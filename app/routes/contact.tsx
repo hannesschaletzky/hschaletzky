@@ -2,25 +2,31 @@ import type { MetaFunction } from "@remix-run/node";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
-import { siteNav } from "~/components/site/siteNav";
+import { calUrl, siteNav } from "~/components/site/siteNav";
+import { pageMeta } from "~/components/site/pageMeta";
 
-export const meta: MetaFunction = () => [
-  { title: "Contact | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "Contact | Hannes Schaletzky",
+    description:
       "Get in touch with Hannes Schaletzky – freelance software engineer in Berlin.",
-  },
-];
+    path: "/contact",
+  });
 
 const mail = "info@hschaletzky.com";
 
 const channels = [
   {
     title: "Mail",
-    text: "The fastest way to reach me.",
+    text: "The fastest way to reach me – also if you'd like my CV.",
     label: mail,
     href: `mailto:${mail}`,
+  },
+  {
+    title: "Intro call",
+    text: "Pick a free slot in my calendar.",
+    label: "Book an intro call",
+    href: calUrl,
   },
   {
     title: "LinkedIn",
@@ -33,12 +39,6 @@ const channels = [
     text: "Code and side projects.",
     label: "github.com/hannesschaletzky",
     href: "https://github.com/hannesschaletzky",
-  },
-  {
-    title: "CV",
-    text: "Happy to send it on request.",
-    label: "Ask for my CV",
-    href: `mailto:${mail}?subject=CV%20request`,
   },
 ];
 

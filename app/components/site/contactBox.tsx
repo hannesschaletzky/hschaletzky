@@ -1,4 +1,5 @@
 import Peak from "~/components/site/peak";
+import { calUrl } from "~/components/site/siteNav";
 
 const mail = "info@hschaletzky.com";
 
@@ -12,7 +13,7 @@ export default function ContactBox() {
         </h2>
         <p className="relative mt-4 max-w-xl text-lg">
           Whether it&apos;s a cloud platform or your club&apos;s website – drop
-          me a line and I&apos;ll get back to you.
+          me a line or book a call.
         </p>
         <div className="relative mt-8 flex flex-wrap gap-4">
           <a
@@ -22,20 +23,20 @@ export default function ContactBox() {
             {mail}
           </a>
           <a
+            href={calUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-navy/30 px-6 py-3 font-semibold transition hover:border-navy"
+          >
+            Book an intro call
+          </a>
+          <a
             href="https://linkedin.com/in/hannesschaletzky/"
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-navy/30 px-6 py-3 font-semibold transition hover:border-navy"
           >
             LinkedIn
-          </a>
-          <a
-            href="https://github.com/hannesschaletzky"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-navy/30 px-6 py-3 font-semibold transition hover:border-navy"
-          >
-            GitHub
           </a>
         </div>
       </div>

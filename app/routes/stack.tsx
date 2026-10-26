@@ -4,15 +4,15 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { siteNav } from "~/components/site/siteNav";
+import { pageMeta } from "~/components/site/pageMeta";
 
-export const meta: MetaFunction = () => [
-  { title: "Stack | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "Stack | Hannes Schaletzky",
+    description:
       "The tech Hannes Schaletzky works with – AWS, Node.js/TypeScript, integration & data, CI/CD, testing and operations.",
-  },
-];
+    path: "/stack",
+  });
 
 const groups = [
   {

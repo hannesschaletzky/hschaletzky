@@ -16,6 +16,11 @@ export default function useSecretClicks(
     setClicks(next);
 
     if (next >= count) {
+      // no fade for people who turned off animations in their system settings
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.location.assign(target);
+        return;
+      }
       document.body
         .animate([{ opacity: 1 }, { opacity: 0 }], {
           duration: 400,

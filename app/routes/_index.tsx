@@ -4,6 +4,7 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import Mountains from "~/components/site/mountains";
 import Offers from "~/components/site/offers";
+import { businessJsonLd, pageMeta } from "~/components/site/pageMeta";
 import { siteNav } from "~/components/site/siteNav";
 import StackSection from "~/components/site/stackSection";
 import Testimonials from "~/components/site/testimonials";
@@ -14,18 +15,12 @@ const description =
   "Freelance software engineer in Berlin – backend, integration and cloud solutions with Node.js/TypeScript and AWS, plus websites, hosting and maintenance for small businesses and clubs.";
 
 export const meta: MetaFunction = () => [
-  { title: "Hannes Schaletzky | Software Engineer in Berlin" },
-  { name: "description", content: description },
-  // link previews (LinkedIn, WhatsApp, Slack, ...)
-  { property: "og:type", content: "website" },
-  { property: "og:url", content: "https://hschaletzky.com" },
-  {
-    property: "og:title",
-    content: "Hannes Schaletzky | Software Engineer in Berlin",
-  },
-  { property: "og:description", content: description },
-  { property: "og:image", content: "https://hschaletzky.com/hannes.jpg" },
-  { name: "twitter:card", content: "summary" },
+  ...pageMeta({
+    title: "Hannes Schaletzky | Software Engineer in Berlin",
+    description,
+    path: "/",
+  }),
+  businessJsonLd,
 ];
 
 export default function Index() {
@@ -34,15 +29,15 @@ export default function Index() {
       <Header links={siteNav} />
 
       <main>
-        {/* hero */}
-        <section className="relative h-[55rem] overflow-hidden sm:h-[57rem]">
+        {/* hero – -mb-px: overlaps the next section so no dark hairline shows */}
+        <section className="relative -mb-px h-[56rem] overflow-hidden sm:h-[60rem]">
           <Mountains heightClass="h-[35%] sm:h-[42%]" />
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}
             <img
               src="/hannes.jpg"
               alt="Hannes Schaletzky"
-              className="mx-auto mb-10 h-24 w-24 rounded-full object-cover ring-2 ring-teal/50 ring-offset-4 ring-offset-navy sm:h-28 sm:w-28"
+              className="mx-auto mb-10 h-28 w-28 rounded-full object-cover ring-2 ring-teal/50 ring-offset-4 ring-offset-navy sm:h-36 sm:w-36"
             />
             <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl">
               Reliable software,
@@ -52,8 +47,8 @@ export default function Index() {
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg">
-              I&apos;m Hannes, a freelance software engineer in Berlin – for cloud
-              platforms and websites.
+              I&apos;m Hannes, a freelance software engineer in Berlin – for
+              cloud platforms and websites.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a

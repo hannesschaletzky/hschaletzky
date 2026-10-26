@@ -31,6 +31,9 @@ export const siteMap = [
   },
 ];
 
+// intro calls – plain link, nothing from cal.com loads on this site
+export const calUrl = "https://cal.com/hannesschaletzky";
+
 export const legalLinks = [
   { label: "Imprint", href: "/impressum" },
   { label: "Data Privacy Policy", href: "/datenschutz" },

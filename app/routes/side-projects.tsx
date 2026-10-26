@@ -4,16 +4,16 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { siteNav } from "~/components/site/siteNav";
+import { pageMeta } from "~/components/site/pageMeta";
 import privateProjects from "~/projects/unpaid.json";
 
-export const meta: MetaFunction = () => [
-  { title: "Side Projects | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "Side Projects | Hannes Schaletzky",
+    description:
       "Side projects by Hannes Schaletzky – web apps, tools and experiments built for friends, clubs and myself.",
-  },
-];
+    path: "/side-projects",
+  });
 
 // titles are stored in lower case for the classic site – capitalize the first
 // word, unless it is a name with its own casing like "iOS"

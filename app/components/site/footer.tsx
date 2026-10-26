@@ -19,7 +19,7 @@ export default function Footer() {
               src="/brand/hasc-logo-negativ.svg"
               alt="HASC – Hannes Schaletzky"
               className={`h-12 w-auto ${
-                secret.clicks > 0 ? "animate-wiggle" : ""
+                secret.clicks > 0 ? "motion-safe:animate-wiggle" : ""
               } ${
                 secret.clicks >= 2
                   ? "drop-shadow-[0_0_14px_rgba(63,184,160,0.9)]"

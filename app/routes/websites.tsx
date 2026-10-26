@@ -5,15 +5,15 @@ import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
 import { siteNav } from "~/components/site/siteNav";
+import { pageMeta } from "~/components/site/pageMeta";
 
-export const meta: MetaFunction = () => [
-  { title: "Website · Hosting · Maintenance | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "Website · Hosting · Maintenance | Hannes Schaletzky",
+    description:
       "Websites, hosting and maintenance for self-employed people, small businesses and clubs – personal, fair, on-site or remote.",
-  },
-];
+    path: "/websites",
+  });
 
 const mail = "mailto:info@hschaletzky.com?subject=Website%20inquiry";
 

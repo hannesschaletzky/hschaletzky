@@ -4,17 +4,17 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
-import { siteNav } from "~/components/site/siteNav";
+import { calUrl, siteNav } from "~/components/site/siteNav";
 import StackSection from "~/components/site/stackSection";
+import { pageMeta } from "~/components/site/pageMeta";
 
-export const meta: MetaFunction = () => [
-  { title: "Cloud & Integrations | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "Cloud & Integrations | Hannes Schaletzky",
+    description:
       "Freelance integration & cloud engineer in Berlin – backend and integration solutions with Node.js/TypeScript and AWS, from analysis to production.",
-  },
-];
+    path: "/cloud",
+  });
 
 const services = [
   {
@@ -51,7 +51,7 @@ const offers = [
     price: "1,200 €",
     priceNote: "plus VAT",
     cta: "Book a review",
-    href: "mailto:info@hschaletzky.com?subject=Architecture%20review",
+    href: calUrl,
     highlight: true,
   },
   {
@@ -93,7 +93,7 @@ const work = [
     text: "AWS-based platform running data imports and process logic in isolated environments – live at seven customers with around 500 integrations a week on real customer data.",
   },
   {
-    client: "tilde ventures",
+    client: "tilde ventures GmbH",
     title: "Migration from Vercel to AWS",
     text: "Own production AWS environment with CI/CD and an automated test suite for a digital health care directive platform.",
   },
@@ -173,6 +173,10 @@ export default function Cloud() {
                     </div>
                     <a
                       href={offer.href}
+                      {...(offer.href.startsWith("http") && {
+                        target: "_blank",
+                        rel: "noreferrer",
+                      })}
                       className="rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
                     >
                       {offer.cta}

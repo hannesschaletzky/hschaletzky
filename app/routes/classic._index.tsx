@@ -25,7 +25,7 @@ export default function Index() {
         <img
           key={secret.clicks}
           className={`rounded-full w-full h-full object-cover ${
-            secret.clicks > 0 ? "animate-wiggle" : ""
+            secret.clicks > 0 ? "motion-safe:animate-wiggle" : ""
           } ${
             secret.clicks >= 2
               ? "drop-shadow-[0_0_14px_rgba(255,225,0,0.9)]"

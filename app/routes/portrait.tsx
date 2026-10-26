@@ -6,15 +6,15 @@ import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
 import { siteNav } from "~/components/site/siteNav";
+import { pageMeta } from "~/components/site/pageMeta";
 
-export const meta: MetaFunction = () => [
-  { title: "About | Hannes Schaletzky" },
-  {
-    name: "description",
-    content:
+export const meta: MetaFunction = () =>
+  pageMeta({
+    title: "About | Hannes Schaletzky",
+    description:
       "Hannes Schaletzky – freelance software engineer in Berlin. Values, beliefs, coaching licenses and what I do besides code.",
-  },
-];
+    path: "/portrait",
+  });
 
 const facts = [
   { label: "Freelance since", value: "2024" },
