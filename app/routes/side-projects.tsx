@@ -1,8 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
-import ContactIcons from "~/components/contactIcons";
-import highlightWords from "~/components/highlightWords";
+import ContactBox from "~/components/site/contactBox";
+import Footer from "~/components/site/footer";
+import Header from "~/components/site/header";
+import PageHero from "~/components/site/pageHero";
+import { siteNav } from "~/components/site/siteNav";
 import privateProjects from "~/projects/unpaid.json";
-import { calculateMonthsDifference } from "~/utils";
 
 export const meta: MetaFunction = () => [
   { title: "Side Projects | Hannes Schaletzky" },
@@ -13,137 +15,98 @@ export const meta: MetaFunction = () => [
   },
 ];
 
-const projects = privateProjects.map((project) => ({
-  ...project,
-  stack: project.stack.filter((item) => item !== ""),
-  duration: calculateMonthsDifference(project.from, project.until),
-}));
-
-const firstScreenId = "firstScreen";
-const lastScreenId = "lastScreen";
-
-function scrollIntoView(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+// titles are stored in lower case for the classic site – capitalize the first
+// word, unless it is a name with its own casing like "iOS"
+function capitalize(title: string) {
+  const firstWord = title.split(" ")[0];
+  if (/[A-Z]/.test(firstWord)) return title;
+  return title.charAt(0).toUpperCase() + title.slice(1);
 }
 
-export default function ProjectsPage() {
+const projects = privateProjects.map((project) => ({
+  ...project,
+  year: project.from.split(".")[1],
+  title: capitalize(project.title),
+  stack: project.stack.filter((item) => item !== ""),
+}));
+
+export default function SideProjects() {
   return (
-    <div className="container">
-      {/* intro screen */}
-      <div
-        id={firstScreenId}
-        className="tiktok p-6 flex flex-col gap-8 justify-center items-start"
-      >
-        <div>
-          <mark>Swipe</mark> through my <mark>side</mark> projects in a
-          TikTok-like feed 📺
-        </div>
-        <div>{"> "}side projects, built for friends, clubs & myself</div>
-        <div className="flex gap-4">
-          <button
-            className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-            onClick={() => scrollIntoView("project0")}
-          >
-            Start ⬇️
-          </button>
-          <a
-            href="/"
-            className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-          >
-            Back
-          </a>
-        </div>
-      </div>
-      {/* projects */}
-      {projects.map((project, i) => (
-        <div
-          id={`project${i}`}
-          className="tiktok p-6 pt-16 flex flex-col gap-4"
-          key={project.title}
+    <div className="min-h-screen">
+      <Header links={siteNav} />
+
+      <main>
+        <PageHero
+          eyebrow="Side projects"
+          title="Built for fun,"
+          highlight="and to learn something new."
+          cta={{
+            label: "See them on GitHub",
+            href: "https://github.com/hannesschaletzky",
+          }}
         >
-          <div>
-            {"> "}
-            {highlightWords(project.title, project.highlight)}
-          </div>
-          <div>
-            @{project.employer}
-            <br />
-            {project.from} - {project.until}
-          </div>
-          <div>
-            <b>
-              {project.duration} {project.duration == 1 ? "month" : "months"}
-            </b>
-            {" of:"}
-            {project.stack.map((item, j) => (
-              <div key={`${j}-${item}`}>{item}</div>
+          Web apps, tools and experiments I built besides client work – some
+          serious, some just for a Christmas party.
+        </PageHero>
+
+        <section className="bg-navy-lighter">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-24 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="flex flex-col rounded-2xl border border-white/10 p-6"
+              >
+                <p className="text-sm text-slate-400">
+                  {project.year} · {project.employer}
+                </p>
+                <h2 className="mt-2 text-lg font-bold leading-snug text-white">
+                  {project.title}
+                </h2>
+                <ul className="mt-4 flex flex-1 flex-wrap content-start gap-2">
+                  {project.stack.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full bg-white/5 px-3 py-1 text-xs"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                {(project.url !== "" || project.repo !== "") && (
+                  <div className="mt-6 flex gap-4 text-sm font-semibold">
+                    {project.url !== "" && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-teal hover:text-teal-light"
+                      >
+                        Website →
+                      </a>
+                    )}
+                    {project.repo !== "" && (
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-teal hover:text-teal-light"
+                      >
+                        Code →
+                      </a>
+                    )}
+                  </div>
+                )}
+              </article>
             ))}
           </div>
-          <div className="flex flex-col justify-start items-start gap-4">
-            {project.url !== "" && (
-              <div>
-                {"/ "}
-                <u>
-                  <a href={project.url} target="_blank" rel="noreferrer">
-                    hosted here
-                  </a>
-                </u>
-              </div>
-            )}
-            {project.repo !== "" && (
-              <div>
-                {"/ "}
-                <u>
-                  <a href={project.repo} target="_blank" rel="noreferrer">
-                    repository
-                  </a>
-                </u>
-              </div>
-            )}
-          </div>
-          {/* navigation */}
-          <div className="mt-auto mr-auto text-xl lg:text-2xl">
-            <button
-              className="py-1 px-2 mr-2"
-              onClick={() =>
-                scrollIntoView(i == 0 ? firstScreenId : `project${i - 1}`)
-              }
-            >
-              ⬆️
-            </button>
-            <button
-              className="py-1 px-2 mr-2"
-              onClick={() =>
-                scrollIntoView(
-                  i == projects.length - 1 ? lastScreenId : `project${i + 1}`
-                )
-              }
-            >
-              ⬇️
-            </button>
-            <button
-              className="py-1 px-2 mr-2"
-              onClick={() => scrollIntoView(firstScreenId)}
-            >
-              Top
-            </button>
-            {i + 1}/{projects.length}
-          </div>
+        </section>
+
+        <div className="pt-24">
+          <ContactBox />
         </div>
-      ))}
-      {/* last screen */}
-      <div
-        id={lastScreenId}
-        className="tiktok flex flex-col gap-2 justify-center items-center"
-      >
-        <ContactIcons />
-        <a
-          href="/"
-          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-        >
-          Back
-        </a>
-      </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* self-hosted fonts (no requests to Google, GDPR), files and licences in public/fonts */
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/source-sans-3-latin-300-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/roboto-mono-latin-400-normal.woff2") format("woff2");
+}
+
 /* see here: https://codepen.io/ellie_html/pen/dyYjZyB */
 .container {
   height: 100dvh;

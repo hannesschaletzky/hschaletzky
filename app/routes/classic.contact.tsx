@@ -1,0 +1,52 @@
+import type { MetaFunction } from "@remix-run/node";
+import ContactIcons from "~/components/classic/contactIcons";
+import Section from "~/components/classic/section";
+
+export const meta: MetaFunction = () => [
+  { title: "Contact | Hannes Schaletzky" },
+  { name: "robots", content: "noindex" },
+  {
+    name: "description",
+    content:
+      "Get in touch with Hannes Schaletzky – freelance integration & cloud engineer in Berlin, on-site & remote.",
+  },
+];
+
+export default function Contact() {
+  return (
+    <div className="flex flex-col items-center gap-10 p-6 text-center max-w-2xl mx-auto">
+      <div className="mt-10">
+        let&apos;s <mark>talk</mark>...
+      </div>
+
+      <Section title="mail">
+        <a href="mailto:info@hschaletzky.com">
+          <u>info@hschaletzky.com</u>
+        </a>
+      </Section>
+
+      <Section title="location">
+        <div>Berlin · on-site & remote</div>
+      </Section>
+
+      <Section title="CV">
+        <div>
+          happy to send it on request – just{" "}
+          <a href="mailto:info@hschaletzky.com?subject=CV%20request">
+            <u>drop me a mail</u>
+          </a>
+        </div>
+      </Section>
+
+      <div className="flex flex-col items-center gap-2">
+        <ContactIcons />
+        <a
+          href="/classic"
+          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
+        >
+          Back
+        </a>
+      </div>
+    </div>
+  );
+}

@@ -1,6 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
-import ContactIcons from "~/components/contactIcons";
-import Section from "~/components/section";
+import ContactBox from "~/components/site/contactBox";
+import Footer from "~/components/site/footer";
+import Header from "~/components/site/header";
+import PageHero from "~/components/site/pageHero";
+import { siteNav } from "~/components/site/siteNav";
 
 export const meta: MetaFunction = () => [
   { title: "Stack | Hannes Schaletzky" },
@@ -11,39 +14,21 @@ export const meta: MetaFunction = () => [
   },
 ];
 
-type Group = {
-  prefix?: string;
-  highlight: string;
-  suffix?: string;
-  items: string[];
-};
-
-const groups: Group[] = [
+const groups = [
   {
-    prefix: "cloud & ",
-    highlight: "AWS",
-    items: [
-      "ECS/Fargate",
-      "ECR",
-      "IAM",
-      "VPC",
-      "SQS",
-      "S3",
-      "DynamoDB",
-      "Terraform",
-    ],
+    title: "Cloud & AWS",
+    items: ["ECS/Fargate", "ECR", "IAM", "VPC", "SQS", "S3", "DynamoDB", "Terraform"],
   },
   {
-    highlight: "backend",
+    title: "Backend",
     items: ["Node.js", "TypeScript", "REST APIs", "Drizzle ORM", "PostgreSQL"],
   },
   {
-    prefix: "integration & ",
-    highlight: "data",
+    title: "Integration & data",
     items: [
-      "messaging/event-driven",
+      "Messaging / event-driven",
       "ETL",
-      "MS SQL Server/T-SQL",
+      "MS SQL Server / T-SQL",
       "SAML",
       "MS Entra",
       "MS Exchange",
@@ -51,32 +36,22 @@ const groups: Group[] = [
     ],
   },
   {
-    prefix: "delivery & ",
-    highlight: "testing",
+    title: "Delivery & testing",
     items: ["Docker", "GitHub Actions", "Jest", "Playwright"],
   },
   {
-    highlight: "operations",
-    items: [
-      "Grafana",
-      "Prometheus",
-      "Mezmo",
-      "logging & alerting",
-      "on-call",
-    ],
+    title: "Operations",
+    items: ["Grafana", "Prometheus", "Mezmo", "Logging & alerting", "On-call"],
   },
   {
-    prefix: "web & ",
-    highlight: "frontend",
+    title: "Web & frontend",
     items: ["Next.js", "Remix", "React", "Tailwind"],
   },
   {
-    prefix: "also ",
-    highlight: "experienced",
-    suffix: " with",
+    title: "Also experienced with",
     items: [
-      "Kotlin/Spring Boot",
-      "C#/.NET",
+      "Kotlin / Spring Boot",
+      "C# / .NET",
       "Kubernetes",
       "Hetzner Cloud",
       "Azure DevOps",
@@ -85,53 +60,65 @@ const groups: Group[] = [
     ],
   },
   {
-    prefix: "how I ",
-    highlight: "work",
+    title: "How I work",
     items: [
-      "domain-driven design",
-      "clean code",
+      "Domain-driven design",
+      "Clean code",
       "TDD",
-      "infrastructure as code",
-      "pair programming",
+      "Infrastructure as code",
+      "Pair programming",
       "AI-assisted development",
     ],
-  },
-  {
-    prefix: "daily ",
-    highlight: "drivers",
-    items: ["terminal", "git", "VSCode", "MacBook", "Shortcuts 🤗"],
   },
 ];
 
 export default function Stack() {
   return (
-    <div className="flex flex-col items-center gap-10 p-6 text-center max-w-2xl mx-auto">
-      <div className="mt-10">things I work with...</div>
+    <div className="min-h-screen">
+      <Header links={siteNav} />
 
-      {groups.map((group) => (
-        <Section
-          key={group.highlight}
-          title={
-            <>
-              {group.prefix}
-              <mark>{group.highlight}</mark>
-              {group.suffix}
-            </>
-          }
+      <main>
+        <PageHero
+          eyebrow="Stack"
+          title="Tools I trust"
+          highlight="in production."
+          cta={{ label: "Talk about your project", href: "/cloud" }}
         >
-          <div>{group.items.join(" · ")}</div>
-        </Section>
-      ))}
+          The technologies behind the platforms I build and run – from AWS to
+          the tests that keep them reliable.
+        </PageHero>
 
-      <div className="flex flex-col items-center gap-2">
-        <ContactIcons />
-        <a
-          href="/"
-          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-        >
-          Back
-        </a>
-      </div>
+        <section className="bg-navy-lighter">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-24 sm:px-6 md:grid-cols-2">
+            {groups.map((group) => (
+              <div
+                key={group.title}
+                className="rounded-2xl border border-white/10 p-6"
+              >
+                <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                  {group.title}
+                </h2>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-white/10 bg-navy-light px-3 py-1 text-sm text-white"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="pt-24">
+          <ContactBox />
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }

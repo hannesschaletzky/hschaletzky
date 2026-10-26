@@ -1,13 +1,13 @@
 import { useLocation } from "@remix-run/react";
 
-// small link back to the index, shown on every page except the index itself
+// small link back to the classic index, shown on every classic page except the index itself
 export default function HomeLink() {
   const { pathname } = useLocation();
-  if (pathname === "/") return null;
+  if (pathname === "/classic" || pathname === "/classic/") return null;
 
   return (
     <a
-      href="/"
+      href="/classic"
       className="fixed top-3 left-3 z-10 text-base px-2 py-1 rounded-lg bg-white/80"
     >
       <u>← home</u>

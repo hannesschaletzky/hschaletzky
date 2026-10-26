@@ -30,16 +30,6 @@
     "stack": ["terraform", "DigitalOcean", "cloud-init", "", ""]
   },
   {
-    "title": "website for a supportive association for my former school",
-    "highlight": "website, association, school",
-    "from": "09.2023",
-    "until": "10.2023",
-    "employer": "Freundeskreis Peutinger e.V.",
-    "url": "https://freundeskreis-peutinger.de/",
-    "repo": "",
-    "stack": ["Wordpress", "", "", "", ""]
-  },
-  {
     "title": "web scraper for german beach volleyball tournament results",
     "highlight": "scraper, tournament, results",
     "from": "10.2022",
