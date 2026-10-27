@@ -62,10 +62,8 @@ export default function Offers() {
   return (
     <section id="offers" className="scroll-mt-20">
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <SectionHeading eyebrow={lang === "de" ? "Was ich mache" : "What I do"}>
-          {lang === "de"
-            ? "Von Cloud-Plattformen bis zur Vereinswebsite."
-            : "From cloud platforms to club websites."}
+        <SectionHeading eyebrow={lang === "de" ? "Angebote" : "Offers"}>
+          {lang === "de" ? "Womit ich helfen kann." : "How I can help."}
         </SectionHeading>
         <div className="grid gap-6 md:grid-cols-2">
           {offers[lang].map((offer) => (
