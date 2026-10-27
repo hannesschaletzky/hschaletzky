@@ -4,6 +4,7 @@ import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
+import SectionHeading from "~/components/site/sectionHeading";
 import Peak from "~/components/site/peak";
 import { pageMeta, personJsonLd } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang, type Lang } from "~/i18n";
@@ -29,6 +30,12 @@ const text = {
     besides: "Außerdem: ",
     since: "seit",
     social: "Ehrenamt",
+    headings: {
+      glance: "Kurz & knapp.",
+      work: "Drei Prinzipien.",
+      clock: "Schnee & Sand.",
+      social: "Zurückgeben.",
+    },
   },
   en: {
     title: "About me | Hannes Schaletzky, Software Engineer",
@@ -48,6 +55,12 @@ const text = {
     besides: "Besides that: ",
     since: "since",
     social: "Social work",
+    headings: {
+      glance: "The short version.",
+      work: "Three principles.",
+      clock: "Snow & sand.",
+      social: "Giving back.",
+    },
   },
 };
 
@@ -257,9 +270,9 @@ function AboutIntro({ lang }: { lang: Lang }) {
             className="mx-auto aspect-square w-56 rounded-3xl object-cover md:w-72"
           />
           <div>
-            <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              {t.glance}
-            </h2>
+            <SectionHeading eyebrow={t.glance}>
+              {t.headings.glance}
+            </SectionHeading>
             {/* same rows as the lists further down */}
             <dl className="border-t border-white/10">
               {facts[lang].map((fact) => (
@@ -293,9 +306,9 @@ export default function About() {
         {/* how I work & beliefs */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-            <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              {t.work}
-            </h2>
+            <SectionHeading eyebrow={t.work}>
+              {t.headings.work}
+            </SectionHeading>
             <ul className="grid gap-10 sm:grid-cols-3 sm:gap-6">
               {values.map((value) => (
                 <li key={value.title}>
@@ -345,9 +358,9 @@ export default function About() {
         {/* licenses as certificates */}
         <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-            <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              {t.clock}
-            </h2>
+            <SectionHeading eyebrow={t.clock}>
+              {t.headings.clock}
+            </SectionHeading>
             <div className="grid gap-10 md:grid-cols-2 md:gap-8">
               {licenses.map((license) => (
                 // a certificate: paper, double frame, ornament line and a seal
@@ -404,9 +417,9 @@ export default function About() {
         {/* giving back – same rows as the values */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-            <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              {t.social}
-            </h2>
+            <SectionHeading eyebrow={t.social}>
+              {t.headings.social}
+            </SectionHeading>
             <ul className="border-t border-white/10">
               {social.map((item) => (
                 <li key={item.href} className="border-b border-white/10">
