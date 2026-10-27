@@ -78,7 +78,7 @@ export default function Offers() {
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                 {offer.eyebrow}
               </p>
-              <h3 className="mt-3 text-2xl font-bold text-white transition-colors group-hover:text-teal-light">
+              <h3 className="mt-3 text-2xl font-bold text-white">
                 {offer.title}
               </h3>
               <ul className="mt-6 flex-1 space-y-2">
