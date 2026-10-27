@@ -62,7 +62,7 @@ export default function Index() {
         {/* hero – the height follows the text, the bottom padding keeps room for the
             mountains (slightly taller than them, so the peak never touches the
             buttons); -mb-px overlaps the next section so no dark hairline shows */}
-        <section className="relative -mb-px overflow-hidden pb-[20.5rem] sm:pb-[26.5rem]">
+        <section className="relative -mb-px overflow-hidden pb-[20.5rem] sm:pb-[max(26.5rem,calc(100vw/5.5+2rem))]">
           <Mountains heightClass="h-[19rem] sm:h-[25rem]" />
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}

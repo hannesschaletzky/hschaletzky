@@ -1,5 +1,8 @@
-// layered mountain range around the HASC peak – the range may crop on wide screens,
-// the summit keeps its own aspect ratio so its tip is never cut off
+// layered mountain range around the HASC peak – the range keeps its proportions;
+// min-h (a sixth of the screen width) makes it tall enough on wide screens that
+// its peaks are never cut off into a flat edge,
+// the summit keeps its own aspect ratio so its tip is never cut off, and grows a bit
+// faster than the range so it always stays the highest peak
 // -bottom-px: at fractional heights the svg edge would leave a dark hairline
 export default function Mountains({
   heightClass = "h-[45%] sm:h-1/2",
@@ -11,7 +14,7 @@ export default function Mountains({
       <svg
         viewBox="0 0 1200 400"
         preserveAspectRatio="xMidYMax slice"
-        className={`absolute inset-x-0 -bottom-px w-full ${heightClass}`}
+        className={`absolute inset-x-0 -bottom-px min-h-[calc(100vw/6)] w-full ${heightClass}`}
         aria-hidden="true"
       >
         <path
@@ -25,7 +28,7 @@ export default function Mountains({
       </svg>
       <svg
         viewBox="380 130 440 270"
-        className={`absolute -bottom-px left-1/2 w-auto -translate-x-1/2 ${heightClass}`}
+        className={`absolute -bottom-px left-1/2 min-h-[calc(100vw/5.5)] w-auto -translate-x-1/2 ${heightClass}`}
         aria-hidden="true"
       >
         <path d="M380 400 L600 140 L820 400Z" className="fill-navy-lighter" />

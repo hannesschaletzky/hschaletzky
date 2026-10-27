@@ -17,10 +17,13 @@ export default function PageHero({
 }) {
   return (
     <section
-      // -mb-px: overlaps the next section so no dark hairline shows at fractional pixel ratios
-      className="relative -mb-px h-[42rem] overflow-hidden sm:h-[44rem]"
+      // the height follows the text, the bottom padding keeps room for the mountains
+      // (slightly taller than them, so the peak never touches the button);
+      // -mb-px overlaps the next section so no dark hairline shows at fractional
+      // pixel ratios
+      className="relative -mb-px overflow-hidden pb-[14rem] sm:pb-[max(17rem,calc(100vw/5.5+2rem))]"
     >
-      <Mountains heightClass="h-[28%] sm:h-[34%]" />
+      <Mountains heightClass="h-[12rem] sm:h-[15rem]" />
       <div className="relative mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6 sm:pt-24">
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
           {eyebrow}

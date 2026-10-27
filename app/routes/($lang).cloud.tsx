@@ -25,8 +25,8 @@ const text = {
       "Freiberuflicher Integration & Cloud Engineer aus Berlin, deutschlandweit remote oder vor Ort – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
     hero: {
       eyebrow: "Für Unternehmen",
-      title: "Cloud & Integrationen,",
-      highlight: "auf die Sie sich verlassen können.",
+      title: "Cloud & Integrationen –",
+      highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
       text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS – von der Architektur über sauberen Code bis zum sicheren Betrieb.",
     },
@@ -131,8 +131,8 @@ const text = {
       "Freelance integration & cloud engineer from Berlin, remote across Germany or on-site – backend and integration solutions with Node.js/TypeScript and AWS.",
     hero: {
       eyebrow: "For companies",
-      title: "Cloud & integrations",
-      highlight: "you can rely on.",
+      title: "Cloud & integrations –",
+      highlight: "reliable in production.",
       cta: "Talk about your project",
       text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS – from architecture and clean code to secure production operation.",
     },
