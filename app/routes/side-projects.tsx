@@ -52,21 +52,27 @@ export default function SideProjects() {
         <section className="bg-navy-lighter">
           <div className="mx-auto grid max-w-6xl gap-6 px-4 py-24 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
+              // on hover the card lifts, a teal line grows along the top edge
+              // and the title lights up
               <article
                 key={project.title}
-                className="flex flex-col rounded-2xl border border-white/10 p-6"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition duration-300 hover:border-teal/40 hover:bg-navy-light hover:shadow-2xl hover:shadow-black/30 motion-safe:hover:-translate-y-1"
               >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-teal transition-transform duration-500 group-hover:scale-x-100"
+                />
                 <p className="text-sm text-slate-400">
                   {project.year} · {project.employer}
                 </p>
-                <h2 className="mt-2 text-lg font-bold leading-snug text-white">
+                <h2 className="mt-2 text-lg font-bold leading-snug text-white transition-colors group-hover:text-teal-light">
                   {project.title}
                 </h2>
                 <ul className="mt-4 flex flex-1 flex-wrap content-start gap-2">
                   {project.stack.map((item) => (
                     <li
                       key={item}
-                      className="rounded-full bg-white/5 px-3 py-1 text-xs"
+                      className="rounded-full bg-white/5 px-3 py-1 text-xs transition-colors group-hover:bg-white/10 group-hover:text-white"
                     >
                       {item}
                     </li>

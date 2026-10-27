@@ -1,3 +1,4 @@
+import { logos } from "~/components/site/logos";
 import SectionHeading from "~/components/site/sectionHeading";
 
 // only quotes with permission to publish them
@@ -7,7 +8,7 @@ const testimonials: {
   name: string;
   role: string;
   href: string;
-  logo: string;
+  logo: { src: string; width: number; height: number };
   draft?: boolean;
 }[] = [
   {
@@ -18,16 +19,17 @@ const testimonials: {
     name: "Dr. Katharina Eller",
     role: "Co-Founder & CTO, tilde ventures GmbH",
     href: "https://www.linkedin.com/in/dr-katharina-eller-a20988101/",
-    logo: "/tilde-logo.png",
+    logo: logos.tilde,
   },
   {
     quote:
-      "[Quote from blu Systems – e.g. what the integration platform changed for them and their customers. 1–3 sentences.]",
-    name: "[Name]",
-    role: "[Role], blu Systems GmbH",
-    href: "https://www.linkedin.com/",
-    logo: "/blu-logo.png",
-    draft: true,
+      "Hannes built our integration platform on his own and still looks after it today. It processes hundreds of integrations every week on real customer data – reliably, and without us having to worry about it.",
+    // original, for the German version:
+    // "Hannes hat unsere Integrationsplattform eigenständig aufgebaut und betreut sie bis heute. Sie verarbeitet jede Woche Hunderte Integrationen auf echten Kundendaten – zuverlässig und ohne dass wir uns darum Sorgen machen müssen."
+    name: "Tien Hào Vu",
+    role: "Head of Service & Management Consulting, blu Systems GmbH",
+    href: "https://www.linkedin.com/in/tien-h%C3%A0o-vu-89a447122/",
+    logo: logos.blu,
   },
 ];
 
@@ -36,7 +38,11 @@ const visible = testimonials.filter(
 );
 
 // stacked rows without boxes – who on the left, the quote on the right
-export default function Testimonials({ className = "" }: { className?: string }) {
+export default function Testimonials({
+  className = "",
+}: {
+  className?: string;
+}) {
   if (visible.length === 0) return null;
 
   return (
@@ -53,7 +59,10 @@ export default function Testimonials({ className = "" }: { className?: string })
             >
               <figcaption className="flex items-center gap-4 md:flex-col md:items-start">
                 <img
-                  src={testimonial.logo}
+                  src={testimonial.logo.src}
+                  width={testimonial.logo.width}
+                  height={testimonial.logo.height}
+                  loading="lazy"
                   alt=""
                   className="h-10 w-auto rounded-lg"
                 />

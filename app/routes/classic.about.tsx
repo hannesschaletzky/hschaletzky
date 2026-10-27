@@ -4,7 +4,7 @@ import ContactIcons from "~/components/classic/contactIcons";
 import Section from "~/components/classic/section";
 
 export const meta: MetaFunction = () => [
-  { title: "Portrait | Hannes Schaletzky" },
+  { title: "About | Hannes Schaletzky" },
   { name: "robots", content: "noindex" },
   {
     name: "description",
@@ -45,7 +45,7 @@ function ExternalLink({
   );
 }
 
-export default function Portrait() {
+export default function About() {
   return (
     <div className="flex flex-col items-center gap-10 p-6 text-center max-w-2xl mx-auto">
       {/* intro */}
@@ -118,12 +118,6 @@ export default function Portrait() {
           </>
         }
       >
-        <div>
-          {"> "}website support for the{" "}
-          <ExternalLink href="https://freundeskreis-peutinger.de/">
-            Freundeskreis Peutinger-Gymnasium Augsburg e. V.
-          </ExternalLink>
-        </div>
         <div>
           {"> "}founding chairman of the student initiative{" "}
           <ExternalLink href="https://winitiative-augsburg.de/">

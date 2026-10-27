@@ -6,7 +6,7 @@ const offers = [
     eyebrow: "For companies",
     title: "Cloud & Integrations",
     items: [
-      "Architecture & cloud review – 1,200 € plus VAT",
+      "Project kickoff – from 800 € plus VAT",
       "System integration & data flows",
       "AWS architecture & migrations",
       "CI/CD, testing & production operation",
@@ -18,9 +18,10 @@ const offers = [
     eyebrow: "For small businesses & clubs",
     title: "Website · Hosting · Maintenance",
     items: [
-      "Website check-up – 119 € incl. VAT",
-      "Website creation – from 699 € incl. VAT",
-      "Hosting, updates & AI automation",
+      "Website check-up – from 150 € incl. VAT",
+      "Website creation – from 990 € incl. VAT",
+      "Hosting & maintenance – from 49 € / month",
+      "AI & automation",
     ],
     href: "/websites",
     cta: "More about websites",

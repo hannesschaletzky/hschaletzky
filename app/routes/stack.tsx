@@ -8,7 +8,7 @@ import { pageMeta } from "~/components/site/pageMeta";
 
 export const meta: MetaFunction = () =>
   pageMeta({
-    title: "Stack | Hannes Schaletzky",
+    title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
     description:
       "The tech Hannes Schaletzky works with – AWS, Node.js/TypeScript, integration & data, CI/CD, testing and operations.",
     path: "/stack",
@@ -17,7 +17,16 @@ export const meta: MetaFunction = () =>
 const groups = [
   {
     title: "Cloud & AWS",
-    items: ["ECS/Fargate", "ECR", "IAM", "VPC", "SQS", "S3", "DynamoDB", "Terraform"],
+    items: [
+      "ECS/Fargate",
+      "ECR",
+      "IAM",
+      "VPC",
+      "SQS",
+      "S3",
+      "DynamoDB",
+      "Terraform",
+    ],
   },
   {
     title: "Backend",
@@ -82,7 +91,10 @@ export default function Stack() {
           eyebrow="Stack"
           title="Tools I trust"
           highlight="in production."
-          cta={{ label: "Talk about your project", href: "/cloud" }}
+          cta={{
+            label: "Talk about your project",
+            href: "mailto:info@hschaletzky.com?subject=Project%20inquiry",
+          }}
         >
           The technologies behind the platforms I build and run – from AWS to
           the tests that keep them reliable.

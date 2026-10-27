@@ -9,7 +9,7 @@ export const meta: MetaFunction = () =>
   pageMeta({
     title: "Contact | Hannes Schaletzky",
     description:
-      "Get in touch with Hannes Schaletzky – freelance software engineer in Berlin.",
+      "Contact Hannes Schaletzky, freelance software engineer in Berlin – by email, on LinkedIn or in an intro call.",
     path: "/contact",
   });
 

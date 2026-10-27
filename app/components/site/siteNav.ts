@@ -2,7 +2,7 @@
 export const siteNav = [
   { label: "Cloud & Integrations", href: "/cloud" },
   { label: "Websites", href: "/websites" },
-  { label: "About", href: "/portrait" },
+  { label: "About", href: "/about" },
 ];
 
 // every page, grouped – used by the mobile menu and the footer
@@ -17,7 +17,7 @@ export const siteMap = [
   {
     title: "About me",
     links: [
-      { label: "About", href: "/portrait" },
+      { label: "About", href: "/about" },
       { label: "Stack", href: "/stack" },
       { label: "Side projects", href: "/side-projects" },
     ],

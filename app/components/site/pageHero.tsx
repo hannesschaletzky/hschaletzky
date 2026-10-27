@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Mountains from "~/components/site/mountains";
 
-// smaller version of the E2 hero for subpages
+// smaller version of the index hero for subpages
 export default function PageHero({
   eyebrow,
   title,

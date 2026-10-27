@@ -21,9 +21,7 @@ export default function StackSection() {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <SectionHeading eyebrow="Stack">
-          Tools I trust in production.
-        </SectionHeading>
+        <SectionHeading eyebrow="Stack">The tech behind it.</SectionHeading>
         <ul className="flex flex-wrap gap-3">
           {stack.map((item) => (
             <li

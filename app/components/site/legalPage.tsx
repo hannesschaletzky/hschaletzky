@@ -41,13 +41,6 @@ export function LegalSection({
   );
 }
 
-// open point that still has to be filled in before going live
-export function Todo({ children }: { children: ReactNode }) {
-  return (
-    <span className="rounded bg-yellow-300/90 px-1 text-navy">[{children}]</span>
-  );
-}
-
 export function ExternalLink({
   href,
   children,

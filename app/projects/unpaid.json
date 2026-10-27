@@ -17,7 +17,7 @@
     "employer": "christmas party",
     "url": "",
     "repo": "https://github.com/hannesschaletzky/ugly_sweater",
-    "stack": ["NextJS", "TypeScript", "React", "Tailwind", ""]
+    "stack": ["Next.js", "TypeScript", "React", "Tailwind", ""]
   },
   {
     "title": "provisioning digital ocean droplet with terraform and cloud-init",
@@ -27,7 +27,7 @@
     "employer": "myself",
     "url": "",
     "repo": "https://github.com/hannesschaletzky/terraform-digitalocean-droplet",
-    "stack": ["terraform", "DigitalOcean", "cloud-init", "", ""]
+    "stack": ["Terraform", "DigitalOcean", "cloud-init", "", ""]
   },
   {
     "title": "web scraper for german beach volleyball tournament results",
@@ -37,7 +37,7 @@
     "employer": "🏐❤️",
     "url": "",
     "repo": "https://github.com/hannesschaletzky/beachstats_scraper",
-    "stack": ["Node", "TypeScript", "JEST", "node-cron", "http"]
+    "stack": ["Node.js", "TypeScript", "Jest", "node-cron", "http"]
   },
   {
     "title": "a shopping list for people in covid quarantine",
@@ -45,19 +45,9 @@
     "from": "02.2022",
     "until": "02.2022",
     "employer": "🦠",
-    "url": "https://quarantine.hschaletzky.de/",
-    "repo": "https://github.com/hannesschaletzky/quarantine_list",
-    "stack": ["NextJS", "TypeScript", "React", "Tailwind", "Deta"]
-  },
-  {
-    "title": "a web app to find good surf spots in portugal, surf-easy",
-    "highlight": "portugal, surf, spots",
-    "from": "04.2021",
-    "until": "05.2021",
-    "employer": "LeWagon",
     "url": "",
-    "repo": "https://github.com/CharlesOuverleaux/surfeasy",
-    "stack": ["Ruby", "Redis", "HTML", "🏄", ""]
+    "repo": "https://github.com/hannesschaletzky/quarantine_list",
+    "stack": ["Next.js", "TypeScript", "React", "Tailwind", "Deta"]
   },
   {
     "title": "a platform to rent tech people, rent-a-techy",
@@ -70,6 +60,16 @@
     "stack": ["Ruby", "HTML", "CSS", "", ""]
   },
   {
+    "title": "a web app to find good surf spots in portugal, surf-easy",
+    "highlight": "portugal, surf, spots",
+    "from": "04.2021",
+    "until": "05.2021",
+    "employer": "LeWagon",
+    "url": "",
+    "repo": "https://github.com/CharlesOuverleaux/surfeasy",
+    "stack": ["Ruby", "Redis", "HTML", "🏄", ""]
+  },
+  {
     "title": "citefight, a multiplayer twitter guessing game",
     "highlight": "multiplayer, twitter, game",
     "from": "12.2020",
@@ -77,7 +77,7 @@
     "employer": "myself",
     "url": "",
     "repo": "https://github.com/hannesschaletzky/citefight",
-    "stack": ["Node", "TypeScript", "React", "Pusher", "Twitter"]
+    "stack": ["Node.js", "TypeScript", "React", "Pusher", "Twitter"]
   },
   {
     "title": "an iOS cycling GPS tracker app for your 🚲 journeys",
@@ -87,7 +87,7 @@
     "employer": "myself",
     "url": "",
     "repo": "https://github.com/hannesschaletzky/CycleLogVC",
-    "stack": ["iOS", "Swift", "GPS", "cycling", ""]
+    "stack": ["iOS", "Swift", "GPS", "Cycling", ""]
   },
   {
     "title": "iOS app to find bars and clubs to party at",

@@ -26,6 +26,8 @@ export default function Header({
         <a href="/" aria-label="Hannes Schaletzky – home">
           <img
             src="/brand/hasc-wortmarke-negativ.svg"
+            width={525}
+            height={121}
             alt="HASC"
             className="h-6 w-auto"
           />

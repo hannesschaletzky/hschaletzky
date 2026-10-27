@@ -67,8 +67,8 @@ export default function Index() {
 
       {/* navigation */}
       <div className="flex flex-wrap justify-center gap-x-2">
-        <a href="/classic/portrait">
-          <u>portrait</u>
+        <a href="/classic/about">
+          <u>about</u>
         </a>
         ·
         <a href="/classic/stack">

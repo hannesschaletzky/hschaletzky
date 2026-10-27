@@ -17,6 +17,9 @@ export default function Footer() {
             <img
               key={secret.clicks}
               src="/brand/hasc-logo-negativ.svg"
+              width={525}
+              height={159}
+              loading="lazy"
               alt="HASC – Hannes Schaletzky"
               className={`h-12 w-auto ${
                 secret.clicks > 0 ? "motion-safe:animate-wiggle" : ""

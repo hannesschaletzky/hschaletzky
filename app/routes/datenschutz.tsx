@@ -14,8 +14,8 @@ export default function Datenschutz() {
     <LegalPage title="Datenschutzerklärung" updated="Oktober 2026">
       <LegalSection title="1. Verantwortlicher">
         <p>
-          Verantwortlich für die Verarbeitung personenbezogener Daten auf
-          dieser Website ist:
+          Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser
+          Website ist:
         </p>
         <p>
           Hannes Schaletzky
@@ -40,11 +40,11 @@ export default function Datenschutz() {
           .
         </p>
         <p>
-          Vercel ist unter dem EU-US Data Privacy Framework zertifiziert, wodurch ein angemessenes
-          Datenschutzniveau für die Übermittlung in die USA besteht (Art. 45
-          DSGVO). Rechtsgrundlage für das Hosting ist Art. 6 Abs. 1 lit. f
-          DSGVO; das berechtigte Interesse liegt in einer sicheren, schnellen
-          und zuverlässigen Bereitstellung der Website.
+          Vercel ist unter dem EU-US Data Privacy Framework zertifiziert,
+          wodurch ein angemessenes Datenschutzniveau für die Übermittlung in die
+          USA besteht (Art. 45 DSGVO). Rechtsgrundlage für das Hosting ist Art.
+          6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in einer
+          sicheren, schnellen und zuverlässigen Bereitstellung der Website.
         </p>
       </LegalSection>
 
@@ -92,8 +92,8 @@ export default function Datenschutz() {
           Name, E-Mail-Adresse, Inhalt der Nachricht), um Ihre Anfrage zu
           beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern
           Ihre Anfrage mit einem Vertrag oder vorvertraglichen Maßnahmen
-          zusammenhängt, und im Übrigen Art. 6 Abs. 1 lit. f DSGVO
-          (berechtigtes Interesse an der Beantwortung von Anfragen).
+          zusammenhängt, und im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+          Interesse an der Beantwortung von Anfragen).
         </p>
         <p>
           Für E-Mails nutze ich Microsoft 365 (Microsoft Ireland Operations
@@ -106,10 +106,22 @@ export default function Datenschutz() {
 
       <LegalSection title="7. Externe Links">
         <p>
-          Diese Website enthält Links zu externen Angeboten wie LinkedIn und
-          GitHub. Daten werden erst übertragen, wenn Sie einen solchen Link
+          Diese Website enthält Links zu externen Angeboten wie LinkedIn, GitHub
+          und cal.com. Daten werden erst übertragen, wenn Sie einen solchen Link
           anklicken; ab dann gilt die Datenschutzerklärung des jeweiligen
           Anbieters.
+        </p>
+        <p>
+          Für die Buchung von Gesprächsterminen verlinke ich auf cal.com
+          (Cal.com, Inc., USA). Wenn Sie dort einen Termin buchen, werden die
+          von Ihnen eingegebenen Daten (z. B. Name, E-Mail-Adresse,
+          Terminwunsch) von cal.com verarbeitet und an mich übermittelt, damit
+          ich das Gespräch vorbereiten und durchführen kann. Rechtsgrundlage ist
+          Art. 6 Abs. 1 lit. b DSGVO. Weitere Informationen finden Sie in der{" "}
+          <ExternalLink href="https://cal.com/privacy">
+            Datenschutzerklärung von cal.com
+          </ExternalLink>
+          .
         </p>
       </LegalSection>
 
