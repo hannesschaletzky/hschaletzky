@@ -1,21 +1,60 @@
+import { useLocation } from "@remix-run/react";
 import { useEffect, useState } from "react";
-import { siteMap } from "~/components/site/siteNav";
+import { getSiteMap, getSiteNav, legalPaths } from "~/components/site/siteNav";
+import { localize, switchLang, useLang } from "~/i18n";
 
-type NavLink = { label: string; href: string };
+// the language switch links to the same page in the other language (the
+// German-only legal pages switch to the English start page)
+function useOtherLang() {
+  const lang = useLang();
+  const { pathname } = useLocation();
+  const href = legalPaths.includes(pathname) ? "/en" : switchLang(pathname);
+  return { lang, href } as const;
+}
 
-export default function Header({
-  links,
-  contactHref = "/contact",
-}: {
-  links: NavLink[];
-  contactHref?: string;
-}) {
+// DE | EN in a rounded frame, the active language filled
+function LangSwitch({ className = "" }: { className?: string }) {
+  const { lang, href } = useOtherLang();
+  return (
+    <div
+      className={`flex items-center rounded-full border border-white/20 p-0.5 text-xs font-semibold ${className}`}
+    >
+      {(["de", "en"] as const).map((code) =>
+        code === lang ? (
+          <span
+            key={code}
+            aria-current="true"
+            className="rounded-full bg-white px-2.5 py-1 text-navy"
+          >
+            {code.toUpperCase()}
+          </span>
+        ) : (
+          <a
+            key={code}
+            href={href}
+            hrefLang={code}
+            lang={code}
+            aria-label={code === "de" ? "Deutsch" : "English"}
+            className="rounded-full px-2.5 py-1 text-slate-300 transition hover:text-white"
+          >
+            {code.toUpperCase()}
+          </a>
+        )
+      )}
+    </div>
+  );
+}
+
+export default function Header() {
+  const lang = useLang();
+  const de = lang === "de";
   const [menuOpen, setMenuOpen] = useState(false);
 
   // close the mobile menu with Escape
   useEffect(() => {
     if (!menuOpen) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    const onKey = (e: KeyboardEvent) =>
+      e.key === "Escape" && setMenuOpen(false);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [menuOpen]);
@@ -23,17 +62,22 @@ export default function Header({
   return (
     <header className="sticky top-0 z-20 border-b border-white/10 bg-navy/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6">
-        <a href="/" aria-label="Hannes Schaletzky – home">
+        <a
+          href={localize("/", lang)}
+          aria-label={
+            de ? "Hannes Schaletzky – Startseite" : "Hannes Schaletzky – home"
+          }
+        >
           <img
             src="/brand/hasc-wortmarke-negativ.svg"
             width={525}
             height={121}
             alt="HASC"
-            className="h-6 w-auto"
+            className="h-5 w-auto sm:h-6"
           />
         </a>
-        <nav className="flex items-center gap-6 text-sm">
-          {links.map((link) => (
+        <nav className="flex items-center gap-3 text-sm sm:gap-6">
+          {getSiteNav(lang).map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -42,15 +86,24 @@ export default function Header({
               {link.label}
             </a>
           ))}
+          <LangSwitch />
           <a
-            href={contactHref}
+            href={localize("/contact", lang)}
             className="rounded-full bg-teal px-4 py-2 font-semibold text-navy transition hover:bg-teal-light"
           >
-            Contact
+            {de ? "Kontakt" : "Contact"}
           </a>
           <button
             type="button"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={
+              menuOpen
+                ? de
+                  ? "Menü schließen"
+                  : "Close menu"
+                : de
+                ? "Menü öffnen"
+                : "Open menu"
+            }
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMenuOpen((open) => !open)}
@@ -79,10 +132,10 @@ export default function Header({
       {menuOpen && (
         <nav
           id="mobile-menu"
-          aria-label="Menu"
+          aria-label={de ? "Menü" : "Menu"}
           className="border-t border-white/10 bg-navy px-4 pb-8 pt-4 md:hidden"
         >
-          {siteMap.map((group) => (
+          {getSiteMap(lang).map((group) => (
             <div key={group.title} className="mt-4">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
                 {group.title}

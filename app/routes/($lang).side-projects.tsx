@@ -3,17 +3,76 @@ import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
-import { siteNav } from "~/components/site/siteNav";
 import { pageMeta } from "~/components/site/pageMeta";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 import privateProjects from "~/projects/unpaid.json";
 
-export const meta: MetaFunction = () =>
-  pageMeta({
+export const loader = langLoader;
+
+const text = {
+  de: {
+    title: "Hobbyprojekte | Hannes Schaletzky",
+    description:
+      "Hobbyprojekte von Hannes Schaletzky – Web-Apps, Tools und Experimente für Freunde, Vereine und mich selbst.",
+    eyebrow: "Hobbyprojekte",
+    title1: "Gebaut aus Spaß",
+    highlight: "und um Neues zu lernen.",
+    cta: "Auf GitHub ansehen",
+    intro:
+      "Web-Apps, Tools und Experimente, die ich neben der Kundenarbeit gebaut habe – manche ernst gemeint, manche nur für eine Weihnachtsfeier.",
+    website: "Website",
+    code: "Code",
+  },
+  en: {
     title: "Side Projects | Hannes Schaletzky",
     description:
       "Side projects by Hannes Schaletzky – web apps, tools and experiments built for friends, clubs and myself.",
+    eyebrow: "Side projects",
+    title1: "Built for fun,",
+    highlight: "and to learn something new.",
+    cta: "See them on GitHub",
+    intro:
+      "Web apps, tools and experiments I built besides client work – some serious, some just for a Christmas party.",
+    website: "Website",
+    code: "Code",
+  },
+};
+
+export const meta: MetaFunction = ({ params }) => {
+  const lang = langFromParams(params);
+  return pageMeta({
+    title: text[lang].title,
+    description: text[lang].description,
     path: "/side-projects",
+    lang,
   });
+};
+
+// German titles, by repository – the JSON holds the English ones for both sites
+const germanTitles: Record<string, string> = {
+  hschaletzky_remix: "Meine Website – auf Basis von Remix",
+  ugly_sweater:
+    "Abstimmungs-Tool für den hässlichsten Weihnachtspulli als Web-App",
+  "terraform-digitalocean-droplet":
+    "DigitalOcean-Droplet mit Terraform und cloud-init bereitstellen",
+  beachstats_scraper:
+    "Web-Scraper für Ergebnisse deutscher Beachvolleyball-Turniere",
+  quarantine_list: "Eine Einkaufsliste für Menschen in Corona-Quarantäne",
+  "rent-a-techy": "Eine Plattform, um Tech-Leute zu mieten: rent-a-techy",
+  surfeasy: "Eine Web-App, um gute Surfspots in Portugal zu finden: surf-easy",
+  citefight: "citefight, ein Multiplayer-Ratespiel mit Tweets",
+  CycleLogVC: "Eine iOS-App, die Ihre 🚲-Touren per GPS aufzeichnet",
+  nightlive: "iOS-App, um Bars und Clubs zum Feiern zu finden",
+};
+
+const germanTags: Record<string, string> = {
+  Cycling: "Radfahren",
+};
+
+const germanEmployers: Record<string, string> = {
+  myself: "für mich",
+  "christmas party": "Weihnachtsfeier",
+};
 
 // titles are stored in lower case for the classic site – capitalize the first
 // word, unless it is a name with its own casing like "iOS"
@@ -23,30 +82,43 @@ function capitalize(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1);
 }
 
-const projects = privateProjects.map((project) => ({
-  ...project,
-  year: project.from.split(".")[1],
-  title: capitalize(project.title),
-  stack: project.stack.filter((item) => item !== ""),
-}));
+const projects = privateProjects.map((project) => {
+  const repo = project.repo.split("/").pop() ?? "";
+  return {
+    ...project,
+    year: project.from.split(".")[1],
+    title: {
+      en: capitalize(project.title),
+      de: germanTitles[repo] ?? capitalize(project.title),
+    },
+    employer: {
+      en: project.employer,
+      de: germanEmployers[project.employer] ?? project.employer,
+    },
+    stack: project.stack
+      .filter((item) => item !== "")
+      .map((item) => ({ en: item, de: germanTags[item] ?? item })),
+  };
+});
 
 export default function SideProjects() {
+  const lang = useLang();
+  const t = text[lang];
   return (
     <div className="min-h-screen">
-      <Header links={siteNav} />
+      <Header />
 
       <main>
         <PageHero
-          eyebrow="Side projects"
-          title="Built for fun,"
-          highlight="and to learn something new."
+          eyebrow={t.eyebrow}
+          title={t.title1}
+          highlight={t.highlight}
           cta={{
-            label: "See them on GitHub",
+            label: t.cta,
             href: "https://github.com/hannesschaletzky",
           }}
         >
-          Web apps, tools and experiments I built besides client work – some
-          serious, some just for a Christmas party.
+          {t.intro}
         </PageHero>
 
         <section className="bg-navy-lighter">
@@ -55,7 +127,7 @@ export default function SideProjects() {
               // on hover the card lifts, a teal line grows along the top edge
               // and the title lights up
               <article
-                key={project.title}
+                key={project.repo}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition duration-300 hover:border-teal/40 hover:bg-navy-light hover:shadow-2xl hover:shadow-black/30 motion-safe:hover:-translate-y-1"
               >
                 <span
@@ -63,18 +135,18 @@ export default function SideProjects() {
                   className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-teal transition-transform duration-500 group-hover:scale-x-100"
                 />
                 <p className="text-sm text-slate-400">
-                  {project.year} · {project.employer}
+                  {project.year} · {project.employer[lang]}
                 </p>
                 <h2 className="mt-2 text-lg font-bold leading-snug text-white transition-colors group-hover:text-teal-light">
-                  {project.title}
+                  {project.title[lang]}
                 </h2>
                 <ul className="mt-4 flex flex-1 flex-wrap content-start gap-2">
                   {project.stack.map((item) => (
                     <li
-                      key={item}
+                      key={item.en}
                       className="rounded-full bg-white/5 px-3 py-1 text-xs transition-colors group-hover:bg-white/10 group-hover:text-white"
                     >
-                      {item}
+                      {item[lang]}
                     </li>
                   ))}
                 </ul>
@@ -87,7 +159,7 @@ export default function SideProjects() {
                         rel="noreferrer"
                         className="text-teal hover:text-teal-light"
                       >
-                        Website →
+                        {t.website} →
                       </a>
                     )}
                     {project.repo !== "" && (
@@ -97,7 +169,7 @@ export default function SideProjects() {
                         rel="noreferrer"
                         className="text-teal hover:text-teal-light"
                       >
-                        Code →
+                        {t.code} →
                       </a>
                     )}
                   </div>

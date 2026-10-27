@@ -1,4 +1,5 @@
 import SectionHeading from "~/components/site/sectionHeading";
+import { localize, useLang } from "~/i18n";
 
 const stack = [
   "AWS ECS/Fargate",
@@ -18,10 +19,13 @@ const stack = [
 ];
 
 export default function StackSection() {
+  const lang = useLang();
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <SectionHeading eyebrow="Stack">The tech behind it.</SectionHeading>
+        <SectionHeading eyebrow="Stack">
+          {lang === "de" ? "Die Technik dahinter." : "The tech behind it."}
+        </SectionHeading>
         <ul className="flex flex-wrap gap-3">
           {stack.map((item) => (
             <li
@@ -33,10 +37,10 @@ export default function StackSection() {
           ))}
         </ul>
         <a
-          href="/stack"
+          href={localize("/stack", lang)}
           className="mt-8 inline-block text-teal hover:text-teal-light"
         >
-          Full stack →
+          {lang === "de" ? "Zum kompletten Stack" : "Full stack"} →
         </a>
       </div>
     </section>

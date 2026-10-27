@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
-import { siteNav } from "~/components/site/siteNav";
 
 // layout for the legal pages (German, as required for a German business)
 export default function LegalPage({
@@ -15,7 +14,7 @@ export default function LegalPage({
 }) {
   return (
     <div className="min-h-screen" lang="de">
-      <Header links={siteNav} />
+      <Header />
       <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
         <h1 className="text-4xl font-light text-white sm:text-5xl">{title}</h1>
         <p className="mt-3 text-sm text-slate-400">Stand: {updated}</p>

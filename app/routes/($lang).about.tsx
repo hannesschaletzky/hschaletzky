@@ -5,31 +5,92 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import Peak from "~/components/site/peak";
-import { siteNav } from "~/components/site/siteNav";
 import { pageMeta, personJsonLd } from "~/components/site/pageMeta";
+import { langFromParams, langLoader, useLang, type Lang } from "~/i18n";
 
-export const meta: MetaFunction = () => [
-  ...pageMeta({
+export const loader = langLoader;
+
+const text = {
+  de: {
+    title: "Über mich | Hannes Schaletzky, Software Engineer in Berlin",
+    description:
+      "Hannes Schaletzky – freiberuflicher Software Engineer in Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
+    hero: {
+      eyebrow: "Über mich",
+      title: "Hallo, ich bin Hannes –",
+      highlight: "schön, dass Sie hier sind.",
+      cta: "Kontakt aufnehmen",
+      text: "Im Beruf Engineer, im Herzen Coach. Ich erkläre verständlich, übernehme Verantwortung und bleibe auch nach dem Go-live an Bord.",
+    },
+    glance: "Auf einen Blick",
+    work: "So arbeite ich",
+    believe: "Woran ich glaube",
+    clock: "Abseits vom Code",
+    besides: "Außerdem: ",
+    since: "seit",
+    social: "Ehrenamt",
+  },
+  en: {
     title: "About me | Hannes Schaletzky, Software Engineer in Berlin",
     description:
       "Hannes Schaletzky – freelance software engineer in Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
-    path: "/about",
-  }),
-  personJsonLd,
-];
+    hero: {
+      eyebrow: "About me",
+      title: "Hi, I'm Hannes –",
+      highlight: "glad you're here.",
+      cta: "Get in touch",
+      text: "Engineer by trade, coach at heart. I explain things clearly, take ownership and stay around after go-live.",
+    },
+    glance: "At a glance",
+    work: "How I work",
+    believe: "What I believe",
+    clock: "Off the clock",
+    besides: "Besides that: ",
+    since: "since",
+    social: "Social work",
+  },
+};
 
-const facts = [
-  { label: "Freelance since", value: "2024" },
-  { label: "Experience", value: `${new Date().getFullYear() - 2019}+ years` },
-  {
-    label: "Education",
-    value: "B.Sc. business informatics, University of Augsburg",
-  },
-  {
-    label: "Languages",
-    value: "German (native), English (fluent), French (basic)",
-  },
-];
+export const meta: MetaFunction = ({ params }) => {
+  const lang = langFromParams(params);
+  return [
+    ...pageMeta({
+      title: text[lang].title,
+      description: text[lang].description,
+      path: "/about",
+      lang,
+    }),
+    personJsonLd,
+  ];
+};
+
+const facts = {
+  de: [
+    { label: "Freiberuflich seit", value: "2024" },
+    { label: "Erfahrung", value: `${new Date().getFullYear() - 2019}+ Jahre` },
+    {
+      label: "Ausbildung",
+      value: "B.Sc. Wirtschaftsinformatik, Universität Augsburg",
+    },
+    {
+      label: "Sprachen",
+      value:
+        "Deutsch (Muttersprache), Englisch (fließend), Französisch (Grundkenntnisse)",
+    },
+  ],
+  en: [
+    { label: "Freelance since", value: "2024" },
+    { label: "Experience", value: `${new Date().getFullYear() - 2019}+ years` },
+    {
+      label: "Education",
+      value: "B.Sc. business informatics, University of Augsburg",
+    },
+    {
+      label: "Languages",
+      value: "German (native), English (fluent), French (basic)",
+    },
+  ],
+};
 
 // icons from Lucide (ISC license): target, shield-check, eye
 const values = [
@@ -63,21 +124,30 @@ const values = [
   },
 ];
 
-const beliefs = [
-  "Honest communication is the best motivation.",
-  "Written async project and company updates are underrated.",
-];
+const beliefs = {
+  de: [
+    "Ehrlichkeit motiviert mehr als jedes Lob.",
+    "Gute schriftliche Updates sparen mehr Zeit als jedes Meeting.",
+  ],
+  en: [
+    "Honesty motivates more than any praise.",
+    "Good written updates save more time than any meeting.",
+  ],
+};
 
 const licenses = [
   {
-    title: "Ski instructor",
-    detail: "Austrian Landeslehrer 1",
+    title: { de: "Landesskilehrer", en: "Ski instructor" },
+    detail: {
+      de: "Österreich",
+      en: "Austrian Landeslehrer 1",
+    },
     since: "2019",
     icon: <Peak className="h-6 w-auto text-navy" />,
   },
   {
-    title: "Beach volleyball coach",
-    detail: "DOSB B-license",
+    title: { de: "Beachvolleyball-Trainer", en: "Beach volleyball coach" },
+    detail: { de: "DOSB B-Lizenz", en: "DOSB B-license" },
     since: "2023",
     icon: (
       <svg
@@ -101,33 +171,49 @@ const licenses = [
   },
 ];
 
-const interests = [
-  "Weight training",
-  "Cycling",
-  "Sustainability",
-  "Self-development",
-  "Nutrition",
-  "Private coding projects",
-];
+const interests = {
+  de: [
+    "Krafttraining",
+    "Radfahren",
+    "Nachhaltigkeit",
+    "Persönliche Weiterentwicklung",
+    "Ernährung",
+    "Private Coding-Projekte",
+  ],
+  en: [
+    "Weight training",
+    "Cycling",
+    "Sustainability",
+    "Self-development",
+    "Nutrition",
+    "Private coding projects",
+  ],
+};
 
 // newest first
 const social = [
   {
-    role: "Mentor in Berlin",
+    role: { de: "Mentor in Berlin", en: "Mentor in Berlin" },
     years: "2020–2021",
-    org: "Joblinge",
+    org: { de: "Joblinge", en: "Joblinge" },
     href: "https://www.joblinge.de/",
   },
   {
-    role: "Founding chairman",
+    role: { de: "Gründungsvorsitzender", en: "Founding chairman" },
     years: "2015–2017",
-    org: "WINitiative – student initiative",
+    org: {
+      de: "WINitiative – Studierendeninitiative",
+      en: "WINitiative – student initiative",
+    },
     href: "https://winitiative-augsburg.de/",
   },
   {
-    role: "Tutor for an American international student",
+    role: {
+      de: "Tutor für einen amerikanischen Austauschstudenten",
+      en: "Tutor for an American international student",
+    },
     years: "2015",
-    org: "Erasmus Student Network",
+    org: { de: "Erasmus Student Network", en: "Erasmus Student Network" },
     href: "https://esn.org/",
   },
 ];
@@ -149,17 +235,17 @@ function ExternalLink({
 }
 
 // hero + photo & facts – identical in every variant
-function AboutIntro() {
+function AboutIntro({ lang }: { lang: Lang }) {
+  const t = text[lang];
   return (
     <>
       <PageHero
-        eyebrow="About me"
-        title="Hi, I'm Hannes –"
-        highlight="nice to meet you."
-        cta={{ label: "Get in touch", href: "mailto:info@hschaletzky.com" }}
+        eyebrow={t.hero.eyebrow}
+        title={t.hero.title}
+        highlight={t.hero.highlight}
+        cta={{ label: t.hero.cta, href: "mailto:info@hschaletzky.com" }}
       >
-        Engineer by trade, coach at heart. I explain things clearly, take
-        ownership and stay around after go-live.
+        {t.hero.text}
       </PageHero>
       <section className="bg-navy-lighter">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-24 sm:px-6 md:grid-cols-[18rem_1fr]">
@@ -172,11 +258,11 @@ function AboutIntro() {
           />
           <div>
             <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              At a glance
+              {t.glance}
             </h2>
             {/* same rows as the lists further down */}
             <dl className="border-t border-white/10">
-              {facts.map((fact) => (
+              {facts[lang].map((fact) => (
                 <div
                   key={fact.label}
                   className="grid gap-1 border-b border-white/10 py-4 sm:grid-cols-[11rem_1fr] sm:items-baseline sm:gap-6"
@@ -196,17 +282,19 @@ function AboutIntro() {
 }
 
 export default function About() {
+  const lang = useLang();
+  const t = text[lang];
   return (
     <div className="min-h-screen">
-      <Header links={siteNav} />
+      <Header />
       <main>
-        <AboutIntro />
+        <AboutIntro lang={lang} />
 
         {/* how I work & beliefs */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
             <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              How I work
+              {t.work}
             </h2>
             <ul className="grid gap-10 sm:grid-cols-3 sm:gap-6">
               {values.map((value) => (
@@ -233,10 +321,10 @@ export default function About() {
             </ul>
             <div className="mt-16 rounded-3xl bg-navy-light p-8 sm:p-12">
               <h3 className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                What I believe
+                {t.believe}
               </h3>
               <ul className="grid gap-8 md:grid-cols-2 md:gap-12">
-                {beliefs.map((belief) => (
+                {beliefs[lang].map((belief) => (
                   <li key={belief} className="flex gap-4">
                     <span
                       aria-hidden="true"
@@ -258,19 +346,19 @@ export default function About() {
         <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
             <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              Off the clock
+              {t.clock}
             </h2>
             <div className="grid gap-10 md:grid-cols-2 md:gap-8">
               {licenses.map((license) => (
                 // a certificate: paper, double frame, ornament line and a seal
                 <div
-                  key={license.title}
+                  key={license.since}
                   className="rounded-xl bg-[#FBF8F1] p-2 text-navy shadow-2xl shadow-black/30"
                 >
                   <div className="relative h-full rounded-lg border-2 border-navy/20 p-1">
                     <div className="h-full rounded-md border border-navy/20 px-6 pb-10 pt-8 text-center sm:px-10">
                       <h3 className="font-serif text-3xl text-navy sm:text-4xl">
-                        {license.title}
+                        {license.title[lang]}
                       </h3>
                       <div
                         aria-hidden="true"
@@ -281,10 +369,10 @@ export default function About() {
                         <span className="h-px flex-1 bg-navy/20" />
                       </div>
                       <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy/70">
-                        {license.detail}
+                        {license.detail[lang]}
                       </p>
                       <p className="mt-1 text-sm text-navy/50">
-                        since {license.since}
+                        {t.since} {license.since}
                       </p>
                     </div>
                     {/* seal */}
@@ -298,13 +386,13 @@ export default function About() {
               ))}
             </div>
             <p className="mt-16 text-lg leading-relaxed">
-              <span className="text-slate-400">Besides that: </span>
-              {interests.map((interest, i) => (
+              <span className="text-slate-400">{t.besides}</span>
+              {interests[lang].map((interest, i, all) => (
                 <span key={interest}>
                   <span className="whitespace-nowrap text-white">
                     {interest}
                   </span>
-                  {i < interests.length - 1 ? (
+                  {i < all.length - 1 ? (
                     <span className="mx-2 text-teal">·</span>
                   ) : null}{" "}
                 </span>
@@ -317,21 +405,21 @@ export default function About() {
         <section>
           <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
             <h2 className="mb-10 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-              Social work
+              {t.social}
             </h2>
             <ul className="border-t border-white/10">
               {social.map((item) => (
-                <li key={item.org} className="border-b border-white/10">
+                <li key={item.href} className="border-b border-white/10">
                   <ExternalLink
                     href={item.href}
                     className="group flex items-center justify-between gap-6 py-6"
                   >
                     <span>
                       <span className="block text-xl font-bold text-white group-hover:text-teal-light sm:text-2xl">
-                        {item.org}
+                        {item.org[lang]}
                       </span>
                       <span className="mt-1 block text-slate-400">
-                        {item.role}
+                        {item.role[lang]}
                         {item.years ? ` · ${item.years}` : null}
                       </span>
                     </span>

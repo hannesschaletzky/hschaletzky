@@ -1,40 +1,65 @@
+import { localize, type Lang } from "~/i18n";
+
 // main links shown in the desktop header
-export const siteNav = [
-  { label: "Cloud & Integrations", href: "/cloud" },
-  { label: "Websites", href: "/websites" },
-  { label: "About", href: "/about" },
-];
+export function getSiteNav(lang: Lang) {
+  const labels =
+    lang === "de"
+      ? ["Cloud & Integrationen", "Websites", "Über mich"]
+      : ["Cloud & Integrations", "Websites", "About"];
+  return [
+    { label: labels[0], href: localize("/cloud", lang) },
+    { label: labels[1], href: localize("/websites", lang) },
+    { label: labels[2], href: localize("/about", lang) },
+  ];
+}
 
 // every page, grouped – used by the mobile menu and the footer
-export const siteMap = [
-  {
-    title: "Offers",
-    links: [
-      { label: "Cloud & Integrations", href: "/cloud" },
-      { label: "Websites", href: "/websites" },
-    ],
-  },
-  {
-    title: "About me",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Stack", href: "/stack" },
-      { label: "Side projects", href: "/side-projects" },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [
-      { label: "Contact", href: "/contact" },
-      { label: "info@hschaletzky.com", href: "mailto:info@hschaletzky.com" },
-    ],
-  },
-];
+export function getSiteMap(lang: Lang) {
+  const de = lang === "de";
+  return [
+    {
+      title: de ? "Angebote" : "Offers",
+      links: [
+        {
+          label: de ? "Cloud & Integrationen" : "Cloud & Integrations",
+          href: localize("/cloud", lang),
+        },
+        { label: "Websites", href: localize("/websites", lang) },
+      ],
+    },
+    {
+      title: de ? "Über mich" : "About me",
+      links: [
+        { label: de ? "Über mich" : "About", href: localize("/about", lang) },
+        { label: "Stack", href: localize("/stack", lang) },
+        {
+          label: de ? "Hobbyprojekte" : "Side projects",
+          href: localize("/side-projects", lang),
+        },
+      ],
+    },
+    {
+      title: de ? "Kontakt" : "Contact",
+      links: [
+        { label: de ? "Kontakt" : "Contact", href: localize("/contact", lang) },
+        { label: "info@hschaletzky.com", href: "mailto:info@hschaletzky.com" },
+      ],
+    },
+  ];
+}
 
 // intro calls – plain link, nothing from cal.com loads on this site
 export const calUrl = "https://cal.com/hannesschaletzky";
 
-export const legalLinks = [
-  { label: "Imprint", href: "/impressum" },
-  { label: "Data Privacy Policy", href: "/datenschutz" },
-];
+// the legal pages exist in German only
+export const legalPaths = ["/impressum", "/datenschutz"];
+
+export function getLegalLinks(lang: Lang) {
+  return [
+    { label: lang === "de" ? "Impressum" : "Imprint", href: "/impressum" },
+    {
+      label: lang === "de" ? "Datenschutz" : "Privacy policy",
+      href: "/datenschutz",
+    },
+  ];
+}

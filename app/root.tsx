@@ -12,7 +12,7 @@ import {
 } from "@remix-run/react";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
-import { siteNav } from "~/components/site/siteNav";
+import { localize, useLang } from "~/i18n";
 import styles from "~/tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -39,9 +39,16 @@ export const links: LinksFunction = () => [
   { rel: "manifest", href: "/site.webmanifest" },
 ];
 
-function Document({ title, children }: { title?: string; children: ReactNode }) {
+function Document({
+  title,
+  children,
+}: {
+  title?: string;
+  children: ReactNode;
+}) {
+  const lang = useLang();
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,28 +79,49 @@ export default function App() {
 export function ErrorBoundary() {
   const error = useRouteError();
   const notFound = isRouteErrorResponse(error) && error.status === 404;
+  const lang = useLang();
+  const text =
+    lang === "de"
+      ? {
+          title: notFound ? "Seite nicht gefunden" : "Fehler",
+          label: notFound ? "404" : "Fehler",
+          heading: notFound
+            ? "Diese Seite gibt es nicht."
+            : "Etwas ist schiefgelaufen.",
+          text: notFound
+            ? "Vielleicht ist sie umgezogen – die Website hat ein neues Design."
+            : "Bitte versuchen Sie es gleich noch einmal.",
+          back: "Zur Startseite",
+        }
+      : {
+          title: notFound ? "Page not found" : "Error",
+          label: notFound ? "404" : "Error",
+          heading: notFound
+            ? "This page doesn't exist."
+            : "Something went wrong.",
+          text: notFound
+            ? "Maybe it moved – the site has a new design."
+            : "Please try again in a moment.",
+          back: "Back to the start",
+        };
 
   return (
-    <Document title={notFound ? "Page not found | Hannes Schaletzky" : "Error | Hannes Schaletzky"}>
+    <Document title={`${text.title} | Hannes Schaletzky`}>
       <div className="flex min-h-screen flex-col">
-        <Header links={siteNav} />
+        <Header />
         <main className="mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center px-4 py-24 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-            {notFound ? "404" : "Error"}
+            {text.label}
           </p>
           <h1 className="mt-4 text-4xl font-light text-white sm:text-5xl">
-            {notFound ? "This page doesn't exist." : "Something went wrong."}
+            {text.heading}
           </h1>
-          <p className="mt-6 text-lg">
-            {notFound
-              ? "Maybe it moved – the site has a new design."
-              : "Please try again in a moment."}
-          </p>
+          <p className="mt-6 text-lg">{text.text}</p>
           <a
-            href="/"
+            href={localize("/", lang)}
             className="mt-10 rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
           >
-            Back to the start
+            {text.back}
           </a>
         </main>
         <Footer />

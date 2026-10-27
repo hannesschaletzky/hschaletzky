@@ -1,9 +1,11 @@
-import { legalLinks, siteMap } from "~/components/site/siteNav";
+import { getLegalLinks, getSiteMap } from "~/components/site/siteNav";
 import useSecretClicks from "~/components/useSecretClicks";
+import { useLang } from "~/i18n";
 
 export default function Footer() {
   // easter egg: click the footer logo three times to open the hand-built classic site
   const secret = useSecretClicks("/classic");
+  const lang = useLang();
 
   return (
     <footer className="border-t border-white/10">
@@ -32,7 +34,7 @@ export default function Footer() {
           </button>
         </div>
 
-        {siteMap.map((group) => (
+        {getSiteMap(lang).map((group) => (
           <nav key={group.title} aria-label={group.title}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
               {group.title}
@@ -71,7 +73,7 @@ export default function Footer() {
             >
               GitHub
             </a>
-            {legalLinks.map((link) => (
+            {getLegalLinks(lang).map((link) => (
               <a key={link.href} href={link.href} className="hover:text-white">
                 {link.label}
               </a>

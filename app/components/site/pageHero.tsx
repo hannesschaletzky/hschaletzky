@@ -18,7 +18,8 @@ export default function PageHero({
   return (
     <section
       // -mb-px: overlaps the next section so no dark hairline shows at fractional pixel ratios
-      className="relative -mb-px h-[42rem] overflow-hidden sm:h-[44rem]">
+      className="relative -mb-px h-[42rem] overflow-hidden sm:h-[44rem]"
+    >
       <Mountains heightClass="h-[28%] sm:h-[34%]" />
       <div className="relative mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6 sm:pt-24">
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-teal">

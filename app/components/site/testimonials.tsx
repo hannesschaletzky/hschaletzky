@@ -1,31 +1,30 @@
 import { logos } from "~/components/site/logos";
 import SectionHeading from "~/components/site/sectionHeading";
+import { useLang } from "~/i18n";
 
 // only quotes with permission to publish them
-// draft: shown in development only – remove the flag once the quote is approved
 const testimonials: {
-  quote: string;
+  quote: { de: string; en: string };
   name: string;
   role: string;
   href: string;
   logo: { src: string; width: number; height: number };
-  draft?: boolean;
 }[] = [
   {
-    quote:
-      "Hannes moved our app from Vercel to its own secure AWS environment. With a staging system and automated tests, we are now much better prepared to handle sensitive health care directive data.",
-    // original, for the German version:
-    // "Hannes hat unsere App von Vercel in eine eigene, sichere AWS-Umgebung überführt. Mit Staging-System und automatisierten Tests sind wir für den Umgang mit sensiblen Vorsorgedaten heute deutlich besser aufgestellt."
+    quote: {
+      de: "Hannes hat unsere App von Vercel in eine eigene, sichere AWS-Umgebung überführt. Mit Staging-System und automatisierten Tests sind wir für den Umgang mit sensiblen Vorsorgedaten heute deutlich besser aufgestellt.",
+      en: "Hannes moved our app from Vercel to its own secure AWS environment. With a staging system and automated tests, we are now much better prepared to handle sensitive health care directive data.",
+    },
     name: "Dr. Katharina Eller",
     role: "Co-Founder & CTO, tilde ventures GmbH",
     href: "https://www.linkedin.com/in/dr-katharina-eller-a20988101/",
     logo: logos.tilde,
   },
   {
-    quote:
-      "Hannes built our integration platform on his own and still looks after it today. It processes hundreds of integrations every week on real customer data – reliably, and without us having to worry about it.",
-    // original, for the German version:
-    // "Hannes hat unsere Integrationsplattform eigenständig aufgebaut und betreut sie bis heute. Sie verarbeitet jede Woche Hunderte Integrationen auf echten Kundendaten – zuverlässig und ohne dass wir uns darum Sorgen machen müssen."
+    quote: {
+      de: "Unsere Integrationsplattform wurde von Hannes eigenständig aufgebaut und wird bis heute von ihm betreut. Sie verarbeitet jede Woche Hunderte Integrationen auf echten Kundendaten – zuverlässig und ohne dass wir uns darum Sorgen machen müssen.",
+      en: "Hannes built our integration platform on his own and still looks after it today. It processes hundreds of integrations every week on real customer data – reliably, and without us having to worry about it.",
+    },
     name: "Tien Hào Vu",
     role: "Head of Service & Management Consulting, blu Systems GmbH",
     href: "https://www.linkedin.com/in/tien-h%C3%A0o-vu-89a447122/",
@@ -33,26 +32,24 @@ const testimonials: {
   },
 ];
 
-const visible = testimonials.filter(
-  (testimonial) => !testimonial.draft || process.env.NODE_ENV === "development"
-);
-
 // stacked rows without boxes – who on the left, the quote on the right
 export default function Testimonials({
   className = "",
 }: {
   className?: string;
 }) {
-  if (visible.length === 0) return null;
+  const lang = useLang();
 
   return (
     <section aria-labelledby="testimonials" className={className}>
       <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
-        <SectionHeading eyebrow="Kind words">
-          <span id="testimonials">What clients say.</span>
+        <SectionHeading eyebrow={lang === "de" ? "Stimmen" : "Kind words"}>
+          <span id="testimonials">
+            {lang === "de" ? "Was Kunden sagen." : "What clients say."}
+          </span>
         </SectionHeading>
         <div className="divide-y divide-white/10 border-y border-white/10">
-          {visible.map((testimonial) => (
+          {testimonials.map((testimonial) => (
             <figure
               key={testimonial.name}
               className="grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12"
@@ -87,7 +84,9 @@ export default function Testimonials({
                 </a>
               </figcaption>
               <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
-                “{testimonial.quote}”
+                {lang === "de" ? "„" : "“"}
+                {testimonial.quote[lang]}
+                {lang === "de" ? "“" : "”"}
               </blockquote>
             </figure>
           ))}
