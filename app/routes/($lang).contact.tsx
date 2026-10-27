@@ -14,7 +14,7 @@ const text = {
   de: {
     title: "Kontakt | Hannes Schaletzky",
     description:
-      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer in Berlin – per E-Mail, auf LinkedIn oder in einem Erstgespräch.",
+      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin – per E-Mail, auf LinkedIn oder in einem Erstgespräch.",
     eyebrow: "Kontakt",
     title1: "Lassen Sie uns",
     highlight: "über Ihr Projekt sprechen.",
@@ -51,7 +51,7 @@ const text = {
   en: {
     title: "Contact | Hannes Schaletzky",
     description:
-      "Contact Hannes Schaletzky, freelance software engineer in Berlin – by email, on LinkedIn or in an intro call.",
+      "Contact Hannes Schaletzky, freelance software engineer from Berlin – by email, on LinkedIn or in an intro call.",
     eyebrow: "Contact",
     title1: "Let's talk",
     highlight: "about your project.",

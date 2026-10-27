@@ -12,9 +12,9 @@ export const loader = langLoader;
 
 const text = {
   de: {
-    title: "Über mich | Hannes Schaletzky, Software Engineer in Berlin",
+    title: "Über mich | Hannes Schaletzky, Software Engineer",
     description:
-      "Hannes Schaletzky – freiberuflicher Software Engineer in Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
+      "Hannes Schaletzky – freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
     hero: {
       eyebrow: "Über mich",
       title: "Hallo, ich bin Hannes –",
@@ -31,9 +31,9 @@ const text = {
     social: "Ehrenamt",
   },
   en: {
-    title: "About me | Hannes Schaletzky, Software Engineer in Berlin",
+    title: "About me | Hannes Schaletzky, Software Engineer",
     description:
-      "Hannes Schaletzky – freelance software engineer in Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
+      "Hannes Schaletzky – freelance software engineer from Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
     hero: {
       eyebrow: "About me",
       title: "Hi, I'm Hannes –",

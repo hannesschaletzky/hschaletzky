@@ -20,9 +20,9 @@ const projectMail = {
 
 const text = {
   de: {
-    title: "Integration & Cloud Engineer in Berlin | Hannes Schaletzky",
+    title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freiberuflicher Integration & Cloud Engineer in Berlin – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS, vom Projekt-Kickoff bis zum Betrieb.",
+      "Freiberuflicher Integration & Cloud Engineer aus Berlin, deutschlandweit remote oder vor Ort – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
     hero: {
       eyebrow: "Für Unternehmen",
       title: "Cloud & Integrationen,",
@@ -126,9 +126,9 @@ const text = {
     ],
   },
   en: {
-    title: "Integration & Cloud Engineer in Berlin | Hannes Schaletzky",
+    title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freelance integration & cloud engineer in Berlin – backend and integration solutions with Node.js/TypeScript and AWS, from project kickoff to production.",
+      "Freelance integration & cloud engineer from Berlin, remote across Germany or on-site – backend and integration solutions with Node.js/TypeScript and AWS.",
     hero: {
       eyebrow: "For companies",
       title: "Cloud & integrations",

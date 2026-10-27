@@ -15,24 +15,24 @@ export const loader = langLoader;
 
 const text = {
   de: {
-    title: "Hannes Schaletzky | Freelance Software Engineer in Berlin",
+    title: "Hannes Schaletzky | Freelance Software Engineer",
     description:
-      "Software Engineer in Berlin: Integrations- und Cloud-Lösungen mit Node.js/TypeScript und AWS – dazu Websites und Hosting für kleine Unternehmen und Vereine.",
-    heading: "Zuverlässige Software,",
-    highlight: "von Anfang an.",
+      "Software Engineer aus Berlin, deutschlandweit remote oder vor Ort: Cloud- und Integrationslösungen mit Node.js/TypeScript und AWS – dazu Websites und Hosting.",
+    heading: "Cloud, Integrationen &\u00a0Websites –",
+    highlight: "die zuverlässig laufen.",
     intro:
-      "Ich bin Hannes, freiberuflicher Software Engineer in Berlin – für Cloud-Plattformen und Websites.",
+      "Ich bin Hannes, freiberuflicher Software Engineer. Vom ersten Konzept bis zum laufenden Betrieb – alles aus einer Hand.",
     contact: "Kontakt aufnehmen",
     offers: "Was ich mache",
   },
   en: {
-    title: "Hannes Schaletzky | Freelance Software Engineer in Berlin",
+    title: "Hannes Schaletzky | Freelance Software Engineer",
     description:
-      "Software engineer in Berlin: integration and cloud solutions with Node.js/TypeScript and AWS – plus websites and hosting for small businesses and clubs.",
-    heading: "Reliable software,",
-    highlight: "right from the start.",
+      "Software engineer from Berlin, remote across Germany or on-site: cloud and integration solutions with Node.js/TypeScript and AWS – plus websites and hosting.",
+    heading: "Cloud, integrations &\u00a0websites –",
+    highlight: "that just keep running.",
     intro:
-      "I'm Hannes, a freelance software engineer in Berlin – for cloud platforms and websites.",
+      "I'm Hannes, a freelance software engineer. From the first concept to day-to-day operation – all from one person.",
     contact: "Get in touch",
     offers: "See what I do",
   },
@@ -59,9 +59,11 @@ export default function Index() {
       <Header />
 
       <main>
-        {/* hero – -mb-px: overlaps the next section so no dark hairline shows */}
-        <section className="relative -mb-px h-[56rem] overflow-hidden sm:h-[60rem]">
-          <Mountains heightClass="h-[35%] sm:h-[42%]" />
+        {/* hero – the height follows the text, the bottom padding keeps room for the
+            mountains (slightly taller than them, so the peak never touches the
+            buttons); -mb-px overlaps the next section so no dark hairline shows */}
+        <section className="relative -mb-px overflow-hidden pb-[20.5rem] sm:pb-[26.5rem]">
+          <Mountains heightClass="h-[19rem] sm:h-[25rem]" />
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}
             <img
