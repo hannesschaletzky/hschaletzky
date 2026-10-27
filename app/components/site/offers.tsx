@@ -69,14 +69,16 @@ export default function Offers() {
         </SectionHeading>
         <div className="grid gap-6 md:grid-cols-2">
           {offers[lang].map((offer) => (
+            // the whole card is clickable: the link's ::after covers the card, so
+            // screen readers still announce just the one link
             <article
               key={offer.title}
-              className="flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8 transition hover:border-teal/40"
+              className="group relative flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8 transition hover:border-teal/40 has-[a:focus-visible]:border-teal"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                 {offer.eyebrow}
               </p>
-              <h3 className="mt-3 text-2xl font-bold text-white">
+              <h3 className="mt-3 text-2xl font-bold text-white transition-colors group-hover:text-teal-light">
                 {offer.title}
               </h3>
               <ul className="mt-6 flex-1 space-y-2">
@@ -89,9 +91,15 @@ export default function Offers() {
               </ul>
               <a
                 href={localize(offer.href, lang)}
-                className="mt-8 font-semibold text-teal hover:text-teal-light"
+                className="mt-8 font-semibold text-teal after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus:outline-none group-hover:text-teal-light"
               >
-                {offer.cta} →
+                {offer.cta}{" "}
+                <span
+                  aria-hidden="true"
+                  className="inline-block transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </a>
             </article>
           ))}
