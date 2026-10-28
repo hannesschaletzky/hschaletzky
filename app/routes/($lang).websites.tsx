@@ -14,7 +14,7 @@ const text = {
   de: {
     title: "Websites für kleine Unternehmen & Vereine | Hannes Schaletzky",
     description:
-      "Website-Check-up ab 150 €, neue Websites ab 990 €, Hosting ab 49 € im Monat – persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
+      "Website-Check-up ab 250 €, neue Websites ab 990 €, Hosting ab 49 € im Monat – persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
     mail: "mailto:info@hschaletzky.com?subject=Website-Anfrage",
     hero: {
       eyebrow: "Für kleine Unternehmen & Vereine",
@@ -28,8 +28,8 @@ const text = {
     offers: [
       {
         title: "Website-Check-up",
-        price: "ab 150 €",
-        text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit und Auffindbarkeit – und sage Ihnen verständlich, was Sie verbessern sollten. Der Preis hängt vom Umfang ab, z. B. Anzahl der Seiten, Sprachen oder Shop.",
+        price: "ab 250 €",
+        text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Der Preis hängt vom Umfang ab, z. B. Anzahl der Seiten, Sprachen oder Shop.",
       },
       {
         title: "Website-Erstellung",
@@ -94,7 +94,7 @@ const text = {
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Website check-up from 150 €, new websites from 990 €, hosting from 49 € a month – personal and fair, for self-employed people, small businesses and clubs.",
+      "Website check-up from 250 €, new websites from 990 €, hosting from 49 € a month – personal and fair, for self-employed people, small businesses and clubs.",
     mail: "mailto:info@hschaletzky.com?subject=Website%20inquiry",
     hero: {
       eyebrow: "For small businesses & clubs",
@@ -108,8 +108,8 @@ const text = {
     offers: [
       {
         title: "Website check-up",
-        price: "from 150 €",
-        text: "I check your existing website for technology, security and how well it can be found – and tell you in plain words what to improve. The price depends on the scope, e.g. number of pages, languages or a shop.",
+        price: "from 250 €",
+        text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. The price depends on the scope, e.g. number of pages, languages or a shop.",
       },
       {
         title: "Website creation",

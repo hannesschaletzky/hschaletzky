@@ -109,7 +109,7 @@ export const businessJsonLd = (lang: Lang) => ({
         ),
         offer(
           lang === "de" ? "Website-Check-up" : "Website check-up",
-          150,
+          250,
           true
         ),
         offer(
