@@ -30,7 +30,7 @@ const text = {
       cta: "Über Ihr Projekt sprechen",
       text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS – von der Architektur über sauberen Code bis zum sicheren Betrieb.",
     },
-    servicesEyebrow: "Was ich mache",
+    servicesEyebrow: "Leistungen",
     servicesHeading: "Was ich übernehme.",
     services: [
       {
@@ -136,7 +136,7 @@ const text = {
       cta: "Talk about your project",
       text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS – from architecture and clean code to secure production operation.",
     },
-    servicesEyebrow: "What I do",
+    servicesEyebrow: "Services",
     servicesHeading: "What I take on.",
     services: [
       {
