@@ -31,7 +31,7 @@ const text = {
       text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS – von der Architektur über sauberen Code bis zum sicheren Betrieb.",
     },
     servicesEyebrow: "Was ich mache",
-    servicesHeading: "Von der ersten Codezeile bis zum Betrieb.",
+    servicesHeading: "Was ich übernehme.",
     services: [
       {
         title: "Backend-Entwicklung",
@@ -59,7 +59,7 @@ const text = {
       },
     ],
     offersEyebrow: "Angebote",
-    offersHeading: "Klein anfangen oder direkt loslegen.",
+    offersHeading: "Zwei Wege zum Start.",
     offers: [
       {
         eyebrow: "Ein guter erster Schritt",
@@ -83,7 +83,7 @@ const text = {
       },
     ],
     stepsEyebrow: "So arbeite ich",
-    stepsHeading: "End-to-End – von der ersten Analyse bis zur Übergabe.",
+    stepsHeading: "Von der Analyse zur Übergabe.",
     steps: [
       {
         title: "Verstehen",
@@ -137,7 +137,7 @@ const text = {
       text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS – from architecture and clean code to secure production operation.",
     },
     servicesEyebrow: "What I do",
-    servicesHeading: "From the first line of code to operation.",
+    servicesHeading: "What I take on.",
     services: [
       {
         title: "Backend engineering",
@@ -165,7 +165,7 @@ const text = {
       },
     ],
     offersEyebrow: "Offers",
-    offersHeading: "Start small or start building.",
+    offersHeading: "Two ways to start.",
     offers: [
       {
         eyebrow: "A good first step",
@@ -189,7 +189,7 @@ const text = {
       },
     ],
     stepsEyebrow: "How I work",
-    stepsHeading: "End to end – from the first analysis to the handover.",
+    stepsHeading: "From analysis to handover.",
     steps: [
       {
         title: "Understand",
