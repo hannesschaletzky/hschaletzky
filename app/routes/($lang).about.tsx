@@ -19,9 +19,9 @@ const text = {
     hero: {
       eyebrow: "Über mich",
       title: "Hallo, ich bin Hannes –",
-      highlight: "im Beruf Engineer, im\u00a0Herzen\u00a0Coach.",
+      highlight: "Software Engineer\u00a0&\u00a0Coach.",
       cta: "Kontakt aufnehmen",
-      text: "Was ich als Skilehrer gelernt habe, hilft mir auch im Projekt: zuhören, verständlich erklären und dranbleiben, bis es sitzt.",
+      text: "Was gutes Coaching ausmacht, gilt auch für Software: zuhören, erklären, dranbleiben, bis\u00a0es\u00a0sitzt.",
     },
     glance: "Auf einen Blick",
     work: "So arbeite ich",
@@ -44,9 +44,9 @@ const text = {
     hero: {
       eyebrow: "About me",
       title: "Hi, I'm Hannes –",
-      highlight: "engineer by trade, coach\u00a0at\u00a0heart.",
+      highlight: "software engineer\u00a0&\u00a0coach.",
       cta: "Get in touch",
-      text: "What I learned as a ski instructor helps me in projects too: listen, explain things clearly and keep at it until it clicks.",
+      text: "What makes good coaching also applies to software: listen, explain, keep at it until\u00a0it\u00a0clicks.",
     },
     glance: "At a glance",
     work: "How I work",
