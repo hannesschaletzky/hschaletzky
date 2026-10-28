@@ -29,7 +29,7 @@ const text = {
       {
         title: "Website-Check-up",
         price: "ab 250 €",
-        text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Der Preis hängt vom Umfang ab, z. B. Anzahl der Seiten, Sprachen oder Shop.",
+        text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Teurer wird es nur bei sehr komplexen Websites – und dann sage ich Ihnen das vorher.",
       },
       {
         title: "Website-Erstellung",
@@ -109,7 +109,7 @@ const text = {
       {
         title: "Website check-up",
         price: "from 250 €",
-        text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. The price depends on the scope, e.g. number of pages, languages or a shop.",
+        text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. It only costs more for very complex websites – and I'll tell you beforehand.",
       },
       {
         title: "Website creation",
