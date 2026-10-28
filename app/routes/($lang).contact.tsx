@@ -20,7 +20,7 @@ const text = {
     highlight: "über Ihr Projekt sprechen.",
     cta: "E-Mail schreiben",
     intro:
-      "Ob Cloud-Plattform oder Vereinswebsite – schreiben Sie mir, ich melde mich bei Ihnen.",
+      "Ich antworte auf jede Nachricht, meist innerhalb eines Werktags. Ich freue mich auf Sie.",
     channels: [
       {
         title: "E-Mail",
@@ -57,7 +57,7 @@ const text = {
     highlight: "about your project.",
     cta: "Write me",
     intro:
-      "Whether it's a cloud platform or your club's website – drop me a line and I'll get back to you.",
+      "I reply to every message, usually within one working day. I look forward to hearing from you.",
     channels: [
       {
         title: "Mail",
