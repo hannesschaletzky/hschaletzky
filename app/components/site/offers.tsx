@@ -61,7 +61,7 @@ export default function Offers() {
   const lang = useLang();
   return (
     <section id="offers" className="scroll-mt-20">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading eyebrow={lang === "de" ? "Angebote" : "Offers"}>
           {lang === "de" ? "Womit ich helfen kann." : "How I can help."}
         </SectionHeading>

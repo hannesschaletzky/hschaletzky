@@ -122,7 +122,7 @@ export default function SideProjects() {
         </PageHero>
 
         <section className="bg-navy-lighter">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-24 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               // on hover the card lifts, a teal line grows along the top edge
               // and the title lights up
@@ -179,7 +179,7 @@ export default function SideProjects() {
           </div>
         </section>
 
-        <div className="pt-24">
+        <div className="pt-16 sm:pt-24">
           <ContactBox />
         </div>
       </main>

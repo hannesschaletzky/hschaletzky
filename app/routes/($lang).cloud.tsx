@@ -270,7 +270,7 @@ export default function Cloud() {
 
         {/* services */}
         <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.servicesEyebrow}>
               {t.servicesHeading}
             </SectionHeading>
@@ -292,7 +292,7 @@ export default function Cloud() {
 
         {/* offers: small entry and the main project work */}
         <section>
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}
             </SectionHeading>
@@ -339,7 +339,7 @@ export default function Cloud() {
 
         {/* approach */}
         <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.stepsEyebrow}>
               {t.stepsHeading}
             </SectionHeading>
@@ -349,7 +349,7 @@ export default function Cloud() {
 
         {/* selected work */}
         <section>
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.workEyebrow}>
               {t.workHeading}
             </SectionHeading>

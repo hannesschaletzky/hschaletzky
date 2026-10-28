@@ -218,7 +218,7 @@ export default function Websites() {
 
         {/* offers */}
         <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}
             </SectionHeading>
@@ -247,7 +247,7 @@ export default function Websites() {
 
         {/* process */}
         <section>
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.stepsEyebrow}>
               {t.stepsHeading}
             </SectionHeading>
@@ -257,7 +257,7 @@ export default function Websites() {
 
         {/* reference */}
         <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.referencesEyebrow}>
               {t.referencesHeading}
             </SectionHeading>
@@ -293,7 +293,7 @@ export default function Websites() {
 
         {/* faq */}
         <section>
-          <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow="FAQ">{t.faqHeading}</SectionHeading>
             <div className="divide-y divide-white/10 border-y border-white/10">
               {t.faqs.map((faq) => (

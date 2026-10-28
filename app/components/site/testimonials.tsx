@@ -42,7 +42,7 @@ export default function Testimonials({
 
   return (
     <section aria-labelledby="testimonials" className={className}>
-      <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading eyebrow={lang === "de" ? "Stimmen" : "Kind words"}>
           <span id="testimonials">
             {lang === "de" ? "Was Kunden sagen." : "What clients say."}

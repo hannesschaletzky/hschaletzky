@@ -22,7 +22,9 @@ export default function StackSection() {
   const lang = useLang();
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+      {/* no top padding: on both pages it follows a section in the same colour, whose
+          bottom padding already makes the gap */}
+      <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-24">
         <SectionHeading eyebrow="Stack">
           {lang === "de" ? "Die Technik dahinter." : "The tech behind it."}
         </SectionHeading>

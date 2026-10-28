@@ -135,7 +135,7 @@ export default function Stack() {
         </PageHero>
 
         <section className="bg-navy-lighter">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-24 sm:px-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-2">
             {groups.map((group) => (
               <div
                 key={group.title.en}
@@ -163,7 +163,7 @@ export default function Stack() {
           </div>
         </section>
 
-        <div className="pt-24">
+        <div className="pt-16 sm:pt-24">
           <ContactBox />
         </div>
       </main>

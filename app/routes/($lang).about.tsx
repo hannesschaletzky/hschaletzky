@@ -261,7 +261,7 @@ function AboutIntro({ lang }: { lang: Lang }) {
         {t.hero.text}
       </PageHero>
       <section className="bg-navy-lighter">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-24 sm:px-6 md:grid-cols-[18rem_1fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-[18rem_1fr]">
           <img
             src="/hannes.jpg"
             width={512}
@@ -305,7 +305,7 @@ export default function About() {
 
         {/* how I work & beliefs */}
         <section>
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.work}>
               {t.headings.work}
             </SectionHeading>
@@ -357,7 +357,7 @@ export default function About() {
 
         {/* licenses as certificates */}
         <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.clock}>
               {t.headings.clock}
             </SectionHeading>
@@ -416,7 +416,7 @@ export default function About() {
 
         {/* giving back – same rows as the values */}
         <section>
-          <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.social}>
               {t.headings.social}
             </SectionHeading>
