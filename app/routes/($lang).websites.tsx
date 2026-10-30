@@ -30,6 +30,10 @@ const text = {
         title: "Website-Check-up",
         price: "ab 250 €",
         text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Teurer wird es nur bei sehr komplexen Websites – und dann sage ich Ihnen das vorher.",
+        link: {
+          label: "Beispielbericht ansehen (PDF)",
+          href: "/website-check-up-beispiel.pdf",
+        },
       },
       {
         title: "Website-Erstellung",
@@ -110,6 +114,10 @@ const text = {
         title: "Website check-up",
         price: "from 250 €",
         text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. It only costs more for very complex websites – and I'll tell you beforehand.",
+        link: {
+          label: "View a sample report (PDF, German)",
+          href: "/website-check-up-beispiel.pdf",
+        },
       },
       {
         title: "Website creation",
@@ -237,6 +245,22 @@ export default function Websites() {
                     </p>
                   </div>
                   <p className="mt-3 leading-relaxed">{offer.text}</p>
+                  {offer.link && (
+                    <a
+                      href={offer.link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group mt-4 font-semibold text-teal hover:text-teal-light"
+                    >
+                      {offer.link.label}{" "}
+                      <span
+                        aria-hidden="true"
+                        className="inline-block transition-transform group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
