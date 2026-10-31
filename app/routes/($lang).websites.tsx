@@ -50,6 +50,10 @@ const text = {
             label: "Beispiel: Sportverein",
             href: "https://sv-musterstadt.hschaletzky.com/",
           },
+          {
+            label: "Beispiel: Physiotherapie",
+            href: "https://physio-musterfrau.hschaletzky.com/",
+          },
         ],
       },
       {
@@ -145,6 +149,10 @@ const text = {
           {
             label: "Example: sports club (German)",
             href: "https://sv-musterstadt.hschaletzky.com/",
+          },
+          {
+            label: "Example: physiotherapy (German)",
+            href: "https://physio-musterfrau.hschaletzky.com/",
           },
         ],
       },
