@@ -30,15 +30,27 @@ const text = {
         title: "Website-Check-up",
         price: "ab 250 €",
         text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Teurer wird es nur bei sehr komplexen Websites – und dann sage ich Ihnen das vorher.",
-        link: {
-          label: "Beispielbericht ansehen (PDF)",
-          href: "/website-check-up-beispiel.pdf",
-        },
+        links: [
+          {
+            label: "Beispielbericht ansehen (PDF)",
+            href: "/website-check-up-beispiel.pdf",
+          },
+        ],
       },
       {
         title: "Website-Erstellung",
         price: "ab 990 €",
         text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Enthalten sind bis zu 5 Seiten in einer Sprache, Impressum und Datenschutzerklärung – größere Websites, Shops oder weitere Sprachen nach Aufwand.",
+        links: [
+          {
+            label: "Beispiel: Tischlerei",
+            href: "https://tischlerei-mustermann.hschaletzky.com/",
+          },
+          {
+            label: "Beispiel: Sportverein",
+            href: "https://sv-musterstadt.hschaletzky.com/",
+          },
+        ],
       },
       {
         title: "Hosting & Wartung",
@@ -114,15 +126,27 @@ const text = {
         title: "Website check-up",
         price: "from 250 €",
         text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. It only costs more for very complex websites – and I'll tell you beforehand.",
-        link: {
-          label: "View a sample report (PDF, German)",
-          href: "/website-check-up-beispiel.pdf",
-        },
+        links: [
+          {
+            label: "View a sample report (PDF, German)",
+            href: "/website-check-up-beispiel.pdf",
+          },
+        ],
       },
       {
         title: "Website creation",
         price: "from 990 €",
         text: "A modern, fast website that looks good on every device and that you can understand. Includes up to 5 pages in one language, imprint and privacy policy – bigger sites, shops or more languages depending on the effort.",
+        links: [
+          {
+            label: "Example: carpentry (German)",
+            href: "https://tischlerei-mustermann.hschaletzky.com/",
+          },
+          {
+            label: "Example: sports club (German)",
+            href: "https://sv-musterstadt.hschaletzky.com/",
+          },
+        ],
       },
       {
         title: "Hosting & maintenance",
@@ -245,21 +269,26 @@ export default function Websites() {
                     </p>
                   </div>
                   <p className="mt-3 leading-relaxed">{offer.text}</p>
-                  {offer.link && (
-                    <a
-                      href={offer.link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group mt-4 font-semibold text-teal hover:text-teal-light"
-                    >
-                      {offer.link.label}{" "}
-                      <span
-                        aria-hidden="true"
-                        className="inline-block transition-transform group-hover:translate-x-1"
-                      >
-                        →
-                      </span>
-                    </a>
+                  {offer.links && (
+                    <div className="mt-4 flex flex-col items-start gap-2">
+                      {offer.links.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="group font-semibold text-teal hover:text-teal-light"
+                        >
+                          {link.label}{" "}
+                          <span
+                            aria-hidden="true"
+                            className="inline-block transition-transform group-hover:translate-x-1"
+                          >
+                            →
+                          </span>
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
