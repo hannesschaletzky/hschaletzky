@@ -22,7 +22,7 @@ const text = {
   de: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freiberuflicher Integration & Cloud Engineer aus Berlin, deutschlandweit remote oder vor Ort – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
+      "Freiberuflicher Integration & Cloud Engineer aus Berlin, im DACH-Raum remote oder vor Ort – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
     hero: {
       eyebrow: "Für Unternehmen",
       title: "Cloud & Integrationen –",
@@ -128,7 +128,7 @@ const text = {
   en: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freelance integration & cloud engineer from Berlin, remote across Germany or on-site – backend and integration solutions with Node.js/TypeScript and AWS.",
+      "Freelance integration & cloud engineer from Berlin, remote or on-site across Germany, Austria and Switzerland – backend and integration solutions with Node.js/TypeScript and AWS.",
     hero: {
       eyebrow: "For companies",
       title: "Cloud & integrations –",
