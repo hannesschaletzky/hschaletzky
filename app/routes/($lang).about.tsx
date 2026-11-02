@@ -151,16 +151,20 @@ const beliefs = {
 const licenses = [
   {
     title: { de: "Skilehrer", en: "Ski instructor" },
-    detail: {
-      de: "Landeslehrer 1, Österreich",
-      en: "Austrian Landeslehrer 1",
-    },
+    // one line per qualification, as in the CV
+    details: [
+      { de: "Anwärter · Tirol, 2018", en: "Anwärter · Tyrol, 2018" },
+      {
+        de: "Landeslehrer 1 · Salzburg, 2025",
+        en: "Landeslehrer 1 · Salzburg, 2025",
+      },
+    ],
     since: "2019",
     icon: <Peak className="h-6 w-auto text-navy" />,
   },
   {
     title: { de: "Beachvolleyball-Trainer", en: "Beach volleyball coach" },
-    detail: { de: "DOSB B-Lizenz", en: "DOSB B-license" },
+    details: [{ de: "DOSB B-Lizenz · 2026", en: "DOSB B-license · 2026" }],
     since: "2023",
     icon: (
       <svg
@@ -306,9 +310,7 @@ export default function About() {
         {/* how I work & beliefs */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.work}>
-              {t.headings.work}
-            </SectionHeading>
+            <SectionHeading eyebrow={t.work}>{t.headings.work}</SectionHeading>
             <ul className="grid gap-10 sm:grid-cols-3 sm:gap-6">
               {values.map((value) => (
                 <li key={value.title}>
@@ -373,6 +375,9 @@ export default function About() {
                       <h3 className="font-serif text-3xl text-navy sm:text-4xl">
                         {license.title[lang]}
                       </h3>
+                      <p className="mt-1 text-sm text-navy/50">
+                        {t.since} {license.since}
+                      </p>
                       <div
                         aria-hidden="true"
                         className="mx-auto mt-4 flex max-w-48 items-center gap-3 text-teal"
@@ -381,12 +386,11 @@ export default function About() {
                         <span className="text-sm">✦</span>
                         <span className="h-px flex-1 bg-navy/20" />
                       </div>
-                      <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy/70">
-                        {license.detail[lang]}
-                      </p>
-                      <p className="mt-1 text-sm text-navy/50">
-                        {t.since} {license.since}
-                      </p>
+                      <ul className="mt-4 space-y-1 text-sm font-semibold uppercase tracking-[0.12em] text-navy/70 sm:tracking-[0.2em]">
+                        {license.details.map((detail) => (
+                          <li key={detail.en}>{detail[lang]}</li>
+                        ))}
+                      </ul>
                     </div>
                     {/* seal */}
                     <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-[#FBF8F1]">
