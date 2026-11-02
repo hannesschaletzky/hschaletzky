@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import type { ReactNode } from "react";
 import ContactIcons from "~/components/classic/contactIcons";
 import Section from "~/components/classic/section";

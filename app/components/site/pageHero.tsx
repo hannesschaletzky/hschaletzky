@@ -21,14 +21,14 @@ export default function PageHero({
       // (slightly taller than them, so the peak never touches the button);
       // -mb-px overlaps the next section so no dark hairline shows at fractional
       // pixel ratios
-      className="relative -mb-px overflow-hidden pb-[14rem] sm:pb-[max(17rem,calc(100vw/5.5+2rem))]"
+      className="relative -mb-px overflow-hidden pb-56 sm:pb-[max(17rem,calc(100vw/5.5+2rem))]"
     >
-      <Mountains heightClass="h-[12rem] sm:h-[15rem]" />
+      <Mountains heightClass="h-48 sm:h-60" />
       <div className="relative mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6 sm:pt-24">
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
           {eyebrow}
         </p>
-        <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl">
+        <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl sm:leading-none">
           {title}
           <br />
           <span className="font-semibold text-teal">{highlight}</span>

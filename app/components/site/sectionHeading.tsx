@@ -12,7 +12,7 @@ export default function SectionHeading({
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
+      <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-10">
         {children}
       </h2>
     </div>

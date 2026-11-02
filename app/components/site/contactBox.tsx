@@ -10,7 +10,7 @@ export default function ContactBox() {
     <section id="contact" className="scroll-mt-20 px-4 pb-16 sm:px-6 sm:pb-24">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-teal px-8 py-16 text-navy sm:px-16">
         <Peak className="pointer-events-none absolute -bottom-16 -right-10 h-72 w-auto text-navy/10" />
-        <h2 className="relative max-w-xl text-3xl font-bold leading-tight sm:text-4xl">
+        <h2 className="relative max-w-xl text-3xl font-bold leading-tight sm:text-4xl sm:leading-10">
           {de
             ? "Lassen Sie uns über Ihr Projekt sprechen."
             : "Let's talk about your project."}

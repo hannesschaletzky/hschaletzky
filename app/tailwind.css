@@ -1,6 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --rotate--30: -30deg;
+
+  --width-14\/7: 200%;
+
+  --z-index--10: -10;
+
+  --height-150px: 150px;
+
+  --font-roboto: 'Roboto Mono', sans-serif;
+  /* quoted, an unquoted name with a digit ("3") is invalid CSS */
+  --font-brand: 'Source Sans 3', system-ui, sans-serif;
+
+  /* easter egg feedback */
+  --animate-wiggle: wiggle 400ms ease-in-out;
+
+  /* HASC brand colors, see brand/hasc-logo-paket/LIESMICH.txt */
+  --color-navy: #15233a;
+  --color-navy-light: #1c2e4a;
+  --color-navy-lighter: #26395a;
+
+  --color-teal: #3fb8a0;
+  --color-teal-light: #6fd0bc;
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-6deg);
+    }
+    75% {
+      transform: rotate(6deg);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Tailwind v4 dropped the pointer cursor on buttons, keep the v3 behaviour */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 /* self-hosted fonts (no requests to Google, GDPR), files and licences in public/fonts */
 @font-face {

@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import type { ReactNode } from "react";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
@@ -375,7 +375,7 @@ export default function About() {
                       </h3>
                       <div
                         aria-hidden="true"
-                        className="mx-auto mt-4 flex max-w-[12rem] items-center gap-3 text-teal"
+                        className="mx-auto mt-4 flex max-w-48 items-center gap-3 text-teal"
                       >
                         <span className="h-px flex-1 bg-navy/20" />
                         <span className="text-sm">✦</span>

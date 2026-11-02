@@ -1,19 +1,18 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "react-router";
 import type { ReactNode } from "react";
 import {
   isRouteErrorResponse,
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   useRouteError,
-} from "@remix-run/react";
+} from "react-router";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { localize, useLang } from "~/i18n";
-import styles from "~/tailwind.css";
+import styles from "~/tailwind.css?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -61,7 +60,6 @@ function Document({
         {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

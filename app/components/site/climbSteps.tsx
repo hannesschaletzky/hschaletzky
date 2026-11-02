@@ -5,14 +5,14 @@
 
 const layouts = {
   3: {
-    height: "lg:h-[19rem]",
+    height: "lg:h-76",
     heightPx: 304,
     pads: ["lg:pt-32", "lg:pt-16", "lg:pt-0"],
     padsPx: [128, 64, 0],
     cols: "lg:grid-cols-3",
   },
   4: {
-    height: "lg:h-[22rem]",
+    height: "lg:h-88",
     heightPx: 352,
     pads: ["lg:pt-36", "lg:pt-24", "lg:pt-12", "lg:pt-0"],
     padsPx: [144, 96, 48, 0],
@@ -46,7 +46,7 @@ export default function ClimbSteps({
       <svg
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="absolute inset-0 hidden h-full w-full [mask-image:linear-gradient(to_bottom,black_55%,transparent)] lg:block"
+        className="absolute inset-0 hidden h-full w-full mask-[linear-gradient(to_bottom,black_55%,transparent)] lg:block"
         aria-hidden="true"
       >
         <path d={`${ridge} L100 100 L0 100Z`} className={hillClass} />

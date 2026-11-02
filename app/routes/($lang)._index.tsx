@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
@@ -62,8 +62,8 @@ export default function Index() {
         {/* hero – the height follows the text, the bottom padding keeps room for the
             mountains (slightly taller than them, so the peak never touches the
             buttons); -mb-px overlaps the next section so no dark hairline shows */}
-        <section className="relative -mb-px overflow-hidden pb-[20.5rem] sm:pb-[max(26.5rem,calc(100vw/5.5+2rem))]">
-          <Mountains heightClass="h-[19rem] sm:h-[25rem]" />
+        <section className="relative -mb-px overflow-hidden pb-82 sm:pb-[max(26.5rem,calc(100vw/5.5+2rem))]">
+          <Mountains heightClass="h-76 sm:h-100" />
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}
             <img
@@ -73,7 +73,7 @@ export default function Index() {
               alt="Hannes Schaletzky"
               className="mx-auto mb-10 h-28 w-28 rounded-full object-cover ring-2 ring-teal/50 ring-offset-4 ring-offset-navy sm:h-36 sm:w-36"
             />
-            <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl sm:leading-none">
               {t.heading}
               <br />
               <span className="font-semibold text-teal">{t.highlight}</span>

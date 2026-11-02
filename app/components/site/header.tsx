@@ -1,4 +1,4 @@
-import { useLocation } from "@remix-run/react";
+import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
 import { getSiteMap, getSiteNav, legalPaths } from "~/components/site/siteNav";
 import { localize, switchLang, useLang } from "~/i18n";
@@ -60,7 +60,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-white/10 bg-navy/80 backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-white/10 bg-navy/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6">
         <a
           href={localize("/", lang)}

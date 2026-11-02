@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import ContactIcons from "~/components/classic/contactIcons";
 import highlightWords from "~/components/classic/highlightWords";
 import privateProjects from "~/projects/unpaid.json";

@@ -11,8 +11,8 @@ ENV NODE_ENV=production PORT=3000
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev && npm cache clean --force
+# build/client already contains everything from public/
 COPY --from=build /app/build ./build
-COPY --from=build /app/public ./public
 USER node
 EXPOSE 3000
 CMD ["npm", "start"]

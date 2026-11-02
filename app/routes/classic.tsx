@@ -1,4 +1,4 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet } from "react-router";
 import HomeLink from "~/components/classic/homeLink";
 
 // layout of the hand-built original site (tag v1-handmade), reachable via the easter egg
@@ -6,7 +6,7 @@ import HomeLink from "~/components/classic/homeLink";
 export default function ClassicLayout() {
   return (
     // isolate keeps the diagonal rectangles (-z-10) above the white background
-    <div className="isolate min-h-screen bg-white text-black font-roboto [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] text-xl">
+    <div className="isolate min-h-screen bg-white text-black font-roboto [text-shadow:0_1px_0_rgb(0_0_0/10%)] text-xl">
       <HomeLink />
       <Outlet />
 

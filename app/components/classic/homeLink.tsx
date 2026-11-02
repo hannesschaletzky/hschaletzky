@@ -1,4 +1,4 @@
-import { useLocation } from "@remix-run/react";
+import { useLocation } from "react-router";
 
 // small link back to the classic index, shown on every classic page except the index itself
 export default function HomeLink() {

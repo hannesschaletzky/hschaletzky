@@ -89,7 +89,7 @@ export default function Offers() {
               </ul>
               <a
                 href={localize(offer.href, lang)}
-                className="mt-8 font-semibold text-teal after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus:outline-none group-hover:text-teal-light"
+                className="mt-8 font-semibold text-teal after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus:outline-hidden group-hover:text-teal-light"
               >
                 {offer.cta}{" "}
                 <span

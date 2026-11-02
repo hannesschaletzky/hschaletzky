@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
