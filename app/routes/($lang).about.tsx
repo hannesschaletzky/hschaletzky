@@ -150,9 +150,9 @@ const beliefs = {
 
 const licenses = [
   {
-    title: { de: "Landesskilehrer", en: "Ski instructor" },
+    title: { de: "Skilehrer", en: "Ski instructor" },
     detail: {
-      de: "Österreich",
+      de: "Landeslehrer 1, Österreich",
       en: "Austrian Landeslehrer 1",
     },
     since: "2019",
