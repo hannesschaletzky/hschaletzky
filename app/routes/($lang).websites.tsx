@@ -86,7 +86,7 @@ const text = {
     ],
     referencesEyebrow: "Referenzen",
     referencesHeading: "Websites, die ich betreue.",
-    references: ["Technisches Update & Wartung", "Technische Wartung"],
+    references: ["Technisches Update & Wartung", "Hosting & Wartung"],
     since: "seit",
     faqHeading: "Gut zu wissen.",
     faqs: [
@@ -186,7 +186,7 @@ const text = {
     ],
     referencesEyebrow: "References",
     referencesHeading: "Websites I look after.",
-    references: ["Technical update & maintenance", "Technical maintenance"],
+    references: ["Technical update & maintenance", "Hosting & maintenance"],
     since: "since",
     faqHeading: "Good to know.",
     faqs: [
