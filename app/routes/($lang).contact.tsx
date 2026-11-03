@@ -14,24 +14,23 @@ const text = {
   de: {
     title: "Kontakt | Hannes Schaletzky",
     description:
-      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin – per E-Mail, auf LinkedIn oder in einem Erstgespräch.",
+      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, per E-Mail, auf LinkedIn oder in einem kostenlosen Erstgespräch.",
     eyebrow: "Kontakt",
     title1: "Lassen Sie uns",
     highlight: "über Ihr Projekt sprechen.",
-    cta: "E-Mail schreiben",
-    intro:
-      "Ich antworte auf jede Nachricht, meist innerhalb eines Werktags.",
+    cta: "Kostenloses Erstgespräch buchen",
+    intro: "Ich antworte auf jede Nachricht, meist innerhalb eines Werktags.",
     channels: [
       {
         title: "E-Mail",
-        text: "Der schnellste Weg zu mir – auch, wenn Sie meinen Lebenslauf möchten.",
+        text: "Der schnellste Weg zu mir, auch wenn Sie meinen Lebenslauf möchten.",
         label: mail,
         href: `mailto:${mail}`,
       },
       {
         title: "Erstgespräch",
-        text: "Wählen Sie einen freien Termin in meinem Kalender.",
-        label: "Erstgespräch buchen",
+        text: "Wählen Sie einen freien Termin in meinem Kalender. Das Gespräch ist kostenlos.",
+        label: "Kostenloses Erstgespräch buchen",
         href: calUrl,
       },
       {
@@ -51,24 +50,23 @@ const text = {
   en: {
     title: "Contact | Hannes Schaletzky",
     description:
-      "Contact Hannes Schaletzky, freelance software engineer from Berlin – by email, on LinkedIn or in an intro call.",
+      "Contact Hannes Schaletzky, freelance software engineer from Berlin, by email, on LinkedIn or in a free intro call.",
     eyebrow: "Contact",
     title1: "Let's talk",
     highlight: "about your project.",
-    cta: "Write me",
-    intro:
-      "I reply to every message, usually within one working day.",
+    cta: "Book a free intro call",
+    intro: "I reply to every message, usually within one working day.",
     channels: [
       {
         title: "Mail",
-        text: "The fastest way to reach me – also if you'd like my CV.",
+        text: "The fastest way to reach me, also if you'd like my CV.",
         label: mail,
         href: `mailto:${mail}`,
       },
       {
         title: "Intro call",
-        text: "Pick a free slot in my calendar.",
-        label: "Book an intro call",
+        text: "Pick a free slot in my calendar. The call is free of charge.",
+        label: "Book a free intro call",
         href: calUrl,
       },
       {
@@ -109,7 +107,7 @@ export default function Contact() {
           eyebrow={t.eyebrow}
           title={t.title1}
           highlight={t.highlight}
-          cta={{ label: t.cta, href: `mailto:${mail}` }}
+          cta={{ label: t.cta, href: calUrl }}
         >
           {t.intro}
         </PageHero>

@@ -17,23 +17,24 @@ export default function ContactBox() {
         </h2>
         <p className="relative mt-4 max-w-xl text-lg">
           {de
-            ? "Ob Cloud-Plattform oder Vereinswebsite – schreiben Sie mir oder buchen Sie ein Erstgespräch."
-            : "Whether it's a cloud platform or your club's website – drop me a line or book a call."}
+            ? "Ob Cloud-Plattform oder Vereinswebsite: Schreiben Sie mir oder buchen Sie ein kostenloses Erstgespräch."
+            : "Whether it's a cloud platform or your club's website, drop me a line or book a free call."}
         </p>
         <div className="relative mt-8 flex flex-wrap gap-4">
-          <a
-            href={`mailto:${mail}`}
-            className="rounded-full bg-navy px-6 py-3 font-semibold text-white transition hover:bg-navy-lighter"
-          >
-            {mail}
-          </a>
+          {/* the free call is the main action, mail second */}
           <a
             href={calUrl}
             target="_blank"
             rel="noreferrer"
+            className="rounded-full bg-navy px-6 py-3 font-semibold text-white transition hover:bg-navy-lighter"
+          >
+            {de ? "Kostenloses Erstgespräch buchen" : "Book a free intro call"}
+          </a>
+          <a
+            href={`mailto:${mail}`}
             className="rounded-full border border-navy/30 px-6 py-3 font-semibold transition hover:border-navy"
           >
-            {de ? "Erstgespräch buchen" : "Book an intro call"}
+            {mail}
           </a>
           <a
             href="https://linkedin.com/in/hannesschaletzky/"

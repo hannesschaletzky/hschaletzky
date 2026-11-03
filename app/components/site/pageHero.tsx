@@ -36,6 +36,11 @@ export default function PageHero({
         <p className="mx-auto mt-6 max-w-xl text-lg">{children}</p>
         <a
           href={cta.href}
+          // external links (the booking page) open in a new tab
+          {...(cta.href.startsWith("http") && {
+            target: "_blank",
+            rel: "noreferrer",
+          })}
           className="mt-10 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
         >
           {cta.label}

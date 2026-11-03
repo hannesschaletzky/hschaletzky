@@ -15,13 +15,13 @@ const text = {
   de: {
     title: "Über mich | Hannes Schaletzky, Software Engineer",
     description:
-      "Hannes Schaletzky – freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
+      "Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
     hero: {
       eyebrow: "Über mich",
-      title: "Hallo, ich bin Hannes –",
-      highlight: "Software Engineer\u00a0&\u00a0Coach.",
+      title: "Hallo, ich bin Hannes,",
+      highlight: "Software Engineer\u00a0&\u00a0Trainer.",
       cta: "Kontakt aufnehmen",
-      text: "Was gutes Coaching ausmacht, gilt auch für Software: genau hinschauen, verständlich erklären, Fortschritt sichtbar machen – und dranbleiben, bis\u00a0es\u00a0sitzt.",
+      text: "Was gutes Training ausmacht, gilt auch für Software: genau hinschauen, verständlich erklären, Fortschritt sichtbar machen und dranbleiben, bis\u00a0es\u00a0sitzt.",
     },
     glance: "Auf einen Blick",
     work: "So arbeite ich",
@@ -40,13 +40,13 @@ const text = {
   en: {
     title: "About me | Hannes Schaletzky, Software Engineer",
     description:
-      "Hannes Schaletzky – freelance software engineer from Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
+      "Hannes Schaletzky, freelance software engineer from Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
     hero: {
       eyebrow: "About me",
-      title: "Hi, I'm Hannes –",
+      title: "Hi, I'm Hannes,",
       highlight: "software engineer\u00a0&\u00a0coach.",
       cta: "Get in touch",
-      text: "What makes good coaching also applies to software: look closely, explain clearly, make progress visible – and keep at it until\u00a0it\u00a0clicks.",
+      text: "What makes good coaching also applies to software: look closely, explain clearly, make progress visible and keep at it until\u00a0it\u00a0clicks.",
     },
     glance: "At a glance",
     work: "How I work",
@@ -109,6 +109,10 @@ const facts = {
 const values = [
   {
     title: "Focus on impact",
+    text: {
+      de: "Ich baue zuerst, was Ihnen am meisten bringt, nicht was technisch am spannendsten ist.",
+      en: "I build what helps you most first, not what is technically most exciting.",
+    },
     icon: (
       <>
         <circle cx="12" cy="12" r="10" />
@@ -119,6 +123,10 @@ const values = [
   },
   {
     title: "Take ownership",
+    text: {
+      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum, bis es wieder läuft.",
+      en: "What I build, I also look after. If something breaks, I take care of it until it runs again.",
+    },
     icon: (
       <>
         <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
@@ -128,6 +136,10 @@ const values = [
   },
   {
     title: "Open by default",
+    text: {
+      de: "Sie wissen jederzeit, wo Ihr Projekt steht, auch wenn etwas nicht nach Plan läuft.",
+      en: "You always know where your project stands, even when something doesn't go to plan.",
+    },
     icon: (
       <>
         <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
@@ -266,11 +278,16 @@ function AboutIntro({ lang }: { lang: Lang }) {
       </PageHero>
       <section className="bg-navy-lighter">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-[18rem_1fr]">
+          {/* a different photo than on the home page: skiing, matching "snow & sand" below */}
           <img
-            src="/hannes.jpg"
-            width={512}
-            height={512}
-            alt="Hannes Schaletzky"
+            src="/hannes-ski.jpg"
+            width={640}
+            height={640}
+            alt={
+              lang === "de"
+                ? "Hannes Schaletzky beim Skifahren"
+                : "Hannes Schaletzky skiing"
+            }
             className="mx-auto aspect-square w-56 rounded-3xl object-cover md:w-72"
           />
           <div>
@@ -331,6 +348,7 @@ export default function About() {
                   <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">
                     {value.title}
                   </h3>
+                  <p className="mt-3 leading-relaxed">{value.text[lang]}</p>
                 </li>
               ))}
             </ul>

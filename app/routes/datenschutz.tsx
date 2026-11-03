@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => [
 
 export default function Datenschutz() {
   return (
-    <LegalPage title="Datenschutzerklärung" updated="Oktober 2026">
+    <LegalPage title="Datenschutzerklärung" updated="November 2026">
       <LegalSection title="1. Verantwortlicher">
         <p>
           Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser
@@ -30,28 +30,28 @@ export default function Datenschutz() {
 
       <LegalSection title="2. Hosting">
         <p>
-          Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina,
-          CA 91723, USA gehostet. Beim Aufruf der Website verarbeitet Vercel
-          technisch erforderliche Daten, um die Seiten auszuliefern. Weitere
-          Informationen finden Sie in der{" "}
-          <ExternalLink href="https://vercel.com/legal/privacy-policy">
-            Datenschutzerklärung von Vercel
+          Diese Website läuft auf einem Server, den ich bei der Hetzner Online
+          GmbH, Industriestr. 25, 91710 Gunzenhausen, miete. Der Server steht in
+          einem Rechenzentrum in Nürnberg, eine Übermittlung in Länder außerhalb
+          der EU findet nicht statt. Mit Hetzner besteht ein Vertrag zur
+          Auftragsverarbeitung nach Art. 28 DSGVO. Weitere Informationen finden
+          Sie in der{" "}
+          <ExternalLink href="https://www.hetzner.com/legal/privacy-policy">
+            Datenschutzerklärung von Hetzner
           </ExternalLink>
           .
         </p>
         <p>
-          Vercel ist unter dem EU-US Data Privacy Framework zertifiziert,
-          wodurch ein angemessenes Datenschutzniveau für die Übermittlung in die
-          USA besteht (Art. 45 DSGVO). Rechtsgrundlage für das Hosting ist Art.
-          6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in einer
-          sicheren, schnellen und zuverlässigen Bereitstellung der Website.
+          Rechtsgrundlage für das Hosting ist Art. 6 Abs. 1 lit. f DSGVO; das
+          berechtigte Interesse liegt in einer sicheren, schnellen und
+          zuverlässigen Bereitstellung der Website.
         </p>
       </LegalSection>
 
       <LegalSection title="3. Server-Log-Dateien">
         <p>
           Bei jedem Aufruf der Website werden automatisch Informationen in
-          sogenannten Server-Log-Dateien verarbeitet. Dazu gehören insbesondere:
+          sogenannten Server-Log-Dateien gespeichert. Dazu gehören insbesondere:
         </p>
         <ul className="list-disc space-y-1 pl-6">
           <li>IP-Adresse</li>
@@ -63,10 +63,8 @@ export default function Datenschutz() {
         <p>
           Die Verarbeitung dient dem sicheren und stabilen Betrieb der Website
           sowie der Erkennung und Abwehr von Störungen und Angriffen.
-          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die für mich
-          einsehbaren Log-Daten werden von Vercel nach etwa einer Stunde
-          gelöscht; darüber hinaus verarbeitet Vercel Daten nach seiner eigenen
-          Datenschutzerklärung.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die Log-Dateien werden
+          nach 14 Tagen automatisch gelöscht.
         </p>
       </LegalSection>
 

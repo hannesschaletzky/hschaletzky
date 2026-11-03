@@ -6,6 +6,7 @@ import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
+import { calUrl } from "~/components/site/siteNav";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
@@ -14,22 +15,22 @@ const text = {
   de: {
     title: "Websites für kleine Unternehmen & Vereine | Hannes Schaletzky",
     description:
-      "Website-Check-up ab 250 €, neue Websites ab 990 €, Hosting ab 25 € im Monat – persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
-    mail: "mailto:info@hschaletzky.com?subject=Website-Anfrage",
+      "Website-Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat. Persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
     hero: {
       eyebrow: "Für kleine Unternehmen & Vereine",
       title: "Ihre Website,",
       highlight: "einfach gut betreut.",
-      cta: "Unverbindlich anfragen",
-      text: "Persönlich, fair, vor Ort oder remote – für Selbstständige, kleine Unternehmen und Vereine.",
+      cta: "Kostenloses Erstgespräch buchen",
+      text: "Persönlich, fair, vor Ort oder remote. Für Selbstständige, kleine Unternehmen und Vereine.",
     },
     offersEyebrow: "Angebote & Preise",
     offersHeading: "Klare Preise, keine Überraschungen.",
+    // short cards first, the two with tiers below, so each row has a similar height
     offers: [
       {
         title: "Website-Check-up",
-        price: "ab 250 €",
-        text: "Ich prüfe Ihre bestehende Website auf Technik, Sicherheit, Auffindbarkeit und Nutzerfreundlichkeit. Sie erhalten einen schriftlichen Bericht (PDF) mit priorisierten Empfehlungen und einer Aufwandsschätzung – und wir besprechen ihn 30 Minuten per Video oder Telefon. Teurer wird es nur bei sehr komplexen Websites – und dann sage ich Ihnen das vorher.",
+        price: "250 €",
+        text: "Ich prüfe Ihre gesamte Website auf Technik, Sicherheit und Auffindbarkeit und schaue mir bis zu 5 wichtige Seiten genau an. Sie bekommen einen Bericht (PDF) mit klaren Empfehlungen, und wir besprechen ihn in 30 Minuten per Video oder Telefon.",
         links: [
           {
             label: "Beispielbericht ansehen (PDF)",
@@ -38,44 +39,58 @@ const text = {
         ],
       },
       {
+        title: "KI & Automatisierung",
+        price: "auf Anfrage",
+        text: "Wiederkehrende Arbeit automatisieren, zum Beispiel E-Mails, Termine und Routinen. Wir schauen zuerst, wo Sie am meisten Zeit verlieren, und ich baue nur, was Ihnen wirklich Arbeit abnimmt.",
+      },
+      {
         title: "Website-Erstellung",
-        price: "ab 990 €",
-        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Enthalten sind bis zu 5 Seiten in einer Sprache, Impressum und Datenschutzerklärung – größere Websites, Shops oder weitere Sprachen nach Aufwand*.",
+        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Impressum und Datenschutzerklärung sind immer dabei.",
+        tiers: [
+          {
+            name: "Onepager",
+            price: "599 €",
+            text: "Eine Seite mit allem Wichtigen: Leistungen, Über uns, Kontakt.",
+          },
+          {
+            name: "Mehrseitig",
+            price: "990 €",
+            text: "Bis zu 5 Seiten, zum Beispiel Leistungen, Team, Termine und Kontakt.",
+          },
+        ],
+        note: "Größere Websites, Shops oder weitere Sprachen nach Aufwand*.",
+        linksLabel: "Beispiele:",
         links: [
           {
-            label: "Beispiel: Tischlerei",
+            label: "Tischlerei",
             href: "https://tischlerei-mustermann.hschaletzky.com/",
           },
           {
-            label: "Beispiel: Sportverein",
+            label: "Sportverein",
             href: "https://sv-musterstadt.hschaletzky.com/",
           },
           {
-            label: "Beispiel: Physiotherapie",
+            label: "Physiotherapie",
             href: "https://physio-musterfrau.hschaletzky.com/",
           },
         ],
       },
       {
         title: "Hosting & Wartung",
-        text: "Updates, Sicherheit und technische Hilfe, wenn etwas hakt – damit Sie sich nicht darum kümmern müssen. In zwei Varianten:",
+        text: "Updates, Sicherheit und technische Hilfe, wenn etwas hakt. Damit Sie sich nicht darum kümmern müssen.",
         tiers: [
           {
             name: "Basis",
             price: "25 € / Monat",
-            text: "Hosting, SSL, Backups und Updates. Änderungen nach Aufwand*.",
+            text: "Hosting, SSL, Backups und Updates.",
           },
           {
             name: "Plus",
             price: "49 € / Monat",
-            text: "Alles aus Basis, dazu kleine Änderungen bis 30 Minuten im Monat – alles darüber nach Aufwand*.",
+            text: "Alles aus Basis, dazu kleine Änderungen bis 30 Minuten im Monat.",
           },
         ],
-      },
-      {
-        title: "KI & Automatisierung",
-        price: "auf Anfrage",
-        text: "Wiederkehrende Arbeit automatisieren, zum Beispiel E-Mails, Termine und Routinen. Wir schauen zuerst, wo Sie am meisten Zeit verlieren – und ich baue nur, was Ihnen wirklich Arbeit abnimmt.",
+        note: "Alle weiteren Änderungen nach Aufwand*.",
       },
     ],
     effort: "* Arbeit nach Aufwand: 71,40 € pro Stunde (60 € netto).",
@@ -84,16 +99,16 @@ const text = {
     stepsHeading: "In drei Schritten zu Ihrer Website.",
     steps: [
       {
-        title: "Kontakt aufnehmen",
-        text: "Schreiben Sie mir oder buchen Sie ein Erstgespräch und erzählen Sie mir, was Sie brauchen.",
+        title: "Kennenlernen",
+        text: "Sie erzählen mir in einem kostenlosen Gespräch, was Sie vorhaben. Danach wissen Sie, welches Paket passt und was es kostet.",
       },
       {
-        title: "Klares Angebot",
-        text: "Sie bekommen ein Angebot mit einem fairen Preis, bevor die Arbeit beginnt.",
+        title: "Entwurf & Feinschliff",
+        text: "Nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und wir passen an, bis alles stimmt.",
       },
       {
         title: "Online & betreut",
-        text: "Ihre Website geht online – und ich bleibe danach Ihr Ansprechpartner.",
+        text: "Ihre Website geht online, und erst dann zahlen Sie. Danach bin ich weiter für Sie da.",
       },
     ],
     referencesEyebrow: "Referenzen",
@@ -105,7 +120,37 @@ const text = {
       {
         question: "Brauche ich technisches Wissen?",
         answer:
-          "Nein. Ich kümmere mich um die Technik und erkläre alles verständlich.",
+          "Nein. Ich kümmere mich um die Technik und erkläre Ihnen alles so, dass Sie es verstehen.",
+      },
+      {
+        question: "Wie lange dauert eine neue Website?",
+        answer:
+          "Ein Onepager ist meist nach einer Woche fertig, eine mehrseitige Website nach etwa zwei Wochen. Wichtig ist nur, dass Texte und Bilder bereitliegen.",
+      },
+      {
+        question: "Wer liefert Texte und Bilder?",
+        answer:
+          "Am besten Sie, denn Sie kennen Ihr Geschäft. Ich helfe gern beim Formulieren und suche bei Bedarf passende lizenzfreie Bilder.",
+      },
+      {
+        question: "Kann ich Inhalte selbst ändern?",
+        answer:
+          "Ja. Auf Wunsch baue ich ein einfaches Redaktionssystem ein, mit dem Sie Texte und Bilder selbst pflegen können. Das rechne ich nach Aufwand ab. Sie können mir Änderungen aber auch einfach schicken.",
+      },
+      {
+        question: "Wie läuft die Bezahlung?",
+        answer:
+          "Sie zahlen erst, wenn Ihre Website online ist und Ihnen gefällt. Hosting und Wartung rechne ich monatlich ab.",
+      },
+      {
+        question: "Wie lange läuft Hosting & Wartung?",
+        answer:
+          "Sie können jeden Monat kündigen. Eine Mindestlaufzeit gibt es nicht.",
+      },
+      {
+        question: "Wem gehören die Website und die Domain?",
+        answer:
+          "Die Website gehört Ihnen. Die Domain kann auf Ihren Namen laufen, das empfehle ich auch. Ich kann sie aber auch für Sie verwalten. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
       },
       {
         question: "Können Sie meine bestehende Website übernehmen?",
@@ -113,35 +158,30 @@ const text = {
           "Ja. Nach einem Website-Check-up sage ich Ihnen, ob ich sie so weiter betreuen kann oder ob ein Neuaufbau sinnvoller ist.",
       },
       {
-        question: "Wie lange dauert eine neue Website?",
-        answer:
-          "Meist 2–4 Wochen, je nachdem, wie schnell Texte und Bilder bereitstehen.",
-      },
-      {
         question: "Arbeiten Sie auch vor Ort?",
-        answer: "Ja – vor Ort oder remote, ganz wie es Ihnen am besten passt.",
+        answer:
+          "Ja, gern. Ich komme vorbei oder wir arbeiten remote, ganz wie es Ihnen lieber ist.",
       },
     ],
   },
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Website check-up from 250 €, new websites from 990 €, hosting from 25 € a month – personal and fair, for self-employed people, small businesses and clubs.",
-    mail: "mailto:info@hschaletzky.com?subject=Website%20inquiry",
+      "Website check-up for 250 €, new websites from 599 €, hosting from 25 € a month. Personal and fair, for self-employed people, small businesses and clubs.",
     hero: {
       eyebrow: "For small businesses & clubs",
       title: "Your website,",
       highlight: "simply taken care of.",
-      cta: "Send an inquiry",
-      text: "Personal, fair, on-site or remote – for self-employed people, small businesses and clubs.",
+      cta: "Book a free intro call",
+      text: "Personal, fair, on-site or remote. For self-employed people, small businesses and clubs.",
     },
     offersEyebrow: "Offers & prices",
     offersHeading: "Clear prices, no surprises.",
     offers: [
       {
         title: "Website check-up",
-        price: "from 250 €",
-        text: "I check your existing website for technology, security, findability and usability. You get a written report (PDF) with prioritised recommendations and an effort estimate – and we go through it in a 30-minute video or phone call. It only costs more for very complex websites – and I'll tell you beforehand.",
+        price: "250 €",
+        text: "I check your whole website for technology, security and findability and take a close look at up to 5 important pages. You get a report (PDF) with clear recommendations, and we go through it in a 30-minute video or phone call.",
         links: [
           {
             label: "View a sample report (PDF, German)",
@@ -150,44 +190,58 @@ const text = {
         ],
       },
       {
+        title: "AI & automation",
+        price: "on request",
+        text: "Automate recurring work such as mails, appointments and routines. We start by looking at where you lose the most time, and I only build what really saves you work.",
+      },
+      {
         title: "Website creation",
-        price: "from 990 €",
-        text: "A modern, fast website that looks good on every device and that you can understand. Includes up to 5 pages in one language, imprint and privacy policy – bigger sites, shops or more languages depending on the effort*.",
+        text: "A modern, fast website that looks good on every device and that you can understand. Imprint and privacy policy are always included.",
+        tiers: [
+          {
+            name: "One-pager",
+            price: "599 €",
+            text: "One page with everything important: services, about, contact.",
+          },
+          {
+            name: "Multi-page",
+            price: "990 €",
+            text: "Up to 5 pages, for example services, team, dates and contact.",
+          },
+        ],
+        note: "Bigger sites, shops or more languages depending on the effort*.",
+        linksLabel: "Examples (German):",
         links: [
           {
-            label: "Example: carpentry (German)",
+            label: "carpentry",
             href: "https://tischlerei-mustermann.hschaletzky.com/",
           },
           {
-            label: "Example: sports club (German)",
+            label: "sports club",
             href: "https://sv-musterstadt.hschaletzky.com/",
           },
           {
-            label: "Example: physiotherapy (German)",
+            label: "physiotherapy",
             href: "https://physio-musterfrau.hschaletzky.com/",
           },
         ],
       },
       {
         title: "Hosting & maintenance",
-        text: "Updates, security and technical help when something gets stuck – so you don't have to think about it. In two versions:",
+        text: "Updates, security and technical help when something gets stuck. So you don't have to think about it.",
         tiers: [
           {
             name: "Basic",
             price: "25 € / month",
-            text: "Hosting, SSL, backups and updates. Changes depending on the effort*.",
+            text: "Hosting, SSL, backups and updates.",
           },
           {
             name: "Plus",
             price: "49 € / month",
-            text: "Everything in Basic, plus small changes up to 30 minutes a month – anything beyond that depending on the effort*.",
+            text: "Everything in Basic, plus small changes up to 30 minutes a month.",
           },
         ],
-      },
-      {
-        title: "AI & automation",
-        price: "on request",
-        text: "Automate recurring work such as mails, appointments and routines. We start by looking at where you lose the most time – and I only build what really saves you work.",
+        note: "Any further changes depending on the effort*.",
       },
     ],
     effort: "* Work billed by effort: 71.40 € per hour (60 € net).",
@@ -196,16 +250,16 @@ const text = {
     stepsHeading: "Three steps to your website.",
     steps: [
       {
-        title: "Get in touch",
-        text: "Write me or book a call and tell me what you need.",
+        title: "Get to know each other",
+        text: "You tell me in a free call what you have in mind. Afterwards you know which package fits and what it costs.",
       },
       {
-        title: "Clear offer",
-        text: "You get a proposal with a fair price before any work starts.",
+        title: "Draft & polish",
+        text: "After a few days you see a first draft. You tell me what you like, and we adjust until everything is right.",
       },
       {
         title: "Online & cared for",
-        text: "Your website goes live – and I stay your contact afterwards.",
+        text: "Your website goes live, and only then do you pay. After that I'm still there for you.",
       },
     ],
     referencesEyebrow: "References",
@@ -217,7 +271,36 @@ const text = {
       {
         question: "Do I need any technical knowledge?",
         answer:
-          "No. I take care of the technology and explain everything in plain words.",
+          "No. I take care of the technology and explain everything in a way that makes sense to you.",
+      },
+      {
+        question: "How long does a new website take?",
+        answer:
+          "A one-pager is usually ready after a week, a multi-page website after about two weeks. All it needs is for the texts and images to be ready.",
+      },
+      {
+        question: "Who provides texts and images?",
+        answer:
+          "Ideally you, because you know your business. I'm happy to help with the wording and can find suitable royalty-free images if needed.",
+      },
+      {
+        question: "Can I change content myself?",
+        answer:
+          "Yes. If you like, I add a simple content management system so you can edit texts and images yourself. I bill that by effort. You can also just send me your changes.",
+      },
+      {
+        question: "How does payment work?",
+        answer:
+          "You only pay once your website is online and you like it. Hosting and maintenance are billed monthly.",
+      },
+      {
+        question: "How long does hosting & maintenance run?",
+        answer: "You can cancel any month. There is no minimum term.",
+      },
+      {
+        question: "Who owns the website and the domain?",
+        answer:
+          "The website is yours. The domain can be registered in your name, which is what I recommend. I can also manage it for you. If you ever want to switch, I hand everything over.",
       },
       {
         question: "Can you take over my existing website?",
@@ -225,13 +308,9 @@ const text = {
           "Yes. After a check-up I'll tell you whether I can maintain it as it is or whether a rebuild makes more sense.",
       },
       {
-        question: "How long does a new website take?",
-        answer:
-          "Usually 2–4 weeks, depending on how quickly texts and images are ready.",
-      },
-      {
         question: "Do you work on-site?",
-        answer: "Yes – on-site or remote, whatever suits you best.",
+        answer:
+          "Yes, happily. I can come by or we work remotely, whatever you prefer.",
       },
     ],
   },
@@ -262,6 +341,91 @@ export const meta: MetaFunction = ({ params }) => {
   });
 };
 
+type Offer = (typeof text)["de"]["offers"][number];
+
+function OfferCard({
+  offer,
+  className = "",
+}: {
+  offer: Offer;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`flex flex-col rounded-2xl border border-white/10 p-6 ${className}`}
+    >
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="text-xl font-bold text-white">{offer.title}</h3>
+        {/* offers with tiers show their prices there instead */}
+        {offer.price && (
+          <p className="shrink-0 font-semibold text-teal">{offer.price}</p>
+        )}
+      </div>
+      <p className="mt-3 leading-relaxed">{offer.text}</p>
+      {offer.tiers && (
+        <dl className="mt-4 space-y-3">
+          {offer.tiers.map((tier) => (
+            <div key={tier.name} className="rounded-xl bg-white/5 px-4 py-3">
+              <dt className="flex items-baseline justify-between gap-4 font-semibold text-white">
+                {tier.name}
+                <span className="shrink-0 text-teal">{tier.price}</span>
+              </dt>
+              <dd className="mt-1 text-sm leading-relaxed">{tier.text}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+      {offer.note && (
+        <p className="mt-4 text-sm leading-relaxed">{offer.note}</p>
+      )}
+      {/* several links with a label: one compact row */}
+      {offer.linksLabel && (
+        <p className="mt-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          <span>{offer.linksLabel}</span>
+          {offer.links.map((link, i) => (
+            <span key={link.href}>
+              {i > 0 && (
+                <span aria-hidden="true" className="mr-2 text-slate-500">
+                  ·
+                </span>
+              )}
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-teal hover:text-teal-light"
+              >
+                {link.label}
+              </a>
+            </span>
+          ))}
+        </p>
+      )}
+      {offer.links && !offer.linksLabel && (
+        <div className="mt-4 flex flex-col items-start gap-2">
+          {offer.links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group font-semibold text-teal hover:text-teal-light"
+            >
+              {link.label}{" "}
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Websites() {
   const lang = useLang();
   const t = text[lang];
@@ -275,7 +439,7 @@ export default function Websites() {
           eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: t.mail }}
+          cta={{ label: t.hero.cta, href: calUrl }}
         >
           {t.hero.text}
         </PageHero>
@@ -288,64 +452,7 @@ export default function Websites() {
             </SectionHeading>
             <div className="grid gap-6 sm:grid-cols-2">
               {t.offers.map((offer) => (
-                <div
-                  key={offer.title}
-                  className="flex flex-col rounded-2xl border border-white/10 p-6"
-                >
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-xl font-bold text-white">
-                      {offer.title}
-                    </h3>
-                    {/* hosting shows its prices in the tiers instead */}
-                    {offer.price && (
-                      <p className="shrink-0 font-semibold text-teal">
-                        {offer.price}
-                      </p>
-                    )}
-                  </div>
-                  <p className="mt-3 leading-relaxed">{offer.text}</p>
-                  {offer.tiers && (
-                    <dl className="mt-4 space-y-3">
-                      {offer.tiers.map((tier) => (
-                        <div
-                          key={tier.name}
-                          className="rounded-xl bg-white/5 px-4 py-3"
-                        >
-                          <dt className="flex items-baseline justify-between gap-4 font-semibold text-white">
-                            {tier.name}
-                            <span className="shrink-0 text-teal">
-                              {tier.price}
-                            </span>
-                          </dt>
-                          <dd className="mt-1 text-sm leading-relaxed">
-                            {tier.text}
-                          </dd>
-                        </div>
-                      ))}
-                    </dl>
-                  )}
-                  {offer.links && (
-                    <div className="mt-4 flex flex-col items-start gap-2">
-                      {offer.links.map((link) => (
-                        <a
-                          key={link.href}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="group font-semibold text-teal hover:text-teal-light"
-                        >
-                          {link.label}{" "}
-                          <span
-                            aria-hidden="true"
-                            className="inline-block transition-transform group-hover:translate-x-1"
-                          >
-                            →
-                          </span>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <OfferCard key={offer.title} offer={offer} />
               ))}
             </div>
             {/* final prices incl. VAT, required when consumers may order (PAngV) */}
@@ -407,13 +514,20 @@ export default function Websites() {
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow="FAQ">{t.faqHeading}</SectionHeading>
             <div className="divide-y divide-white/10 border-y border-white/10">
+              {/* native details/summary: collapsible without JavaScript */}
               {t.faqs.map((faq) => (
-                <div key={faq.question} className="py-5">
-                  <h3 className="text-lg font-semibold text-white">
+                <details key={faq.question} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
                     {faq.question}
-                  </h3>
+                    <span
+                      aria-hidden="true"
+                      className="shrink-0 text-2xl font-normal leading-none text-teal transition-transform group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
                   <p className="mt-2 leading-relaxed">{faq.answer}</p>
-                </div>
+                </details>
               ))}
             </div>
           </div>

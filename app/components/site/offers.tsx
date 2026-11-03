@@ -20,8 +20,8 @@ const offers = {
       eyebrow: "Für kleine Unternehmen & Vereine",
       title: "Website · Hosting · Wartung",
       items: [
-        "Website-Check-up – ab 250 € inkl. MwSt.",
-        "Website-Erstellung – ab 990 € inkl. MwSt.",
+        "Website-Check-up – 250 € inkl. MwSt.",
+        "Website-Erstellung – ab 599 € inkl. MwSt.",
         "Hosting & Wartung – ab 25 € / Monat",
         "KI & Automatisierung",
       ],
@@ -46,8 +46,8 @@ const offers = {
       eyebrow: "For small businesses & clubs",
       title: "Website · Hosting · Maintenance",
       items: [
-        "Website check-up – from 250 € incl. VAT",
-        "Website creation – from 990 € incl. VAT",
+        "Website check-up – 250 € incl. VAT",
+        "Website creation – from 599 € incl. VAT",
         "Hosting & maintenance – from 25 € / month",
         "AI & automation",
       ],

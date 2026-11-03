@@ -87,7 +87,7 @@ export function ErrorBoundary() {
             ? "Diese Seite gibt es nicht."
             : "Etwas ist schiefgelaufen.",
           text: notFound
-            ? "Vielleicht ist sie umgezogen – die Website hat ein neues Design."
+            ? "Vielleicht ist sie umgezogen. Auf der Startseite finden Sie alles Wichtige."
             : "Bitte versuchen Sie es gleich noch einmal.",
           back: "Zur Startseite",
         }
@@ -98,7 +98,7 @@ export function ErrorBoundary() {
             ? "This page doesn't exist."
             : "Something went wrong.",
           text: notFound
-            ? "Maybe it moved – the site has a new design."
+            ? "Maybe it moved. You'll find everything important on the home page."
             : "Please try again in a moment.",
           back: "Back to the start",
         };

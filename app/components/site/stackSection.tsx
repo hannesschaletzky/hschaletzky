@@ -9,7 +9,7 @@ const stack = [
   "Node.js",
   "TypeScript",
   "Next.js",
-  "Remix",
+  "React Router",
   "Docker",
   "GitHub Actions",
   "Terraform",

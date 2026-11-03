@@ -13,26 +13,26 @@ const text = {
   de: {
     title: "Hobbyprojekte | Hannes Schaletzky",
     description:
-      "Hobbyprojekte von Hannes Schaletzky – Web-Apps, Tools und Experimente für Freunde, Vereine und mich selbst.",
+      "Hobbyprojekte von Hannes Schaletzky: Web-Apps, Tools und Experimente für Freunde, Vereine und mich selbst.",
     eyebrow: "Hobbyprojekte",
     title1: "Gebaut aus Spaß",
     highlight: "und um Neues zu lernen.",
     cta: "Auf GitHub ansehen",
     intro:
-      "Web-Apps, Tools und Experimente, die ich neben der Kundenarbeit gebaut habe – manche ernst gemeint, manche nur für eine Weihnachtsfeier.",
+      "Web-Apps, Tools und Experimente, die ich neben der Kundenarbeit gebaut habe. Manche ernst gemeint, manche nur für eine Weihnachtsfeier.",
     website: "Website",
     code: "Code",
   },
   en: {
     title: "Side Projects | Hannes Schaletzky",
     description:
-      "Side projects by Hannes Schaletzky – web apps, tools and experiments built for friends, clubs and myself.",
+      "Side projects by Hannes Schaletzky: web apps, tools and experiments built for friends, clubs and myself.",
     eyebrow: "Side projects",
     title1: "Built for fun,",
     highlight: "and to learn something new.",
     cta: "See them on GitHub",
     intro:
-      "Web apps, tools and experiments I built besides client work – some serious, some just for a Christmas party.",
+      "Web apps, tools and experiments I built besides client work. Some serious, some just for a Christmas party.",
     website: "Website",
     code: "Code",
   },
@@ -50,7 +50,10 @@ export const meta: MetaFunction = ({ params }) => {
 
 // German titles, by repository – the JSON holds the English ones for both sites
 const germanTitles: Record<string, string> = {
-  hschaletzky_remix: "Meine Website – auf Basis von Remix",
+  "physio-musterfrau": "Beispiel-Website für eine Physiotherapie-Praxis",
+  "sv-musterstadt": "Beispiel-Website für einen Sportverein",
+  "tischlerei-mustermann": "Beispiel-Website für eine Tischlerei",
+  hschaletzky: "Meine Website auf eigenem Server",
   ugly_sweater:
     "Abstimmungs-Tool für den hässlichsten Weihnachtspulli als Web-App",
   "terraform-digitalocean-droplet":

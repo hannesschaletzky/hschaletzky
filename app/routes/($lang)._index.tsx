@@ -17,22 +17,22 @@ const text = {
   de: {
     title: "Hannes Schaletzky | Freelance Software Engineer",
     description:
-      "Software Engineer aus Berlin, im DACH-Raum remote oder vor Ort: Cloud- und Integrationslösungen mit Node.js/TypeScript und AWS – dazu Websites und Hosting.",
-    heading: "Cloud, Integrationen &\u00a0Websites –",
+      "Software Engineer aus Berlin, im DACH-Raum remote oder vor Ort: Cloud- und Integrationslösungen mit Node.js/TypeScript und AWS, dazu Websites und Hosting.",
+    heading: "Cloud, Integrationen &\u00a0Websites,",
     highlight: "die zuverlässig laufen.",
     intro:
-      "Ich bin Hannes, freiberuflicher Software Engineer. Vom ersten Konzept bis zum laufenden Betrieb – alles aus einer Hand.",
+      "Ich bin Hannes, freiberuflicher Software Engineer. Vom ersten Konzept bis zum laufenden Betrieb bekommen Sie alles aus einer Hand.",
     contact: "Kontakt aufnehmen",
     offers: "Was ich mache",
   },
   en: {
     title: "Hannes Schaletzky | Freelance Software Engineer",
     description:
-      "Software engineer from Berlin, remote or on-site across Germany, Austria and Switzerland: cloud and integration solutions with Node.js/TypeScript and AWS – plus websites and hosting.",
-    heading: "Cloud, integrations &\u00a0websites –",
+      "Software engineer from Berlin, remote or on-site across Germany, Austria and Switzerland: cloud and integration solutions with Node.js/TypeScript and AWS, plus websites and hosting.",
+    heading: "Cloud, integrations &\u00a0websites",
     highlight: "that just keep running.",
     intro:
-      "I'm Hannes, a freelance software engineer. From the first concept to day-to-day operation – all from one person.",
+      "I'm Hannes, a freelance software engineer. From the first concept to day-to-day operation, you get everything from one person.",
     contact: "Get in touch",
     offers: "See what I do",
   },

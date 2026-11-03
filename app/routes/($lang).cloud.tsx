@@ -22,24 +22,24 @@ const text = {
   de: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freiberuflicher Integration & Cloud Engineer aus Berlin, im DACH-Raum remote oder vor Ort – Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
+      "Freiberuflicher Integration & Cloud Engineer aus Berlin, im DACH-Raum remote oder vor Ort: Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
     hero: {
       eyebrow: "Für Unternehmen",
-      title: "Cloud & Integrationen –",
+      title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
-      text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS – von der Architektur über sauberen Code bis zum sicheren Betrieb.",
+      text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS, von der Architektur über sauberen Code bis zum sicheren Betrieb.",
     },
     servicesEyebrow: "Leistungen",
     servicesHeading: "Was ich übernehme.",
     services: [
       {
         title: "Backend-Entwicklung",
-        text: "APIs und Services in Node.js/TypeScript – typisiert, getestet und wartbar, mit Clean Code und Domain-driven Design.",
+        text: "APIs und Services in Node.js/TypeScript: typisiert, getestet und wartbar, mit Clean Code und Domain-driven Design.",
       },
       {
         title: "Systemintegration & Datenflüsse",
-        text: "SaaS-, Cloud- und On-Prem-Systeme verbinden – mit sicheren, zuverlässigen Datenflüssen über Messaging, ETL und APIs.",
+        text: "SaaS-, Cloud- und On-Prem-Systeme verbinden, mit sicheren, zuverlässigen Datenflüssen über Messaging, ETL und APIs.",
       },
       {
         title: "AWS-Architektur & Migrationen",
@@ -51,11 +51,11 @@ const text = {
       },
       {
         title: "Monitoring & Produktionsbetrieb",
-        text: "Logging, Monitoring und Alerting – und jemand, der das System nach dem Go-live am Laufen hält.",
+        text: "Logging, Monitoring und Alerting. Und jemand, der das System nach dem Go-live am Laufen hält.",
       },
       {
         title: "Full-Stack bei Bedarf",
-        text: "Web-Frontends mit Next.js oder Remix, wenn Ihre Plattform eine Oberfläche braucht – von der API bis zum Bildschirm.",
+        text: "Web-Frontends mit Next.js oder React Router, wenn Ihre Plattform eine Oberfläche braucht. Von der API bis zum Bildschirm.",
       },
     ],
     offersEyebrow: "Angebote",
@@ -74,7 +74,7 @@ const text = {
       {
         eyebrow: "Das Kerngeschäft",
         title: "Projekte & laufende Betreuung",
-        text: "Ihre Systeme aufbauen, migrieren und betreiben – von Integrationsplattformen bis zu AWS-Migrationen, inklusive Betrieb und Weiterentwicklung nach dem Go-live.",
+        text: "Ihre Systeme aufbauen, migrieren und betreiben: von Integrationsplattformen bis zu AWS-Migrationen, inklusive Betrieb und Weiterentwicklung nach dem Go-live.",
         price: "Auf Anfrage",
         priceNote: "je nach Umfang",
         cta: "Über Ihr Projekt sprechen",
@@ -95,11 +95,11 @@ const text = {
       },
       {
         title: "Bauen",
-        text: "Umsetzen – mit automatisierten Tests und einer CI/CD-Pipeline ab dem ersten Tag.",
+        text: "Umsetzen, mit automatisierten Tests und einer CI/CD-Pipeline ab dem ersten Tag.",
       },
       {
         title: "Übergeben",
-        text: "Dokumentieren, an Ihr Team übergeben – oder den Betrieb für Sie übernehmen.",
+        text: "Dokumentieren und an Ihr Team übergeben oder den Betrieb für Sie übernehmen.",
       },
     ],
     workEyebrow: "Ausgewählte Projekte",
@@ -107,12 +107,12 @@ const text = {
     work: [
       {
         title: "Mandantenfähige Integrationsplattform für Xurrent",
-        text: "AWS-basierte Plattform, die Datenimporte und Prozesslogik in isolierten Umgebungen ausführt – live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
+        text: "AWS-basierte Plattform, die Datenimporte und Prozesslogik in isolierten Umgebungen ausführt. Live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
         facts: ["7 Kunden live", "~500 Integrationen / Woche"],
       },
       {
         title: "Hybrid-Cloud-Bridge zu On-Prem-Systemen",
-        text: "Ein Mid-/Jump-Server als sicheres Bindeglied zwischen Xurrent und den On-Prem-Systemen der Kunden – er führt Prozesslogik direkt in deren Umgebungen aus, mit selbstaktualisierenden, mandantengetrennten Docker-Images.",
+        text: "Ein Mid-/Jump-Server als sicheres Bindeglied zwischen Xurrent und den On-Prem-Systemen der Kunden. Er führt Prozesslogik direkt in deren Umgebungen aus, mit selbstaktualisierenden, mandantengetrennten Docker-Images.",
         facts: [
           "Sichere asynchrone Kommunikation über SQS & S3",
           "Linux, PowerShell, Entra & Exchange",
@@ -128,24 +128,24 @@ const text = {
   en: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freelance integration & cloud engineer from Berlin, remote or on-site across Germany, Austria and Switzerland – backend and integration solutions with Node.js/TypeScript and AWS.",
+      "Freelance integration & cloud engineer from Berlin, remote or on-site across Germany, Austria and Switzerland: backend and integration solutions with Node.js/TypeScript and AWS.",
     hero: {
       eyebrow: "For companies",
-      title: "Cloud & integrations –",
+      title: "Cloud & integrations,",
       highlight: "reliable in production.",
       cta: "Talk about your project",
-      text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS – from architecture and clean code to secure production operation.",
+      text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS, from architecture and clean code to secure production operation.",
     },
     servicesEyebrow: "Services",
     servicesHeading: "What I take on.",
     services: [
       {
         title: "Backend engineering",
-        text: "APIs and services in Node.js/TypeScript – typed, tested and maintainable, built with clean code and domain-driven design.",
+        text: "APIs and services in Node.js/TypeScript: typed, tested and maintainable, built with clean code and domain-driven design.",
       },
       {
         title: "System integration & data flows",
-        text: "Connect SaaS, cloud and on-prem systems with secure, reliable data flows – messaging, ETL and APIs.",
+        text: "Connect SaaS, cloud and on-prem systems with secure, reliable data flows via messaging, ETL and APIs.",
       },
       {
         title: "AWS architecture & migrations",
@@ -157,11 +157,11 @@ const text = {
       },
       {
         title: "Monitoring & production operation",
-        text: "Logging, monitoring and alerting – and someone who keeps it running after go-live.",
+        text: "Logging, monitoring and alerting. And someone who keeps it running after go-live.",
       },
       {
         title: "Full-stack when needed",
-        text: "Web frontends with Next.js or Remix when your platform needs an interface – from the API to the screen.",
+        text: "Web frontends with Next.js or React Router when your platform needs an interface. From the API to the screen.",
       },
     ],
     offersEyebrow: "Offers",
@@ -180,7 +180,7 @@ const text = {
       {
         eyebrow: "The main thing",
         title: "Projects & ongoing support",
-        text: "Building, migrating and running your systems – from integration platforms to AWS migrations, including operation and further development after go-live.",
+        text: "Building, migrating and running your systems: from integration platforms to AWS migrations, including operation and further development after go-live.",
         price: "On request",
         priceNote: "depending on scope",
         cta: "Talk about your project",
@@ -205,7 +205,7 @@ const text = {
       },
       {
         title: "Hand over",
-        text: "Document, hand over to your team – or keep running it for you.",
+        text: "Document and hand over to your team, or keep running it for you.",
       },
     ],
     workEyebrow: "Selected work",
@@ -213,12 +213,12 @@ const text = {
     work: [
       {
         title: "Multi-tenant integration platform for Xurrent",
-        text: "AWS-based platform running data imports and process logic in isolated environments – live at seven customers with around 500 integrations a week on real customer data.",
+        text: "AWS-based platform running data imports and process logic in isolated environments. Live at seven customers with around 500 integrations a week on real customer data.",
         facts: ["7 customers live", "~500 integrations / week"],
       },
       {
         title: "Hybrid cloud bridge to on-premise systems",
-        text: "A mid/jump server as the secure link between Xurrent and the on-premise systems of customers – running process logic inside their environments, with self-updating, tenant-separated Docker images.",
+        text: "A mid/jump server as the secure link between Xurrent and the on-premise systems of customers. It runs process logic inside their environments, with self-updating, tenant-separated Docker images.",
         facts: [
           "Secure async messaging via SQS & S3",
           "Linux, PowerShell, Entra & Exchange",

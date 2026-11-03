@@ -1,13 +1,43 @@
 [
   {
-    "title": "my website - based on remix",
-    "highlight": "website, remix",
+    "title": "demo website for a physiotherapy practice",
+    "highlight": "demo, website",
+    "from": "10.2026",
+    "until": "forever",
+    "employer": "myself",
+    "url": "https://physio-musterfrau.hschaletzky.com",
+    "repo": "https://github.com/hannesschaletzky/physio-musterfrau",
+    "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]
+  },
+  {
+    "title": "demo website for a sports club",
+    "highlight": "demo, website",
+    "from": "10.2026",
+    "until": "forever",
+    "employer": "myself",
+    "url": "https://sv-musterstadt.hschaletzky.com",
+    "repo": "https://github.com/hannesschaletzky/sv-musterstadt",
+    "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]
+  },
+  {
+    "title": "demo website for a carpentry",
+    "highlight": "demo, website",
+    "from": "10.2026",
+    "until": "forever",
+    "employer": "myself",
+    "url": "https://tischlerei-mustermann.hschaletzky.com",
+    "repo": "https://github.com/hannesschaletzky/tischlerei-mustermann",
+    "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]
+  },
+  {
+    "title": "my website on its own server",
+    "highlight": "website, server",
     "from": "01.2024",
     "until": "forever",
     "employer": "myself",
     "url": "https://hschaletzky.com",
-    "repo": "https://github.com/hannesschaletzky/hschaletzky_remix",
-    "stack": ["Remix", "TypeScript", "React", "Tailwind", "Design"]
+    "repo": "https://github.com/hannesschaletzky/hschaletzky",
+    "stack": ["React Router", "TypeScript", "Tailwind", "Hetzner", "OpenTofu"]
   },
   {
     "title": "ugly christmas sweater voting tool as web app",
