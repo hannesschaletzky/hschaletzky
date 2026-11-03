@@ -33,6 +33,7 @@ const testimonials: {
 ];
 
 // stacked rows without boxes – who on the left, the quote on the right
+// (on phones the name comes below the quote)
 export default function Testimonials({
   className = "",
 }: {
@@ -54,7 +55,7 @@ export default function Testimonials({
               key={testimonial.name}
               className="grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12"
             >
-              <figcaption className="flex items-center gap-4 md:flex-col md:items-start">
+              <figcaption className="order-last flex items-center gap-4 md:order-first md:flex-col md:items-start">
                 <img
                   src={testimonial.logo.src}
                   width={testimonial.logo.width}
