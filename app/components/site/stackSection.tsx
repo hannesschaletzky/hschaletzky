@@ -1,21 +1,24 @@
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
 
-const stack = [
-  "AWS ECS/Fargate",
-  "SQS · S3 · IAM",
-  "DynamoDB",
-  "PostgreSQL",
-  "Node.js",
-  "TypeScript",
-  "Next.js",
-  "React Router",
-  "Docker",
-  "GitHub Actions",
-  "Terraform",
-  "Playwright",
-  "Jest",
-  "Grafana",
+// the same four areas as on the stack page, only the most telling tools
+const stack: { title: { de: string; en: string }; items: string[] }[] = [
+  {
+    title: { de: "Cloud", en: "Cloud" },
+    items: ["AWS ECS/Fargate", "SQS · S3 · IAM", "Terraform / OpenTofu"],
+  },
+  {
+    title: { de: "Backend", en: "Backend" },
+    items: ["Node.js", "TypeScript", "PostgreSQL"],
+  },
+  {
+    title: { de: "Integration", en: "Integration" },
+    items: ["MS SQL Server", "Microsoft Entra", "SAML / SSO"],
+  },
+  {
+    title: { de: "Delivery & Betrieb", en: "Delivery & operations" },
+    items: ["Docker", "GitHub Actions", "Playwright", "Grafana"],
+  },
 ];
 
 export default function StackSection() {
@@ -28,16 +31,25 @@ export default function StackSection() {
         <SectionHeading eyebrow="Stack">
           {lang === "de" ? "Die Technik dahinter." : "The tech behind it."}
         </SectionHeading>
-        <ul className="flex flex-wrap gap-3">
-          {stack.map((item) => (
-            <li
-              key={item}
-              className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
-            >
-              {item}
-            </li>
+        <div className="grid gap-8 sm:grid-cols-2">
+          {stack.map((group) => (
+            <div key={group.title.en}>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                {group.title[lang]}
+              </h3>
+              <ul className="mt-3 flex flex-wrap gap-3">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
         <a
           href={localize("/stack", lang)}
           className="mt-8 inline-block text-teal hover:text-teal-light"
