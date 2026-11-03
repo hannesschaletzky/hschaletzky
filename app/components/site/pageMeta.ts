@@ -124,7 +124,7 @@ export const businessJsonLd = (lang: Lang) => ({
         ),
         offer(
           lang === "de" ? "Hosting & Wartung" : "Hosting & maintenance",
-          49,
+          25,
           true,
           "month"
         ),

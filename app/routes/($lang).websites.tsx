@@ -14,7 +14,7 @@ const text = {
   de: {
     title: "Websites für kleine Unternehmen & Vereine | Hannes Schaletzky",
     description:
-      "Website-Check-up ab 250 €, neue Websites ab 990 €, Hosting ab 49 € im Monat – persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
+      "Website-Check-up ab 250 €, neue Websites ab 990 €, Hosting ab 25 € im Monat – persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
     mail: "mailto:info@hschaletzky.com?subject=Website-Anfrage",
     hero: {
       eyebrow: "Für kleine Unternehmen & Vereine",
@@ -40,7 +40,7 @@ const text = {
       {
         title: "Website-Erstellung",
         price: "ab 990 €",
-        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Enthalten sind bis zu 5 Seiten in einer Sprache, Impressum und Datenschutzerklärung – größere Websites, Shops oder weitere Sprachen nach Aufwand.",
+        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Enthalten sind bis zu 5 Seiten in einer Sprache, Impressum und Datenschutzerklärung – größere Websites, Shops oder weitere Sprachen nach Aufwand*.",
         links: [
           {
             label: "Beispiel: Tischlerei",
@@ -58,8 +58,19 @@ const text = {
       },
       {
         title: "Hosting & Wartung",
-        price: "ab 49 € / Monat",
-        text: "Updates, Sicherheit und technische Hilfe, wenn etwas hakt – damit Sie sich nicht darum kümmern müssen. Enthalten sind Hosting, SSL, Backups und kleine Änderungen bis 30 Minuten im Monat – alles darüber nach Aufwand.",
+        text: "Updates, Sicherheit und technische Hilfe, wenn etwas hakt – damit Sie sich nicht darum kümmern müssen. In zwei Varianten:",
+        tiers: [
+          {
+            name: "Basis",
+            price: "25 € / Monat",
+            text: "Hosting, SSL, Backups und Updates. Änderungen nach Aufwand*.",
+          },
+          {
+            name: "Plus",
+            price: "49 € / Monat",
+            text: "Alles aus Basis, dazu kleine Änderungen bis 30 Minuten im Monat – alles darüber nach Aufwand*.",
+          },
+        ],
       },
       {
         title: "KI & Automatisierung",
@@ -67,6 +78,7 @@ const text = {
         text: "Wiederkehrende Arbeit automatisieren, zum Beispiel E-Mails, Termine und Routinen. Wir schauen zuerst, wo Sie am meisten Zeit verlieren – und ich baue nur, was Ihnen wirklich Arbeit abnimmt.",
       },
     ],
+    effort: "* Arbeit nach Aufwand: 71,40 € pro Stunde (60 € netto).",
     vat: "Alle Preise inkl. 19 % MwSt.",
     stepsEyebrow: "So läuft es ab",
     stepsHeading: "In drei Schritten zu Ihrer Website.",
@@ -114,7 +126,7 @@ const text = {
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Website check-up from 250 €, new websites from 990 €, hosting from 49 € a month – personal and fair, for self-employed people, small businesses and clubs.",
+      "Website check-up from 250 €, new websites from 990 €, hosting from 25 € a month – personal and fair, for self-employed people, small businesses and clubs.",
     mail: "mailto:info@hschaletzky.com?subject=Website%20inquiry",
     hero: {
       eyebrow: "For small businesses & clubs",
@@ -140,7 +152,7 @@ const text = {
       {
         title: "Website creation",
         price: "from 990 €",
-        text: "A modern, fast website that looks good on every device and that you can understand. Includes up to 5 pages in one language, imprint and privacy policy – bigger sites, shops or more languages depending on the effort.",
+        text: "A modern, fast website that looks good on every device and that you can understand. Includes up to 5 pages in one language, imprint and privacy policy – bigger sites, shops or more languages depending on the effort*.",
         links: [
           {
             label: "Example: carpentry (German)",
@@ -158,8 +170,19 @@ const text = {
       },
       {
         title: "Hosting & maintenance",
-        price: "from 49 € / month",
-        text: "Updates, security and technical help when something gets stuck – so you don't have to think about it. Includes hosting, SSL, backups and small changes up to 30 minutes a month – anything beyond that depending on the effort.",
+        text: "Updates, security and technical help when something gets stuck – so you don't have to think about it. In two versions:",
+        tiers: [
+          {
+            name: "Basic",
+            price: "25 € / month",
+            text: "Hosting, SSL, backups and updates. Changes depending on the effort*.",
+          },
+          {
+            name: "Plus",
+            price: "49 € / month",
+            text: "Everything in Basic, plus small changes up to 30 minutes a month – anything beyond that depending on the effort*.",
+          },
+        ],
       },
       {
         title: "AI & automation",
@@ -167,6 +190,7 @@ const text = {
         text: "Automate recurring work such as mails, appointments and routines. We start by looking at where you lose the most time – and I only build what really saves you work.",
       },
     ],
+    effort: "* Work billed by effort: 71.40 € per hour (60 € net).",
     vat: "All prices incl. 19 % VAT.",
     stepsEyebrow: "How it works",
     stepsHeading: "Three steps to your website.",
@@ -272,11 +296,34 @@ export default function Websites() {
                     <h3 className="text-xl font-bold text-white">
                       {offer.title}
                     </h3>
-                    <p className="shrink-0 font-semibold text-teal">
-                      {offer.price}
-                    </p>
+                    {/* hosting shows its prices in the tiers instead */}
+                    {offer.price && (
+                      <p className="shrink-0 font-semibold text-teal">
+                        {offer.price}
+                      </p>
+                    )}
                   </div>
                   <p className="mt-3 leading-relaxed">{offer.text}</p>
+                  {offer.tiers && (
+                    <dl className="mt-4 space-y-3">
+                      {offer.tiers.map((tier) => (
+                        <div
+                          key={tier.name}
+                          className="rounded-xl bg-white/5 px-4 py-3"
+                        >
+                          <dt className="flex items-baseline justify-between gap-4 font-semibold text-white">
+                            {tier.name}
+                            <span className="shrink-0 text-teal">
+                              {tier.price}
+                            </span>
+                          </dt>
+                          <dd className="mt-1 text-sm leading-relaxed">
+                            {tier.text}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                   {offer.links && (
                     <div className="mt-4 flex flex-col items-start gap-2">
                       {offer.links.map((link) => (
@@ -302,7 +349,10 @@ export default function Websites() {
               ))}
             </div>
             {/* final prices incl. VAT, required when consumers may order (PAngV) */}
-            <p className="mt-6 text-sm text-slate-400">{t.vat}</p>
+            <div className="mt-6 space-y-1 text-sm text-slate-400">
+              <p>{t.vat}</p>
+              <p>{t.effort}</p>
+            </div>
           </div>
         </section>
 
