@@ -134,7 +134,7 @@ const values = [
   {
     title: "Take ownership",
     text: {
-      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum, bis es wieder läuft.",
+      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum, bis das Problem gelöst ist.",
       en: "What I build, I also look after. If something breaks, I take care of it until it runs again.",
     },
     icon: (
