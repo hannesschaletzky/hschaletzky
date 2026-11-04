@@ -29,6 +29,14 @@ export function getSiteMap(lang: Lang) {
           label: de ? "Website-Check-up" : "Website check-up",
           href: localize("/website-check-up", lang),
         },
+        {
+          label: de ? "Website-Erstellung" : "Website creation",
+          href: localize("/website-erstellen", lang),
+        },
+        {
+          label: de ? "Hosting & Wartung" : "Hosting & maintenance",
+          href: localize("/hosting-wartung", lang),
+        },
       ],
     },
     {

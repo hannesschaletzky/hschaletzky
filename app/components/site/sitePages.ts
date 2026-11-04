@@ -7,6 +7,8 @@ export const sitePages = [
   "/cloud",
   "/websites",
   "/website-check-up",
+  "/website-erstellen",
+  "/hosting-wartung",
   "/about",
   "/stack",
   "/side-projects",

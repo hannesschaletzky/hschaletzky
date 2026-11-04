@@ -2,6 +2,7 @@ import type { MetaFunction } from "react-router";
 import ClimbSteps from "~/components/site/climbSteps";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
+import FeatureList from "~/components/site/featureList";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
@@ -136,7 +137,7 @@ const text = {
       {
         question: "Wie viele Seiten prüfen Sie?",
         answer:
-          "Technik, Sicherheit und Links prüfe ich für die ganze Website. Bis zu fünf wichtige Seiten sehe ich mir zusätzlich persönlich genau an, Startseite, Impressum und Datenschutzerklärung immer.",
+          "Technik, Sicherheit und Links prüfe ich für die ganze Website. Bis zu fünf wichtige Seiten sehe ich mir zusätzlich persönlich genau an, darunter immer Startseite, Impressum und Datenschutzerklärung.",
       },
       {
         question: "Beheben Sie die Probleme auch?",
@@ -340,22 +341,7 @@ export default function WebsiteCheckUp() {
             <SectionHeading eyebrow={t.areasEyebrow}>
               {t.areasHeading}
             </SectionHeading>
-            <ol className="grid gap-x-12 border-t border-white/10 md:grid-cols-2">
-              {t.areas.map((area, i) => (
-                <li
-                  key={area.title}
-                  className="flex gap-5 border-b border-white/10 py-5"
-                >
-                  <span className="w-6 shrink-0 font-semibold tabular-nums text-teal">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-white">{area.title}</h3>
-                    <p className="mt-1 leading-relaxed">{area.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+            <FeatureList items={t.areas} />
             <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
               {t.tools}
             </p>
