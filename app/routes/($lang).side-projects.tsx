@@ -74,6 +74,7 @@ const germanTags: Record<string, string> = {
 
 const germanEmployers: Record<string, string> = {
   myself: "für mich",
+  "sample project": "Beispielprojekt",
   "christmas party": "Weihnachtsfeier",
 };
 

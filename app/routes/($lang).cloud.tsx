@@ -7,16 +7,11 @@ import { logos } from "~/components/site/logos";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
-import { calUrl } from "~/components/site/siteNav";
 import StackSection from "~/components/site/stackSection";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import Testimonials from "~/components/site/testimonials";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
-
-const projectMail = {
-  de: "mailto:info@hschaletzky.com?subject=Projektanfrage",
-  en: "mailto:info@hschaletzky.com?subject=Project%20inquiry",
-};
 
 const text = {
   de: {
@@ -67,8 +62,8 @@ const text = {
         text: "Ein kurzer, fokussierter Einstieg: Ich lerne Ihr Setup, Ihre Schnittstellen und Datenflüsse kennen und finde die Schwachstellen. Danach bekommen Sie einen Lösungsvorschlag und eine belastbare Schätzung.",
         price: "ab 800 €",
         priceNote: "zzgl. MwSt.",
-        cta: "Kickoff buchen",
-        href: calUrl,
+        cta: "Kickoff anfragen",
+        href: "/contact",
         highlight: true,
       },
       {
@@ -78,7 +73,7 @@ const text = {
         price: "Auf Anfrage",
         priceNote: "je nach Umfang",
         cta: "Über Ihr Projekt sprechen",
-        href: projectMail.de,
+        href: "/contact",
         highlight: false,
       },
     ],
@@ -185,8 +180,8 @@ const text = {
         text: "A short, focused start: I get to know your setup, interfaces and data flows and find the weak spots. Then you get a proposed solution and a reliable estimate.",
         price: "from 800 €",
         priceNote: "plus VAT",
-        cta: "Book a kickoff",
-        href: calUrl,
+        cta: "Request a kickoff",
+        href: "/en/contact",
         highlight: true,
       },
       {
@@ -196,7 +191,7 @@ const text = {
         price: "On request",
         priceNote: "depending on scope",
         cta: "Talk about your project",
-        href: projectMail.en,
+        href: "/en/contact",
         highlight: false,
       },
     ],
@@ -285,13 +280,16 @@ export default function Cloud() {
           eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: projectMail[lang] }}
+          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
         >
           {t.hero.text}
         </PageHero>
 
+        {/* proof first: companies want to know who has trusted me before */}
+        <Testimonials className="bg-navy-lighter" />
+
         {/* services */}
-        <section className="bg-navy-lighter">
+        <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.servicesEyebrow}>
               {t.servicesHeading}
@@ -313,7 +311,7 @@ export default function Cloud() {
         </section>
 
         {/* offers: small entry and the main project work */}
-        <section>
+        <section className="bg-navy-lighter">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}

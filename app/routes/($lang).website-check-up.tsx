@@ -6,6 +6,7 @@ import FeatureList from "~/components/site/featureList";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
+import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
@@ -16,11 +17,11 @@ export const loader = langLoader;
 // landing page for the check-up (also the target of the check-up ads)
 const text = {
   de: {
-    title: "Website-Check-up für 250 € | Hannes Schaletzky",
+    title: "Website-Check-up in Berlin für 250 € | Hannes Schaletzky",
     description:
       "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30 Minuten Besprechung, Festpreis 250 €.",
     hero: {
-      eyebrow: "Website-Check-up",
+      eyebrow: "Website-Check-up aus Berlin",
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
       cta: "Kontakt aufnehmen",
@@ -85,7 +86,7 @@ const text = {
       },
       {
         title: "Besprechen",
-        text: "Sie bekommen den Bericht als PDF, und wir gehen ihn in 30 Minuten per Video oder Telefon durch.",
+        text: "Innerhalb von 5 Werktagen bekommen Sie den Bericht als PDF. Den Termin für die 30 Minuten Besprechung legen Sie fest.",
       },
     ],
     reportEyebrow: "Der Bericht",
@@ -116,7 +117,7 @@ const text = {
         features: [
           "Prüfung der ganzen Website in zehn Bereichen",
           "Persönliche Durchsicht von bis zu fünf wichtigen Seiten",
-          "Bericht als PDF, jeder Vorschlag mit Dringlichkeit und Aufwand",
+          "Bericht als PDF innerhalb von 5 Werktagen, jeder Vorschlag mit Dringlichkeit und Aufwand",
           "30 Minuten Besprechung per Video oder Telefon",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
@@ -133,6 +134,11 @@ const text = {
         question: "Funktioniert das auch mit WordPress, Wix oder Jimdo?",
         answer:
           "Ja. Weil ich von außen prüfe, ist es egal, womit Ihre Website gebaut ist.",
+      },
+      {
+        question: "Wann bekomme ich den Bericht, und wie wird bezahlt?",
+        answer:
+          "Innerhalb von 5 Werktagen, zusammen mit der Rechnung. Den Termin für die Besprechung legen Sie danach ganz nach Ihrem Kalender fest, per Video oder Telefon.",
       },
       {
         question: "Wie viele Seiten prüfen Sie?",
@@ -161,7 +167,7 @@ const text = {
     description:
       "I check your website for security, technology, loading time, findability on Google and legal texts. A report with clear recommendations and a 30-minute call, fixed price 250 €.",
     hero: {
-      eyebrow: "Website check-up",
+      eyebrow: "Website check-up from Berlin",
       title: "How good is your website",
       highlight: "really?",
       cta: "Get in touch",
@@ -226,7 +232,7 @@ const text = {
       },
       {
         title: "Talk it through",
-        text: "You get the report as a PDF, and we go through it in a 30-minute video or phone call.",
+        text: "Within 5 working days you get the report as a PDF. You pick the time for the 30-minute call.",
       },
     ],
     reportEyebrow: "The report",
@@ -257,7 +263,7 @@ const text = {
         features: [
           "A check of the whole website in ten areas",
           "A personal look at up to five important pages",
-          "Report as a PDF, every suggestion with urgency and effort",
+          "Report as a PDF within 5 working days, every suggestion with urgency and effort",
           "30-minute video or phone call",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
@@ -274,6 +280,11 @@ const text = {
         question: "Does this work with WordPress, Wix or Jimdo too?",
         answer:
           "Yes. Because I check from the outside, it doesn't matter what your website is built with.",
+      },
+      {
+        question: "When do I get the report, and how do I pay?",
+        answer:
+          "Within 5 working days, together with the invoice. Afterwards you pick a time for the call that suits your calendar, by video or phone.",
       },
       {
         question: "How many pages do you check?",
@@ -306,6 +317,7 @@ export const meta: MetaFunction = ({ params }) => {
     description: text[lang].description,
     path: "/website-check-up",
     lang,
+    image: "website-check-up",
   });
 };
 
@@ -433,10 +445,9 @@ export default function WebsiteCheckUp() {
           className="bg-navy-light"
         />
 
-        {/* the faq has its own background, so the box needs its own gap */}
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <RelatedOffers current="/website-check-up" />
+
+        <ContactBox />
       </main>
 
       <Footer />

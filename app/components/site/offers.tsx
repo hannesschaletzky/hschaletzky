@@ -22,7 +22,7 @@ const offers = {
       items: [
         "Website-Check-up – 250 € inkl. MwSt.",
         "Website-Erstellung – ab 599 € inkl. MwSt.",
-        "Hosting & Wartung – ab 25 € / Monat",
+        "Hosting & Wartung – ab 25 € / Monat inkl. MwSt.",
         "KI & Automatisierung",
       ],
       href: "/websites",
@@ -48,7 +48,7 @@ const offers = {
       items: [
         "Website check-up – 250 € incl. VAT",
         "Website creation – from 599 € incl. VAT",
-        "Hosting & maintenance – from 25 € / month",
+        "Hosting & maintenance – from 25 € / month incl. VAT",
         "AI & automation",
       ],
       href: "/websites",

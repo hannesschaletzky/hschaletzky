@@ -7,6 +7,7 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
+import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
 import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
@@ -16,11 +17,11 @@ export const loader = langLoader;
 // landing page for new websites (also the target of the website ads)
 const text = {
   de: {
-    title: "Website erstellen lassen ab 599 € | Hannes Schaletzky",
+    title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Fertig in ein bis zwei Wochen, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Fertig in ein bis zwei Wochen, bezahlt wird erst, wenn sie online ist.",
     hero: {
-      eyebrow: "Website-Erstellung",
+      eyebrow: "Webdesign aus Berlin",
       title: "Ihre neue Website,",
       highlight: "in ein bis zwei Wochen online.",
       cta: "Kontakt aufnehmen",
@@ -44,7 +45,7 @@ const text = {
       },
       {
         title: "Entwurf & Feinschliff",
-        text: "Nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und wir passen an, bis alles stimmt.",
+        text: "Nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und in zwei Korrekturrunden passen wir alles an.",
       },
       {
         title: "Online & betreut",
@@ -64,7 +65,7 @@ const text = {
       },
       {
         title: "Impressum & Datenschutz",
-        text: "Die Pflichtangaben sind immer dabei und überall verlinkt.",
+        text: "Erstellt mit anerkannten Werkzeugen, passend zu Ihrer Website. Die Angaben zu Ihrem Betrieb liefern Sie.",
       },
       {
         title: "Bei Google auffindbar",
@@ -89,7 +90,9 @@ const text = {
         priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
           "Eine Seite mit allem Wichtigen: Leistungen, Über uns, Kontakt",
-          "Impressum und Datenschutzerklärung",
+          "Kontaktformular",
+          "Dazu Impressum und Datenschutzerklärung",
+          "Zwei Korrekturrunden",
           "Meist nach einer Woche fertig",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
@@ -100,15 +103,17 @@ const text = {
         priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
           "Bis zu 5 Seiten, zum Beispiel Leistungen, Team, Termine und Kontakt",
-          "Impressum und Datenschutzerklärung",
+          "Kontaktformular",
+          "Dazu Impressum und Datenschutzerklärung",
+          "Zwei Korrekturrunden",
           "Meist nach etwa zwei Wochen fertig",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
     ],
     pricingNotes: [
-      "Größere Websites, Shops oder weitere Sprachen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
-      "Hosting & Wartung gibt es auf Wunsch ab 25 € im Monat dazu.",
+      "Weitere Korrekturrunden, größere Websites, Shops oder weitere Sprachen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
+      "Dazu empfehle ich Hosting & Wartung ab 25 € im Monat, eine .de-Domain ist dabei.",
     ],
     faqHeading: "Gut zu wissen.",
     faqs: [
@@ -140,6 +145,16 @@ const text = {
           "Ja. Auf Wunsch baue ich ein einfaches Redaktionssystem ein, mit dem Sie Texte und Bilder selbst pflegen können. Das rechne ich nach Aufwand ab. Sie können mir Änderungen aber auch einfach schicken.",
       },
       {
+        question: "Welche laufenden Kosten kommen dazu?",
+        answer:
+          "Das hängt davon ab, wo Ihre Website läuft. Ich empfehle Hosting & Wartung bei mir ab 25 € im Monat, eine .de-Domain ist dabei. Sie können die Website aber auch bei einem anderen Anbieter betreiben, dann übergebe ich sie Ihnen fertig eingerichtet.",
+      },
+      {
+        question: "Wer ist für Impressum und Datenschutz verantwortlich?",
+        answer:
+          "Ich erstelle beide Texte mit anerkannten Werkzeugen, passend zu dem, was Ihre Website technisch macht. Die Angaben zu Ihrem Betrieb liefern Sie, und Sie prüfen die Texte vor dem Start. Eine Rechtsberatung ist das nicht.",
+      },
+      {
         question: "Wie läuft die Bezahlung?",
         answer:
           "Sie zahlen erst, wenn Ihre Website online ist und Ihnen gefällt. Hosting und Wartung rechne ich monatlich ab.",
@@ -147,7 +162,7 @@ const text = {
       {
         question: "Wem gehören die Website und die Domain?",
         answer:
-          "Die Website gehört Ihnen. Die Domain läuft am besten auf Ihren Namen, ich kann sie aber auch für Sie verwalten. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
+          "Die Website gehört Ihnen, und die Domain läuft auf Ihren Namen. Bei Hosting & Wartung ist eine .de-Domain enthalten, ich verwalte sie technisch für Sie. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
       },
     ],
   },
@@ -156,7 +171,7 @@ const text = {
     description:
       "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Ready in one to two weeks, you only pay once it's online.",
     hero: {
-      eyebrow: "Website creation",
+      eyebrow: "Web design from Berlin",
       title: "Your new website,",
       highlight: "online in one to two weeks.",
       cta: "Get in touch",
@@ -180,7 +195,7 @@ const text = {
       },
       {
         title: "Draft & polish",
-        text: "After a few days you see a first draft. You tell me what you like, and we adjust until everything is right.",
+        text: "After a few days you see a first draft. You tell me what you like, and we adjust everything in two rounds of changes.",
       },
       {
         title: "Online & cared for",
@@ -200,7 +215,7 @@ const text = {
       },
       {
         title: "Imprint & privacy policy",
-        text: "The mandatory details are always included and linked everywhere.",
+        text: "Created with established tools to match your website. You provide the details about your business.",
       },
       {
         title: "Findable on Google",
@@ -225,7 +240,9 @@ const text = {
         priceNote: "one-off, incl. 19 % VAT",
         features: [
           "One page with everything important: services, about, contact",
-          "Imprint and privacy policy",
+          "Contact form",
+          "Plus imprint and privacy policy",
+          "Two rounds of changes",
           "Usually ready after a week",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
@@ -236,15 +253,17 @@ const text = {
         priceNote: "one-off, incl. 19 % VAT",
         features: [
           "Up to 5 pages, for example services, team, dates and contact",
-          "Imprint and privacy policy",
+          "Contact form",
+          "Plus imprint and privacy policy",
+          "Two rounds of changes",
           "Usually ready after about two weeks",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
       },
     ],
     pricingNotes: [
-      "Bigger sites, shops or more languages billed by effort: 71.40 € per hour (60 € net).",
-      "Hosting & maintenance can be added from 25 € a month.",
+      "More rounds of changes, bigger sites, shops or more languages billed by effort: 71.40 € per hour (60 € net).",
+      "I recommend adding hosting & maintenance from 25 € a month, a .de domain included.",
     ],
     faqHeading: "Good to know.",
     faqs: [
@@ -275,6 +294,16 @@ const text = {
           "Yes. If you like, I add a simple content management system so you can edit texts and images yourself. I bill that by effort. You can also just send me your changes.",
       },
       {
+        question: "What running costs come on top?",
+        answer:
+          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month, a .de domain included. You can also run the website with another provider, then I hand it over to you fully set up.",
+      },
+      {
+        question: "Who is responsible for the imprint and privacy policy?",
+        answer:
+          "I create both texts with established tools, matching what your website does technically. You provide the details about your business and review the texts before launch. This is not legal advice.",
+      },
+      {
         question: "How does payment work?",
         answer:
           "You only pay once your website is online and you like it. Hosting and maintenance are billed monthly.",
@@ -282,7 +311,7 @@ const text = {
       {
         question: "Who owns the website and the domain?",
         answer:
-          "The website is yours. The domain is best registered in your name, but I can also manage it for you. If you ever want to switch, I hand everything over.",
+          "The website is yours, and the domain is registered in your name. Hosting & maintenance includes a .de domain, which I manage technically for you. If you ever want to switch, I hand everything over.",
       },
     ],
   },
@@ -295,6 +324,7 @@ export const meta: MetaFunction = ({ params }) => {
     description: text[lang].description,
     path: "/website-erstellen",
     lang,
+    image: "website-erstellen",
   });
 };
 
@@ -386,10 +416,9 @@ export default function WebsiteErstellen() {
           className="bg-navy-light"
         />
 
-        {/* the faq has its own background, so the box needs its own gap */}
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <RelatedOffers current="/website-erstellen" />
+
+        <ContactBox />
       </main>
 
       <Footer />

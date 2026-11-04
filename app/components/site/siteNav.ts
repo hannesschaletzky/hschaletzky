@@ -55,6 +55,7 @@ export function getSiteMap(lang: Lang) {
       links: [
         { label: de ? "Kontakt" : "Contact", href: localize("/contact", lang) },
         { label: "info@hschaletzky.com", href: "mailto:info@hschaletzky.com" },
+        phone,
       ],
     },
   ];
@@ -62,6 +63,9 @@ export function getSiteMap(lang: Lang) {
 
 // intro calls – plain link, nothing from cal.com loads on this site
 export const calUrl = "https://cal.com/hannesschaletzky";
+
+// business number, the same as in the imprint
+export const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
 
 // the legal pages exist in German only
 export const legalPaths = ["/impressum", "/datenschutz"];

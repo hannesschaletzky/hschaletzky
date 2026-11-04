@@ -84,14 +84,15 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Kontakt per E-Mail">
+      <LegalSection title="6. Kontakt per E-Mail oder Telefon">
         <p>
-          Wenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre Angaben (z. B.
-          Name, E-Mail-Adresse, Inhalt der Nachricht), um Ihre Anfrage zu
-          beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern
-          Ihre Anfrage mit einem Vertrag oder vorvertraglichen Maßnahmen
-          zusammenhängt, und im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-          Interesse an der Beantwortung von Anfragen).
+          Wenn Sie mir eine E-Mail schreiben oder mich anrufen, verarbeite ich
+          Ihre Angaben (z. B. Name, E-Mail-Adresse oder Telefonnummer, Inhalt
+          der Nachricht oder des Gesprächs), um Ihre Anfrage zu beantworten.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage
+          mit einem Vertrag oder vorvertraglichen Maßnahmen zusammenhängt, und
+          im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+          Beantwortung von Anfragen).
         </p>
         <p>
           Für E-Mails nutze ich Microsoft 365 (Microsoft Ireland Operations

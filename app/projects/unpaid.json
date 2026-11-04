@@ -4,7 +4,7 @@
     "highlight": "demo, website",
     "from": "10.2026",
     "until": "forever",
-    "employer": "myself",
+    "employer": "sample project",
     "url": "https://physio-musterfrau.hschaletzky.com",
     "repo": "https://github.com/hannesschaletzky/physio-musterfrau",
     "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]
@@ -14,7 +14,7 @@
     "highlight": "demo, website",
     "from": "10.2026",
     "until": "forever",
-    "employer": "myself",
+    "employer": "sample project",
     "url": "https://sv-musterstadt.hschaletzky.com",
     "repo": "https://github.com/hannesschaletzky/sv-musterstadt",
     "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]
@@ -24,7 +24,7 @@
     "highlight": "demo, website",
     "from": "10.2026",
     "until": "forever",
-    "employer": "myself",
+    "employer": "sample project",
     "url": "https://tischlerei-mustermann.hschaletzky.com",
     "repo": "https://github.com/hannesschaletzky/tischlerei-mustermann",
     "stack": ["Astro", "TypeScript", "Caddy", "Docker", "Design"]

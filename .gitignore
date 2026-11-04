@@ -4,3 +4,6 @@ node_modules
 /.react-router
 .env
 .DS_Store
+
+# internal documents (offer terms etc.), never published
+/intern/

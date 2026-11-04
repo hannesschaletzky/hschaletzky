@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => [
 
 export default function Impressum() {
   return (
-    <LegalPage title="Impressum" updated="Oktober 2026">
+    <LegalPage title="Impressum" updated="November 2026">
       <LegalSection title="Angaben gemäß § 5 DDG">
         <p>
           Hannes Schaletzky

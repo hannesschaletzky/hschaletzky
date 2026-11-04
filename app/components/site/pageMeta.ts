@@ -4,16 +4,19 @@ import { localize, type Lang } from "~/i18n";
 // title, description, link preview (Open Graph), canonical URL and the links
 // between the German and English version of a page
 // path is the German address ("/cloud"), the English one is derived from it
+// image: own preview under /og/<image>-<lang>.png (2x, centred for square crops)
 export function pageMeta({
   title,
   description,
   path,
   lang,
+  image,
 }: {
   title: string;
   description: string;
   path: string;
   lang: Lang;
+  image?: string;
 }) {
   const urls = {
     de: siteUrl + (path === "/" ? "" : path),
@@ -39,10 +42,12 @@ export function pageMeta({
     { property: "og:description", content: description },
     {
       property: "og:image",
-      content: `${siteUrl}/${lang === "de" ? "og-image-de" : "og-image"}.png`,
+      content: image
+        ? `${siteUrl}/og/${image}-${lang}.png`
+        : `${siteUrl}/${lang === "de" ? "og-image-de" : "og-image"}.png`,
     },
-    { property: "og:image:width", content: "1200" },
-    { property: "og:image:height", content: "630" },
+    { property: "og:image:width", content: image ? "2400" : "1200" },
+    { property: "og:image:height", content: image ? "1260" : "630" },
     { name: "twitter:card", content: "summary_large_image" },
   ];
 }
@@ -79,8 +84,12 @@ export const businessJsonLd = (lang: Lang) => ({
     image: `${siteUrl}/hannes.jpg`,
     logo: `${siteUrl}/icon-512.png`,
     email: "info@hschaletzky.com",
+    telephone: "+491628525830",
+    // the same address as in the imprint
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Fasanenstraße 38",
+      postalCode: "10719",
       addressLocality: "Berlin",
       addressCountry: "DE",
     },

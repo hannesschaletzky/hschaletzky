@@ -2,15 +2,13 @@ import type { MetaFunction } from "react-router";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
-import { calUrl } from "~/components/site/siteNav";
+import { calUrl, phone } from "~/components/site/siteNav";
 import { pageMeta } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
 const mail = "info@hschaletzky.com";
-// same number as in the imprint
-const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
 
 const text = {
   de: {

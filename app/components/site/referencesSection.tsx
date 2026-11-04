@@ -20,7 +20,7 @@ const references = [
   },
 ];
 
-// websites I look after, on the websites overview and the hosting page
+// websites I look after technically, on the hosting page (content is up to the clubs)
 export default function ReferencesSection({
   className,
 }: {
@@ -32,9 +32,14 @@ export default function ReferencesSection({
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeading eyebrow={lang === "de" ? "Referenzen" : "References"}>
           {lang === "de"
-            ? "Websites, die ich betreue."
-            : "Websites I look after."}
+            ? "Websites, die ich technisch betreue."
+            : "Websites I look after technically."}
         </SectionHeading>
+        <p className="-mt-4 mb-10 max-w-2xl text-lg leading-relaxed">
+          {lang === "de"
+            ? "Inhalte und Gestaltung pflegen die Vereine selbst. Ich sorge dafür, dass ihre Seiten sicher, aktuell und erreichbar sind."
+            : "The clubs maintain content and design themselves. I make sure their sites are secure, up to date and online."}
+        </p>
         <div className="grid gap-6 md:grid-cols-2">
           {references.map((reference) => (
             <a
