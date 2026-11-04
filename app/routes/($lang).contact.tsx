@@ -23,7 +23,7 @@ const text = {
     channels: [
       {
         title: "E-Mail",
-        text: "Der schnellste Weg zu mir, auch wenn Sie meinen Lebenslauf möchten.",
+        text: "Der schnellste Weg zu mir. Gern schicke ich Ihnen auch meinen Lebenslauf.",
         label: mail,
         href: `mailto:${mail}`,
       },
@@ -59,7 +59,7 @@ const text = {
     channels: [
       {
         title: "Mail",
-        text: "The fastest way to reach me, also if you'd like my CV.",
+        text: "The fastest way to reach me. I'm also happy to send you my CV.",
         label: mail,
         href: `mailto:${mail}`,
       },

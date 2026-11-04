@@ -28,18 +28,18 @@ const text = {
       title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
-      text: "Ich verbinde ITSM-, MDM- und Microsoft-Umgebungen mit der Cloud und mit On-Prem-Systemen. Mit Node.js/TypeScript und AWS, von der Architektur bis zum sicheren Betrieb.",
+      text: "Ich verbinde ITSM-, MDM- und Microsoft-Umgebungen mit der Cloud und mit On-Prem-Systemen. Dafür nutze ich Node.js/TypeScript und AWS und begleite Sie von der Architektur bis zum sicheren Betrieb.",
     },
     servicesEyebrow: "Leistungen",
     servicesHeading: "Was ich übernehme.",
     services: [
       {
         title: "ITSM-, MDM- & Identity-Integrationen",
-        text: "ITSM-Systeme wie Xurrent mit MDM-Systemen wie Microsoft Intune, ACMP oder Mobivisor verbinden und Abläufe in Entra und Exchange automatisieren, über APIs, Messaging und ETL.",
+        text: "Ich verbinde ITSM-Systeme wie Xurrent mit MDM-Systemen wie Intune, ACMP oder Mobivisor und automatisiere Abläufe in Entra und Exchange, über APIs, Messaging und ETL.",
       },
       {
         title: "Cloud & On-Prem verbinden",
-        text: "Sichere Brücken zwischen SaaS, Cloud und den On-Prem-Systemen Ihrer Kunden, mit zuverlässigen, asynchronen Datenflüssen.",
+        text: "Ich verbinde SaaS und Cloud sicher mit den On-Prem-Systemen Ihrer Kunden. Die Daten fließen asynchron und zuverlässig.",
       },
       {
         title: "AWS-Architektur & Migrationen",
@@ -64,7 +64,7 @@ const text = {
       {
         eyebrow: "Ein guter erster Schritt",
         title: "Projekt-Kickoff",
-        text: "Ein kurzer, fokussierter Start an Ihrem System: Ich lerne Ihr Setup, Ihre Schnittstellen und Datenflüsse kennen, finde die Schwachstellen, skizziere eine Lösung und gebe Ihnen eine belastbare Schätzung.",
+        text: "Ein kurzer, fokussierter Einstieg: Ich lerne Ihr Setup, Ihre Schnittstellen und Datenflüsse kennen und finde die Schwachstellen. Danach bekommen Sie einen Lösungsvorschlag und eine belastbare Schätzung.",
         price: "ab 800 €",
         priceNote: "zzgl. MwSt.",
         cta: "Kickoff buchen",
@@ -74,7 +74,7 @@ const text = {
       {
         eyebrow: "Das Kerngeschäft",
         title: "Projekte & laufende Betreuung",
-        text: "Ihre Systeme aufbauen, migrieren und betreiben: von Integrationsplattformen bis zu AWS-Migrationen, inklusive Betrieb und Weiterentwicklung nach dem Go-live.",
+        text: "Von der Integrationsplattform bis zur AWS-Migration: Ich baue Ihre Systeme auf, betreibe sie und entwickle sie nach dem Go-live weiter.",
         price: "Auf Anfrage",
         priceNote: "je nach Umfang",
         cta: "Über Ihr Projekt sprechen",
@@ -107,7 +107,7 @@ const text = {
     work: [
       {
         title: "Mandantenfähige Integrationsplattform für Xurrent",
-        text: "AWS-basierte Plattform, die Datenimporte und Prozesslogik in isolierten Umgebungen ausführt, darunter Integrationen mit MDM-Systemen wie Microsoft Intune, ACMP und Mobivisor. Live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
+        text: "AWS-Plattform, die Datenimporte und Prozesslogik für jeden Kunden in einer eigenen Umgebung ausführt, zum Beispiel Integrationen mit Intune, ACMP und Mobivisor. Live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
         facts: [
           "7 Kunden live",
           "~500 Integrationen / Woche",
@@ -116,7 +116,7 @@ const text = {
       },
       {
         title: "Hybrid-Cloud-Bridge zu On-Prem-Systemen",
-        text: "Ein Mid-/Jump-Server als sicheres Bindeglied zwischen Xurrent und den On-Prem-Systemen der Kunden. Er führt Prozesslogik direkt in deren Umgebungen aus, mit selbstaktualisierenden, mandantengetrennten Docker-Images.",
+        text: "Ein Mid-/Jump-Server als sicheres Bindeglied zwischen Xurrent und den On-Prem-Systemen der Kunden. Er führt die Prozesslogik direkt in ihren Umgebungen aus. Die Docker-Images aktualisieren sich selbst und sind pro Mandant getrennt.",
         facts: [
           "Sichere asynchrone Kommunikation über SQS & S3",
           "Linux, PowerShell, Entra & Exchange",
@@ -129,7 +129,7 @@ const text = {
       },
       {
         title: "BundesIdent: Backend für digitale Identitäten (eID)",
-        text: "Skalierbares Backend zur Authentifizierung digitaler Identitäten in der bundesweiten eID-Infrastruktur, mit sicheren API-Schnittstellen, Kubernetes-Deployment und Rufbereitschaft für den Produktivbetrieb. Als angestellter Software Engineer bei DigitalService. Das Backend lief 2022–2023 und ist Open Source.",
+        text: "Skalierbares Backend, das digitale Identitäten in der bundesweiten eID-Infrastruktur prüft, mit sicheren APIs, Kubernetes und Rufbereitschaft im Produktivbetrieb. Ich habe daran als angestellter Software Engineer bei DigitalService gearbeitet. Das Backend lief 2022–2023 und ist Open Source.",
         facts: [
           "Öffentlicher Sektor",
           "Kotlin/Spring Boot · SAML · Kubernetes",
@@ -146,18 +146,18 @@ const text = {
       title: "Cloud & integrations,",
       highlight: "reliable in production.",
       cta: "Talk about your project",
-      text: "I connect ITSM, MDM and Microsoft environments with the cloud and with on-prem systems. With Node.js/TypeScript and AWS, from architecture to secure production operation.",
+      text: "I connect ITSM, MDM and Microsoft environments with the cloud and with on-prem systems. I use Node.js/TypeScript and AWS and support you from architecture to secure production operation.",
     },
     servicesEyebrow: "Services",
     servicesHeading: "What I take on.",
     services: [
       {
         title: "ITSM, MDM & identity integrations",
-        text: "Connect ITSM systems such as Xurrent with MDM systems such as Microsoft Intune, ACMP or Mobivisor, and automate processes in Entra and Exchange, via APIs, messaging and ETL.",
+        text: "I connect ITSM systems such as Xurrent with MDM systems such as Intune, ACMP or Mobivisor and automate processes in Entra and Exchange, via APIs, messaging and ETL.",
       },
       {
         title: "Connecting cloud & on-prem",
-        text: "Secure bridges between SaaS, the cloud and the on-prem systems of your customers, with reliable asynchronous data flows.",
+        text: "I connect SaaS and the cloud securely with the on-prem systems of your customers. Data flows asynchronously and reliably.",
       },
       {
         title: "AWS architecture & migrations",
@@ -182,7 +182,7 @@ const text = {
       {
         eyebrow: "A good first step",
         title: "Project kickoff",
-        text: "A short, focused start on your system: I get to know your setup, interfaces and data flows, find the weak spots, sketch a solution and give you a reliable estimate.",
+        text: "A short, focused start: I get to know your setup, interfaces and data flows and find the weak spots. Then you get a proposed solution and a reliable estimate.",
         price: "from 800 €",
         priceNote: "plus VAT",
         cta: "Book a kickoff",
@@ -192,7 +192,7 @@ const text = {
       {
         eyebrow: "The main thing",
         title: "Projects & ongoing support",
-        text: "Building, migrating and running your systems: from integration platforms to AWS migrations, including operation and further development after go-live.",
+        text: "From an integration platform to an AWS migration: I build your systems, run them and keep developing them after go-live.",
         price: "On request",
         priceNote: "depending on scope",
         cta: "Talk about your project",
@@ -225,7 +225,7 @@ const text = {
     work: [
       {
         title: "Multi-tenant integration platform for Xurrent",
-        text: "AWS-based platform running data imports and process logic in isolated environments, including integrations with MDM systems such as Microsoft Intune, ACMP and Mobivisor. Live at seven customers with around 500 integrations a week on real customer data.",
+        text: "AWS platform that runs data imports and process logic in a separate environment for each customer, for example integrations with Intune, ACMP and Mobivisor. Live at seven customers with around 500 integrations a week on real customer data.",
         facts: [
           "7 customers live",
           "~500 integrations / week",
@@ -234,7 +234,7 @@ const text = {
       },
       {
         title: "Hybrid cloud bridge to on-premise systems",
-        text: "A mid/jump server as the secure link between Xurrent and the on-premise systems of customers. It runs process logic inside their environments, with self-updating, tenant-separated Docker images.",
+        text: "A mid/jump server as the secure link between Xurrent and the on-premise systems of customers. It runs the process logic inside their environments. The Docker images update themselves and are separated per tenant.",
         facts: [
           "Secure async messaging via SQS & S3",
           "Linux, PowerShell, Entra & Exchange",
@@ -247,7 +247,7 @@ const text = {
       },
       {
         title: "BundesIdent: backend for digital identities (eID)",
-        text: "Scalable backend for authenticating digital identities within the German federal eID infrastructure, with secure APIs, a Kubernetes deployment and on-call duty for production. Built as an employed software engineer at DigitalService. The backend ran from 2022 to 2023 and is open source.",
+        text: "Scalable backend for authenticating digital identities within the German federal eID infrastructure, with secure APIs, a Kubernetes deployment and on-call duty for production. I worked on it as an employed software engineer at DigitalService. The backend ran from 2022 to 2023 and is open source.",
         facts: ["Public sector", "Kotlin/Spring Boot · SAML · Kubernetes"],
       },
     ],

@@ -45,7 +45,7 @@ const text = {
       },
       {
         title: "Website-Erstellung",
-        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht und die Sie verstehen. Impressum und Datenschutzerklärung sind immer dabei.",
+        text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht. Impressum und Datenschutzerklärung sind immer dabei.",
         tiers: [
           {
             name: "Onepager",
@@ -77,7 +77,7 @@ const text = {
       },
       {
         title: "Hosting & Wartung",
-        text: "Updates, Sicherheit und technische Hilfe, wenn etwas hakt. Damit Sie sich nicht darum kümmern müssen.",
+        text: "Updates, Sicherheit und schnelle Hilfe, wenn etwas hakt. Darum müssen Sie sich nicht mehr kümmern.",
         tiers: [
           {
             name: "Basis",
@@ -142,7 +142,7 @@ const text = {
         question:
           "Können Sie auch eine Seite für ein einzelnes Angebot oder eine Aktion bauen?",
         answer:
-          "Ja. Für eine Aktion, einen Kurs oder ein Angebot, das Sie auf Instagram, Facebook oder per Flyer bewerben, baue ich eine eigene Landingpage mit Anmeldung oder Kontaktformular. Links zu Ihren Social-Media-Kanälen sind auf jeder Website dabei. Den Preis nenne ich Ihnen vorher, er richtet sich nach dem Umfang.",
+          "Ja. Für eine Aktion, einen Kurs oder ein Angebot, das Sie auf Instagram, Facebook oder per Flyer bewerben, baue ich eine eigene Landingpage mit Anmeldung oder Kontaktformular. Links zu Ihren Social-Media-Kanälen sind auf jeder Website dabei. Was das kostet, hängt vom Umfang ab. Den Preis nenne ich Ihnen vorher.",
       },
       {
         question: "Kann ich Inhalte selbst ändern?",
@@ -162,7 +162,7 @@ const text = {
       {
         question: "Wem gehören die Website und die Domain?",
         answer:
-          "Die Website gehört Ihnen. Die Domain kann auf Ihren Namen laufen, das empfehle ich auch. Ich kann sie aber auch für Sie verwalten. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
+          "Die Website gehört Ihnen. Die Domain läuft am besten auf Ihren Namen, ich kann sie aber auch für Sie verwalten. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
       },
       {
         question: "Können Sie meine bestehende Website übernehmen?",
@@ -208,7 +208,7 @@ const text = {
       },
       {
         title: "Website creation",
-        text: "A modern, fast website that looks good on every device and that you can understand. Imprint and privacy policy are always included.",
+        text: "A modern, fast website that looks good on every device. Imprint and privacy policy are always included.",
         tiers: [
           {
             name: "One-pager",
@@ -240,7 +240,7 @@ const text = {
       },
       {
         title: "Hosting & maintenance",
-        text: "Updates, security and technical help when something gets stuck. So you don't have to think about it.",
+        text: "Updates, security and quick help when something gets stuck. You don't have to worry about any of it.",
         tiers: [
           {
             name: "Basic",
@@ -304,7 +304,7 @@ const text = {
       {
         question: "Can you also build a page for a single offer or campaign?",
         answer:
-          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with sign-up or a contact form. Links to your social media channels are part of every website. I tell you the price beforehand, it depends on the scope.",
+          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with sign-up or a contact form. Links to your social media channels are part of every website. The cost depends on the scope. I tell you the price beforehand.",
       },
       {
         question: "Can I change content myself?",
@@ -323,7 +323,7 @@ const text = {
       {
         question: "Who owns the website and the domain?",
         answer:
-          "The website is yours. The domain can be registered in your name, which is what I recommend. I can also manage it for you. If you ever want to switch, I hand everything over.",
+          "The website is yours. The domain is best registered in your name, but I can also manage it for you. If you ever want to switch, I hand everything over.",
       },
       {
         question: "Can you take over my existing website?",

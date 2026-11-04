@@ -18,7 +18,7 @@ const text = {
     cta: "Über Ihr Projekt sprechen",
     mail: "mailto:info@hschaletzky.com?subject=Projektanfrage",
     intro:
-      "Die Technologien hinter den Plattformen, die ich baue und betreibe, von AWS bis zu den Tests, die sie zuverlässig machen.",
+      "Ein Überblick über die Technologien, mit denen ich arbeite, von der Cloud über Websites bis zu KI.",
   },
   en: {
     title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
@@ -29,7 +29,7 @@ const text = {
     cta: "Talk about your project",
     mail: "mailto:info@hschaletzky.com?subject=Project%20inquiry",
     intro:
-      "The technologies behind the platforms I build and run, from AWS to the tests that keep them reliable.",
+      "An overview of the technologies I work with, from the cloud to websites and AI.",
   },
 };
 
