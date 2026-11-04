@@ -1,8 +1,10 @@
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
 
-// the same four areas as on the stack page, only the most telling tools
-const stack: { title: { de: string; en: string }; items: string[] }[] = [
+type Label = string | { de: string; en: string };
+
+// the same areas as on the stack page, only the most telling tools
+const stack: { title: { de: string; en: string }; items: Label[] }[] = [
   {
     title: { de: "Cloud", en: "Cloud" },
     items: ["AWS ECS/Fargate", "SQS · S3 · IAM", "Terraform / OpenTofu"],
@@ -16,12 +18,24 @@ const stack: { title: { de: string; en: string }; items: string[] }[] = [
     items: ["MS SQL Server", "Microsoft Entra", "SAML / SSO"],
   },
   {
+    title: { de: "Web", en: "Web" },
+    items: ["Next.js", "Astro", "WordPress"],
+  },
+  {
+    title: { de: "KI & Automatisierung", en: "AI & automation" },
+    items: [
+      "Claude Code",
+      { de: "Workflow-Automatisierung", en: "Workflow automation" },
+    ],
+  },
+  {
     title: { de: "Delivery & Betrieb", en: "Delivery & operations" },
     items: ["Docker", "GitHub Actions", "Playwright", "Grafana"],
   },
 ];
 
-export default function StackSection() {
+// the cloud page leaves out the web group, it is about platforms there
+export default function StackSection({ web = true }: { web?: boolean }) {
   const lang = useLang();
   return (
     <section>
@@ -32,23 +46,29 @@ export default function StackSection() {
           {lang === "de" ? "Die Technik dahinter." : "The tech behind it."}
         </SectionHeading>
         <div className="grid gap-8 sm:grid-cols-2">
-          {stack.map((group) => (
-            <div key={group.title.en}>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                {group.title[lang]}
-              </h3>
-              <ul className="mt-3 flex flex-wrap gap-3">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {stack
+            .filter((group) => web || group.title.en !== "Web")
+            .map((group) => (
+              <div key={group.title.en}>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                  {group.title[lang]}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-3">
+                  {group.items.map((entry) => {
+                    const item =
+                      typeof entry === "string" ? entry : entry[lang];
+                    return (
+                      <li
+                        key={item}
+                        className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
+                      >
+                        {item}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
         </div>
         <a
           href={localize("/stack", lang)}

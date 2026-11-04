@@ -12,7 +12,7 @@ const text = {
   de: {
     title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
     description:
-      "Die Technologien, mit denen Hannes Schaletzky arbeitet: AWS, Node.js/TypeScript, Integration & Daten, CI/CD, Tests und Betrieb.",
+      "Die Technologien, mit denen Hannes Schaletzky arbeitet: AWS, Node.js/TypeScript, Integration & Daten, Websites, KI & Automatisierung, CI/CD, Tests und Betrieb.",
     title1: "Werkzeuge, denen ich",
     highlight: "im Betrieb vertraue.",
     cta: "Über Ihr Projekt sprechen",
@@ -23,7 +23,7 @@ const text = {
   en: {
     title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
     description:
-      "The tech Hannes Schaletzky works with: AWS, Node.js/TypeScript, integration & data, CI/CD, testing and operations.",
+      "The tech Hannes Schaletzky works with: AWS, Node.js/TypeScript, integration & data, websites, AI & automation, CI/CD, testing and operations.",
     title1: "Tools I trust",
     highlight: "in production.",
     cta: "Talk about your project",
@@ -97,6 +97,35 @@ const focus: {
     ],
   },
   {
+    title: { de: "Web & Frontend", en: "Web & frontend" },
+    text: {
+      de: "Schnelle, moderne Websites und Web-Apps, die auf jedem Handy gut aussehen, von der Onepager-Website bis zur Oberfläche einer Plattform. Gehostet in Deutschland und bei Google gut auffindbar.",
+      en: "Fast, modern websites and web apps that look good on every phone, from a one-page website to the interface of a platform. Hosted in Germany and easy to find on Google.",
+    },
+    items: [
+      "Next.js",
+      "React Router",
+      "React",
+      "Astro",
+      "Tailwind",
+      "WordPress",
+      "Hetzner Cloud",
+      "Google Search Console",
+    ],
+  },
+  {
+    title: { de: "KI & Automatisierung", en: "AI & automation" },
+    text: {
+      de: "Wiederkehrende Arbeit automatisieren, von E-Mails über Termine bis zu Routinen. Ich entwickle selbst täglich mit KI und weiß, wo sie hilft und wo nicht.",
+      en: "Automating recurring work, from emails and appointments to routines. I develop with AI every day myself and know where it helps and where it doesn't.",
+    },
+    items: [
+      "Claude Code",
+      { de: "KI-gestützte Entwicklung", en: "AI-assisted development" },
+      { de: "Workflow-Automatisierung", en: "Workflow automation" },
+    ],
+  },
+  {
     title: { de: "Delivery & Betrieb", en: "Delivery & operations" },
     text: {
       de: "Automatisierte Tests und Deployments ab dem ersten Tag und ein Monitoring, das Probleme meldet, bevor Ihre Kunden sie bemerken.",
@@ -118,16 +147,11 @@ const focus: {
 // smaller lists below the main areas
 const more: { title: { de: string; en: string }; items: Label[] }[] = [
   {
-    title: { de: "Web & Frontend", en: "Web & frontend" },
-    items: ["Next.js", "React Router", "React", "Astro", "Tailwind"],
-  },
-  {
     title: { de: "Außerdem Erfahrung mit", en: "Also experienced with" },
     items: [
       "Kotlin / Spring Boot",
       "C# / .NET",
       "Kubernetes",
-      "Hetzner Cloud",
       "Azure DevOps",
       "SSAS",
       "VBA",
@@ -141,7 +165,6 @@ const more: { title: { de: string; en: string }; items: Label[] }[] = [
       "TDD",
       { de: "Infrastructure as Code", en: "Infrastructure as code" },
       { de: "Pair Programming", en: "Pair programming" },
-      { de: "KI-gestützte Entwicklung", en: "AI-assisted development" },
     ],
   },
 ];
@@ -198,7 +221,7 @@ export default function Stack() {
               ))}
             </div>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-3">
+            <div className="mt-16 grid gap-10 md:grid-cols-2">
               {more.map((group) => (
                 <div key={group.title.en}>
                   <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
