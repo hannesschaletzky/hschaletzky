@@ -133,6 +133,18 @@ const text = {
           "Am besten Sie, denn Sie kennen Ihr Geschäft. Ich helfe gern beim Formulieren und suche bei Bedarf passende lizenzfreie Bilder.",
       },
       {
+        question:
+          "Ich habe noch kein Logo oder Corporate Design. Ist das ein Problem?",
+        answer:
+          "Nein. Auf Wunsch entwerfe ich Ihnen ein Logo und lege Farben und Schriften fest, die Sie auch für Flyer und Visitenkarten nutzen können. Gibt es schon Drucksachen oder ein Logo, übernehme ich den Stil, damit alles zusammenpasst. Arbeiten Sie mit einer Agentur, setze ich deren Vorgaben um.",
+      },
+      {
+        question:
+          "Können Sie auch eine Seite für ein einzelnes Angebot oder eine Aktion bauen?",
+        answer:
+          "Ja. Für eine Aktion, einen Kurs oder ein Angebot, das Sie auf Instagram, Facebook oder per Flyer bewerben, baue ich eine eigene Landingpage mit Anmeldung oder Kontaktformular. Links zu Ihren Social-Media-Kanälen sind auf jeder Website dabei. Den Preis nenne ich Ihnen vorher, er richtet sich nach dem Umfang.",
+      },
+      {
         question: "Kann ich Inhalte selbst ändern?",
         answer:
           "Ja. Auf Wunsch baue ich ein einfaches Redaktionssystem ein, mit dem Sie Texte und Bilder selbst pflegen können. Das rechne ich nach Aufwand ab. Sie können mir Änderungen aber auch einfach schicken.",
@@ -282,6 +294,17 @@ const text = {
         question: "Who provides texts and images?",
         answer:
           "Ideally you, because you know your business. I'm happy to help with the wording and can find suitable royalty-free images if needed.",
+      },
+      {
+        question:
+          "I don't have a logo or corporate design yet. Is that a problem?",
+        answer:
+          "No. If you like, I design a logo and choose colours and fonts that you can also use for flyers and business cards. If you already have printed material or a logo, I adopt its style so everything fits together. If you work with an agency, I implement their guidelines.",
+      },
+      {
+        question: "Can you also build a page for a single offer or campaign?",
+        answer:
+          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with sign-up or a contact form. Links to your social media channels are part of every website. I tell you the price beforehand, it depends on the scope.",
       },
       {
         question: "Can I change content myself?",
