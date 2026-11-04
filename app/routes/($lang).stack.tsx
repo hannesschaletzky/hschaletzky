@@ -79,13 +79,17 @@ const focus: {
   {
     title: { de: "Integration & Daten", en: "Integration & data" },
     text: {
-      de: "Ich verbinde SaaS-, Cloud- und On-Prem-Systeme, von Microsoft-Umgebungen bis zu gewachsenen SQL-Datenbanken.",
-      en: "I connect SaaS, cloud and on-prem systems, from Microsoft environments to SQL databases that have grown over the years.",
+      de: "Ich verbinde SaaS-, Cloud- und On-Prem-Systeme, von ITSM und Gerätemanagement (MDM) über Microsoft-Umgebungen bis zu gewachsenen SQL-Datenbanken.",
+      en: "I connect SaaS, cloud and on-prem systems, from ITSM and device management (MDM) to Microsoft environments and SQL databases that have grown over the years.",
     },
     items: [
       "MS SQL Server / T-SQL",
       "Microsoft Entra",
+      "Microsoft Intune",
       "Microsoft Exchange",
+      "Xurrent (ITSM)",
+      "ACMP",
+      "Mobivisor",
       "SAML / SSO",
       { de: "Message Queues", en: "Message queues" },
       { de: "ETL-Strecken", en: "ETL pipelines" },

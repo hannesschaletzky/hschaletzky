@@ -80,6 +80,11 @@ export const meta: MetaFunction = ({ params }) => {
 const facts = {
   de: [
     { label: "Freiberuflich seit", value: "2024" },
+    {
+      label: "Davor",
+      value:
+        "Software Engineer bei der DigitalService GmbH des Bundes (2022–2024), u. a. am Backend von BundesIdent für digitale Identitäten (eID)",
+    },
     { label: "Erfahrung", value: `${new Date().getFullYear() - 2019}+ Jahre` },
     {
       label: "Ausbildung",
@@ -93,6 +98,11 @@ const facts = {
   ],
   en: [
     { label: "Freelance since", value: "2024" },
+    {
+      label: "Before that",
+      value:
+        "Software engineer at DigitalService GmbH des Bundes, the German federal government's digital service (2022–2024), including the BundesIdent backend for digital identities (eID)",
+    },
     { label: "Experience", value: `${new Date().getFullYear() - 2019}+ years` },
     {
       label: "Education",

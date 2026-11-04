@@ -22,24 +22,24 @@ const text = {
   de: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freiberuflicher Integration & Cloud Engineer aus Berlin, im DACH-Raum remote oder vor Ort: Backend- und Integrationslösungen mit Node.js/TypeScript und AWS.",
+      "Freiberuflicher Integration & Cloud Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
     hero: {
       eyebrow: "Für Unternehmen",
       title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
-      text: "Ich entwickle Backend- und Integrationslösungen mit Node.js/TypeScript und AWS, von der Architektur über sauberen Code bis zum sicheren Betrieb.",
+      text: "Ich verbinde ITSM-, MDM- und Microsoft-Umgebungen mit der Cloud und mit On-Prem-Systemen. Mit Node.js/TypeScript und AWS, von der Architektur bis zum sicheren Betrieb.",
     },
     servicesEyebrow: "Leistungen",
     servicesHeading: "Was ich übernehme.",
     services: [
       {
-        title: "Backend-Entwicklung",
-        text: "APIs und Services in Node.js/TypeScript: typisiert, getestet und wartbar, mit Clean Code und Domain-driven Design.",
+        title: "ITSM-, MDM- & Identity-Integrationen",
+        text: "ITSM-Systeme wie Xurrent mit MDM-Systemen wie Microsoft Intune, ACMP oder Mobivisor verbinden und Abläufe in Entra und Exchange automatisieren, über APIs, Messaging und ETL.",
       },
       {
-        title: "Systemintegration & Datenflüsse",
-        text: "SaaS-, Cloud- und On-Prem-Systeme verbinden, mit sicheren, zuverlässigen Datenflüssen über Messaging, ETL und APIs.",
+        title: "Cloud & On-Prem verbinden",
+        text: "Sichere Brücken zwischen SaaS, Cloud und den On-Prem-Systemen Ihrer Kunden, mit zuverlässigen, asynchronen Datenflüssen.",
       },
       {
         title: "AWS-Architektur & Migrationen",
@@ -54,8 +54,8 @@ const text = {
         text: "Logging, Monitoring und Alerting. Und jemand, der das System nach dem Go-live am Laufen hält.",
       },
       {
-        title: "Full-Stack bei Bedarf",
-        text: "Web-Frontends mit Next.js oder React Router, wenn Ihre Plattform eine Oberfläche braucht. Von der API bis zum Bildschirm.",
+        title: "Backend & Full-Stack",
+        text: "APIs und Services in Node.js/TypeScript, typisiert und getestet, mit Clean Code und Domain-driven Design. Bei Bedarf auch die Weboberfläche dazu.",
       },
     ],
     offersEyebrow: "Angebote",
@@ -103,12 +103,16 @@ const text = {
       },
     ],
     workEyebrow: "Ausgewählte Projekte",
-    workHeading: "Heute im Produktivbetrieb.",
+    workHeading: "Gebaut für den Produktivbetrieb.",
     work: [
       {
         title: "Mandantenfähige Integrationsplattform für Xurrent",
-        text: "AWS-basierte Plattform, die Datenimporte und Prozesslogik in isolierten Umgebungen ausführt. Live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
-        facts: ["7 Kunden live", "~500 Integrationen / Woche"],
+        text: "AWS-basierte Plattform, die Datenimporte und Prozesslogik in isolierten Umgebungen ausführt, darunter Integrationen mit MDM-Systemen wie Microsoft Intune, ACMP und Mobivisor. Live bei sieben Kunden mit rund 500 Integrationen pro Woche auf echten Kundendaten.",
+        facts: [
+          "7 Kunden live",
+          "~500 Integrationen / Woche",
+          "Intune, ACMP & Mobivisor",
+        ],
       },
       {
         title: "Hybrid-Cloud-Bridge zu On-Prem-Systemen",
@@ -123,29 +127,37 @@ const text = {
         text: "Eigene produktive AWS-Umgebung mit CI/CD und automatisierter Testsuite für eine digitale Vorsorge-Plattform.",
         facts: ["Eigene AWS-Umgebung", "Staging & CI/CD"],
       },
+      {
+        title: "BundesIdent: Backend für digitale Identitäten (eID)",
+        text: "Skalierbares Backend zur Authentifizierung digitaler Identitäten in der bundesweiten eID-Infrastruktur, mit sicheren API-Schnittstellen, Kubernetes-Deployment und Rufbereitschaft für den Produktivbetrieb. Als angestellter Software Engineer bei DigitalService. Das Backend lief 2022–2023 und ist Open Source.",
+        facts: [
+          "Öffentlicher Sektor",
+          "Kotlin/Spring Boot · SAML · Kubernetes",
+        ],
+      },
     ],
   },
   en: {
     title: "Integration & Cloud Engineer | Hannes Schaletzky",
     description:
-      "Freelance integration & cloud engineer from Berlin, remote or on-site across Germany, Austria and Switzerland: backend and integration solutions with Node.js/TypeScript and AWS.",
+      "Freelance integration & cloud engineer from Berlin: ITSM, MDM and Microsoft integrations (Xurrent, Intune, ACMP, Entra) with Node.js/TypeScript and AWS. Remote or on-site across Germany, Austria and Switzerland.",
     hero: {
       eyebrow: "For companies",
       title: "Cloud & integrations,",
       highlight: "reliable in production.",
       cta: "Talk about your project",
-      text: "I engineer backend and integration solutions with Node.js/TypeScript and AWS, from architecture and clean code to secure production operation.",
+      text: "I connect ITSM, MDM and Microsoft environments with the cloud and with on-prem systems. With Node.js/TypeScript and AWS, from architecture to secure production operation.",
     },
     servicesEyebrow: "Services",
     servicesHeading: "What I take on.",
     services: [
       {
-        title: "Backend engineering",
-        text: "APIs and services in Node.js/TypeScript: typed, tested and maintainable, built with clean code and domain-driven design.",
+        title: "ITSM, MDM & identity integrations",
+        text: "Connect ITSM systems such as Xurrent with MDM systems such as Microsoft Intune, ACMP or Mobivisor, and automate processes in Entra and Exchange, via APIs, messaging and ETL.",
       },
       {
-        title: "System integration & data flows",
-        text: "Connect SaaS, cloud and on-prem systems with secure, reliable data flows via messaging, ETL and APIs.",
+        title: "Connecting cloud & on-prem",
+        text: "Secure bridges between SaaS, the cloud and the on-prem systems of your customers, with reliable asynchronous data flows.",
       },
       {
         title: "AWS architecture & migrations",
@@ -160,8 +172,8 @@ const text = {
         text: "Logging, monitoring and alerting. And someone who keeps it running after go-live.",
       },
       {
-        title: "Full-stack when needed",
-        text: "Web frontends with Next.js or React Router when your platform needs an interface. From the API to the screen.",
+        title: "Backend & full-stack",
+        text: "APIs and services in Node.js/TypeScript, typed and tested, built with clean code and domain-driven design. And the web interface when you need one.",
       },
     ],
     offersEyebrow: "Offers",
@@ -209,12 +221,16 @@ const text = {
       },
     ],
     workEyebrow: "Selected work",
-    workHeading: "Running in production today.",
+    workHeading: "Built for production.",
     work: [
       {
         title: "Multi-tenant integration platform for Xurrent",
-        text: "AWS-based platform running data imports and process logic in isolated environments. Live at seven customers with around 500 integrations a week on real customer data.",
-        facts: ["7 customers live", "~500 integrations / week"],
+        text: "AWS-based platform running data imports and process logic in isolated environments, including integrations with MDM systems such as Microsoft Intune, ACMP and Mobivisor. Live at seven customers with around 500 integrations a week on real customer data.",
+        facts: [
+          "7 customers live",
+          "~500 integrations / week",
+          "Intune, ACMP & Mobivisor",
+        ],
       },
       {
         title: "Hybrid cloud bridge to on-premise systems",
@@ -229,6 +245,11 @@ const text = {
         text: "Own production AWS environment with CI/CD and an automated test suite for a digital health care directive platform.",
         facts: ["Own AWS environment", "Staging & CI/CD"],
       },
+      {
+        title: "BundesIdent: backend for digital identities (eID)",
+        text: "Scalable backend for authenticating digital identities within the German federal eID infrastructure, with secure APIs, a Kubernetes deployment and on-call duty for production. Built as an employed software engineer at DigitalService. The backend ran from 2022 to 2023 and is open source.",
+        facts: ["Public sector", "Kotlin/Spring Boot · SAML · Kubernetes"],
+      },
     ],
   },
 };
@@ -238,6 +259,7 @@ const clients = [
   { client: "blu Systems GmbH", logo: logos.blu },
   { client: "blu Systems GmbH", logo: logos.blu },
   { client: "tilde ventures GmbH", logo: logos.tilde },
+  { client: "DigitalService GmbH des Bundes", logo: logos.digitalservice },
 ];
 
 export const meta: MetaFunction = ({ params }) => {
@@ -353,7 +375,7 @@ export default function Cloud() {
             <SectionHeading eyebrow={t.workEyebrow}>
               {t.workHeading}
             </SectionHeading>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {t.work.map((item, i) => (
                 <article
                   key={item.title}
