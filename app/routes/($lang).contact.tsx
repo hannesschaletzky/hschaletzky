@@ -9,12 +9,14 @@ import { langFromParams, langLoader, useLang } from "~/i18n";
 export const loader = langLoader;
 
 const mail = "info@hschaletzky.com";
+// same number as in the imprint
+const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
 
 const text = {
   de: {
     title: "Kontakt | Hannes Schaletzky",
     description:
-      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, per E-Mail, auf LinkedIn oder in einem kostenlosen Erstgespräch.",
+      "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, per E-Mail, Telefon oder in einem kostenlosen Erstgespräch.",
     eyebrow: "Kontakt",
     title1: "Lassen Sie uns",
     highlight: "über Ihr Projekt sprechen.",
@@ -23,9 +25,14 @@ const text = {
     channels: [
       {
         title: "E-Mail",
-        text: "Der schnellste Weg zu mir. Gern schicke ich Ihnen auch meinen Lebenslauf.",
+        text: "Am besten für Anfragen mit Details. Gern schicke ich Ihnen auch meinen Lebenslauf.",
         label: mail,
         href: `mailto:${mail}`,
+      },
+      {
+        title: "Telefon",
+        text: "Rufen Sie gern an. Wenn ich gerade nicht rangehe, rufe ich zurück.",
+        ...phone,
       },
       {
         title: "Erstgespräch",
@@ -33,24 +40,12 @@ const text = {
         label: "Kostenloses Erstgespräch buchen",
         href: calUrl,
       },
-      {
-        title: "LinkedIn",
-        text: "Kundenprojekte und Empfehlungen.",
-        label: "linkedin.com/in/hannesschaletzky",
-        href: "https://linkedin.com/in/hannesschaletzky/",
-      },
-      {
-        title: "GitHub",
-        text: "Code und Hobbyprojekte.",
-        label: "github.com/hannesschaletzky",
-        href: "https://github.com/hannesschaletzky",
-      },
     ],
   },
   en: {
     title: "Contact | Hannes Schaletzky",
     description:
-      "Contact Hannes Schaletzky, freelance software engineer from Berlin, by email, on LinkedIn or in a free intro call.",
+      "Contact Hannes Schaletzky, freelance software engineer from Berlin, by email, phone or in a free intro call.",
     eyebrow: "Contact",
     title1: "Let's talk",
     highlight: "about your project.",
@@ -59,27 +54,20 @@ const text = {
     channels: [
       {
         title: "Mail",
-        text: "The fastest way to reach me. I'm also happy to send you my CV.",
+        text: "Best for requests with details. I'm also happy to send you my CV.",
         label: mail,
         href: `mailto:${mail}`,
+      },
+      {
+        title: "Phone",
+        text: "Feel free to call. If I can't pick up, I'll call you back.",
+        ...phone,
       },
       {
         title: "Intro call",
         text: "Pick a free slot in my calendar. The call is free of charge.",
         label: "Book a free intro call",
         href: calUrl,
-      },
-      {
-        title: "LinkedIn",
-        text: "Client work and recommendations.",
-        label: "linkedin.com/in/hannesschaletzky",
-        href: "https://linkedin.com/in/hannesschaletzky/",
-      },
-      {
-        title: "GitHub",
-        text: "Code and side projects.",
-        label: "github.com/hannesschaletzky",
-        href: "https://github.com/hannesschaletzky",
       },
     ],
   },
@@ -113,7 +101,7 @@ export default function Contact() {
         </PageHero>
 
         <section className="bg-navy-lighter">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-3">
             {t.channels.map((channel) => {
               const external = channel.href.startsWith("http");
               return (

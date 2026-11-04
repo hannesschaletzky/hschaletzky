@@ -1,13 +1,14 @@
 import type { MetaFunction } from "react-router";
 import ClimbSteps from "~/components/site/climbSteps";
 import ContactBox from "~/components/site/contactBox";
+import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -31,6 +32,7 @@ const text = {
         title: "Website-Check-up",
         price: "250 €",
         text: "Ich prüfe Ihre gesamte Website auf Technik, Sicherheit und Auffindbarkeit und schaue mir bis zu 5 wichtige Seiten genau an. Sie bekommen einen Bericht (PDF) mit klaren Empfehlungen, und wir besprechen ihn in 30 Minuten per Video oder Telefon.",
+        more: { label: "Alles zum Check-up", href: "/website-check-up" },
         links: [
           {
             label: "Beispielbericht ansehen (PDF)",
@@ -194,6 +196,7 @@ const text = {
         title: "Website check-up",
         price: "250 €",
         text: "I check your whole website for technology, security and findability and take a close look at up to 5 important pages. You get a report (PDF) with clear recommendations, and we go through it in a 30-minute video or phone call.",
+        more: { label: "All about the check-up", href: "/website-check-up" },
         links: [
           {
             label: "View a sample report (PDF, German)",
@@ -373,6 +376,7 @@ function OfferCard({
   offer: Offer;
   className?: string;
 }) {
+  const lang = useLang();
   return (
     <div
       className={`flex flex-col rounded-2xl border border-white/10 p-6 ${className}`}
@@ -426,6 +430,21 @@ function OfferCard({
       )}
       {offer.links && !offer.linksLabel && (
         <div className="mt-4 flex flex-col items-start gap-2">
+          {/* own page of the offer first, in the same tab */}
+          {offer.more && (
+            <a
+              href={localize(offer.more.href, lang)}
+              className="group font-semibold text-teal hover:text-teal-light"
+            >
+              {offer.more.label}{" "}
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+          )}
           {offer.links.map((link) => (
             <a
               key={link.href}
@@ -532,29 +551,7 @@ export default function Websites() {
           </div>
         </section>
 
-        {/* faq */}
-        <section>
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow="FAQ">{t.faqHeading}</SectionHeading>
-            <div className="divide-y divide-white/10 border-y border-white/10">
-              {/* native details/summary: collapsible without JavaScript */}
-              {t.faqs.map((faq) => (
-                <details key={faq.question} className="group py-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
-                    {faq.question}
-                    <span
-                      aria-hidden="true"
-                      className="shrink-0 text-2xl font-normal leading-none text-teal transition-transform group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-2 leading-relaxed">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection heading={t.faqHeading} faqs={t.faqs} />
 
         <ContactBox />
       </main>

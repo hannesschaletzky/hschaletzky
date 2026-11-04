@@ -6,6 +6,7 @@ export const sitePages = [
   "/",
   "/cloud",
   "/websites",
+  "/website-check-up",
   "/about",
   "/stack",
   "/side-projects",

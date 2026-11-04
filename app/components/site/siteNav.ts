@@ -25,6 +25,10 @@ export function getSiteMap(lang: Lang) {
           href: localize("/cloud", lang),
         },
         { label: "Websites", href: localize("/websites", lang) },
+        {
+          label: de ? "Website-Check-up" : "Website check-up",
+          href: localize("/website-check-up", lang),
+        },
       ],
     },
     {
