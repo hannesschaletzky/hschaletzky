@@ -31,10 +31,10 @@ export default function Impressum() {
           <br />
           Telefon:{" "}
           <a
-            href="tel:+4917632267236"
+            href="tel:+491628525830"
             className="text-teal underline underline-offset-4"
           >
-            +49 176 32267236
+            +49 162 8525830
           </a>
         </p>
       </LegalSection>
