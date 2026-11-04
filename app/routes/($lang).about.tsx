@@ -5,6 +5,7 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
+import StackSection from "~/components/site/stackSection";
 import Peak from "~/components/site/peak";
 import { pageMeta, personJsonLd } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang, type Lang } from "~/i18n";
@@ -385,8 +386,10 @@ export default function About() {
           </div>
         </section>
 
+        <StackSection className="bg-navy-light" />
+
         {/* licenses as certificates */}
-        <section className="bg-navy-light">
+        <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.clock}>
               {t.headings.clock}
@@ -447,7 +450,7 @@ export default function About() {
         </section>
 
         {/* giving back – same rows as the values */}
-        <section>
+        <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.social}>
               {t.headings.social}
@@ -481,7 +484,9 @@ export default function About() {
           </div>
         </section>
 
-        <ContactBox />
+        <div className="pt-16 sm:pt-24">
+          <ContactBox />
+        </div>
       </main>
       <Footer />
     </div>

@@ -34,14 +34,23 @@ const stack: { title: { de: string; en: string }; items: Label[] }[] = [
   },
 ];
 
-// the cloud page leaves out the web group, it is about platforms there
-export default function StackSection({ web = true }: { web?: boolean }) {
+// the cloud page leaves out the web group, it is about platforms there;
+// with its own background (about page) it also needs the top padding
+export default function StackSection({
+  web = true,
+  className,
+}: {
+  web?: boolean;
+  className?: string;
+}) {
   const lang = useLang();
   return (
-    <section>
-      {/* no top padding: on both pages it follows a section in the same colour, whose
-          bottom padding already makes the gap */}
-      <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-24">
+    <section className={className}>
+      {/* no top padding on the home and cloud page: there it follows a section in the
+          same colour, whose bottom padding already makes the gap */}
+      <div
+        className={`mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-24 ${className ? "pt-16 sm:pt-24" : ""}`}
+      >
         <SectionHeading eyebrow="Stack">
           {lang === "de" ? "Die Technik dahinter." : "The tech behind it."}
         </SectionHeading>
