@@ -13,8 +13,8 @@ const text = {
     title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
     description:
       "Die Technologien, mit denen Hannes Schaletzky arbeitet: AWS, Node.js/TypeScript, Integration & Daten, Websites, KI & Automatisierung, CI/CD, Tests und Betrieb.",
-    title1: "Werkzeuge, denen ich",
-    highlight: "im Betrieb vertraue.",
+    title1: "Werkzeuge, auf die ich",
+    highlight: "mich verlassen kann.",
     cta: "Über Ihr Projekt sprechen",
     mail: "mailto:info@hschaletzky.com?subject=Projektanfrage",
     intro:
