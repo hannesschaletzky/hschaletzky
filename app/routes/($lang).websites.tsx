@@ -62,16 +62,16 @@ const text = {
         linksLabel: "Beispiele:",
         links: [
           {
-            label: "Tischlerei",
-            href: "https://tischlerei-mustermann.hschaletzky.com/",
+            label: "Physiotherapie",
+            href: "https://physio-musterfrau.hschaletzky.com/",
           },
           {
             label: "Sportverein",
             href: "https://sv-musterstadt.hschaletzky.com/",
           },
           {
-            label: "Physiotherapie",
-            href: "https://physio-musterfrau.hschaletzky.com/",
+            label: "Tischlerei",
+            href: "https://tischlerei-mustermann.hschaletzky.com/",
           },
         ],
       },
@@ -213,16 +213,16 @@ const text = {
         linksLabel: "Examples (German):",
         links: [
           {
-            label: "carpentry",
-            href: "https://tischlerei-mustermann.hschaletzky.com/",
+            label: "physiotherapy",
+            href: "https://physio-musterfrau.hschaletzky.com/",
           },
           {
             label: "sports club",
             href: "https://sv-musterstadt.hschaletzky.com/",
           },
           {
-            label: "physiotherapy",
-            href: "https://physio-musterfrau.hschaletzky.com/",
+            label: "carpentry",
+            href: "https://tischlerei-mustermann.hschaletzky.com/",
           },
         ],
       },
