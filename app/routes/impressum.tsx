@@ -39,9 +39,10 @@ export default function Impressum() {
         </p>
       </LegalSection>
 
-      <LegalSection title="Umsatzsteuer-ID">
+      <LegalSection title="Wirtschafts-Identifikationsnummer">
         <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE418915944
+          Wirtschafts-Identifikationsnummer gemäß § 139c Abgabenordnung:
+          DE418915944-00001
         </p>
       </LegalSection>
 
