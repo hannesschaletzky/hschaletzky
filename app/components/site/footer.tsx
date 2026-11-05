@@ -42,8 +42,16 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {group.links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="break-all hover:text-white">
+                  <a
+                    href={link.href}
+                    {...(link.external && {
+                      target: "_blank",
+                      rel: "noreferrer",
+                    })}
+                    className="break-all hover:text-white"
+                  >
                     {link.label}
+                    {link.external && <span aria-hidden="true"> ↗</span>}
                   </a>
                 </li>
               ))}
@@ -52,27 +60,11 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* legal & social */}
+      {/* legal */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>© {new Date().getFullYear()} Hannes Schaletzky</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a
-              href="https://linkedin.com/in/hannesschaletzky/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/hannesschaletzky"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
-            >
-              GitHub
-            </a>
             {getLegalLinks(lang).map((link) => (
               <a key={link.href} href={link.href} className="hover:text-white">
                 {link.label}

@@ -13,8 +13,11 @@ export function getSiteNav(lang: Lang) {
   ];
 }
 
+// external links (GitHub, LinkedIn) open in a new tab
+export type SiteLink = { label: string; href: string; external?: boolean };
+
 // every page, grouped – used by the mobile menu and the footer
-export function getSiteMap(lang: Lang) {
+export function getSiteMap(lang: Lang): { title: string; links: SiteLink[] }[] {
   const de = lang === "de";
   return [
     {
@@ -44,13 +47,23 @@ export function getSiteMap(lang: Lang) {
       ],
     },
     {
-      title: de ? "Über mich" : "About me",
+      title: "Hannes",
       links: [
         { label: de ? "Über mich" : "About", href: localize("/about", lang) },
         { label: "Stack", href: localize("/stack", lang) },
         {
           label: de ? "Hobbyprojekte" : "Side projects",
           href: localize("/side-projects", lang),
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/hannesschaletzky",
+          external: true,
+        },
+        {
+          label: "LinkedIn",
+          href: "https://linkedin.com/in/hannesschaletzky/",
+          external: true,
         },
       ],
     },

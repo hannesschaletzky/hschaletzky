@@ -39,7 +39,7 @@ function LangSwitch({ className = "" }: { className?: string }) {
           >
             {code.toUpperCase()}
           </a>
-        )
+        ),
       )}
     </div>
   );
@@ -101,8 +101,8 @@ export default function Header() {
                   ? "Menü schließen"
                   : "Close menu"
                 : de
-                ? "Menü öffnen"
-                : "Open menu"
+                  ? "Menü öffnen"
+                  : "Open menu"
             }
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -145,10 +145,15 @@ export default function Header() {
                   <li key={link.href}>
                     <a
                       href={link.href}
+                      {...(link.external && {
+                        target: "_blank",
+                        rel: "noreferrer",
+                      })}
                       onClick={() => setMenuOpen(false)}
                       className="block py-2 text-lg text-white"
                     >
                       {link.label}
+                      {link.external && <span aria-hidden="true"> ↗</span>}
                     </a>
                   </li>
                 ))}
