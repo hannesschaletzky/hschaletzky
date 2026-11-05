@@ -15,7 +15,7 @@ export const loader = langLoader;
 
 const text = {
   de: {
-    title: "Integration & Cloud Engineer | Hannes Schaletzky",
+    title: "Cloud & Integrationen für Unternehmen | Hannes Schaletzky",
     description:
       "Freiberuflicher Integration & Cloud Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
     hero: {

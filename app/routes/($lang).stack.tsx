@@ -10,7 +10,7 @@ export const loader = langLoader;
 
 const text = {
   de: {
-    title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
+    title: "Technologien für Cloud, Websites & KI | Hannes Schaletzky",
     description:
       "Die Technologien, mit denen Hannes Schaletzky arbeitet: AWS, Node.js/TypeScript, Integration & Daten, Websites, KI & Automatisierung, CI/CD, Tests und Betrieb.",
     title1: "Werkzeuge, auf die ich",
@@ -21,7 +21,7 @@ const text = {
       "Ein Überblick über die Technologien, mit denen ich arbeite, von der Cloud über Websites bis zu KI.",
   },
   en: {
-    title: "Tech Stack: AWS, Node.js & TypeScript | Hannes Schaletzky",
+    title: "Tech Stack for Cloud, Websites & AI | Hannes Schaletzky",
     description:
       "The tech Hannes Schaletzky works with: AWS, Node.js/TypeScript, integration & data, websites, AI & automation, CI/CD, testing and operations.",
     title1: "Tools I trust",

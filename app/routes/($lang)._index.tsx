@@ -15,7 +15,7 @@ export const loader = langLoader;
 
 const text = {
   de: {
-    title: "Hannes Schaletzky | Freelance Software Engineer",
+    title: "Hannes Schaletzky | Websites & Cloud aus Berlin",
     description:
       "Software Engineer aus Berlin, im DACH-Raum remote oder vor Ort: Cloud- und Integrationslösungen mit Node.js/TypeScript und AWS, dazu Websites und Hosting.",
     heading: "Cloud, Integrationen &\u00a0Websites,",
