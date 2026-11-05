@@ -37,6 +37,10 @@ export function getSiteMap(lang: Lang) {
           label: de ? "Hosting & Wartung" : "Hosting & maintenance",
           href: localize("/hosting-wartung", lang),
         },
+        {
+          label: de ? "Website-Sicherheit" : "Website security",
+          href: localize("/website-sicherheit", lang),
+        },
       ],
     },
     {

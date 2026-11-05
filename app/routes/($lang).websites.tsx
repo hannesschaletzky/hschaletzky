@@ -29,6 +29,7 @@ const text = {
     offersEyebrow: "Angebote & Preise",
     offersHeading: "Klare Preise, keine Überraschungen.",
     vat: "Alle Preise inkl. 19 % MwSt.",
+    security: "Sorgen um die Sicherheit Ihrer Website? So gehe ich vor",
     faqHeading: "Gut zu wissen.",
     faqs: [
       {
@@ -62,6 +63,8 @@ const text = {
     offersEyebrow: "Offers & prices",
     offersHeading: "Clear prices, no surprises.",
     vat: "All prices incl. 19 % VAT.",
+    security:
+      "Worried about the security of your website? Here's how I go about it",
     faqHeading: "Good to know.",
     faqs: [
       {
@@ -121,6 +124,18 @@ export default function Websites() {
             <OfferTiles />
             {/* final prices incl. VAT, required when consumers may order (PAngV) */}
             <p className="mt-6 text-sm text-slate-400">{t.vat}</p>
+            <a
+              href={localize("/website-sicherheit", lang)}
+              className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
+            >
+              {t.security}{" "}
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
           </div>
         </section>
 

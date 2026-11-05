@@ -9,6 +9,7 @@ export const sitePages = [
   "/website-check-up",
   "/website-erstellen",
   "/hosting-wartung",
+  "/website-sicherheit",
   "/about",
   "/stack",
   "/side-projects",
