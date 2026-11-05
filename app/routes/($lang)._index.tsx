@@ -59,10 +59,11 @@ export default function Index() {
       <Header />
 
       <main>
-        {/* hero – the height follows the text, the bottom padding keeps room for the
+        {/* hero – at least one screen high (minus the header), text centred above
+            the mountains; the bottom padding keeps room for the
             mountains (slightly taller than them, so the peak never touches the
             buttons); -mb-px overlaps the next section so no dark hairline shows */}
-        <section className="relative -mb-px overflow-hidden pb-82 sm:pb-[max(26.5rem,calc(100vw/5.5+2rem))]">
+        <section className="relative -mb-px flex min-h-[calc(100svh-77px)] flex-col md:min-h-[calc(100svh-69px)] justify-center overflow-hidden pb-82 sm:pb-[max(26.5rem,calc(100vw/5.5+2rem))]">
           <Mountains heightClass="h-76 sm:h-100" />
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}

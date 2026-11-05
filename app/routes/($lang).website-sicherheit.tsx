@@ -12,8 +12,8 @@ import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
-// landing page for the security ads: the risks, then check-up and maintenance
-// as the three steps
+// landing page for the security ads: the risks, then check-up, fixes and
+// maintenance as the three steps
 const text = {
   de: {
     title:
@@ -21,7 +21,6 @@ const text = {
     description:
       "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat.",
     hero: {
-      eyebrow: "Website-Sicherheit aus Berlin",
       title: "Ist Ihre Website",
       highlight: "sicher?",
       cta: "Kontakt aufnehmen",
@@ -56,7 +55,7 @@ const text = {
       },
     ],
     stepsEyebrow: "So gehen wir vor",
-    stepsHeading: "Erst prüfen, dann absichern.",
+    stepsHeading: "Prüfen, beheben, absichern.",
     steps: [
       {
         label: "Schritt 1",
@@ -83,7 +82,7 @@ const text = {
       },
     ],
     stepsNote:
-      "Jeden Schritt gibt es auch einzeln. Den Bericht können Sie genauso Ihrem bisherigen Dienstleister geben.",
+      "Jeden Schritt gibt es auch einzeln. Alle Preise inkl. 19 % MwSt.",
     protectionEyebrow: "Was ich in der Wartung übernehme",
     protectionHeading: "Damit Sie sich nicht kümmern müssen.",
     protection: [
@@ -115,8 +114,7 @@ const text = {
     faqHeading: "Gut zu wissen.",
     faqs: [
       {
-        question:
-          "Ist meine Website von der aktuellen PHP-Sicherheitslücke betroffen?",
+        question: "Ist meine Website von Sicherheitslücken in PHP betroffen?",
         answer:
           "Das hängt davon ab, welche PHP-Version Ihr Anbieter einsetzt und ob er die Updates schon eingespielt hat. Im Check-up sehe ich mir an, was von außen erkennbar ist, und sage Ihnen, was zu tun ist. Liegt Ihre Website bei mir, spiele ich solche Updates selbst ein.",
       },
@@ -149,7 +147,6 @@ const text = {
     description:
       "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month.",
     hero: {
-      eyebrow: "Website security from Berlin",
       title: "Is your website",
       highlight: "secure?",
       cta: "Get in touch",
@@ -184,7 +181,7 @@ const text = {
       },
     ],
     stepsEyebrow: "How we go about it",
-    stepsHeading: "Check first, then secure.",
+    stepsHeading: "Check, fix, secure.",
     steps: [
       {
         label: "Step 1",
@@ -211,7 +208,7 @@ const text = {
       },
     ],
     stepsNote:
-      "Each step is also available on its own. You can just as well give the report to your current provider.",
+      "Each step is also available on its own. All prices incl. 19 % VAT.",
     protectionEyebrow: "What I take care of in maintenance",
     protectionHeading: "So you don't have to.",
     protection: [
@@ -243,7 +240,7 @@ const text = {
     faqHeading: "Good to know.",
     faqs: [
       {
-        question: "Is my website affected by the current PHP security hole?",
+        question: "Is my website affected by security holes in PHP?",
         answer:
           "That depends on which PHP version your provider runs and whether they have already installed the updates. In the check-up I look at what can be seen from the outside and tell you what to do. If your website is hosted with me, I install such updates myself.",
       },
@@ -293,7 +290,6 @@ export default function WebsiteSicherheit() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
@@ -360,7 +356,23 @@ export default function WebsiteSicherheit() {
             <SectionHeading eyebrow={t.protectionEyebrow}>
               {t.protectionHeading}
             </SectionHeading>
-            <FeatureList items={t.protection} />
+            {/* a list with checks, so it doesn't repeat the numbered risks */}
+            <ul className="max-w-3xl divide-y divide-white/10 border-y border-white/10">
+              {t.protection.map((item) => (
+                <li key={item.title} className="flex gap-5 py-5">
+                  <span
+                    aria-hidden="true"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal"
+                  >
+                    ✓
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-white">{item.title}</h3>
+                    <p className="mt-1 leading-relaxed">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -372,7 +384,10 @@ export default function WebsiteSicherheit() {
           className="bg-navy-light"
         />
 
-        <ContactBox />
+        {/* the faq has its own background, so the box needs its own gap */}
+        <div className="pt-16 sm:pt-24">
+          <ContactBox />
+        </div>
       </main>
 
       <Footer />

@@ -19,7 +19,6 @@ const text = {
     description:
       "Freiberuflicher Integration & Cloud Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
     hero: {
-      eyebrow: "Für Unternehmen",
       title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
@@ -137,7 +136,6 @@ const text = {
     description:
       "Freelance integration & cloud engineer from Berlin: ITSM, MDM and Microsoft integrations (Xurrent, Intune, ACMP, Entra) with Node.js/TypeScript and AWS. Remote or on-site across Germany, Austria and Switzerland.",
     hero: {
-      eyebrow: "For companies",
       title: "Cloud & integrations,",
       highlight: "reliable in production.",
       cta: "Talk about your project",
@@ -277,7 +275,6 @@ export default function Cloud() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}

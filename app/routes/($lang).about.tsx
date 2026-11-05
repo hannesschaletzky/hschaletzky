@@ -18,7 +18,6 @@ const text = {
     description:
       "Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
     hero: {
-      eyebrow: "Über mich",
       title: "Hallo, ich bin Hannes,",
       highlight: "Software Engineer\u00a0&\u00a0Trainer.",
       cta: "Kontakt aufnehmen",
@@ -43,7 +42,6 @@ const text = {
     description:
       "Hannes Schaletzky, freelance software engineer from Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
     hero: {
-      eyebrow: "About me",
       title: "Hi, I'm Hannes,",
       highlight: "software engineer\u00a0&\u00a0coach.",
       cta: "Get in touch",
@@ -278,7 +276,6 @@ function AboutIntro({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         highlight={t.hero.highlight}
         cta={{ label: t.hero.cta, href: "mailto:info@hschaletzky.com" }}

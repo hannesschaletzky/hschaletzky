@@ -15,7 +15,6 @@ const text = {
     title: "Kontakt | Hannes Schaletzky",
     description:
       "Kontakt zu Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, per E-Mail, Telefon oder in einem kostenlosen Erstgespräch.",
-    eyebrow: "Kontakt",
     title1: "Lassen Sie uns",
     highlight: "über Ihr Projekt sprechen.",
     cta: "Kostenloses Erstgespräch buchen",
@@ -44,7 +43,6 @@ const text = {
     title: "Contact | Hannes Schaletzky",
     description:
       "Contact Hannes Schaletzky, freelance software engineer from Berlin, by email, phone or in a free intro call.",
-    eyebrow: "Contact",
     title1: "Let's talk",
     highlight: "about your project.",
     cta: "Book a free intro call",
@@ -90,7 +88,6 @@ export default function Contact() {
 
       <main>
         <PageHero
-          eyebrow={t.eyebrow}
           title={t.title1}
           highlight={t.highlight}
           cta={{ label: t.cta, href: calUrl }}

@@ -26,6 +26,10 @@ export function getSiteMap(lang: Lang) {
         },
         { label: "Websites", href: localize("/websites", lang) },
         {
+          label: de ? "Website-Sicherheit" : "Website security",
+          href: localize("/website-sicherheit", lang),
+        },
+        {
           label: de ? "Website-Check-up" : "Website check-up",
           href: localize("/website-check-up", lang),
         },
@@ -36,10 +40,6 @@ export function getSiteMap(lang: Lang) {
         {
           label: de ? "Hosting & Wartung" : "Hosting & maintenance",
           href: localize("/hosting-wartung", lang),
-        },
-        {
-          label: de ? "Website-Sicherheit" : "Website security",
-          href: localize("/website-sicherheit", lang),
         },
       ],
     },

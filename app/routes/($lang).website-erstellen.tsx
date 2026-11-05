@@ -21,11 +21,10 @@ const text = {
     description:
       "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Fertig in ein bis zwei Wochen, bezahlt wird erst, wenn sie online ist.",
     hero: {
-      eyebrow: "Webdesign aus Berlin",
       title: "Ihre neue Website,",
       highlight: "in ein bis zwei Wochen online.",
       cta: "Kontakt aufnehmen",
-      text: "Modern, schnell und auf jedem Handy gut lesbar. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
+      text: "Webdesign aus Berlin: modern, schnell und auf jedem Handy gut lesbar. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
     },
     examplesEyebrow: "Beispiele",
     examplesHeading: "So kann Ihre Website aussehen.",
@@ -171,11 +170,10 @@ const text = {
     description:
       "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Ready in one to two weeks, you only pay once it's online.",
     hero: {
-      eyebrow: "Web design from Berlin",
       title: "Your new website,",
       highlight: "online in one to two weeks.",
       cta: "Get in touch",
-      text: "Modern, fast and easy to read on every phone. I take care of design and technology, you only take care of your content.",
+      text: "Web design from Berlin: modern, fast and easy to read on every phone. I take care of design and technology, you only take care of your content.",
     },
     examplesEyebrow: "Examples",
     examplesHeading: "This is what your website could look like.",
@@ -338,7 +336,6 @@ export default function WebsiteErstellen() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}

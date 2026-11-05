@@ -18,18 +18,28 @@ const text = {
     title:
       "Websites für kleine Unternehmen & Vereine in Berlin | Hannes Schaletzky",
     description:
-      "Website-Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat. Persönlich und fair, für kleine Unternehmen, Vereine und Selbstständige.",
+      "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat. Persönlich und fair.",
     hero: {
-      eyebrow: "Für kleine Unternehmen & Vereine",
       title: "Ihre Website,",
       highlight: "einfach gut betreut.",
       cta: "Kontakt aufnehmen",
-      text: "Persönlich, fair, vor Ort in Berlin oder remote. Für Selbstständige, kleine Unternehmen und Vereine.",
+      text: "Persönlich & fair. Vor Ort in Berlin oder remote. Für Selbstständige, kleine Unternehmen und Vereine.",
     },
     offersEyebrow: "Angebote & Preise",
     offersHeading: "Klare Preise, keine Überraschungen.",
     vat: "Alle Preise inkl. 19 % MwSt.",
-    security: "Sorgen um die Sicherheit Ihrer Website? So gehe ich vor",
+    security: {
+      eyebrow: "Website-Sicherheit",
+      heading: "Ist Ihre Website sicher?",
+      text: "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Viele kleine Websites sind angreifbar, ohne dass es jemand merkt. Ich finde heraus, wo Ihre Seite steht, und sorge dafür, dass sie sicher bleibt.",
+      steps: [
+        { title: "Prüfen", text: "Check-up mit klarem Bericht" },
+        { title: "Beheben", text: "Die dringenden Punkte zuerst" },
+        { title: "Absichern", text: "Updates, Backups und Überwachung" },
+      ],
+      contact: "Kontakt aufnehmen",
+      details: "So gehe ich vor",
+    },
     faqHeading: "Gut zu wissen.",
     faqs: [
       {
@@ -52,19 +62,28 @@ const text = {
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Website check-up for 250 €, new websites from 599 €, hosting from 25 € a month. Personal and fair, for self-employed people, small businesses and clubs.",
+      "Secure websites for small businesses, clubs and self-employed people: check-up for 250 €, new websites from 599 €, hosting from 25 € a month. Personal and fair.",
     hero: {
-      eyebrow: "For small businesses & clubs",
       title: "Your website,",
       highlight: "simply taken care of.",
       cta: "Get in touch",
-      text: "Personal, fair, on-site in Berlin or remote. For self-employed people, small businesses and clubs.",
+      text: "Personal & fair. On-site in Berlin or remote. For self-employed people, small businesses and clubs.",
     },
     offersEyebrow: "Offers & prices",
     offersHeading: "Clear prices, no surprises.",
     vat: "All prices incl. 19 % VAT.",
-    security:
-      "Worried about the security of your website? Here's how I go about it",
+    security: {
+      eyebrow: "Website security",
+      heading: "Is your website secure?",
+      text: "Outdated WordPress, old PHP versions, no backups: many small websites are open to attacks without anyone noticing. I find out where your site stands and make sure it stays secure.",
+      steps: [
+        { title: "Check", text: "Check-up with a clear report" },
+        { title: "Fix", text: "The urgent points first" },
+        { title: "Secure", text: "Updates, backups and monitoring" },
+      ],
+      contact: "Get in touch",
+      details: "How I go about it",
+    },
     faqHeading: "Good to know.",
     faqs: [
       {
@@ -107,7 +126,6 @@ export default function Websites() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
@@ -115,8 +133,57 @@ export default function Websites() {
           {t.hero.text}
         </PageHero>
 
-        {/* offers: equal tiles, each one links to its own page */}
+        {/* security first: the main selling point, details on its own page */}
         <section className="bg-navy-lighter">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            <div className="grid items-center gap-10 rounded-2xl border border-teal/40 p-6 sm:p-10 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                  {t.security.eyebrow}
+                </p>
+                <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
+                  {t.security.heading}
+                </h2>
+                <p className="mt-4 text-lg leading-relaxed">
+                  {t.security.text}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <a
+                    href={localize("/contact", lang)}
+                    className="rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+                  >
+                    {t.security.contact}
+                  </a>
+                  <a
+                    href={localize("/website-sicherheit", lang)}
+                    className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-teal hover:text-teal"
+                  >
+                    {t.security.details}
+                  </a>
+                </div>
+              </div>
+              <ol className="space-y-4">
+                {t.security.steps.map((step, i) => (
+                  <li
+                    key={step.title}
+                    className="flex items-center gap-5 rounded-xl border border-white/10 px-5 py-4"
+                  >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-semibold text-white">{step.title}</h3>
+                      <p>{step.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* offers: equal tiles, each one links to its own page */}
+        <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}
@@ -124,22 +191,10 @@ export default function Websites() {
             <OfferTiles />
             {/* final prices incl. VAT, required when consumers may order (PAngV) */}
             <p className="mt-6 text-sm text-slate-400">{t.vat}</p>
-            <a
-              href={localize("/website-sicherheit", lang)}
-              className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-            >
-              {t.security}{" "}
-              <span
-                aria-hidden="true"
-                className="inline-block transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </a>
           </div>
         </section>
 
-        <AboutMeSection />
+        <AboutMeSection className="bg-navy-lighter" />
 
         <FaqSection
           heading={t.faqHeading}

@@ -22,7 +22,6 @@ const text = {
     description:
       "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und schnelle Hilfe aus Berlin. Basis 25 €, Plus 49 € im Monat, Umzug kostenlos.",
     hero: {
-      eyebrow: "Für kleine Unternehmen & Vereine",
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
       cta: "Kontakt aufnehmen",
@@ -134,7 +133,6 @@ const text = {
     description:
       "Hosting in Germany, .de domain, SSL, daily backups, monitoring and quick help from Berlin. Basic 25 €, Plus 49 € a month, free move.",
     hero: {
-      eyebrow: "For small businesses & clubs",
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
       cta: "Get in touch",
@@ -263,7 +261,6 @@ export default function HostingWartung() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}

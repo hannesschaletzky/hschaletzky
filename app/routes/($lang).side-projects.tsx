@@ -14,7 +14,6 @@ const text = {
     title: "Hobbyprojekte | Hannes Schaletzky",
     description:
       "Hobbyprojekte von Hannes Schaletzky: Web-Apps, Tools und Experimente für Freunde, Vereine und mich selbst.",
-    eyebrow: "Hobbyprojekte",
     title1: "Gebaut aus Spaß",
     highlight: "und um Neues zu lernen.",
     cta: "Auf GitHub ansehen",
@@ -27,7 +26,6 @@ const text = {
     title: "Side Projects | Hannes Schaletzky",
     description:
       "Side projects by Hannes Schaletzky: web apps, tools and experiments built for friends, clubs and myself.",
-    eyebrow: "Side projects",
     title1: "Built for fun,",
     highlight: "and to learn something new.",
     cta: "See them on GitHub",
@@ -114,7 +112,6 @@ export default function SideProjects() {
 
       <main>
         <PageHero
-          eyebrow={t.eyebrow}
           title={t.title1}
           highlight={t.highlight}
           cta={{

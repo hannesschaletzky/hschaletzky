@@ -178,7 +178,6 @@ export default function Stack() {
 
       <main>
         <PageHero
-          eyebrow="Stack"
           title={t.title1}
           highlight={t.highlight}
           cta={{ label: t.cta, href: t.mail }}

@@ -21,7 +21,6 @@ const text = {
     description:
       "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30 Minuten Besprechung, Festpreis 250 €.",
     hero: {
-      eyebrow: "Website-Check-up aus Berlin",
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
       cta: "Kontakt aufnehmen",
@@ -167,7 +166,6 @@ const text = {
     description:
       "I check your website for security, technology, loading time, findability on Google and legal texts. A report with clear recommendations and a 30-minute call, fixed price 250 €.",
     hero: {
-      eyebrow: "Website check-up from Berlin",
       title: "How good is your website",
       highlight: "really?",
       cta: "Get in touch",
@@ -339,7 +337,6 @@ export default function WebsiteCheckUp() {
 
       <main>
         <PageHero
-          eyebrow={t.hero.eyebrow}
           title={t.hero.title}
           highlight={t.hero.highlight}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}

@@ -3,13 +3,11 @@ import Mountains from "~/components/site/mountains";
 
 // smaller version of the index hero for subpages
 export default function PageHero({
-  eyebrow,
   title,
   highlight,
   children,
   cta,
 }: {
-  eyebrow: string;
   title: string;
   highlight: string;
   children: ReactNode;
@@ -17,17 +15,17 @@ export default function PageHero({
 }) {
   return (
     <section
-      // the height follows the text, the bottom padding keeps room for the mountains
+      // at least one screen high (minus the header: 77 px on phones, 69 px from
+      // md up), so the next section starts
+      // below the fold; the text sits centred above the mountains, the bottom
+      // padding keeps room for them
       // (slightly taller than them, so the peak never touches the button);
       // -mb-px overlaps the next section so no dark hairline shows at fractional
       // pixel ratios
-      className="relative -mb-px overflow-hidden pb-56 sm:pb-[max(17rem,calc(100vw/5.5+2rem))]"
+      className="relative -mb-px flex min-h-[calc(100svh-77px)] flex-col md:min-h-[calc(100svh-69px)] justify-center overflow-hidden pb-56 sm:pb-[max(17rem,calc(100vw/5.5+2rem))]"
     >
       <Mountains heightClass="h-48 sm:h-60" />
       <div className="relative mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6 sm:pt-24">
-        <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-          {eyebrow}
-        </p>
         <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl sm:leading-none">
           {title}
           <br />
