@@ -72,7 +72,7 @@ export const calUrl = "https://cal.com/hannesschaletzky";
 export const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
 
 // the legal pages exist in German only
-export const legalPaths = ["/impressum", "/datenschutz"];
+export const legalPaths = ["/impressum", "/datenschutz", "/widerruf"];
 
 export function getLegalLinks(lang: Lang) {
   return [
@@ -80,6 +80,10 @@ export function getLegalLinks(lang: Lang) {
     {
       label: lang === "de" ? "Datenschutz" : "Privacy policy",
       href: "/datenschutz",
+    },
+    {
+      label: lang === "de" ? "Widerruf" : "Right of withdrawal",
+      href: "/widerruf",
     },
   ];
 }
