@@ -75,9 +75,19 @@
     "from": "02.2022",
     "until": "02.2022",
     "employer": "🦠",
-    "url": "",
+    "url": "https://quarantine.hschaletzky.com",
     "repo": "https://github.com/hannesschaletzky/quarantine_list",
-    "stack": ["Next.js", "TypeScript", "React", "Tailwind", "Deta"]
+    "stack": ["Next.js", "TypeScript", "React", "Tailwind", "SQLite"]
+  },
+  {
+    "title": "focus, a game to tap the squares of your color within 5 seconds",
+    "highlight": "game, squares, color",
+    "from": "11.2021",
+    "until": "03.2022",
+    "employer": "🎯",
+    "url": "https://focus.hschaletzky.com",
+    "repo": "https://github.com/hannesschaletzky/focusgame",
+    "stack": ["Next.js", "TypeScript", "React", "SQLite", "Docker"]
   },
   {
     "title": "a platform to rent tech people, rent-a-techy",

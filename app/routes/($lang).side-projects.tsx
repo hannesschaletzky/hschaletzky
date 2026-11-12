@@ -59,6 +59,8 @@ const germanTitles: Record<string, string> = {
   beachstats_scraper:
     "Web-Scraper für Ergebnisse deutscher Beachvolleyball-Turniere",
   quarantine_list: "Eine Einkaufsliste für Menschen in Corona-Quarantäne",
+  focusgame:
+    "Focus, ein Spiel: in 5 Sekunden alle Felder in Ihrer Farbe antippen",
   "rent-a-techy": "Eine Plattform, um Tech-Leute zu mieten: rent-a-techy",
   surfeasy: "Eine Web-App, um gute Surfspots in Portugal zu finden: surf-easy",
   citefight: "citefight, ein Multiplayer-Ratespiel mit Tweets",
