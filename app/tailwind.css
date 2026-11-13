@@ -16,7 +16,7 @@
   /* easter egg feedback */
   --animate-wiggle: wiggle 400ms ease-in-out;
 
-  /* HASC brand colors, see brand/hasc-logo-paket/LIESMICH.txt */
+  /* HASC brand colors, see the repo hschaletzky-design (logo/LIESMICH.txt, design-system/) */
   --color-navy: #15233a;
   --color-navy-light: #1c2e4a;
   --color-navy-lighter: #26395a;
