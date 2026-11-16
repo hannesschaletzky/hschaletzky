@@ -1,6 +1,6 @@
 import { siteUrl, sitePages } from "~/components/site/sitePages";
 import { localize } from "~/i18n";
-import { publishedArticles } from "~/ratgeber";
+import { publishedArticles } from "~/ratgeber.server";
 
 // every page in German and English, each entry pointing to both versions,
 // plus the German-only guide

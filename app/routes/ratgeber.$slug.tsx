@@ -5,13 +5,14 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { pageMeta } from "~/components/site/pageMeta";
 import { siteUrl } from "~/components/site/sitePages";
-import { formatDate, getArticle } from "~/ratgeber";
+import { formatDate } from "~/ratgeber";
+import { getArticle, status } from "~/ratgeber.server";
 
 // one guide article from app/content/ratgeber/<slug>.md
 export const loader = ({ params }: LoaderFunctionArgs) => {
   const article = getArticle(params.slug ?? "");
   if (!article) throw new Response("Not found", { status: 404 });
-  return article;
+  return { ...article, status: status(article) };
 };
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData: data }) => {
@@ -26,8 +27,8 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData: data }) => {
       germanOnly: true,
       type: "article",
     }),
-    // drafts are only previewed locally, never indexed
-    ...(data.draft ? [{ name: "robots", content: "noindex" }] : []),
+    // drafts and scheduled articles are only previewed locally, never indexed
+    ...(data.status ? [{ name: "robots", content: "noindex" }] : []),
     { property: "article:published_time", content: data.date },
     { property: "article:section", content: data.topic },
     {
@@ -85,11 +86,12 @@ export default function RatgeberArticle() {
           <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-5xl sm:leading-tight">
             {article.title} {article.highlight}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed">{article.description}</p>
 
-          {/* the article itself, written in Markdown */}
+          {/* the article itself, written in Markdown. The short description is
+              not repeated here: readers know it from the card, and every article
+              opens with its own introduction */}
           <div
-            className="ratgeber-text mt-12"
+            className="ratgeber-text mt-10"
             dangerouslySetInnerHTML={{ __html: article.html }}
           />
 
