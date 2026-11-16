@@ -1,15 +1,19 @@
 import { localize, type Lang } from "~/i18n";
 
-// main links shown in the desktop header
+// main links shown in the desktop header (the guide is German only)
 export function getSiteNav(lang: Lang) {
-  const labels =
-    lang === "de"
-      ? ["Cloud & Integrationen", "Websites", "Über mich"]
-      : ["Cloud & Integrations", "Websites", "About"];
+  if (lang === "de") {
+    return [
+      { label: "Cloud & Integrationen", href: "/cloud" },
+      { label: "Websites", href: "/websites" },
+      { label: "Ratgeber", href: "/ratgeber" },
+      { label: "Über mich", href: "/about" },
+    ];
+  }
   return [
-    { label: labels[0], href: localize("/cloud", lang) },
-    { label: labels[1], href: localize("/websites", lang) },
-    { label: labels[2], href: localize("/about", lang) },
+    { label: "Cloud & Integrations", href: "/en/cloud" },
+    { label: "Websites", href: "/en/websites" },
+    { label: "About", href: "/en/about" },
   ];
 }
 
@@ -44,6 +48,8 @@ export function getSiteMap(lang: Lang): { title: string; links: SiteLink[] }[] {
           label: de ? "Hosting & Wartung" : "Hosting & maintenance",
           href: localize("/hosting-wartung", lang),
         },
+        // the guide exists in German only
+        ...(de ? [{ label: "Ratgeber", href: "/ratgeber" }] : []),
       ],
     },
     {
@@ -86,6 +92,15 @@ export const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
 
 // the legal pages exist in German only
 export const legalPaths = ["/impressum", "/datenschutz", "/widerruf"];
+
+// German-only pages: the language switch leads to the English start page
+export function isGermanOnly(pathname: string) {
+  return (
+    legalPaths.includes(pathname) ||
+    pathname === "/ratgeber" ||
+    pathname.startsWith("/ratgeber/")
+  );
+}
 
 export function getLegalLinks(lang: Lang) {
   return [

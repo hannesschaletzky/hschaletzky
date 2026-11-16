@@ -1,14 +1,18 @@
 import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
-import { getSiteMap, getSiteNav, legalPaths } from "~/components/site/siteNav";
+import {
+  getSiteMap,
+  getSiteNav,
+  isGermanOnly,
+} from "~/components/site/siteNav";
 import { localize, switchLang, useLang } from "~/i18n";
 
 // the language switch links to the same page in the other language (the
-// German-only legal pages switch to the English start page)
+// German-only pages, legal texts and the guide, switch to the English start page)
 function useOtherLang() {
   const lang = useLang();
   const { pathname } = useLocation();
-  const href = legalPaths.includes(pathname) ? "/en" : switchLang(pathname);
+  const href = isGermanOnly(pathname) ? "/en" : switchLang(pathname);
   return { lang, href } as const;
 }
 

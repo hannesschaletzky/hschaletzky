@@ -138,3 +138,75 @@ mark {
   );
   box-decoration-break: clone;
 }
+
+/* guide articles (Markdown): headings with a full stop, lists, tables and links in the HASC look */
+.ratgeber-text {
+  line-height: 1.75;
+  font-size: 1.0625rem;
+}
+.ratgeber-text > * + * {
+  margin-top: 1.25rem;
+}
+.ratgeber-text h2 {
+  margin-top: 3.5rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: white;
+}
+.ratgeber-text h3 {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+.ratgeber-text strong {
+  font-weight: 600;
+  color: white;
+}
+.ratgeber-text a {
+  font-weight: 600;
+  color: var(--color-teal);
+}
+.ratgeber-text a:hover {
+  color: var(--color-teal-light);
+}
+.ratgeber-text ul,
+.ratgeber-text ol {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+}
+.ratgeber-text ul {
+  list-style: disc;
+}
+.ratgeber-text ol {
+  list-style: decimal;
+}
+.ratgeber-text li::marker {
+  color: var(--color-teal);
+  font-weight: 600;
+}
+.ratgeber-text table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.ratgeber-text th,
+.ratgeber-text td {
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  padding: 0.75rem 1rem 0.75rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+.ratgeber-text th {
+  font-weight: 600;
+  color: white;
+}
+.ratgeber-text blockquote {
+  border-left: 1px solid var(--color-teal);
+  padding-left: 1.5rem;
+  color: #f1f5f9;
+}

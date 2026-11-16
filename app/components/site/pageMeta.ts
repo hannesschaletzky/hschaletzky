@@ -11,32 +11,47 @@ export function pageMeta({
   path,
   lang,
   image,
+  germanOnly = false,
+  type = "website",
 }: {
   title: string;
   description: string;
   path: string;
   lang: Lang;
   image?: string;
+  // pages without an English version (the guide) get no language alternates
+  germanOnly?: boolean;
+  type?: "website" | "article";
 }) {
   const urls = {
     de: siteUrl + (path === "/" ? "" : path),
     en: siteUrl + localize(path, "en"),
   };
   const url = urls[lang];
+  const alternates = germanOnly
+    ? []
+    : [
+        { tagName: "link", rel: "alternate", hrefLang: "de", href: urls.de },
+        { tagName: "link", rel: "alternate", hrefLang: "en", href: urls.en },
+        {
+          tagName: "link",
+          rel: "alternate",
+          hrefLang: "x-default",
+          href: urls.de,
+        },
+        {
+          property: "og:locale:alternate",
+          content: lang === "de" ? "en_US" : "de_DE",
+        },
+      ];
   return [
     { title },
     { name: "description", content: description },
     { tagName: "link", rel: "canonical", href: url },
-    { tagName: "link", rel: "alternate", hrefLang: "de", href: urls.de },
-    { tagName: "link", rel: "alternate", hrefLang: "en", href: urls.en },
-    { tagName: "link", rel: "alternate", hrefLang: "x-default", href: urls.de },
-    { property: "og:type", content: "website" },
+    ...alternates,
+    { property: "og:type", content: type },
     { property: "og:site_name", content: "Hannes Schaletzky" },
     { property: "og:locale", content: lang === "de" ? "de_DE" : "en_US" },
-    {
-      property: "og:locale:alternate",
-      content: lang === "de" ? "en_US" : "de_DE",
-    },
     { property: "og:url", content: url },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
@@ -57,7 +72,7 @@ function offer(
   name: string,
   minPrice?: number,
   vatIncluded?: boolean,
-  unitText?: string
+  unitText?: string,
 ) {
   return {
     "@type": "Offer",
@@ -114,28 +129,28 @@ export const businessJsonLd = (lang: Lang) => ({
         offer(
           lang === "de" ? "Projekt-Kickoff" : "Project kickoff",
           800,
-          false
+          false,
         ),
         offer(
           lang === "de"
             ? "Integrations- & Cloud-Projekte"
-            : "Integration & cloud projects"
+            : "Integration & cloud projects",
         ),
         offer(
           lang === "de" ? "Website-Check-up" : "Website check-up",
           250,
-          true
+          true,
         ),
         offer(
           lang === "de" ? "Website-Erstellung" : "Website creation",
           599,
-          true
+          true,
         ),
         offer(
           lang === "de" ? "Hosting & Wartung" : "Hosting & maintenance",
           25,
           true,
-          "month"
+          "month",
         ),
         offer(lang === "de" ? "KI & Automatisierung" : "AI & automation"),
       ],
