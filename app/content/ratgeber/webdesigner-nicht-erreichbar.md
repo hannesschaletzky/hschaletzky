@@ -7,7 +7,7 @@ thema: Hosting & Wartung
 angebot: /hosting-wartung
 angebotTitel: Hosting & Wartung
 angebotText: Ich ziehe Ihre Website kostenlos zu mir um und halte sie danach aktuell. Ab 25 € im Monat, eine .de-Domain ist dabei.
-entwurf: ja
+entwurf: nein
 ---
 
 Das passiert öfter, als man denkt. Der Webdesigner hat sich beruflich verändert, die Agentur gibt es nicht mehr, oder der Bekannte, der die Seite damals „schnell gemacht“ hat, meldet sich einfach nicht. Solange alles läuft, fällt das niemandem auf. Zum Problem wird es, wenn sich die Öffnungszeiten ändern, ein Fehler auftaucht oder eine Rechnung vom Hosting-Anbieter kommt, mit der niemand etwas anfangen kann.

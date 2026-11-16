@@ -7,7 +7,7 @@ thema: Website erstellen
 angebot: /website-erstellen
 angebotTitel: Website-Erstellung
 angebotText: Bei jeder Website, die ich baue, sind Impressum und Datenschutzerklärung eingerichtet und passen zu dem, was auf der Seite tatsächlich läuft. Ab 599 €.
-entwurf: ja
+entwurf: nein
 ---
 
 Kaum ein Thema verunsichert Website-Besitzer so sehr wie die Rechtstexte. Das liegt auch an den Geschichten über Abmahnungen, die regelmäßig die Runde machen. Vorweg: Ich bin kein Anwalt, und dieser Artikel ersetzt keine Rechtsberatung. Aber er zeigt Ihnen, worauf es ankommt, und hilft Ihnen, die häufigsten Fehler zu vermeiden.

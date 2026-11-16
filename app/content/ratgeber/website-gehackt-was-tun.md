@@ -7,7 +7,7 @@ thema: Sicherheit
 angebot: /website-sicherheit
 angebotTitel: Website-Sicherheit
 angebotText: Ich bereinige gehackte Websites, schließe die Lücke, durch die der Angriff kam, und halte die Seite danach aktuell.
-entwurf: ja
+entwurf: nein
 ---
 
 Die meisten merken es nicht selbst. Ein Kunde ruft an und sagt, er sei auf Ihrer Seite bei einem Gewinnspiel gelandet. Oder Google zeigt unter Ihrem Namen plötzlich „Diese Website wurde möglicherweise gehackt“. Das ist ein Schreck, aber kein Grund für Panik. Wichtig ist, jetzt in der richtigen Reihenfolge vorzugehen.
