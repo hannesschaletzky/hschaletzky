@@ -22,12 +22,14 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData: data }) => {
       description: data.description,
       path: `/ratgeber/${data.slug}`,
       lang: "de",
-      image: "websites",
+      image: `ratgeber-${data.slug}`,
       germanOnly: true,
       type: "article",
     }),
     // drafts are only previewed locally, never indexed
     ...(data.draft ? [{ name: "robots", content: "noindex" }] : []),
+    { property: "article:published_time", content: data.date },
+    { property: "article:section", content: data.topic },
     {
       "script:ld+json": {
         "@context": "https://schema.org",
@@ -35,12 +37,19 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData: data }) => {
         headline: `${data.title} ${data.highlight}`,
         description: data.description,
         datePublished: data.date,
+        dateModified: data.date,
+        image: `${siteUrl}/og/ratgeber-${data.slug}-de.png`,
         inLanguage: "de",
         url: `${siteUrl}/ratgeber/${data.slug}`,
         author: {
           "@type": "Person",
           name: "Hannes Schaletzky",
           url: `${siteUrl}/about`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hannes Schaletzky",
+          logo: { "@type": "ImageObject", url: `${siteUrl}/icon-512.png` },
         },
       },
     },
@@ -56,14 +65,21 @@ export default function RatgeberArticle() {
 
       <main>
         <article className="mx-auto max-w-3xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-24">
-          <p className="text-sm text-slate-400">
-            <a
-              href="/ratgeber"
-              className="font-semibold text-teal hover:text-teal-light"
+          {/* the way back to the overview, clearly visible above the article */}
+          <a
+            href="/ratgeber"
+            className="group inline-flex items-center gap-2 text-lg font-semibold text-teal hover:text-teal-light"
+          >
+            <span
+              aria-hidden="true"
+              className="inline-block transition-transform group-hover:-translate-x-1"
             >
-              Ratgeber
-            </a>{" "}
-            · {formatDate(article.date)} · {article.topic} · {article.minutes}{" "}
+              ←
+            </span>
+            Zurück zum Ratgeber
+          </a>
+          <p className="mt-10 text-sm text-slate-400">
+            {formatDate(article.date)} · {article.topic} · {article.minutes}{" "}
             Min. Lesezeit
           </p>
           <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-5xl sm:leading-tight">

@@ -29,7 +29,7 @@ export const meta: MetaFunction = () =>
       "Praktische Antworten zu Websites, Sicherheit und Technik für Selbstständige, kleine Betriebe und Vereine: verständlich erklärt, ohne Fachchinesisch.",
     path: "/ratgeber",
     lang: "de",
-    image: "websites",
+    image: "ratgeber",
     germanOnly: true,
   });
 
