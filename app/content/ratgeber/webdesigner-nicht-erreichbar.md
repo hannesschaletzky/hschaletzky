@@ -44,8 +44,6 @@ Versuchen Sie es zuerst freundlich und schriftlich: Bitten Sie per E-Mail oder B
 
 Kommt keine Antwort, lohnt sich ein Gespräch mit einem Anwalt, besonders wenn Sie die Domain bezahlt haben und es dafür Belege gibt. Im schlimmsten Fall bleibt nur, mit einer neuen Domain neu anzufangen. Ärgerlich, aber kein Weltuntergang: Ihre Texte und Bilder haben Sie im Zweifel noch, und die alte Seite können Sie im Browser abspeichern, solange sie online ist.
 
-<!-- Hannes: Falls du schon so eine Übergabe begleitet hast, passt hier ein kurzer, anonymisierter Satz dazu. -->
-
 ## Bei Vereinen besonders häufig.
 
 Im Verein ist die Lage oft dieselbe, nur ohne Rechnung. Ein Mitglied hat die Seite gebaut und alles über das eigene Konto angemeldet. Ist es nicht mehr aktiv, hängt die Website des Vereins an einer Privatperson.

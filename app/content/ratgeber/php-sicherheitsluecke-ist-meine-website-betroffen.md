@@ -43,8 +43,6 @@ Das ist oft die eigentliche Frage. Grob gilt:
 
 Bei Vereinen kommt eine typische Lücke dazu: Die Website hat vor Jahren ein Mitglied gebaut, das sich inzwischen um anderes kümmert oder gar nicht mehr dabei ist. Die Zugangsdaten liegen irgendwo, und niemand fühlt sich verantwortlich. Genau solche Seiten laufen oft mit uralter Software.
 
-<!-- Hannes: Falls du einen Verein kennst, bei dem es so war, passt hier ein kurzer, anonymisierter Satz dazu. -->
-
 Wenn das bei Ihnen so ist, ist der erste Schritt nicht technisch: Klären Sie, wer die Zugänge zu Hosting, Domain und Website hat, und legen Sie sie an einem Ort ab, den der Vorstand kennt.
 
 ## Was tun, wenn die Version veraltet ist?

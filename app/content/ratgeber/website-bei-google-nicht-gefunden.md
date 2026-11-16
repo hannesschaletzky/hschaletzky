@@ -40,8 +40,6 @@ Dann liegt es meist an einem dieser Punkte:
 
 Wenn Ihre Kunden aus der Umgebung kommen, ist das [Google-Unternehmensprofil](https://www.google.com/business/) oft wichtiger als die Website selbst. Es ist der Eintrag mit Karte, Öffnungszeiten und Bewertungen, der bei Suchen wie „Friseur in der Nähe“ ganz oben steht. Es ist kostenlos, und mit einem Link darin bekommt auch Ihre Website mehr Besucher.
 
-<!-- Hannes: Hier passt eine eigene Beobachtung, z. B. wie lange es bei hschaletzky.com gedauert hat, bis die Seiten in der Search Console auftauchten. -->
-
 ## Was Sie nicht brauchen.
 
 Sie bekommen vermutlich regelmäßig Mails von Anbietern, die Ihnen „Platz 1 bei Google“ versprechen. Das kann niemand seriös versprechen. Auch gekaufte Links oder massenhaft Einträge in Verzeichnissen schaden eher, als dass sie helfen.

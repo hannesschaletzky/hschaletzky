@@ -47,8 +47,6 @@ Lässt man die KI gleich die ganze Website programmieren, läuft das Ergebnis of
 
 Als Werkzeug für Textentwürfe und Ideen ist KI also wirklich gut. Jemanden, der sich auskennt und die Verantwortung übernimmt, ersetzt sie heute noch nicht.
 
-<!-- Hannes: Hier passt eine eigene Beobachtung, z. B. was dein Bekannter beim Selbermachen erlebt hat, sobald er damit weiter ist. -->
-
 ## Machen lassen.
 
 Wenn Sie jemanden beauftragen, liefern Sie die Inhalte, und um Aufbau, Gestaltung und Technik kümmert sich jemand anderes. Das kostet am Anfang mehr, spart aber viel Zeit. Eine gute Website lädt schnell, wird bei Google gefunden und funktioniert auf jedem Gerät, ohne dass Sie sich darum kümmern müssen.

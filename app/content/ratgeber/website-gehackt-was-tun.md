@@ -39,8 +39,6 @@ Ab hier wird es technisch. Grob läuft eine Bereinigung so ab:
 
 Ehrlich gesagt: Wer das zum ersten Mal macht, übersieht leicht etwas. Ein Angreifer hinterlässt oft mehrere Hintertüren, und wenn eine übrig bleibt, ist die Seite nach ein paar Tagen wieder befallen.
 
-<!-- Hannes: Falls du eine Bereinigung schon gemacht hast, passt hier ein anonymisierter Satz, was die Ursache war. -->
-
 ## Wenn Daten betroffen sein könnten.
 
 Haben Sie über die Website persönliche Daten gesammelt, etwa über ein Kontaktformular, Mitgliederanmeldungen oder einen Shop, kann der Angriff auch ein Datenschutzvorfall sein. Dann müssen Sie ihn unter Umständen innerhalb von 72 Stunden der Datenschutzbehörde Ihres Bundeslandes melden. Lassen Sie sich im Zweifel beraten.

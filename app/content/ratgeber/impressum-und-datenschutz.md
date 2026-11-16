@@ -50,8 +50,6 @@ Besser sind Generatoren von Anbietern, die sich auf das Thema spezialisiert habe
 
 Und von der KI? Eine KI schreibt Ihnen ein Impressum, das überzeugend klingt. Ob es vollständig und aktuell ist, prüft niemand. Für Rechtstexte würde ich mich darauf nicht verlassen.
 
-<!-- Hannes: Hier passt ein Satz, wie du die Rechtstexte bei deinen Kundenseiten löst. -->
-
 ## Mein Rat.
 
 Schauen Sie einmal im Jahr auf Ihre Rechtstexte, und immer dann, wenn auf der Seite etwas dazukommt, etwa ein Kontaktformular, ein Video oder eine Karte. Prüfen Sie, ob noch alles stimmt, was dort steht. Das kostet wenig Zeit und ist der beste Schutz vor bösen Überraschungen.

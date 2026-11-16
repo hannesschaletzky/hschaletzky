@@ -56,8 +56,6 @@ Auch Texte selbst zu schreiben spart Geld, und niemand kennt Ihr Geschäft so gu
 
 Nicht sparen sollten Sie bei den Rechtstexten und bei der Wartung. Eine Abmahnung wegen eines fehlerhaften Impressums oder eine gehackte Seite kostet schnell mehr als das, was Sie vorher gespart haben.
 
-<!-- Hannes: Hier passt ein Satz, wie du deine Preise gebaut hast (599 € / 990 €) und warum du erst nach dem Start abrechnest. -->
-
 ## Mein Rat.
 
 Rechnen Sie nicht nur den Startpreis, sondern die Kosten für die ersten drei Jahre zusammen. Dann sieht man schnell, ob der günstige Baukasten wirklich günstiger ist oder ob die teure Agentur ihr Geld wert ist. Und lassen Sie sich vorher schriftlich geben, was enthalten ist. Ein seriöser Anbieter hat damit kein Problem.
