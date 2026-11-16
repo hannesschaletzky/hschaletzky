@@ -54,6 +54,26 @@ const text = {
         text: "Fällt die Seite aus oder wird sie verändert, merkt das oft wochenlang niemand.",
       },
     ],
+    php: {
+      eyebrow: "PHP-Sicherheitslücken",
+      heading: "Ist Ihre Website betroffen?",
+      text: "PHP ist die Programmiersprache, auf der WordPress und die meisten kleinen Websites laufen. Wird darin eine Lücke bekannt, hängt es von zwei Dingen ab, ob Sie handeln müssen: welche PHP-Version Ihre Website nutzt und ob Ihr Anbieter die Updates einspielt.",
+      checkHeading: "So prüfen Sie es selbst",
+      check: [
+        "In WordPress unter Werkzeuge → Website-Zustand → Bericht → Server.",
+        "Oder im Kundenbereich Ihres Hosting-Anbieters, meist in den Einstellungen zu PHP.",
+        "Steht Ihre Version nicht mehr in der Liste der unterstützten Versionen, bekommt sie keine Sicherheitsupdates mehr.",
+      ],
+      versionsLink: "Unterstützte PHP-Versionen auf php.net",
+      helpHeading: "Das übernehme ich",
+      help: [
+        "Ich prüfe im Check-up, welche Version läuft und was von außen angreifbar ist.",
+        "Ich aktualisiere PHP sicher: erst ein Backup, dann der Test, ob Theme und Plugins mitspielen.",
+        "In der Wartung spiele ich Updates dauerhaft selbst ein.",
+      ],
+      cta: "Kontakt aufnehmen",
+      note: "Ein PHP-Update kann ältere Plugins oder Themes stören. Deshalb nie ohne Backup.",
+    },
     stepsEyebrow: "So gehen wir vor",
     stepsHeading: "Prüfen, beheben, absichern.",
     steps: [
@@ -113,11 +133,6 @@ const text = {
     ],
     faqHeading: "Gut zu wissen.",
     faqs: [
-      {
-        question: "Ist meine Website von Sicherheitslücken in PHP betroffen?",
-        answer:
-          "Das hängt davon ab, welche PHP-Version Ihr Anbieter einsetzt und ob er die Updates schon eingespielt hat. Im Check-up sehe ich mir an, was von außen erkennbar ist, und sage Ihnen, was zu tun ist. Liegt Ihre Website bei mir, spiele ich solche Updates selbst ein.",
-      },
       {
         question: "Meine Website ist klein. Lohnt sich ein Angriff überhaupt?",
         answer:
@@ -180,6 +195,26 @@ const text = {
         text: "If the site goes down or gets changed, often nobody notices for weeks.",
       },
     ],
+    php: {
+      eyebrow: "Security holes in PHP",
+      heading: "Is your website affected?",
+      text: "PHP is the programming language that WordPress and most small websites run on. When a hole in it becomes known, two things decide whether you need to act: which PHP version your website uses and whether your provider installs the updates.",
+      checkHeading: "How to check it yourself",
+      check: [
+        "In WordPress under Tools → Site Health → Info → Server.",
+        "Or in your hosting provider's customer area, usually in the PHP settings.",
+        "If your version is no longer on the list of supported versions, it gets no more security updates.",
+      ],
+      versionsLink: "Supported PHP versions on php.net",
+      helpHeading: "What I take care of",
+      help: [
+        "In the check-up I find out which version runs and what is open to attack from the outside.",
+        "I update PHP safely: a backup first, then a test whether theme and plugins still work.",
+        "With maintenance I install updates myself, for good.",
+      ],
+      cta: "Get in touch",
+      note: "A PHP update can break older plugins or themes. So never without a backup.",
+    },
     stepsEyebrow: "How we go about it",
     stepsHeading: "Check, fix, secure.",
     steps: [
@@ -240,11 +275,6 @@ const text = {
     faqHeading: "Good to know.",
     faqs: [
       {
-        question: "Is my website affected by security holes in PHP?",
-        answer:
-          "That depends on which PHP version your provider runs and whether they have already installed the updates. In the check-up I look at what can be seen from the outside and tell you what to do. If your website is hosted with me, I install such updates myself.",
-      },
-      {
         question: "My website is small. Is it even worth attacking?",
         answer:
           "Unfortunately, yes. Most attacks aren't targeted but run automatically against every site with known holes. A hacked site is then used for spam or fraud, for example, no matter how small it is.",
@@ -303,6 +333,66 @@ export default function WebsiteSicherheit() {
               {t.risksHeading}
             </SectionHeading>
             <FeatureList items={t.risks} />
+          </div>
+        </section>
+
+        {/* own anchor for the PHP ads: how to check the version yourself, and what I take over */}
+        <section id="php" className="scroll-mt-20 bg-navy-light">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            <SectionHeading eyebrow={t.php.eyebrow}>
+              {t.php.heading}
+            </SectionHeading>
+            <div className="grid gap-10 lg:grid-cols-2">
+              <div>
+                <p className="text-lg leading-relaxed">{t.php.text}</p>
+                <h3 className="mt-8 font-semibold text-white">
+                  {t.php.checkHeading}
+                </h3>
+                <ol className="mt-4 space-y-3">
+                  {t.php.check.map((step, i) => (
+                    <li key={step} className="flex gap-4 leading-relaxed">
+                      <span className="w-5 shrink-0 font-semibold tabular-nums text-teal">
+                        {i + 1}.
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+                <a
+                  href="https://www.php.net/supported-versions.php"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-block font-semibold text-teal hover:text-teal-light"
+                >
+                  {t.php.versionsLink} ↗
+                </a>
+              </div>
+              <div className="rounded-2xl border border-teal/40 p-6 sm:p-8">
+                <h3 className="text-xl font-bold text-white">
+                  {t.php.helpHeading}
+                </h3>
+                <ul className="mt-6 space-y-4">
+                  {t.php.help.map((item) => (
+                    <li key={item} className="flex gap-4 leading-relaxed">
+                      <span
+                        aria-hidden="true"
+                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal/15 text-sm font-semibold text-teal"
+                      >
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={localize("/contact", lang)}
+                  className="mt-8 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+                >
+                  {t.php.cta}
+                </a>
+                <p className="mt-6 text-sm text-slate-400">{t.php.note}</p>
+              </div>
+            </div>
           </div>
         </section>
 
