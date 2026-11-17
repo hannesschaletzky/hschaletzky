@@ -1,14 +1,16 @@
 import type { MetaFunction } from "react-router";
+import { useState } from "react";
 import { useLoaderData } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { pageMeta } from "~/components/site/pageMeta";
+import { formatDate } from "~/ratgeber";
 import { getArticles, status } from "~/ratgeber.server";
 
-// overview of the guide, German only: the articles grouped by the reader's
-// situation instead of by topic, because people come with a problem, not a category.
-// Headlines stay white here, teal only marks numbers, labels and links (the
+// overview of the guide, German only: one list, newest first, with filter chips
+// for the reader's situation (people come with a problem, not a category).
+// Headlines stay white here, teal only marks the active filter and links (the
 // two-colour headline belongs to the page heroes)
 
 // the list needs no article text
@@ -16,7 +18,8 @@ export const loader = () =>
   getArticles().map((a) => ({
     slug: a.slug,
     title: `${a.title} ${a.highlight}`,
-    minutes: a.minutes,
+    description: a.description,
+    date: a.date,
     topic: a.topic,
     status: status(a),
   }));
@@ -34,40 +37,20 @@ export const meta: MetaFunction = () =>
 
 type Item = ReturnType<typeof loader>[number];
 
-// each article's "thema" decides where it appears; an unknown topic lands in
-// "Weitere Fragen", so no article ever disappears from the overview
+// each article's "thema" decides its situation; an article with an unknown topic
+// shows under "Alle" without a label, so no article ever disappears
 const situations = [
+  { key: "plan", name: "Website planen", topics: ["Website erstellen"] },
+  { key: "find", name: "Gefunden werden", topics: ["Gefunden werden"] },
   {
-    name: "Ich plane eine Website",
-    sub: "Kosten, Wege, Pflichtangaben",
-    topics: ["Website erstellen"],
-  },
-  {
-    name: "Ich will gefunden werden",
-    sub: "Google, Sichtbarkeit, Ladezeit",
-    topics: ["Gefunden werden"],
-  },
-  {
-    name: "Meine Website macht mir Sorgen",
-    sub: "Sicherheit, Updates, Zugänge",
+    key: "worry",
+    name: "Sicherheit & Pflege",
     topics: ["Sicherheit", "Hosting & Wartung"],
   },
 ];
 
-function groups(items: Item[]) {
-  const known = situations.flatMap((s) => s.topics);
-  return [
-    ...situations.map((s) => ({
-      ...s,
-      items: items.filter((i) => s.topics.includes(i.topic)),
-    })),
-    {
-      name: "Weitere Fragen",
-      sub: "",
-      items: items.filter((i) => !known.includes(i.topic)),
-    },
-  ].filter((g) => g.items.length > 0);
-}
+const situationOf = (i: Item) =>
+  situations.find((s) => s.topics.includes(i.topic));
 
 function Badge({ children }: { children: string }) {
   return (
@@ -81,6 +64,10 @@ export default function Ratgeber() {
   const items = useLoaderData<typeof loader>();
   // the newest live article gets a small "Neu" (the list is sorted newest first)
   const newest = items.find((i) => !i.status)?.slug;
+  const [filter, setFilter] = useState<string | null>(null);
+  const shown = filter
+    ? items.filter((i) => situationOf(i)?.key === filter)
+    : items;
 
   return (
     <div className="min-h-screen" lang="de">
@@ -101,51 +88,67 @@ export default function Ratgeber() {
             aber so, dass Sie auch ohne mich gut entscheiden können.
           </p>
 
-          <div className="mt-14 border-t border-white/10">
-            {groups(items).map((group, i) => (
-              <div
-                key={group.name}
-                className="grid gap-6 border-b border-white/10 py-10 lg:grid-cols-[2fr_3fr] lg:gap-12"
+          <div className="mt-14 flex flex-wrap gap-2">
+            {[
+              { key: null, name: `Alle (${items.length})` },
+              ...situations.filter((s) =>
+                items.some((i) => situationOf(i)?.key === s.key),
+              ),
+            ].map((s) => (
+              <button
+                key={s.name}
+                type="button"
+                aria-pressed={filter === s.key}
+                onClick={() => setFilter(s.key)}
+                className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
+                  filter === s.key
+                    ? "border-teal bg-teal text-navy"
+                    : "border-white/15 text-white hover:border-teal/60"
+                }`}
               >
-                <div className="flex gap-5">
-                  <span className="text-4xl font-bold leading-none text-teal/40 sm:text-5xl">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h2 className="text-2xl font-bold leading-tight text-white">
-                      {group.name}
-                    </h2>
-                    {group.sub && (
-                      <p className="mt-2 text-slate-400">{group.sub}</p>
-                    )}
-                  </div>
-                </div>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item.slug}>
-                      <a
-                        href={`/ratgeber/${item.slug}`}
-                        className="group flex items-baseline justify-between gap-4 py-2.5"
-                      >
-                        <span className="text-lg leading-snug text-white group-hover:text-teal-light">
-                          {item.title}
-                          {item.slug === newest && <Badge>Neu</Badge>}
-                          {/* only in development: drafts and scheduled ones */}
-                          {item.status && <Badge>{item.status}</Badge>}
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          className="inline-block text-teal transition-transform group-hover:translate-x-1"
-                        >
-                          →
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {s.name}
+              </button>
             ))}
           </div>
+
+          <ul className="mt-8 border-t border-white/10">
+            {shown.map((item) => (
+              <li key={item.slug} className="border-b border-white/10">
+                <a
+                  href={`/ratgeber/${item.slug}`}
+                  className="group grid gap-2 py-6 md:grid-cols-[10rem_1fr_auto] md:gap-8"
+                >
+                  <span className="md:pt-1">
+                    {situationOf(item) && (
+                      <span className="inline-block whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-3 py-0.5 text-xs font-semibold text-slate-300">
+                        {situationOf(item)!.name}
+                      </span>
+                    )}
+                  </span>
+                  <span>
+                    <span className="block text-xl font-bold leading-snug text-white group-hover:text-teal-light">
+                      {item.title}
+                      {item.slug === newest && <Badge>Neu</Badge>}
+                      {/* only in development: drafts and scheduled ones */}
+                      {item.status && <Badge>{item.status}</Badge>}
+                    </span>
+                    <span className="mt-1 block text-slate-400">
+                      {item.description}
+                    </span>
+                    <span className="mt-2 block text-sm text-slate-400">
+                      {formatDate(item.date)}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="hidden text-teal transition-transform group-hover:translate-x-1 md:block md:pt-1"
+                  >
+                    →
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <ContactBox />
