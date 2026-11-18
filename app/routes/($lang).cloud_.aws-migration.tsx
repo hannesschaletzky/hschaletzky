@@ -1,16 +1,12 @@
 import type { MetaFunction } from "react-router";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import FeaturePath from "~/components/site/featurePath";
 import FeatureChecks from "~/components/site/featureChecks";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
 import ProjectsSection from "~/components/site/projects";
-import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -280,82 +276,54 @@ export const meta: MetaFunction = ({ params }) => {
 export default function AwsMigration() {
   const lang = useLang();
   const t = text[lang];
-  const packages = t.packages.map((pkg) => ({
-    ...pkg,
-    cta: { ...pkg.cta, href: localize(pkg.cta.href, lang) },
-  }));
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="cloud"
+      current="/cloud/aws-migration"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* starting points */}
+      <Section
+        eyebrow={t.fromEyebrow}
+        heading={t.fromHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureHeadlines items={t.from} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* what's included */}
+      <Section eyebrow={t.includedEyebrow} heading={t.includedHeading}>
+        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
+          {t.includedIntro}
+        </p>
+        <FeatureChecks items={t.included} />
+      </Section>
 
-        {/* starting points */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.fromEyebrow}>
-              {t.fromHeading}
-            </SectionHeading>
-            <FeatureHeadlines items={t.from} />
-          </div>
-        </section>
+      {/* proof: the Vercel to AWS move */}
+      <ProjectsSection ids={["vorsorge"]} className="bg-navy-lighter" />
+      <Testimonials only="Dr. Katharina Eller" />
 
-        {/* what's included */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.includedEyebrow}>
-              {t.includedHeading}
-            </SectionHeading>
-            <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-              {t.includedIntro}
-            </p>
-            <FeatureChecks items={t.included} />
-          </div>
-        </section>
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+      </Section>
 
-        {/* proof: the Vercel to AWS move */}
-        <ProjectsSection ids={["vorsorge"]} className="bg-navy-lighter" />
-        <Testimonials only="Dr. Katharina Eller" />
-
-        {/* process */}
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <FeaturePath items={t.steps} circleBg="bg-navy-light" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={packages}
-          featuresLabel={t.featuresLabel}
-          more={{
-            label: t.more,
-            href: `${localize("/cloud", lang)}#leistungen`,
-          }}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-lighter"
-        />
-
-        <ContactBox above="--color-navy-lighter" />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+        more={{
+          label: t.more,
+          href: `${localize("/cloud", lang)}#leistungen`,
+        }}
+      />
+    </OfferPage>
   );
 }

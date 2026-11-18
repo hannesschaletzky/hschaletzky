@@ -1,16 +1,11 @@
 import type { MetaFunction } from "react-router";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
-import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
-import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -331,100 +326,74 @@ export default function WebsiteErstellen() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/neue-website"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* examples: screenshots of the demo sites */}
+      <Section
+        eyebrow={t.examplesEyebrow}
+        heading={t.examplesHeading}
+        className="bg-navy-lighter"
+      >
+        <div className="grid gap-6 md:grid-cols-3">
+          {t.examples.map((example) => (
+            <a
+              key={example.slug}
+              href={`https://${example.slug}.hschaletzky.com/`}
+              target="_blank"
+              rel="noreferrer"
+              className="group overflow-hidden rounded-2xl border border-white/10 transition hover:-translate-y-0.5 hover:border-teal/50"
+            >
+              <img
+                src={`/beispiele/${example.slug}.jpg`}
+                width={1440}
+                height={900}
+                loading="lazy"
+                alt={example.name}
+                className="aspect-[16/10] w-full object-cover object-top"
+              />
+              <div className="p-5">
+                <h3 className="font-bold text-white">{example.name}</h3>
+                <p className="mt-1 text-sm font-semibold text-teal group-hover:text-teal-light">
+                  {example.slug}.hschaletzky.com{" "}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <p className="mt-6 text-sm text-slate-400">{t.examplesNote}</p>
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* process */}
+      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
+        <ClimbSteps steps={t.steps} />
+      </Section>
 
-        {/* examples: screenshots of the demo sites */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.examplesEyebrow}>
-              {t.examplesHeading}
-            </SectionHeading>
-            <div className="grid gap-6 md:grid-cols-3">
-              {t.examples.map((example) => (
-                <a
-                  key={example.slug}
-                  href={`https://${example.slug}.hschaletzky.com/`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group overflow-hidden rounded-2xl border border-white/10 transition hover:-translate-y-0.5 hover:border-teal/50"
-                >
-                  <img
-                    src={`/beispiele/${example.slug}.jpg`}
-                    width={1440}
-                    height={900}
-                    loading="lazy"
-                    alt={example.name}
-                    className="aspect-[16/10] w-full object-cover object-top"
-                  />
-                  <div className="p-5">
-                    <h3 className="font-bold text-white">{example.name}</h3>
-                    <p className="mt-1 text-sm font-semibold text-teal group-hover:text-teal-light">
-                      {example.slug}.hschaletzky.com{" "}
-                      <span
-                        aria-hidden="true"
-                        className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      >
-                        ↗
-                      </span>
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
-            <p className="mt-6 text-sm text-slate-400">{t.examplesNote}</p>
-          </div>
-        </section>
+      {/* included in every website */}
+      <Section
+        eyebrow={t.includedEyebrow}
+        heading={t.includedHeading}
+        className="bg-navy-light"
+      >
+        <FeatureHeadlines items={t.included} />
+      </Section>
 
-        {/* process */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <ClimbSteps steps={t.steps} />
-          </div>
-        </section>
-
-        {/* included in every website */}
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.includedEyebrow}>
-              {t.includedHeading}
-            </SectionHeading>
-            <FeatureHeadlines items={t.included} />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={t.packages}
-          notes={t.pricingNotes}
-          featuresLabel={t.featuresLabel}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/neue-website" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        notes={t.pricingNotes}
+        featuresLabel={t.featuresLabel}
+      />
+    </OfferPage>
   );
 }

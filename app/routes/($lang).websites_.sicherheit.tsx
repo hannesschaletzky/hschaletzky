@@ -1,11 +1,7 @@
 import type { MetaFunction } from "react-router";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import FeatureNumbers from "~/components/site/featureNumbers";
-import Footer from "~/components/site/footer";
-import { RelatedOffers } from "~/components/site/offerTiles";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
@@ -315,175 +311,149 @@ export default function WebsiteSicherheit() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/sicherheit"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      <Section
+        eyebrow={t.risksEyebrow}
+        heading={t.risksHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureNumbers items={t.risks} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
-
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.risksEyebrow}>
-              {t.risksHeading}
-            </SectionHeading>
-            <FeatureNumbers items={t.risks} />
-          </div>
-        </section>
-
-        {/* own anchor for the PHP ads: how to check the version yourself, and what I take over */}
-        <section id="php" className="scroll-mt-20 bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.php.eyebrow}>
-              {t.php.heading}
-            </SectionHeading>
-            <div className="grid gap-10 lg:grid-cols-2">
-              <div>
-                <p className="text-lg leading-relaxed">{t.php.text}</p>
-                <h3 className="mt-8 font-semibold text-white">
-                  {t.php.checkHeading}
-                </h3>
-                <ol className="mt-4 space-y-3">
-                  {t.php.check.map((step, i) => (
-                    <li key={step} className="flex gap-4 leading-relaxed">
-                      <span className="w-5 shrink-0 font-semibold tabular-nums text-teal">
-                        {i + 1}.
-                      </span>
-                      {step}
-                    </li>
-                  ))}
-                </ol>
-                <a
-                  href="https://www.php.net/supported-versions.php"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group mt-6 inline-block font-semibold text-teal hover:text-teal-light"
+      {/* own anchor for the PHP ads: how to check the version yourself, and what I take over */}
+      <section id="php" className="scroll-mt-20 bg-navy-light">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+          <SectionHeading eyebrow={t.php.eyebrow}>
+            {t.php.heading}
+          </SectionHeading>
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <p className="text-lg leading-relaxed">{t.php.text}</p>
+              <h3 className="mt-8 font-semibold text-white">
+                {t.php.checkHeading}
+              </h3>
+              <ol className="mt-4 space-y-3">
+                {t.php.check.map((step, i) => (
+                  <li key={step} className="flex gap-4 leading-relaxed">
+                    <span className="w-5 shrink-0 font-semibold tabular-nums text-teal">
+                      {i + 1}.
+                    </span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+              <a
+                href="https://www.php.net/supported-versions.php"
+                target="_blank"
+                rel="noreferrer"
+                className="group mt-6 inline-block font-semibold text-teal hover:text-teal-light"
+              >
+                {t.php.versionsLink}{" "}
+                <span
+                  aria-hidden="true"
+                  className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 >
-                  {t.php.versionsLink}{" "}
-                  <span
-                    aria-hidden="true"
-                    className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  >
-                    ↗
-                  </span>
-                </a>
-              </div>
-              <div className="rounded-2xl border border-teal/40 p-6 sm:p-8">
-                <h3 className="text-xl font-bold text-white">
-                  {t.php.helpHeading}
-                </h3>
-                <ul className="mt-6 space-y-4">
-                  {t.php.help.map((item) => (
-                    <li key={item} className="flex gap-4 leading-relaxed">
-                      <span
-                        aria-hidden="true"
-                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal/15 text-sm font-semibold text-teal"
-                      >
-                        ✓
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={localize("/contact", lang)}
-                  className="mt-8 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
-                >
-                  {t.php.cta}
-                </a>
-                <p className="mt-6 text-sm text-slate-400">{t.php.note}</p>
-              </div>
+                  ↗
+                </span>
+              </a>
             </div>
-          </div>
-        </section>
-
-        {/* check-up, fixes and maintenance as steps, styled like the offer tiles */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <div className="grid gap-6 md:grid-cols-3">
-              {t.steps.map((step) => (
-                <a
-                  key={step.title}
-                  href={localize(step.href, lang)}
-                  className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                    {step.label}
-                  </p>
-                  <div className="mt-3 flex items-baseline justify-between gap-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-teal-light">
-                      {step.title}
-                    </h3>
-                    {step.price && (
-                      <p className="shrink-0 font-semibold text-teal">
-                        {step.price}
-                      </p>
-                    )}
-                  </div>
-                  <p className="mt-3 leading-relaxed">{step.text}</p>
-                  <p className="mt-auto pt-6 font-semibold text-teal group-hover:text-teal-light">
-                    {step.link}{" "}
+            <div className="rounded-2xl border border-teal/40 p-6 sm:p-8">
+              <h3 className="text-xl font-bold text-white">
+                {t.php.helpHeading}
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {t.php.help.map((item) => (
+                  <li key={item} className="flex gap-4 leading-relaxed">
                     <span
                       aria-hidden="true"
-                      className="inline-block transition-transform group-hover:translate-x-1"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal/15 text-sm font-semibold text-teal"
                     >
-                      →
+                      ✓
                     </span>
-                  </p>
-                </a>
-              ))}
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={localize("/contact", lang)}
+                className="mt-8 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+              >
+                {t.php.cta}
+              </a>
+              <p className="mt-6 text-sm text-slate-400">{t.php.note}</p>
             </div>
-            <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
-              {t.stepsNote}
-            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.protectionEyebrow}>
-              {t.protectionHeading}
-            </SectionHeading>
-            {/* a list with checks, so it doesn't repeat the numbered risks */}
-            <ul className="max-w-3xl divide-y divide-white/10 border-y border-white/10">
-              {t.protection.map((item) => (
-                <li key={item.title} className="flex gap-5 py-5">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal"
-                  >
-                    ✓
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-white">{item.title}</h3>
-                    <p className="mt-1 leading-relaxed">{item.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+      {/* check-up, fixes and maintenance as steps, styled like the offer tiles */}
+      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
+        <div className="grid gap-6 md:grid-cols-3">
+          {t.steps.map((step) => (
+            <a
+              key={step.title}
+              href={localize(step.href, lang)}
+              className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                {step.label}
+              </p>
+              <div className="mt-3 flex items-baseline justify-between gap-4">
+                <h3 className="text-xl font-bold text-white group-hover:text-teal-light">
+                  {step.title}
+                </h3>
+                {step.price && (
+                  <p className="shrink-0 font-semibold text-teal">
+                    {step.price}
+                  </p>
+                )}
+              </div>
+              <p className="mt-3 leading-relaxed">{step.text}</p>
+              <p className="mt-auto pt-6 font-semibold text-teal group-hover:text-teal-light">
+                {step.link}{" "}
+                <span
+                  aria-hidden="true"
+                  className="inline-block transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </p>
+            </a>
+          ))}
+        </div>
+        <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
+          {t.stepsNote}
+        </p>
+      </Section>
 
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/sicherheit" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <Section
+        eyebrow={t.protectionEyebrow}
+        heading={t.protectionHeading}
+        className="bg-navy-lighter"
+      >
+        {/* a list with checks, so it doesn't repeat the numbered risks */}
+        <ul className="max-w-3xl divide-y divide-white/10 border-y border-white/10">
+          {t.protection.map((item) => (
+            <li key={item.title} className="flex gap-5 py-5">
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal"
+              >
+                ✓
+              </span>
+              <div>
+                <h3 className="font-semibold text-white">{item.title}</h3>
+                <p className="mt-1 leading-relaxed">{item.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    </OfferPage>
   );
 }

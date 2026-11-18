@@ -1,16 +1,12 @@
 import type { MetaFunction } from "react-router";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import FeatureNumbers from "~/components/site/featureNumbers";
 import FeatureTable from "~/components/site/featureTable";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
 import ProjectsSection from "~/components/site/projects";
-import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -269,85 +265,57 @@ export const meta: MetaFunction = ({ params }) => {
 export default function Systemintegration() {
   const lang = useLang();
   const t = text[lang];
-  const packages = t.packages.map((pkg) => ({
-    ...pkg,
-    cta: { ...pkg.cta, href: localize(pkg.cta.href, lang) },
-  }));
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="cloud"
+      current="/cloud/systemintegration"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* systems */}
+      <Section
+        eyebrow={t.systemsEyebrow}
+        heading={t.systemsHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureTable items={t.systems} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* typical tasks */}
+      <Section eyebrow={t.tasksEyebrow} heading={t.tasksHeading}>
+        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
+          {t.tasksIntro}
+        </p>
+        <FeatureNumbers items={t.tasks} />
+      </Section>
 
-        {/* systems */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.systemsEyebrow}>
-              {t.systemsHeading}
-            </SectionHeading>
-            <FeatureTable items={t.systems} />
-          </div>
-        </section>
+      {/* proof: the platform this is all based on */}
+      <ProjectsSection
+        ids={["platform", "bridge"]}
+        className="bg-navy-lighter"
+      />
+      <Testimonials only="Tien Hào Vu" />
 
-        {/* typical tasks */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.tasksEyebrow}>
-              {t.tasksHeading}
-            </SectionHeading>
-            <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-              {t.tasksIntro}
-            </p>
-            <FeatureNumbers items={t.tasks} />
-          </div>
-        </section>
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+      </Section>
 
-        {/* proof: the platform this is all based on */}
-        <ProjectsSection
-          ids={["platform", "bridge"]}
-          className="bg-navy-lighter"
-        />
-        <Testimonials only="Tien Hào Vu" />
-
-        {/* process */}
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={packages}
-          featuresLabel={t.featuresLabel}
-          more={{
-            label: t.more,
-            href: `${localize("/cloud", lang)}#leistungen`,
-          }}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-lighter"
-        />
-
-        <ContactBox above="--color-navy-lighter" />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+        more={{
+          label: t.more,
+          href: `${localize("/cloud", lang)}#leistungen`,
+        }}
+      />
+    </OfferPage>
   );
 }

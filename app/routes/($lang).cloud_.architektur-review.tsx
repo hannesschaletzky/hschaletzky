@@ -1,15 +1,11 @@
 import type { MetaFunction } from "react-router";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import FeatureTable from "~/components/site/featureTable";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
-import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
@@ -300,78 +296,50 @@ export const meta: MetaFunction = ({ params }) => {
 export default function ArchitekturReview() {
   const lang = useLang();
   const t = text[lang];
-  const packages = t.packages.map((pkg) => ({
-    ...pkg,
-    cta: { ...pkg.cta, href: localize(pkg.cta.href, lang) },
-  }));
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="cloud"
+      current="/cloud/architektur-review"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* when it pays off */}
+      <Section
+        eyebrow={t.whenEyebrow}
+        heading={t.whenHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureTable items={t.when} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* possible focus areas, picked together */}
+      <Section eyebrow={t.focusEyebrow} heading={t.focusHeading}>
+        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
+          {t.focusIntro}
+        </p>
+        <FeatureStrokes items={t.focus} columns={4} />
+      </Section>
 
-        {/* when it pays off */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.whenEyebrow}>
-              {t.whenHeading}
-            </SectionHeading>
-            <FeatureTable items={t.when} />
-          </div>
-        </section>
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+      </Section>
 
-        {/* possible focus areas, picked together */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.focusEyebrow}>
-              {t.focusHeading}
-            </SectionHeading>
-            <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-              {t.focusIntro}
-            </p>
-            <FeatureStrokes items={t.focus} columns={4} />
-          </div>
-        </section>
-
-        {/* process */}
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={packages}
-          featuresLabel={t.featuresLabel}
-          more={{
-            label: t.more,
-            href: `${localize("/cloud", lang)}#leistungen`,
-          }}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-lighter"
-        />
-
-        <ContactBox above="--color-navy-lighter" />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+        more={{
+          label: t.more,
+          href: `${localize("/cloud", lang)}#leistungen`,
+        }}
+      />
+    </OfferPage>
   );
 }

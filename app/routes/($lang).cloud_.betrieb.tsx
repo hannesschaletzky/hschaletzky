@@ -1,16 +1,12 @@
 import type { MetaFunction } from "react-router";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import FeaturePath from "~/components/site/featurePath";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import FeatureTable from "~/components/site/featureTable";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
 import ProjectsSection from "~/components/site/projects";
-import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -293,85 +289,57 @@ export const meta: MetaFunction = ({ params }) => {
 export default function Betrieb() {
   const lang = useLang();
   const t = text[lang];
-  const packages = t.packages.map((pkg) => ({
-    ...pkg,
-    cta: { ...pkg.cta, href: localize(pkg.cta.href, lang) },
-  }));
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="cloud"
+      current="/cloud/betrieb"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* what I look after */}
+      <Section
+        eyebrow={t.whatEyebrow}
+        heading={t.whatHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureTable items={t.what} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* possible tasks, agreed together */}
+      <Section eyebrow={t.tasksEyebrow} heading={t.tasksHeading}>
+        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
+          {t.tasksIntro}
+        </p>
+        <FeatureStrokes items={t.tasks} columns={4} />
+      </Section>
 
-        {/* what I look after */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.whatEyebrow}>
-              {t.whatHeading}
-            </SectionHeading>
-            <FeatureTable items={t.what} />
-          </div>
-        </section>
+      {/* proof: the integration platform I still look after */}
+      <ProjectsSection
+        ids={["platform", "bridge"]}
+        className="bg-navy-lighter"
+      />
+      <Testimonials only="Tien Hào Vu" />
 
-        {/* possible tasks, agreed together */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.tasksEyebrow}>
-              {t.tasksHeading}
-            </SectionHeading>
-            <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-              {t.tasksIntro}
-            </p>
-            <FeatureStrokes items={t.tasks} columns={4} />
-          </div>
-        </section>
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+      </Section>
 
-        {/* proof: the integration platform I still look after */}
-        <ProjectsSection
-          ids={["platform", "bridge"]}
-          className="bg-navy-lighter"
-        />
-        <Testimonials only="Tien Hào Vu" />
-
-        {/* process */}
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <FeaturePath items={t.steps} circleBg="bg-navy-light" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={packages}
-          featuresLabel={t.featuresLabel}
-          more={{
-            label: t.more,
-            href: `${localize("/cloud", lang)}#leistungen`,
-          }}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-lighter"
-        />
-
-        <ContactBox above="--color-navy-lighter" />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+        more={{
+          label: t.more,
+          href: `${localize("/cloud", lang)}#leistungen`,
+        }}
+      />
+    </OfferPage>
   );
 }

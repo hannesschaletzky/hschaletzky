@@ -1,4 +1,5 @@
 import SectionHeading from "~/components/site/sectionHeading";
+import { localize, useLang } from "~/i18n";
 
 type Package = {
   name: string;
@@ -14,11 +15,14 @@ type Package = {
 };
 
 function Cta({ cta }: { cta: Package["cta"] }) {
+  const lang = useLang();
+  // internal links get the language prefix, unless the text already has it
+  const href = cta.href.startsWith("/en") ? cta.href : localize(cta.href, lang);
   return (
     <a
-      href={cta.href}
+      href={href}
       // external links (the booking page) open in a new tab
-      {...(cta.href.startsWith("http") && {
+      {...(href.startsWith("http") && {
         target: "_blank",
         rel: "noreferrer",
       })}

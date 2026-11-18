@@ -1,16 +1,12 @@
 import type { MetaFunction } from "react-router";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import FeatureTable from "~/components/site/featureTable";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
-import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -332,122 +328,97 @@ export default function WebsiteCheckUp() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/check-up"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      {/* areas */}
+      <Section
+        eyebrow={t.areasEyebrow}
+        heading={t.areasHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureTable items={t.areas} />
+        <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
+          {t.tools}
+        </p>
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      {/* process */}
+      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
+        <ClimbSteps steps={t.steps} />
+      </Section>
 
-        {/* areas */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.areasEyebrow}>
-              {t.areasHeading}
+      {/* sample report: text left, three pages fanned out right */}
+      <section className="bg-navy-light">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2">
+          <div>
+            <SectionHeading eyebrow={t.reportEyebrow}>
+              {t.reportHeading}
             </SectionHeading>
-            <FeatureTable items={t.areas} />
-            <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
-              {t.tools}
-            </p>
-          </div>
-        </section>
-
-        {/* process */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <ClimbSteps steps={t.steps} />
-          </div>
-        </section>
-
-        {/* sample report: text left, three pages fanned out right */}
-        <section className="bg-navy-light">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2">
-            <div>
-              <SectionHeading eyebrow={t.reportEyebrow}>
-                {t.reportHeading}
-              </SectionHeading>
-              <p className="-mt-4 text-lg leading-relaxed">{t.reportText}</p>
-              <dl className="mt-8 grid grid-cols-3 gap-4">
-                {t.reportFacts.map((fact) => (
-                  <div
-                    key={fact.label}
-                    className="rounded-xl border border-white/10 px-4 py-3"
-                  >
-                    <dt className="sr-only">{fact.label}</dt>
-                    <dd className="text-3xl font-bold text-white">
-                      {fact.value}
-                    </dd>
-                    <dd className="text-sm">{fact.label}</dd>
-                  </div>
-                ))}
-              </dl>
-              <p className="mt-3 text-sm text-slate-400">{t.reportFactsNote}</p>
-              <div className="mt-8">
-                <a
-                  href={reportPdf}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+            <p className="-mt-4 text-lg leading-relaxed">{t.reportText}</p>
+            <dl className="mt-8 grid grid-cols-3 gap-4">
+              {t.reportFacts.map((fact) => (
+                <div
+                  key={fact.label}
+                  className="rounded-xl border border-white/10 px-4 py-3"
                 >
-                  {t.reportCta}
-                </a>
-              </div>
-            </div>
-            <a
-              href={reportPdf}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={t.reportCta}
-              className="group relative mx-auto block aspect-[4/3] w-full max-w-lg"
-            >
-              {reportPages.map((src, i) => (
-                <img
-                  key={src}
-                  src={src}
-                  width={800}
-                  height={1131}
-                  loading="lazy"
-                  alt={t.pages[i]}
-                  className={`absolute top-1/2 w-[46%] -translate-y-1/2 rounded-md shadow-2xl shadow-black/40 transition-transform duration-300 ${
-                    [
-                      "left-0 -rotate-6 group-hover:-translate-x-2 group-hover:-rotate-8",
-                      "left-[27%] z-10 group-hover:-translate-y-[54%]",
-                      "right-0 rotate-6 group-hover:translate-x-2 group-hover:rotate-8",
-                    ][i]
-                  }`}
-                />
+                  <dt className="sr-only">{fact.label}</dt>
+                  <dd className="text-3xl font-bold text-white">
+                    {fact.value}
+                  </dd>
+                  <dd className="text-sm">{fact.label}</dd>
+                </div>
               ))}
-            </a>
+            </dl>
+            <p className="mt-3 text-sm text-slate-400">{t.reportFactsNote}</p>
+            <div className="mt-8">
+              <a
+                href={reportPdf}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+              >
+                {t.reportCta}
+              </a>
+            </div>
           </div>
-        </section>
+          <a
+            href={reportPdf}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={t.reportCta}
+            className="group relative mx-auto block aspect-[4/3] w-full max-w-lg"
+          >
+            {reportPages.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                width={800}
+                height={1131}
+                loading="lazy"
+                alt={t.pages[i]}
+                className={`absolute top-1/2 w-[46%] -translate-y-1/2 rounded-md shadow-2xl shadow-black/40 transition-transform duration-300 ${
+                  [
+                    "left-0 -rotate-6 group-hover:-translate-x-2 group-hover:-rotate-8",
+                    "left-[27%] z-10 group-hover:-translate-y-[54%]",
+                    "right-0 rotate-6 group-hover:translate-x-2 group-hover:rotate-8",
+                  ][i]
+                }`}
+              />
+            ))}
+          </a>
+        </div>
+      </section>
 
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={t.packages}
-          featuresLabel={t.featuresLabel}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/check-up" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+      />
+    </OfferPage>
   );
 }

@@ -1,16 +1,11 @@
 import type { MetaFunction } from "react-router";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import FeatureStrokes from "~/components/site/featureStrokes";
-import Footer from "~/components/site/footer";
-import { RelatedOffers } from "~/components/site/offerTiles";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
 import ReferencesSection from "~/components/site/referencesSection";
-import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -288,49 +283,29 @@ export default function HostingWartung() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/hosting-wartung"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      <Section
+        eyebrow={t.servicesEyebrow}
+        heading={t.servicesHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureStrokes items={t.services} columns={4} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        notes={t.pricingNotes}
+        featuresLabel={t.featuresLabel}
+      />
 
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.servicesEyebrow}>
-              {t.servicesHeading}
-            </SectionHeading>
-            <FeatureStrokes items={t.services} columns={4} />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={t.packages}
-          notes={t.pricingNotes}
-          featuresLabel={t.featuresLabel}
-        />
-
-        <ReferencesSection className="bg-navy-lighter" />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/hosting-wartung" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <ReferencesSection className="bg-navy-lighter" />
+    </OfferPage>
   );
 }

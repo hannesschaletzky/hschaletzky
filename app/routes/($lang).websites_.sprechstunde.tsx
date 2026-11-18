@@ -1,16 +1,11 @@
 import type { MetaFunction } from "react-router";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import FeatureNumbers from "~/components/site/featureNumbers";
 import FeaturePath from "~/components/site/featurePath";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
-import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
-import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -236,55 +231,34 @@ export default function WebsiteSprechstunde() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/sprechstunde"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      <Section
+        eyebrow={t.topicsEyebrow}
+        heading={t.topicsHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureNumbers items={t.topics} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+      </Section>
 
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.topicsEyebrow}>
-              {t.topicsHeading}
-            </SectionHeading>
-            <FeatureNumbers items={t.topics} />
-          </div>
-        </section>
-
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <FeaturePath items={t.steps} circleBg="bg-navy-light" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={t.packages}
-          featuresLabel={t.featuresLabel}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/sprechstunde" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+      />
+    </OfferPage>
   );
 }

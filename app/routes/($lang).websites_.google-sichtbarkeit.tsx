@@ -1,16 +1,11 @@
 import type { MetaFunction } from "react-router";
+import OfferPage from "~/components/site/offerPage";
+import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
-import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import FeatureStrokes from "~/components/site/featureStrokes";
-import Footer from "~/components/site/footer";
-import Header from "~/components/site/header";
-import PageHero from "~/components/site/pageHero";
-import { RelatedOffers } from "~/components/site/offerTiles";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
-import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -238,55 +233,34 @@ export default function GoogleSichtbarkeit() {
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <OfferPage
+      area="websites"
+      current="/websites/google-sichtbarkeit"
+      hero={t.hero}
+      faq={{ heading: t.faqHeading, faqs: t.faqs }}
+    >
+      <Section
+        eyebrow={t.includedEyebrow}
+        heading={t.includedHeading}
+        className="bg-navy-lighter"
+      >
+        <FeatureStrokes items={t.included} />
+      </Section>
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+      </Section>
 
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.includedEyebrow}>
-              {t.includedHeading}
-            </SectionHeading>
-            <FeatureStrokes items={t.included} />
-          </div>
-        </section>
-
-        <section className="bg-navy-light">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.stepsEyebrow}>
-              {t.stepsHeading}
-            </SectionHeading>
-            <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
-          </div>
-        </section>
-
-        <PricingSection
-          eyebrow={t.pricingEyebrow}
-          heading={t.pricingHeading}
-          packages={t.packages}
-          featuresLabel={t.featuresLabel}
-        />
-
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
-        />
-
-        <RelatedOffers current="/websites/google-sichtbarkeit" />
-
-        <ContactBox />
-      </main>
-
-      <Footer />
-    </div>
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+      />
+    </OfferPage>
   );
 }
