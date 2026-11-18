@@ -314,14 +314,14 @@ function AboutIntro({ lang }: { lang: Lang }) {
         {t.hero.text}
       </PageHero>
       <section className="bg-navy-lighter">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-[18rem_1fr]">
+        <div className="mx-auto grid max-w-6xl items-start gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-[20rem_1fr]">
           {/* from the same shoot as the home page portrait, but a different picture */}
           <img
             src="/hannes-tshirt.jpg"
             width={960}
-            height={960}
+            height={1200}
             alt="Hannes Schaletzky"
-            className="mx-auto aspect-square w-56 rounded-3xl object-cover md:w-72"
+            className="mx-auto aspect-[4/5] w-56 rounded-3xl object-cover md:w-full"
           />
           <div>
             <SectionHeading eyebrow={t.glance}>
