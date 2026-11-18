@@ -272,6 +272,7 @@ export const meta: MetaFunction = ({ params }) => {
     title: text[lang].title,
     description: text[lang].description,
     path: "/cloud/aws-migration",
+    image: "cloud-aws-migration",
     lang,
   });
 };

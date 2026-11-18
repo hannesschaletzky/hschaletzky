@@ -254,6 +254,7 @@ export const meta: MetaFunction = ({ params }) => {
     title: text[lang].title,
     description: text[lang].description,
     path: "/cloud",
+    image: "cloud",
     lang,
   });
 };

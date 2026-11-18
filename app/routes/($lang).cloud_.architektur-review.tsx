@@ -292,6 +292,7 @@ export const meta: MetaFunction = ({ params }) => {
     title: text[lang].title,
     description: text[lang].description,
     path: "/cloud/architektur-review",
+    image: "cloud-architektur-review",
     lang,
   });
 };
