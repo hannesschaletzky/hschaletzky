@@ -23,7 +23,7 @@ const offers = {
         "Website-Check-up – 250 € inkl. MwSt.",
         "Website-Erstellung – ab 599 € inkl. MwSt.",
         "Hosting & Wartung – ab 25 € / Monat inkl. MwSt.",
-        "KI & Automatisierung",
+        "E-Mail, Google-Sichtbarkeit & Sprechstunde",
       ],
       href: "/websites",
       cta: "Mehr zu Websites",
@@ -49,7 +49,7 @@ const offers = {
         "Website check-up – 250 € incl. VAT",
         "Website creation – from 599 € incl. VAT",
         "Hosting & maintenance – from 25 € / month incl. VAT",
-        "AI & automation",
+        "Email, Google visibility & office hours",
       ],
       href: "/websites",
       cta: "More about websites",
@@ -71,12 +71,12 @@ export default function Offers() {
             // screen readers still announce just the one link
             <article
               key={offer.title}
-              className="group relative flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8 transition hover:border-teal/40 has-[a:focus-visible]:border-teal"
+              className="group relative flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8 transition hover:-translate-y-0.5 hover:border-teal/50 has-[a:focus-visible]:border-teal"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                 {offer.eyebrow}
               </p>
-              <h3 className="mt-3 text-2xl font-bold text-white">
+              <h3 className="mt-3 text-2xl font-bold text-white group-hover:text-teal-light">
                 {offer.title}
               </h3>
               <ul className="mt-6 flex-1 space-y-2">

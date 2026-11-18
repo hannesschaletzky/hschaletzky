@@ -12,13 +12,13 @@ export default function ContactBox() {
         <Peak className="pointer-events-none absolute -bottom-16 -right-10 h-72 w-auto text-navy/10" />
         <h2 className="relative max-w-xl text-3xl font-bold leading-tight sm:text-4xl sm:leading-10">
           {de
-            ? "Lassen Sie uns über Ihr Projekt sprechen."
-            : "Let's talk about your project."}
+            ? "Lassen Sie uns sprechen."
+            : "Let's talk."}
         </h2>
         <p className="relative mt-4 max-w-xl text-lg">
           {de
-            ? "Ob Cloud-Plattform oder Vereinswebsite: Schreiben Sie mir, rufen Sie an oder buchen Sie ein kostenloses Erstgespräch."
-            : "Whether it's a cloud platform or your club's website, drop me a line, give me a call or book a free intro call."}
+            ? "Schreiben Sie mir, rufen Sie an oder buchen Sie ein kostenloses Erstgespräch. Meist antworte ich innerhalb eines Werktags."
+            : "Drop me a line, give me a call or book a free intro call. I usually reply within one working day."}
         </p>
         <div className="relative mt-8 flex flex-wrap gap-4">
           {/* the free call is the main action, mail and phone second */}

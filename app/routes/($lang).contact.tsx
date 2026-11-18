@@ -104,14 +104,20 @@ export default function Contact() {
                   key={channel.title}
                   href={channel.href}
                   {...(external && { target: "_blank", rel: "noreferrer" })}
-                  className="group rounded-2xl border border-white/10 p-6 transition hover:border-teal/50"
+                  className="group rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
                 >
                   <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                     {channel.title}
                   </h2>
                   <p className="mt-2">{channel.text}</p>
-                  <p className="mt-4 break-all text-lg font-semibold text-white group-hover:text-teal">
-                    {channel.label} →
+                  <p className="mt-4 break-all text-lg font-semibold text-white group-hover:text-teal-light">
+                    {channel.label}{" "}
+                    <span
+                      aria-hidden="true"
+                      className="inline-block transition-transform group-hover:translate-x-1"
+                    >
+                      →
+                    </span>
                   </p>
                 </a>
               );

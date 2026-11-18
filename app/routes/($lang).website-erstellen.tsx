@@ -2,7 +2,7 @@ import type { MetaFunction } from "react-router";
 import ClimbSteps from "~/components/site/climbSteps";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
-import FeatureList from "~/components/site/featureList";
+import FeatureHeadlines from "~/components/site/featureHeadlines";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
@@ -356,7 +356,7 @@ export default function WebsiteErstellen() {
                   href={`https://${example.slug}.hschaletzky.com/`}
                   target="_blank"
                   rel="noreferrer"
-                  className="group overflow-hidden rounded-2xl border border-white/10 transition hover:border-teal/50"
+                  className="group overflow-hidden rounded-2xl border border-white/10 transition hover:-translate-y-0.5 hover:border-teal/50"
                 >
                   <img
                     src={`/beispiele/${example.slug}.jpg`}
@@ -369,7 +369,13 @@ export default function WebsiteErstellen() {
                   <div className="p-5">
                     <h3 className="font-bold text-white">{example.name}</h3>
                     <p className="mt-1 text-sm font-semibold text-teal group-hover:text-teal-light">
-                      {example.slug}.hschaletzky.com →
+                      {example.slug}.hschaletzky.com{" "}
+                      <span
+                        aria-hidden="true"
+                        className="inline-block transition-transform group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
                     </p>
                   </div>
                 </a>
@@ -395,7 +401,7 @@ export default function WebsiteErstellen() {
             <SectionHeading eyebrow={t.includedEyebrow}>
               {t.includedHeading}
             </SectionHeading>
-            <FeatureList items={t.included} />
+            <FeatureHeadlines items={t.included} />
           </div>
         </section>
 

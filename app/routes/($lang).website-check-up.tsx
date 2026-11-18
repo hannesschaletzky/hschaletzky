@@ -2,7 +2,7 @@ import type { MetaFunction } from "react-router";
 import ClimbSteps from "~/components/site/climbSteps";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
-import FeatureList from "~/components/site/featureList";
+import FeatureTable from "~/components/site/featureTable";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
@@ -350,7 +350,7 @@ export default function WebsiteCheckUp() {
             <SectionHeading eyebrow={t.areasEyebrow}>
               {t.areasHeading}
             </SectionHeading>
-            <FeatureList items={t.areas} />
+            <FeatureTable items={t.areas} />
             <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
               {t.tools}
             </p>

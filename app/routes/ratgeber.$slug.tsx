@@ -98,12 +98,12 @@ export default function RatgeberArticle() {
           {/* every article leads to the matching offer */}
           <a
             href={article.offer.href}
-            className="group mt-16 flex flex-col rounded-2xl border border-teal/40 p-6 transition hover:border-teal sm:p-8"
+            className="group mt-16 flex flex-col rounded-2xl border border-teal/40 p-6 transition hover:-translate-y-0.5 hover:border-teal sm:p-8"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
               Passt zu diesem Thema
             </p>
-            <h2 className="mt-3 text-2xl font-bold text-white">
+            <h2 className="mt-3 text-2xl font-bold text-white group-hover:text-teal-light">
               {article.offer.title}
             </h2>
             <p className="mt-3 leading-relaxed">{article.offer.text}</p>

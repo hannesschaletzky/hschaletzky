@@ -46,64 +46,188 @@ export const meta: MetaFunction = ({ params }) => {
   });
 };
 
-// German titles, by repository – the JSON holds the English ones for both sites
-const germanTitles: Record<string, string> = {
-  "physio-musterfrau": "Beispiel-Website für eine Physiotherapie-Praxis",
-  "sv-musterstadt": "Beispiel-Website für einen Sportverein",
-  "tischlerei-mustermann": "Beispiel-Website für eine Tischlerei",
-  hschaletzky: "Meine Website auf eigenem Server",
-  ugly_sweater:
-    "Abstimmungs-Tool für den hässlichsten Weihnachtspulli als Web-App",
-  "terraform-digitalocean-droplet":
-    "DigitalOcean-Droplet mit Terraform und cloud-init bereitstellen",
-  beachstats_scraper:
-    "Web-Scraper für Ergebnisse deutscher Beachvolleyball-Turniere",
-  quarantine_list: "Eine Einkaufsliste für Menschen in Corona-Quarantäne",
-  focusgame:
-    "Focus, ein Spiel: in 5 Sekunden alle Felder in Ihrer Farbe antippen",
-  "rent-a-techy": "Eine Plattform, um Tech-Leute zu mieten: rent-a-techy",
-  surfeasy: "Eine Web-App, um gute Surfspots in Portugal zu finden: surf-easy",
-  citefight: "citefight, ein Multiplayer-Ratespiel mit Tweets",
-  CycleLogVC: "Eine iOS-App, die Ihre 🚲-Touren per GPS aufzeichnet",
-  nightlive: "iOS-App, um Bars und Clubs zum Feiern zu finden",
+type L = { de: string; en: string };
+type Project = {
+  // repositories in unpaid.json: links and year come from there
+  repos: string[];
+  title: L;
+  text: L;
+  // a few telling tools, the full list stays in the JSON (classic site)
+  stack: string[];
+  // several live sites in one row get their own link labels
+  linkLabels?: L[];
 };
 
-const germanTags: Record<string, string> = {
-  Cycling: "Radfahren",
-};
+// grouped by kind instead of one long list; inside a group, live ones first
+const groups: { title: L; projects: Project[] }[] = [
+  {
+    title: { de: "Websites", en: "Websites" },
+    projects: [
+      {
+        repos: ["hschaletzky"],
+        title: {
+          de: "Diese Website auf eigenem Server",
+          en: "This website on its own server",
+        },
+        text: {
+          de: "Die Seite, auf der Sie gerade sind: eigener Server bei Hetzner, Infrastruktur als Code und ein automatisches Deployment bei jeder Änderung.",
+          en: "The site you're on right now: its own server at Hetzner, infrastructure as code and an automatic deployment on every change.",
+        },
+        stack: ["React Router", "TypeScript", "Hetzner", "OpenTofu"],
+      },
+      {
+        repos: ["physio-musterfrau", "sv-musterstadt", "tischlerei-mustermann"],
+        title: { de: "Drei Beispiel-Websites", en: "Three sample websites" },
+        text: {
+          de: "Für eine Physiopraxis, einen Sportverein und eine Tischlerei, damit Kunden sehen, wie ihre Website aussehen könnte.",
+          en: "For a physiotherapy practice, a sports club and a carpentry, so clients can see what their website could look like.",
+        },
+        stack: ["Astro", "TypeScript", "Docker"],
+        linkLabels: [
+          { de: "Physiopraxis", en: "Physiotherapy" },
+          { de: "Sportverein", en: "Sports club" },
+          { de: "Tischlerei", en: "Carpentry" },
+        ],
+      },
+    ],
+  },
+  {
+    title: { de: "Web-Apps & Spiele", en: "Web apps & games" },
+    projects: [
+      {
+        repos: ["focusgame"],
+        title: { de: "Focus", en: "Focus" },
+        text: {
+          de: "Ein Reaktionsspiel: in fünf Sekunden alle Felder in Ihrer Farbe antippen.",
+          en: "A reaction game: tap all the squares of your colour within five seconds.",
+        },
+        stack: ["Next.js", "TypeScript", "SQLite"],
+      },
+      {
+        repos: ["quarantine_list"],
+        title: { de: "Corona-Einkaufsliste", en: "Covid shopping list" },
+        text: {
+          de: "Eine Einkaufsliste für Menschen in Corona-Quarantäne.",
+          en: "A shopping list for people in Covid quarantine.",
+        },
+        stack: ["Next.js", "TypeScript", "SQLite"],
+      },
+      {
+        repos: ["ugly_sweater"],
+        title: {
+          de: "Abstimmung zum hässlichsten Weihnachtspulli",
+          en: "Ugly Christmas sweater vote",
+        },
+        text: {
+          de: "Eine kleine Web-App für eine Weihnachtsfeier, bei der alle per Handy abstimmen.",
+          en: "A small web app for a Christmas party where everyone votes by phone.",
+        },
+        stack: ["Next.js", "TypeScript", "Tailwind"],
+      },
+      {
+        repos: ["citefight"],
+        title: { de: "citefight", en: "citefight" },
+        text: {
+          de: "Ein Ratespiel für mehrere Spieler rund um Tweets.",
+          en: "A multiplayer guessing game around tweets.",
+        },
+        stack: ["Node.js", "React", "Pusher"],
+      },
+      {
+        repos: ["surfeasy"],
+        title: { de: "surf-easy", en: "surf-easy" },
+        text: {
+          de: "Findet gute Surfspots in Portugal. Entstanden im Coding-Bootcamp Le Wagon.",
+          en: "Finds good surf spots in Portugal. Built at the Le Wagon coding bootcamp.",
+        },
+        stack: ["Ruby", "Redis"],
+      },
+      {
+        repos: ["rent-a-techy"],
+        title: { de: "rent-a-techy", en: "rent-a-techy" },
+        text: {
+          de: "Eine Plattform, um Tech-Leute zu mieten. Entstanden im Coding-Bootcamp Le Wagon.",
+          en: "A platform to rent tech people. Built at the Le Wagon coding bootcamp.",
+        },
+        stack: ["Ruby", "HTML", "CSS"],
+      },
+    ],
+  },
+  {
+    title: { de: "Tools & Infrastruktur", en: "Tools & infrastructure" },
+    projects: [
+      {
+        repos: ["beachstats_scraper"],
+        title: {
+          de: "Beachvolleyball-Ergebnisse",
+          en: "Beach volleyball results",
+        },
+        text: {
+          de: "Sammelt automatisch die Ergebnisse deutscher Beachvolleyball-Turniere.",
+          en: "Automatically collects the results of German beach volleyball tournaments.",
+        },
+        stack: ["Node.js", "TypeScript", "Jest"],
+      },
+      {
+        repos: ["terraform-digitalocean-droplet"],
+        title: { de: "Server mit Terraform", en: "Server with Terraform" },
+        text: {
+          de: "Ein DigitalOcean-Server, der sich per Terraform und cloud-init von selbst einrichtet.",
+          en: "A DigitalOcean server that sets itself up with Terraform and cloud-init.",
+        },
+        stack: ["Terraform", "DigitalOcean", "cloud-init"],
+      },
+    ],
+  },
+  {
+    title: { de: "iOS-Apps", en: "iOS apps" },
+    projects: [
+      {
+        repos: ["CycleLogVC"],
+        title: { de: "Radtouren-Tracker", en: "Cycling tracker" },
+        text: {
+          de: "Eine iOS-App, die Radtouren per GPS aufzeichnet.",
+          en: "An iOS app that records bike rides by GPS.",
+        },
+        stack: ["Swift", "GPS"],
+      },
+      {
+        repos: ["nightlive"],
+        title: { de: "nightlive", en: "nightlive" },
+        text: {
+          de: "Eine iOS-App, um Bars und Clubs zum Feiern zu finden.",
+          en: "An iOS app to find bars and clubs to go out to.",
+        },
+        stack: ["Swift", "Google API"],
+      },
+    ],
+  },
+];
 
-const germanEmployers: Record<string, string> = {
-  myself: "für mich",
-  "sample project": "Beispielprojekt",
-  "christmas party": "Weihnachtsfeier",
-};
+const byRepo = new Map(
+  privateProjects.map((p) => [p.repo.split("/").pop() ?? "", p]),
+);
 
-// titles are stored in lower case for the classic site – capitalize the first
-// word, unless it is a name with its own casing like "iOS"
-function capitalize(title: string) {
-  const firstWord = title.split(" ")[0];
-  if (/[A-Z]/.test(firstWord)) return title;
-  return title.charAt(0).toUpperCase() + title.slice(1);
+function details(project: Project) {
+  const entries = project.repos.map((r) => byRepo.get(r)!);
+  return {
+    year: entries[0].from.split(".")[1],
+    sites: entries.map((e) => e.url).filter((u) => u !== ""),
+    // the sample sites share one row, their code links would only repeat
+    code: entries.length === 1 ? entries[0].repo : "",
+  };
 }
 
-const projects = privateProjects.map((project) => {
-  const repo = project.repo.split("/").pop() ?? "";
-  return {
-    ...project,
-    year: project.from.split(".")[1],
-    title: {
-      en: capitalize(project.title),
-      de: germanTitles[repo] ?? capitalize(project.title),
-    },
-    employer: {
-      en: project.employer,
-      de: germanEmployers[project.employer] ?? project.employer,
-    },
-    stack: project.stack
-      .filter((item) => item !== "")
-      .map((item) => ({ en: item, de: germanTags[item] ?? item })),
-  };
-});
+function Arrow() {
+  return (
+    <span
+      aria-hidden="true"
+      className="inline-block transition-transform group-hover:translate-x-1"
+    >
+      →
+    </span>
+  );
+}
 
 export default function SideProjects() {
   const lang = useLang();
@@ -124,60 +248,103 @@ export default function SideProjects() {
           {t.intro}
         </PageHero>
 
+        {/* chapters with a timeline: title, a dashed line to the tools, text and links */}
         <section className="bg-navy-lighter">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              // on hover the card lifts, a teal line grows along the top edge
-              // and the title lights up
-              <article
-                key={project.repo}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition duration-300 hover:border-teal/40 hover:bg-navy-light hover:shadow-2xl hover:shadow-black/30 motion-safe:hover:-translate-y-1"
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            {groups.map((group, g) => (
+              // one thin line per chapter, the projects inside are held together
+              // by whitespace only
+              <div
+                key={group.title.en}
+                className="border-t border-white/15 pb-14 pt-10 last:pb-0"
               >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-teal transition-transform duration-500 group-hover:scale-x-100"
-                />
-                <p className="text-sm text-slate-400">
-                  {project.year} · {project.employer[lang]}
-                </p>
-                <h2 className="mt-2 text-lg font-bold leading-snug text-white transition-colors group-hover:text-teal-light">
-                  {project.title[lang]}
+                {/* numbered like chapters: 1 Websites, then 1.1, 1.2 … */}
+                <h2 className="flex items-baseline gap-4 text-2xl font-bold text-white sm:text-3xl">
+                  <span className="text-4xl font-bold tabular-nums text-teal/40 sm:text-5xl">
+                    {g + 1}
+                  </span>
+                  {group.title[lang]}
                 </h2>
-                <ul className="mt-4 flex flex-1 flex-wrap content-start gap-2">
-                  {project.stack.map((item) => (
-                    <li
-                      key={item.en}
-                      className="rounded-full bg-white/5 px-3 py-1 text-xs transition-colors group-hover:bg-white/10 group-hover:text-white"
-                    >
-                      {item[lang]}
-                    </li>
-                  ))}
-                </ul>
-                {(project.url !== "" || project.repo !== "") && (
-                  <div className="mt-6 flex gap-4 text-sm font-semibold">
-                    {project.url !== "" && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-teal hover:text-teal-light"
-                      >
-                        {t.website} →
-                      </a>
-                    )}
-                    {project.repo !== "" && (
-                      <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-teal hover:text-teal-light"
-                      >
-                        {t.code} →
-                      </a>
-                    )}
-                  </div>
-                )}
-              </article>
+                {/* the projects hang off one teal line per chapter */}
+                <div className="mt-8 ml-1.5 space-y-12 border-l-2 border-teal/30 pl-8">
+                  {group.projects.map((project, i) => {
+                    const d = details(project);
+                    const title = (
+                      <h3 className="text-xl font-bold leading-snug text-white sm:text-2xl">
+                        <span className="mr-3 font-semibold tabular-nums text-teal/40">
+                          {g + 1}.{i + 1}
+                        </span>
+                        {project.title[lang]}
+                      </h3>
+                    );
+                    const pills = (
+                      <ul className="flex flex-wrap gap-2">
+                        {project.stack.map((item) => (
+                          <li
+                            key={item}
+                            className="rounded-full border border-white/10 bg-navy-light px-3 py-1 text-sm text-white transition hover:-translate-y-0.5 hover:border-teal/60"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                    const links = (
+                      <div className="mt-4 flex flex-wrap items-baseline gap-x-5 gap-y-2 font-semibold">
+                        <span className="text-sm font-normal text-slate-400">
+                          {d.year}
+                        </span>
+                        {d.sites.map((url, j) => (
+                          <a
+                            key={url}
+                            href={url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="group text-teal hover:text-teal-light"
+                          >
+                            {project.linkLabels?.[j][lang] ?? t.website}{" "}
+                            <Arrow />
+                          </a>
+                        ))}
+                        {d.code !== "" && (
+                          <a
+                            href={d.code}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="group text-teal hover:text-teal-light"
+                          >
+                            {t.code} <Arrow />
+                          </a>
+                        )}
+                      </div>
+                    );
+                    const dot = (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -left-[calc(2rem+8px)] top-2.5 h-3.5 w-3.5 rounded-full border-2 border-teal bg-navy-lighter"
+                      />
+                    );
+                    return (
+                      <article key={project.repos[0]} className="relative">
+                        {dot}
+                        {/* a dashed line runs from the title to the tools */}
+                        <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+                          {title}
+                          <span
+                            aria-hidden="true"
+                            className="hidden min-w-8 flex-1 border-t border-dashed border-teal/30 md:block"
+                          />
+                          <div className="shrink-0">{pills}</div>
+                        </div>
+                        <p className="mt-2 max-w-2xl text-lg leading-relaxed">
+                          {project.text[lang]}
+                        </p>
+                        {links}
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
             ))}
           </div>
         </section>

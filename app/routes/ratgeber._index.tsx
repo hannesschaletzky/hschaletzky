@@ -84,8 +84,7 @@ export default function Ratgeber() {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed">
             Praktische Antworten zu Websites, Sicherheit und Technik für
             Selbstständige, kleine Betriebe und Vereine, so, wie ich es auch
-            Freunden erklären würde. Ich baue selbst Websites, schreibe hier
-            aber so, dass Sie auch ohne mich gut entscheiden können.
+            Freunden erklären würde.
           </p>
 
           <div className="mt-14 flex flex-wrap gap-2">

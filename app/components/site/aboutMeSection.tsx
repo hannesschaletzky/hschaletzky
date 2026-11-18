@@ -31,9 +31,15 @@ export default function AboutMeSection({ className }: { className?: string }) {
           </p>
           <a
             href={localize("/about", lang)}
-            className="mt-4 inline-block font-semibold text-teal hover:text-teal-light"
+            className="group mt-4 inline-block font-semibold text-teal hover:text-teal-light"
           >
-            {de ? "Mehr über mich" : "More about me"} →
+            {de ? "Mehr über mich" : "More about me"}{" "}
+            <span
+              aria-hidden="true"
+              className="inline-block transition-transform group-hover:translate-x-1"
+            >
+              →
+            </span>
           </a>
         </div>
       </div>

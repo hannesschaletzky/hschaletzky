@@ -412,7 +412,7 @@ export default function Cloud() {
           </div>
         </section>
 
-        <StackSection web={false} />
+        <StackSection />
         <ContactBox />
       </main>
 

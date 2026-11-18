@@ -4,4 +4,11 @@ export const logos = {
   blu: { src: "/blu-logo.png", width: 200, height: 200 },
   tilde: { src: "/tilde-logo.png", width: 360, height: 170 },
   digitalservice: { src: "/digitalservice-logo.png", width: 200, height: 200 },
+  // transparent with dark text, so it sits on a white tile
+  beachFactory: {
+    src: "/beach-factory-logo.png",
+    width: 400,
+    height: 136,
+    onWhite: true,
+  },
 };

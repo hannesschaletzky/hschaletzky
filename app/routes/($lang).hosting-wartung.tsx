@@ -2,7 +2,7 @@ import type { MetaFunction } from "react-router";
 import AboutMeSection from "~/components/site/aboutMeSection";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
-import FeatureList from "~/components/site/featureList";
+import FeatureStrokes from "~/components/site/featureStrokes";
 import Footer from "~/components/site/footer";
 import { RelatedOffers } from "~/components/site/offerTiles";
 import Header from "~/components/site/header";
@@ -20,12 +20,12 @@ const text = {
     title:
       "Website-Hosting & Wartung aus Berlin ab 25 € im Monat | Hannes Schaletzky",
     description:
-      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und schnelle Hilfe aus Berlin. Basis 25 €, Plus 49 € im Monat, Umzug kostenlos.",
+      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und schnelle Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
     hero: {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
       cta: "Kontakt aufnehmen",
-      text: "Ich kümmere mich aus Berlin um Hosting, Backups und Updates und helfe schnell, wenn etwas hakt. Nach drei Monaten monatlich kündbar.",
+      text: "Ich kümmere mich aus Berlin um Hosting, Backups und Updates und helfe schnell, wenn etwas hakt. Monatlich kündbar.",
     },
     servicesEyebrow: "Was ich übernehme",
     servicesHeading: "Damit Ihre Website sorgenfrei läuft.",
@@ -64,11 +64,12 @@ const text = {
       },
     ],
     pricingEyebrow: "Pakete & Preise",
-    pricingHeading: "Zwei Pakete, keine lange Bindung.",
+    pricingHeading: "Drei Pakete, monatlich kündbar.",
     featuresLabel: "Enthalten",
     packages: [
       {
         name: "Basis",
+        description: "Für Websites, die ich für Sie baue.",
         price: "25 €",
         priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: [
@@ -77,38 +78,53 @@ const text = {
           "SSL-Zertifikat",
           "Tägliche Backups, 30 Tage aufbewahrt",
           "Überwachung mit Alarm bei Ausfall",
-          "Updates, auch für WordPress",
-          "Kostenloser Umzug Ihrer bestehenden Website",
+          "Updates von Technik und Software",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
       {
         name: "Plus",
-        price: "49 €",
+        description: "Wie Basis, dazu kleine Änderungen jeden Monat.",
+        price: "50 €",
         priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: [
           "Alles aus Basis",
+        ],
+        extras: [
           "Kleine Änderungen bis 30 Minuten im Monat, etwa Öffnungszeiten, Texte oder Bilder",
+        ],
+        cta: { label: "Kontakt aufnehmen", href: "/contact" },
+      },
+      {
+        name: "WordPress & Co.",
+        description:
+          "Für WordPress, Joomla, Shops und ähnliche Systeme. Änderungen nach Aufwand.",
+        price: "60 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        features: [
+          "Alles aus Basis",
+        ],
+        extras: [
+          "Updates für PHP, Plugins und Themes",
+          "Tägliche Backups inklusive Datenbank",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
     ],
     pricingNotes: [
-      "Mindestlaufzeit 3 Monate, danach monatlich kündbar.",
-      "Alle weiteren Änderungen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
-      "Weitere Domains, andere Endungen und E-Mail-Postfächer auf Anfrage.",
+      "Monatlich kündbar. Den Umzug Ihrer bestehenden Website übernehme ich kostenlos.",
     ],
     faqHeading: "Gut zu wissen.",
     faqs: [
       {
         question: "Wie lange läuft Hosting & Wartung?",
         answer:
-          "Die Mindestlaufzeit beträgt drei Monate. Danach können Sie jeden Monat kündigen.",
+          "Es gibt keine Mindestlaufzeit. Sie können jeden Monat kündigen.",
       },
       {
         question: "Was zählt als kleine Änderung?",
         answer:
-          "Zum Beispiel neue Öffnungszeiten, ein neues Foto oder ein geänderter Text. Im Plus-Paket sind bis zu 30 Minuten im Monat enthalten, ungenutzte Minuten verfallen am Monatsende. Alles darüber rechne ich nach Aufwand ab.",
+          "Zum Beispiel neue Öffnungszeiten, ein neues Foto oder ein geänderter Text. Im Plus-Paket sind bis zu 30 Minuten im Monat enthalten, ungenutzte Minuten verfallen am Monatsende. Alles darüber sowie Änderungen in den Paketen Basis und WordPress & Co. rechne ich nach Aufwand ab: 71,40 € pro Stunde (60 € netto).",
       },
       {
         question: "Können Sie meine bestehende Website übernehmen?",
@@ -118,12 +134,17 @@ const text = {
       {
         question: "Was passiert mit meinen E-Mail-Adressen?",
         answer:
-          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer bei mir ein, den Preis nenne ich Ihnen vorher. Bleiben Ihre Postfächer beim bisherigen Anbieter, sorge ich beim Umzug dafür, dass alle E-Mails weiter ankommen.",
+          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer mit Ihrer Domain ein: 249 € einmalig und 6 € pro Postfach im Monat. Bleiben Ihre Postfächer beim bisherigen Anbieter, sorge ich beim Umzug dafür, dass alle E-Mails weiter ankommen.",
+      },
+      {
+        question: "Welches Paket passt zu meiner Website?",
+        answer:
+          "Basis und Plus sind für die Websites, die ich baue. Sie bestehen aus fertigen Seiten und brauchen keine Datenbank. Das macht sie schnell, sicher und wenig aufwendig. WordPress, Shops und ähnliche Systeme speichern ihre Inhalte dagegen in einer Datenbank und brauchen regelmäßig Updates für PHP, Plugins und Themes. Dafür gibt es das Paket WordPress & Co.",
       },
       {
         question: "Wem gehören die Website und die Domain?",
         answer:
-          "Die Website gehört Ihnen, und die Domain läuft auf Ihren Namen. Eine .de-Domain ist im Hosting enthalten, ich verwalte sie technisch für Sie. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
+          "Die Website gehört Ihnen, und die Domain läuft auf Ihren Namen. Eine .de-Domain ist im Hosting enthalten, ich verwalte sie technisch für Sie. Weitere Domains oder andere Endungen richte ich gern ein, den Preis nenne ich Ihnen vorher. Wenn Sie wechseln möchten, übergebe ich Ihnen alles.",
       },
     ],
   },
@@ -131,12 +152,12 @@ const text = {
     title:
       "Website Hosting & Maintenance from 25 € a Month | Hannes Schaletzky",
     description:
-      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and quick help from Berlin. Basic 25 €, Plus 49 € a month, free move.",
+      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and quick help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
     hero: {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
       cta: "Get in touch",
-      text: "From Berlin, I take care of hosting, backups and updates and help quickly when something gets stuck. Cancel monthly after three months.",
+      text: "From Berlin, I take care of hosting, backups and updates and help quickly when something gets stuck. Cancel any month.",
     },
     servicesEyebrow: "What I take care of",
     servicesHeading: "So your website runs worry-free.",
@@ -175,11 +196,12 @@ const text = {
       },
     ],
     pricingEyebrow: "Packages & prices",
-    pricingHeading: "Two packages, no long commitment.",
+    pricingHeading: "Three packages, cancel any month.",
     featuresLabel: "Included",
     packages: [
       {
         name: "Basic",
+        description: "For websites I build for you.",
         price: "25 €",
         priceNote: "per month, incl. 19 % VAT",
         features: [
@@ -188,38 +210,53 @@ const text = {
           "SSL certificate",
           "Daily backups, kept for 30 days",
           "Monitoring with an alert on outages",
-          "Updates, WordPress included",
-          "Free move of your existing website",
+          "Updates for technology and software",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
       },
       {
         name: "Plus",
-        price: "49 €",
+        description: "Like Basic, plus small changes every month.",
+        price: "50 €",
         priceNote: "per month, incl. 19 % VAT",
         features: [
           "Everything in Basic",
+        ],
+        extras: [
           "Small changes up to 30 minutes a month, such as opening hours, texts or images",
+        ],
+        cta: { label: "Get in touch", href: "/en/contact" },
+      },
+      {
+        name: "WordPress & Co.",
+        description:
+          "For WordPress, Joomla, shops and similar systems. Changes billed by effort.",
+        price: "60 €",
+        priceNote: "per month, incl. 19 % VAT",
+        features: [
+          "Everything in Basic",
+        ],
+        extras: [
+          "Updates for PHP, plugins and themes",
+          "Daily backups including the database",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
       },
     ],
     pricingNotes: [
-      "Minimum term 3 months, then cancel any month.",
-      "Any further changes billed by effort: 71.40 € per hour (60 € net).",
-      "More domains, other endings and email inboxes on request.",
+      "Cancel any month. I move your existing website to me free of charge.",
     ],
     faqHeading: "Good to know.",
     faqs: [
       {
         question: "How long does hosting & maintenance run?",
         answer:
-          "The minimum term is three months. After that you can cancel any month.",
+          "There is no minimum term. You can cancel any month.",
       },
       {
         question: "What counts as a small change?",
         answer:
-          "For example new opening hours, a new photo or an edited text. The Plus package includes up to 30 minutes a month, unused minutes expire at the end of the month. Anything beyond that is billed by effort.",
+          "For example new opening hours, a new photo or an edited text. The Plus package includes up to 30 minutes a month, unused minutes expire at the end of the month. Anything beyond that, and changes in the Basic and WordPress & Co. packages, is billed by effort: 71.40 € per hour (60 € net).",
       },
       {
         question: "Can you take over my existing website?",
@@ -229,12 +266,17 @@ const text = {
       {
         question: "What happens to my email addresses?",
         answer:
-          "Your email addresses keep working. If you like, I set up inboxes with me and tell you the price beforehand. If your inboxes stay with your current provider, I make sure during the move that all emails keep arriving.",
+          "Your email addresses keep working. If you like, I set up mailboxes with your domain: 249 € one-off and 6 € per mailbox a month. If your inboxes stay with your current provider, I make sure during the move that all emails keep arriving.",
+      },
+      {
+        question: "Which package fits my website?",
+        answer:
+          "Basic and Plus are for the websites I build. They consist of ready-made pages and need no database. That makes them fast, secure and low-maintenance. WordPress, shops and similar systems store their content in a database and regularly need updates for PHP, plugins and themes. That is what the WordPress & Co. package is for.",
       },
       {
         question: "Who owns the website and the domain?",
         answer:
-          "The website is yours, and the domain is registered in your name. A .de domain is included in the hosting, which I manage technically for you. If you ever want to switch, I hand everything over.",
+          "The website is yours, and the domain is registered in your name. A .de domain is included in the hosting, which I manage technically for you. I'm happy to set up more domains or other endings and tell you the price beforehand. If you ever want to switch, I hand everything over.",
       },
     ],
   },
@@ -273,7 +315,7 @@ export default function HostingWartung() {
             <SectionHeading eyebrow={t.servicesEyebrow}>
               {t.servicesHeading}
             </SectionHeading>
-            <FeatureList items={t.services} />
+            <FeatureStrokes items={t.services} columns={4} />
           </div>
         </section>
 

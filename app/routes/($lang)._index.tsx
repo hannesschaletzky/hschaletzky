@@ -5,7 +5,6 @@ import Header from "~/components/site/header";
 import Mountains from "~/components/site/mountains";
 import Offers from "~/components/site/offers";
 import { businessJsonLd, pageMeta } from "~/components/site/pageMeta";
-import StackSection from "~/components/site/stackSection";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 
@@ -68,9 +67,9 @@ export default function Index() {
           <div className="relative mx-auto max-w-4xl px-4 pt-14 text-center sm:px-6 sm:pt-20">
             {/* who – what – next step, nothing else */}
             <img
-              src="/hannes.jpg"
-              width={512}
-              height={512}
+              src="/hannes-portrait.jpg"
+              width={960}
+              height={960}
               alt="Hannes Schaletzky"
               className="mx-auto mb-10 h-28 w-28 rounded-full object-cover ring-2 ring-teal/50 ring-offset-4 ring-offset-navy sm:h-36 sm:w-36"
             />
@@ -89,7 +88,7 @@ export default function Index() {
               </a>
               <a
                 href="#offers"
-                className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-white/50"
+                className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-teal hover:text-teal-light"
               >
                 {t.offers}
               </a>
@@ -99,7 +98,6 @@ export default function Index() {
 
         <Testimonials className="bg-navy-lighter" />
         <Offers />
-        <StackSection />
 
         <ContactBox />
       </main>

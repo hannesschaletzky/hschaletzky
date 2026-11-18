@@ -1,11 +1,11 @@
 import type { MetaFunction } from "react-router";
 import type { ReactNode } from "react";
 import ContactBox from "~/components/site/contactBox";
+import PhotoLightbox from "~/components/site/photoLightbox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
-import StackSection from "~/components/site/stackSection";
 import Peak from "~/components/site/peak";
 import { pageMeta, personJsonLd } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang, type Lang } from "~/i18n";
@@ -19,7 +19,7 @@ const text = {
       "Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
     hero: {
       title: "Hallo, ich bin Hannes,",
-      highlight: "Software Engineer\u00a0&\u00a0Trainer.",
+      highlight: "Software Engineer\u00a0&\u00a0Sportler.",
       cta: "Kontakt aufnehmen",
       text: "Was gutes Training ausmacht, gilt auch für Software: genau hinschauen, verständlich erklären, Fortschritt sichtbar machen und dranbleiben, bis\u00a0es\u00a0sitzt.",
     },
@@ -43,7 +43,7 @@ const text = {
       "Hannes Schaletzky, freelance software engineer from Berlin, ski instructor and beach volleyball coach. How I work, what I believe and what I do besides code.",
     hero: {
       title: "Hi, I'm Hannes,",
-      highlight: "software engineer\u00a0&\u00a0coach.",
+      highlight: "software engineer\u00a0&\u00a0athlete.",
       cta: "Get in touch",
       text: "What makes good coaching also applies to software: look closely, explain clearly, make progress visible and keep at it until\u00a0it\u00a0clicks.",
     },
@@ -82,13 +82,21 @@ const facts = {
     { label: "Stationen", value: ["KPMG", "DigitalService GmbH des Bundes"] },
     { label: "Erfahrung", value: `${new Date().getFullYear() - 2019}+ Jahre` },
     {
+      label: "Stack",
+      value: "Node.js, TypeScript, AWS, Terraform",
+      link: { label: "Zum kompletten Stack", href: "/stack" },
+    },
+    {
       label: "Ausbildung",
-      value: "B.Sc. Wirtschaftsinformatik, Universität Augsburg",
+      value: ["B.Sc. Wirtschaftsinformatik", "Universität Augsburg"],
     },
     {
       label: "Sprachen",
-      value:
-        "Deutsch (Muttersprache), Englisch (fließend), Französisch (Grundkenntnisse)",
+      value: [
+        "Deutsch (Muttersprache)",
+        "Englisch (fließend)",
+        "Französisch (Grundkenntnisse)",
+      ],
     },
   ],
   en: [
@@ -102,12 +110,17 @@ const facts = {
     },
     { label: "Experience", value: `${new Date().getFullYear() - 2019}+ years` },
     {
+      label: "Stack",
+      value: "Node.js, TypeScript, AWS, Terraform",
+      link: { label: "Full stack", href: "/en/stack" },
+    },
+    {
       label: "Education",
-      value: "B.Sc. business informatics, University of Augsburg",
+      value: ["B.Sc. business informatics", "University of Augsburg"],
     },
     {
       label: "Languages",
-      value: "German (native), English (fluent), French (basic)",
+      value: ["German (native)", "English (fluent)", "French (basic)"],
     },
   ],
 };
@@ -179,12 +192,30 @@ const licenses = [
       },
     ],
     since: "2019",
+    photo: {
+      src: "/hannes-skilehrer.jpg",
+      width: 960,
+      height: 720,
+      alt: {
+        de: "Hannes Schaletzky auf der Piste",
+        en: "Hannes Schaletzky on the slopes",
+      },
+    },
     icon: <Peak className="h-6 w-auto text-navy" />,
   },
   {
     title: { de: "Beachvolleyball-Trainer", en: "Beach volleyball coach" },
     details: [{ de: "DOSB B-Lizenz · 2026", en: "DOSB B-license · 2026" }],
     since: "2023",
+    photo: {
+      src: "/hannes-beachvolleyball.jpg",
+      width: 680,
+      height: 510,
+      alt: {
+        de: "Hannes Schaletzky beim Beachvolleyball",
+        en: "Hannes Schaletzky playing beach volleyball",
+      },
+    },
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -284,16 +315,12 @@ function AboutIntro({ lang }: { lang: Lang }) {
       </PageHero>
       <section className="bg-navy-lighter">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-[18rem_1fr]">
-          {/* a different photo than on the home page: skiing, matching "snow & sand" below */}
+          {/* from the same shoot as the home page portrait, but a different picture */}
           <img
-            src="/hannes-ski.jpg"
-            width={640}
-            height={640}
-            alt={
-              lang === "de"
-                ? "Hannes Schaletzky beim Skifahren"
-                : "Hannes Schaletzky skiing"
-            }
+            src="/hannes-tshirt.jpg"
+            width={960}
+            height={960}
+            alt="Hannes Schaletzky"
             className="mx-auto aspect-square w-56 rounded-3xl object-cover md:w-72"
           />
           <div>
@@ -317,6 +344,20 @@ function AboutIntro({ lang }: { lang: Lang }) {
                           </span>
                         ))
                       : fact.value}
+                    {"link" in fact && fact.link && (
+                      <a
+                        href={fact.link.href}
+                        className="group mt-1 block text-base font-normal text-teal hover:text-teal-light"
+                      >
+                        {fact.link.label}{" "}
+                        <span
+                          aria-hidden="true"
+                          className="inline-block transition-transform group-hover:translate-x-1"
+                        >
+                          →
+                        </span>
+                      </a>
+                    )}
                   </dd>
                 </div>
               ))}
@@ -331,6 +372,7 @@ function AboutIntro({ lang }: { lang: Lang }) {
 export default function About() {
   const lang = useLang();
   const t = text[lang];
+  const zoom = lang === "de" ? "Foto vergrößern" : "Enlarge photo";
   return (
     <div className="min-h-screen">
       <Header />
@@ -388,8 +430,6 @@ export default function About() {
           </div>
         </section>
 
-        <StackSection className="bg-navy-light" />
-
         {/* licenses as certificates */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
@@ -398,39 +438,55 @@ export default function About() {
             </SectionHeading>
             <div className="grid gap-10 md:grid-cols-2 md:gap-8">
               {licenses.map((license) => (
-                // a certificate: paper, double frame, ornament line and a seal
-                <div
-                  key={license.since}
-                  className="rounded-xl bg-[#FBF8F1] p-2 text-navy shadow-2xl shadow-black/30"
-                >
-                  <div className="relative h-full rounded-lg border-2 border-navy/20 p-1">
-                    <div className="h-full rounded-md border border-navy/20 px-6 pb-10 pt-8 text-center sm:px-10">
-                      <h3 className="font-serif text-3xl text-navy sm:text-4xl">
-                        {license.title[lang]}
-                      </h3>
-                      <p className="mt-1 text-sm text-navy/50">
-                        {t.since} {license.since}
-                      </p>
-                      <div
-                        aria-hidden="true"
-                        className="mx-auto mt-4 flex max-w-48 items-center gap-3 text-teal"
-                      >
-                        <span className="h-px flex-1 bg-navy/20" />
-                        <span className="text-sm">✦</span>
-                        <span className="h-px flex-1 bg-navy/20" />
+                // the certificate (paper, double frame, ornament line and a seal)
+                // with its photo small on it, large on click
+                <div key={license.since} className="relative flex flex-col">
+                  {/* a polaroid pinned to the top right corner, clear of the title */}
+                  <PhotoLightbox
+                    photo={{ ...license.photo, alt: license.photo.alt[lang] }}
+                    label={zoom}
+                    closeLabel={lang === "de" ? "Schließen" : "Close"}
+                    className="absolute -right-3 -top-10 z-10 rotate-6 bg-white p-1.5 pb-5 shadow-xl transition-transform hover:rotate-2 hover:scale-105 sm:-right-5"
+                  >
+                    <img
+                      src={license.photo.src}
+                      width={license.photo.width}
+                      height={license.photo.height}
+                      loading="lazy"
+                      alt=""
+                      className="aspect-square w-16 object-cover sm:w-20"
+                    />
+                  </PhotoLightbox>
+                  <div className="flex-1 rounded-xl bg-[#FBF8F1] p-2 text-navy shadow-2xl shadow-black/30">
+                    <div className="relative h-full rounded-lg border-2 border-navy/20 p-1">
+                      <div className="h-full rounded-md border border-navy/20 px-6 pb-10 pt-8 text-center sm:px-10">
+                        <h3 className="font-serif text-3xl text-navy sm:text-4xl">
+                          {license.title[lang]}
+                        </h3>
+                        <p className="mt-1 text-sm text-navy/50">
+                          {t.since} {license.since}
+                        </p>
+                        <div
+                          aria-hidden="true"
+                          className="mx-auto mt-4 flex max-w-48 items-center gap-3 text-teal"
+                        >
+                          <span className="h-px flex-1 bg-navy/20" />
+                          <span className="text-sm">✦</span>
+                          <span className="h-px flex-1 bg-navy/20" />
+                        </div>
+                        <ul className="mt-4 space-y-1 text-sm font-semibold uppercase tracking-[0.12em] text-navy/70 sm:tracking-[0.2em]">
+                          {license.details.map((detail) => (
+                            <li key={detail.en}>{detail[lang]}</li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="mt-4 space-y-1 text-sm font-semibold uppercase tracking-[0.12em] text-navy/70 sm:tracking-[0.2em]">
-                        {license.details.map((detail) => (
-                          <li key={detail.en}>{detail[lang]}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    {/* seal */}
-                    <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-[#FBF8F1]">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-navy/40">
-                        {license.icon}
+                      {/* seal */}
+                      <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-[#FBF8F1]">
+                        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-navy/40">
+                          {license.icon}
+                        </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
               ))}

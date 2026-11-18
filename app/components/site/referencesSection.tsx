@@ -47,7 +47,7 @@ export default function ReferencesSection({
               href={reference.url}
               target="_blank"
               rel="noreferrer"
-              className="group rounded-2xl border border-white/10 p-6 transition hover:border-teal/50"
+              className="group rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
             >
               <div className="flex items-start justify-between gap-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
@@ -61,8 +61,14 @@ export default function ReferencesSection({
               <h3 className="mt-3 text-xl font-bold text-white">
                 {reference.name}
               </h3>
-              <p className="mt-4 font-semibold text-white group-hover:text-teal">
-                {reference.url.replace("https://", "").replace(/\/$/, "")} →
+              <p className="mt-4 font-semibold text-white group-hover:text-teal-light">
+                {reference.url.replace("https://", "").replace(/\/$/, "")}{" "}
+                <span
+                  aria-hidden="true"
+                  className="inline-block transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </p>
             </a>
           ))}

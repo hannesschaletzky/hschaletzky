@@ -48,6 +48,18 @@ export function getSiteMap(lang: Lang): { title: string; links: SiteLink[] }[] {
           label: de ? "Hosting & Wartung" : "Hosting & maintenance",
           href: localize("/hosting-wartung", lang),
         },
+        {
+          label: de ? "Google-Sichtbarkeit" : "Google visibility",
+          href: localize("/google-sichtbarkeit", lang),
+        },
+        {
+          label: de ? "E-Mail-Einrichtung" : "Email setup",
+          href: localize("/e-mail-einrichtung", lang),
+        },
+        {
+          label: de ? "Website-Sprechstunde" : "Website office hours",
+          href: localize("/website-sprechstunde", lang),
+        },
         // the guide exists in German only
         ...(de ? [{ label: "Ratgeber", href: "/ratgeber" }] : []),
       ],

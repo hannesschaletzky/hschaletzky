@@ -26,7 +26,7 @@ export default function PageHero({
     >
       <Mountains heightClass="h-48 sm:h-60" />
       <div className="relative mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6 sm:pt-24">
-        <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl sm:leading-none">
+        <h1 className="text-4xl font-light leading-tight text-white sm:text-6xl sm:leading-[1.15]">
           {title}
           <br />
           <span className="font-semibold text-teal">{highlight}</span>

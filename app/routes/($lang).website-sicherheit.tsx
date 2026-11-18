@@ -2,7 +2,7 @@ import type { MetaFunction } from "react-router";
 import AboutMeSection from "~/components/site/aboutMeSection";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
-import FeatureList from "~/components/site/featureList";
+import FeatureNumbers from "~/components/site/featureNumbers";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
@@ -332,7 +332,7 @@ export default function WebsiteSicherheit() {
             <SectionHeading eyebrow={t.risksEyebrow}>
               {t.risksHeading}
             </SectionHeading>
-            <FeatureList items={t.risks} />
+            <FeatureNumbers items={t.risks} />
           </div>
         </section>
 
@@ -362,9 +362,15 @@ export default function WebsiteSicherheit() {
                   href="https://www.php.net/supported-versions.php"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-block font-semibold text-teal hover:text-teal-light"
+                  className="group mt-6 inline-block font-semibold text-teal hover:text-teal-light"
                 >
-                  {t.php.versionsLink} ↗
+                  {t.php.versionsLink}{" "}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
                 </a>
               </div>
               <div className="rounded-2xl border border-teal/40 p-6 sm:p-8">
@@ -407,13 +413,13 @@ export default function WebsiteSicherheit() {
                 <a
                   key={step.title}
                   href={localize(step.href, lang)}
-                  className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:border-teal/50"
+                  className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
                 >
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                     {step.label}
                   </p>
                   <div className="mt-3 flex items-baseline justify-between gap-4">
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-white group-hover:text-teal-light">
                       {step.title}
                     </h3>
                     {step.price && (

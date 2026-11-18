@@ -96,7 +96,7 @@ export const businessJsonLd = (lang: Lang) => ({
     "@type": "ProfessionalService",
     name: "Hannes Schaletzky",
     url: siteUrl,
-    image: `${siteUrl}/hannes.jpg`,
+    image: `${siteUrl}/hannes-portrait.jpg`,
     logo: `${siteUrl}/icon-512.png`,
     email: "info@hschaletzky.com",
     telephone: "+491628525830",
@@ -152,7 +152,18 @@ export const businessJsonLd = (lang: Lang) => ({
           true,
           "month",
         ),
-        offer(lang === "de" ? "KI & Automatisierung" : "AI & automation"),
+        offer(lang === "de" ? "E-Mail-Einrichtung" : "Email setup", 249, true),
+        offer(
+          lang === "de" ? "Google-Sichtbarkeit" : "Google visibility",
+          390,
+          true,
+        ),
+        offer(
+          lang === "de" ? "Website-Sprechstunde" : "Website office hours",
+          71.4,
+          true,
+          "hour",
+        ),
       ],
     },
     knowsAbout: [
@@ -173,7 +184,7 @@ export const personJsonLd = {
     "@type": "Person",
     name: "Hannes Schaletzky",
     url: `${siteUrl}/about`,
-    image: `${siteUrl}/hannes.jpg`,
+    image: `${siteUrl}/hannes-portrait.jpg`,
     jobTitle: "Freelance Integration & Cloud Engineer",
     address: {
       "@type": "PostalAddress",
