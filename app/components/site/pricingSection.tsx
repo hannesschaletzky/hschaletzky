@@ -4,8 +4,9 @@ type Package = {
   name: string;
   // who the package is for, one short line under the name
   description?: string;
-  price: string;
-  priceNote: string;
+  // without a price (fixed price only after a call) the card shows no price rows
+  price?: string;
+  priceNote?: string;
   features: string[];
   // what a bigger package adds on top, marked with a plus instead of a tick
   extras?: string[];
@@ -56,7 +57,10 @@ function Features({
             key={feature}
             className="flex gap-3 text-left leading-relaxed text-white"
           >
-            <span aria-hidden="true" className="w-3 shrink-0 font-bold text-teal">
+            <span
+              aria-hidden="true"
+              className="w-3 shrink-0 font-bold text-teal"
+            >
               +
             </span>
             {feature}
@@ -75,6 +79,7 @@ export default function PricingSection({
   heading,
   packages,
   notes,
+  more,
   featuresLabel,
 }: {
   eyebrow: string;
@@ -82,6 +87,8 @@ export default function PricingSection({
   packages: Package[];
   // small print below the cards, e.g. VAT or hourly rates
   notes?: string[];
+  // a link below the card, e.g. back to all services of the area
+  more?: { label: string; href: string };
   featuresLabel: string;
 }) {
   const single = packages.length === 1;
@@ -103,29 +110,33 @@ export default function PricingSection({
                     {pkg.description}
                   </p>
                 )}
-                <p className="mt-4 text-5xl font-bold text-white">
-                  {pkg.price}
-                </p>
-                <p className="mt-2 text-sm text-slate-400">{pkg.priceNote}</p>
+                {pkg.price && (
+                  <>
+                    <p className="mt-4 text-5xl font-bold text-white">
+                      {pkg.price}
+                    </p>
+                    <p className="mt-2 text-sm text-slate-400">
+                      {pkg.priceNote}
+                    </p>
+                  </>
+                )}
                 <div className="mt-8">
                   <Cta cta={pkg.cta} />
                 </div>
               </div>
               <div>
                 <Features
-                    label={featuresLabel}
-                    items={pkg.features}
-                    extras={pkg.extras}
-                  />
+                  label={featuresLabel}
+                  items={pkg.features}
+                  extras={pkg.extras}
+                />
               </div>
             </div>
           ))
         ) : (
           <div
             className={`grid gap-6 ${
-              three
-                ? "lg:grid-cols-3 lg:gap-y-0"
-                : "md:grid-cols-2 md:gap-y-0"
+              three ? "lg:grid-cols-3 lg:gap-y-0" : "md:grid-cols-2 md:gap-y-0"
             }`}
           >
             {packages.map((pkg) => (
@@ -147,9 +158,7 @@ export default function PricingSection({
                 </div>
                 <div className="mt-6">
                   <p className="text-5xl font-bold text-white">{pkg.price}</p>
-                  <p className="mt-2 text-sm text-slate-400">
-                    {pkg.priceNote}
-                  </p>
+                  <p className="mt-2 text-sm text-slate-400">{pkg.priceNote}</p>
                 </div>
                 <div className="mt-8">
                   <Cta cta={pkg.cta} />
@@ -174,6 +183,20 @@ export default function PricingSection({
               <p key={note}>{note}</p>
             ))}
           </div>
+        )}
+        {more && (
+          <a
+            href={more.href}
+            className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
+          >
+            {more.label}{" "}
+            <span
+              aria-hidden="true"
+              className="inline-block transition-transform group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
         )}
       </div>
     </section>

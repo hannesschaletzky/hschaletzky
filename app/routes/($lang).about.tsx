@@ -53,7 +53,7 @@ const text = {
     clock: "Off the clock",
     besides: "Besides that: ",
     since: "since",
-    social: "Social work",
+    social: "Volunteering",
     headings: {
       glance: "The short version.",
       work: "Three principles.",
@@ -112,7 +112,7 @@ const facts = {
     {
       label: "Stack",
       value: "Node.js, TypeScript, AWS, Terraform",
-      link: { label: "Full stack", href: "/en/stack" },
+      link: { label: "See the full stack", href: "/en/stack" },
     },
     {
       label: "Education",
@@ -144,8 +144,8 @@ const values = [
   {
     title: "Take ownership",
     text: {
-      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum, bis das Problem gelöst ist.",
-      en: "What I build, I also look after. If something breaks, I take care of it until it runs again.",
+      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum und bleibe dran.",
+      en: "What I build, I also look after. If something breaks, I take care of it and stay on it.",
     },
     icon: (
       <>
@@ -542,9 +542,7 @@ export default function About() {
           </div>
         </section>
 
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <ContactBox above="--color-navy-light" />
       </main>
       <Footer />
     </div>

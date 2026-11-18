@@ -4,7 +4,7 @@ hervorhebung: Worauf es wirklich ankommt.
 beschreibung: .de oder .com, mit Bindestrich oder ohne, Umlaute ja oder nein? Wie Sie eine Adresse finden, die man sich merken kann, was sie kostet und warum sie unbedingt auf Ihren Namen laufen muss.
 datum: 2027-04-13
 thema: Website erstellen
-angebot: /website-erstellen
+angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
 angebotText: Ich helfe bei der Wahl der Domain, registriere sie auf Ihren Namen und baue die passende Website dazu, ab 599 €.
 entwurf: nein

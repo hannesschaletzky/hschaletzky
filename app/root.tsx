@@ -1,10 +1,11 @@
-import type { LinksFunction } from "react-router";
+import type { LinksFunction, LoaderFunctionArgs } from "react-router";
 import type { ReactNode } from "react";
 import {
   isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
+  redirect,
   Scripts,
   ScrollRestoration,
   useRouteError,
@@ -64,6 +65,31 @@ function Document({
     </html>
   );
 }
+
+// offer pages that moved under their category on 2026-11-18; old addresses
+// (Google results, ads, shared links) keep working with a permanent redirect
+const moved: Record<string, string> = {
+  "/website-check-up": "/websites/check-up",
+  "/website-erstellen": "/websites/neue-website",
+  "/hosting-wartung": "/websites/hosting-wartung",
+  "/e-mail-einrichtung": "/websites/e-mail-einrichtung",
+  "/google-sichtbarkeit": "/websites/google-sichtbarkeit",
+  "/website-sprechstunde": "/websites/sprechstunde",
+  "/website-sicherheit": "/websites/sicherheit",
+};
+
+// runs for every request, also when no route matches; keeps the query (e.g. gclid)
+export function loader({ request }: LoaderFunctionArgs) {
+  const url = new URL(request.url);
+  const en = url.pathname.startsWith("/en/");
+  const path = (en ? url.pathname.slice(3) : url.pathname).replace(/\/$/, "");
+  const target = moved[path];
+  if (target) throw redirect(`${en ? "/en" : ""}${target}${url.search}`, 301);
+  return null;
+}
+
+// the redirect check only matters on the first request, not on every click
+export const shouldRevalidate = () => false;
 
 export default function App() {
   return (

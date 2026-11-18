@@ -18,37 +18,37 @@ const offers: { de: Offer[]; en: Offer[] } = {
       price: "250 €",
       badge: "Guter Einstieg",
       text: "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit und Auffindbarkeit bei Google. Sie bekommen einen klaren Bericht und eine persönliche Besprechung.",
-      href: "/website-check-up",
+      href: "/websites/check-up",
     },
     {
       title: "Neue Website",
       price: "ab 599 €",
       text: "Eine moderne, schnelle Website, die auf jedem Gerät gut aussieht. Impressum und Datenschutz sind dabei, und Sie zahlen erst, wenn sie online ist.",
-      href: "/website-erstellen",
+      href: "/websites/neue-website",
     },
     {
       title: "Hosting & Wartung",
       price: "ab 25 € / Monat",
-      text: "Hosting in Deutschland, Domain, tägliche Backups, Updates und schnelle Hilfe, wenn etwas hakt. Monatlich kündbar.",
-      href: "/hosting-wartung",
+      text: "Hosting in Deutschland, Domain, tägliche Backups, Updates und persönliche Hilfe, wenn etwas hakt. Monatlich kündbar.",
+      href: "/websites/hosting-wartung",
     },
     {
       title: "E-Mail-Einrichtung",
       price: "249 €",
-      text: "Professionelle Adressen wie info@ihr-betrieb.de, eingerichtet auf Handy und Computer. Ihre alten Mails ziehen mit um, und Ihre Domain ist gegen gefälschte Absender geschützt.",
-      href: "/e-mail-einrichtung",
+      text: "Professionelle Adressen wie info@ihr-betrieb.de, eingerichtet auf Handy und Computer. Ihre alten Mails ziehen mit um. Dazu 6 € pro Postfach im Monat.",
+      href: "/websites/e-mail-einrichtung",
     },
     {
       title: "Google-Sichtbarkeit",
       price: "390 €",
-      text: "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie bei Google finden.",
-      href: "/google-sichtbarkeit",
+      text: "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden.",
+      href: "/websites/google-sichtbarkeit",
     },
     {
       title: "Sprechstunde",
       price: "71,40 € / Std.",
       text: "Sie bringen Ihre Fragen mit, wir gehen sie gemeinsam an Ihrer Website durch: Pflege, Updates, Google-Profil oder Ads. Vor Ort in Berlin oder per Video.",
-      href: "/website-sprechstunde",
+      href: "/websites/sprechstunde",
     },
   ],
   en: [
@@ -57,47 +57,47 @@ const offers: { de: Offer[]; en: Offer[] } = {
       price: "250 €",
       badge: "A good place to start",
       text: "I check your website for security, technology, loading time and findability on Google. You get a clear report and a personal call.",
-      href: "/website-check-up",
+      href: "/websites/check-up",
     },
     {
       title: "New website",
       price: "from 599 €",
       text: "A modern, fast website that looks good on every device. Imprint and privacy policy are included, and you only pay once it's online.",
-      href: "/website-erstellen",
+      href: "/websites/neue-website",
     },
     {
       title: "Hosting & maintenance",
       price: "from 25 € / month",
-      text: "Hosting in Germany, domain, daily backups, updates and quick help when something gets stuck. Cancel any month.",
-      href: "/hosting-wartung",
+      text: "Hosting in Germany, domain, daily backups, updates and personal help when something gets stuck. Cancel any month.",
+      href: "/websites/hosting-wartung",
     },
     {
       title: "Email setup",
       price: "249 €",
-      text: "Professional addresses like info@your-business.de, set up on phone and computer. Your old mail moves over, and your domain is protected against forged senders.",
-      href: "/e-mail-einrichtung",
+      text: "Professional addresses like info@your-business.de, set up on phone and computer. Your old mail moves over. Plus 6 € per mailbox a month.",
+      href: "/websites/e-mail-einrichtung",
     },
     {
       title: "Google visibility",
       price: "390 €",
-      text: "Google Business Profile, Search Console, page titles and loading time: I put the basics in order so customers find you on Google.",
-      href: "/google-sichtbarkeit",
+      text: "Google Business Profile, Search Console, page titles and loading time: I put the basics in order so customers find you more easily on Google.",
+      href: "/websites/google-sichtbarkeit",
     },
     {
       title: "Office hours",
       price: "71.40 € / hour",
       text: "You bring your questions, we go through them together on your website: upkeep, updates, Google profile or ads. On-site in Berlin or by video.",
-      href: "/website-sprechstunde",
+      href: "/websites/sprechstunde",
     },
   ],
 };
 
 // the website offers as equal tiles: all of them on the overview, on an offer page
-// only the other website offers (without itself and the AI tile)
+// only the other website offers
 export default function OfferTiles({ current }: { current?: string }) {
   const lang = useLang();
   const shown = current
-    ? offers[lang].filter((o) => o.href !== current && o.href !== "/contact")
+    ? offers[lang].filter((o) => o.href !== current)
     : offers[lang];
   return (
     <div
@@ -120,7 +120,9 @@ export default function OfferTiles({ current }: { current?: string }) {
             </span>
           )}
           <div className="flex items-baseline justify-between gap-4">
-            <h3 className="text-xl font-bold text-white group-hover:text-teal-light">{offer.title}</h3>
+            <h3 className="text-xl font-bold text-white group-hover:text-teal-light">
+              {offer.title}
+            </h3>
             <p className="shrink-0 font-semibold text-teal">{offer.price}</p>
           </div>
           <p className="mt-3 leading-relaxed">{offer.text}</p>

@@ -209,7 +209,7 @@ export default function Stack() {
                       return (
                         <li
                           key={item}
-                          className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white transition hover:-translate-y-0.5 hover:border-teal/60"
+                          className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
                         >
                           {item}
                         </li>
@@ -243,9 +243,7 @@ export default function Stack() {
           </div>
         </section>
 
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <ContactBox above="--color-navy-lighter" />
       </main>
 
       <Footer />

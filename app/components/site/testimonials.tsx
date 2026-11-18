@@ -70,16 +70,25 @@ const testimonials: Testimonial[] = [
 // (on phones the name comes below the quote)
 export default function Testimonials({
   group = "cloud",
+  only,
   className = "",
+  centered,
 }: {
   group?: Testimonial["group"];
+  // a single quote by name, e.g. on an offer page
+  only?: string;
   className?: string;
+  // narrower and centred, right under a centred hero; otherwise on the
+  // same left edge as the other sections
+  centered?: boolean;
 }) {
   const lang = useLang();
 
   return (
     <section aria-labelledby="testimonials" className={className}>
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+      <div
+        className={`mx-auto px-4 py-16 sm:px-6 sm:py-24 ${centered ? "max-w-5xl" : "max-w-6xl"}`}
+      >
         <SectionHeading eyebrow={lang === "de" ? "Stimmen" : "Kind words"}>
           <span id="testimonials">
             {lang === "de" ? "Was Kunden sagen." : "What clients say."}
@@ -87,69 +96,69 @@ export default function Testimonials({
         </SectionHeading>
         <div className="divide-y divide-white/10 border-y border-white/10">
           {testimonials
-            .filter((x) => x.group === group)
+            .filter((x) => x.group === group && (!only || x.name === only))
             .map((testimonial) => (
-            <figure
-              key={testimonial.name}
-              className="grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12"
-            >
-              <figcaption className="order-last flex items-center gap-4 md:order-first md:flex-col md:items-start">
-                {testimonial.logo ? (
-                  <img
-                    src={testimonial.logo.src}
-                    width={testimonial.logo.width}
-                    height={testimonial.logo.height}
-                    loading="lazy"
-                    alt=""
-                    className={`h-10 w-auto rounded-lg ${testimonial.logo.onWhite ? "bg-white px-2 py-1" : ""}`}
-                  />
-                ) : (
-                  // no logo: the initial in a circle, like on Google
-                  <span
-                    aria-hidden="true"
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal/15 font-bold text-teal"
-                  >
-                    {testimonial.name[0]}
-                  </span>
-                )}
-                {testimonial.href ? (
-                  <a
-                    href={testimonial.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group block"
-                  >
-                    <span className="flex items-center gap-1.5 font-semibold text-white transition-colors group-hover:text-teal-light">
-                      {testimonial.name}
-                      <span
-                        aria-hidden="true"
-                        className="text-teal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      >
-                        ↗
+              <figure
+                key={testimonial.name}
+                className="grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12"
+              >
+                <figcaption className="order-last flex items-center gap-4 md:order-first md:flex-col md:items-start">
+                  {testimonial.logo ? (
+                    <img
+                      src={testimonial.logo.src}
+                      width={testimonial.logo.width}
+                      height={testimonial.logo.height}
+                      loading="lazy"
+                      alt=""
+                      className={`h-10 w-auto rounded-lg ${testimonial.logo.onWhite ? "bg-white px-2 py-1" : ""}`}
+                    />
+                  ) : (
+                    // no logo: the initial in a circle, like on Google
+                    <span
+                      aria-hidden="true"
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal/15 font-bold text-teal"
+                    >
+                      {testimonial.name[0]}
+                    </span>
+                  )}
+                  {testimonial.href ? (
+                    <a
+                      href={testimonial.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group block"
+                    >
+                      <span className="flex items-center gap-1.5 font-semibold text-white transition-colors group-hover:text-teal-light">
+                        {testimonial.name}
+                        <span
+                          aria-hidden="true"
+                          className="text-teal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        >
+                          ↗
+                        </span>
+                      </span>
+                      <span className="block text-sm text-slate-400">
+                        {testimonial.role[lang]}
+                      </span>
+                    </a>
+                  ) : (
+                    <span className="block">
+                      <span className="block font-semibold text-white">
+                        {testimonial.name}
+                      </span>
+                      <span className="block text-sm text-slate-400">
+                        {testimonial.role[lang]}
                       </span>
                     </span>
-                    <span className="block text-sm text-slate-400">
-                      {testimonial.role[lang]}
-                    </span>
-                  </a>
-                ) : (
-                  <span className="block">
-                    <span className="block font-semibold text-white">
-                      {testimonial.name}
-                    </span>
-                    <span className="block text-sm text-slate-400">
-                      {testimonial.role[lang]}
-                    </span>
-                  </span>
-                )}
-              </figcaption>
-              <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
-                {lang === "de" ? "„" : "“"}
-                {testimonial.quote[lang]}
-                {lang === "de" ? "“" : "”"}
-              </blockquote>
-            </figure>
-          ))}
+                  )}
+                </figcaption>
+                <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
+                  {lang === "de" ? "„" : "“"}
+                  {testimonial.quote[lang]}
+                  {lang === "de" ? "“" : "”"}
+                </blockquote>
+              </figure>
+            ))}
         </div>
       </div>
     </section>

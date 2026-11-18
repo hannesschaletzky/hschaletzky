@@ -4,7 +4,7 @@ hervorhebung: Was muss auf meine Website?
 beschreibung: Welche Pflichtangaben ins Impressum gehören, was eine Datenschutzerklärung enthalten muss, wann Sie ein Cookie-Banner brauchen und warum ein Generator meist besser ist als ein kopierter Text.
 datum: 2026-12-16
 thema: Website erstellen
-angebot: /website-erstellen
+angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
 angebotText: Bei jeder Website, die ich baue, sind Impressum und Datenschutzerklärung eingerichtet und passen zu dem, was auf der Seite tatsächlich läuft. Ab 599 €.
 entwurf: nein

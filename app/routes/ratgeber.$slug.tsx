@@ -66,9 +66,20 @@ export default function RatgeberArticle() {
 
       <main>
         <article className="mx-auto max-w-3xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-24">
-          {/* the way back to the overview, clearly visible above the article */}
+          {/* the way back to the overview, clearly visible above the article; coming
+              from the overview it goes back in history, so a set filter stays */}
           <a
             href="/ratgeber"
+            onClick={(event) => {
+              const from = document.referrer;
+              if (
+                from.startsWith(`${window.location.origin}/ratgeber`) &&
+                !from.startsWith(`${window.location.origin}/ratgeber/`)
+              ) {
+                event.preventDefault();
+                window.history.back();
+              }
+            }}
             className="group inline-flex items-center gap-2 text-lg font-semibold text-teal hover:text-teal-light"
           >
             <span

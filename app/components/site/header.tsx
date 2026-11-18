@@ -154,7 +154,7 @@ export default function Header() {
                         rel: "noreferrer",
                       })}
                       onClick={() => setMenuOpen(false)}
-                      className="block py-2 text-lg text-white"
+                      className="block py-2 text-lg text-white hover:text-teal-light"
                     >
                       {link.label}
                       {link.external && <span aria-hidden="true"> ↗</span>}

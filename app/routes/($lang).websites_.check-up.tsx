@@ -19,7 +19,7 @@ const text = {
   de: {
     title: "Website-Check-up in Berlin für 250 € | Hannes Schaletzky",
     description:
-      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30 Minuten Besprechung, Festpreis 250 €.",
+      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30-minütige Besprechung, Festpreis 250 €.",
     hero: {
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
@@ -85,7 +85,7 @@ const text = {
       },
       {
         title: "Besprechen",
-        text: "Innerhalb von 5 Werktagen bekommen Sie den Bericht als PDF. Den Termin für die 30 Minuten Besprechung legen Sie fest.",
+        text: "Innerhalb von 5 Werktagen bekommen Sie den Bericht als PDF. Den Termin für die 30-minütige Besprechung legen Sie fest.",
       },
     ],
     reportEyebrow: "Der Bericht",
@@ -117,7 +117,7 @@ const text = {
           "Prüfung der ganzen Website in zehn Bereichen",
           "Persönliche Durchsicht von bis zu fünf wichtigen Seiten",
           "Bericht als PDF innerhalb von 5 Werktagen, jeder Vorschlag mit Dringlichkeit und Aufwand",
-          "30 Minuten Besprechung per Video oder Telefon",
+          "30-minütige Besprechung per Video oder Telefon",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
@@ -184,11 +184,11 @@ const text = {
       },
       {
         title: "Email protection",
-        text: "Whether your domain makes forged emails in your name harder.",
+        text: "Whether your domain makes it harder to forge emails in your name.",
       },
       {
         title: "Technology",
-        text: "Whether pages are reachable, broken links and errors in the source code.",
+        text: "Page availability, broken links and errors in the source code.",
       },
       {
         title: "Loading time",
@@ -212,7 +212,7 @@ const text = {
       },
       {
         title: "Up to date",
-        text: "Outdated years, expired dates and contradicting details.",
+        text: "Outdated years, expired dates and contradictory details.",
       },
     ],
     tools:
@@ -287,7 +287,7 @@ const text = {
       {
         question: "How many pages do you check?",
         answer:
-          "Technology, security and links I check for the whole website. I also take a close personal look at up to five important pages, always including the home page, imprint and privacy policy.",
+          "I check technology, security and links across the whole website. I also take a close personal look at up to five important pages, always including the home page, imprint and privacy policy.",
       },
       {
         question: "Do you fix the problems too?",
@@ -313,7 +313,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/website-check-up",
+    path: "/websites/check-up",
     lang,
     image: "website-check-up",
   });
@@ -442,7 +442,7 @@ export default function WebsiteCheckUp() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/website-check-up" />
+        <RelatedOffers current="/websites/check-up" />
 
         <ContactBox />
       </main>

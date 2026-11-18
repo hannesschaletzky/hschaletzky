@@ -4,7 +4,7 @@ hervorhebung: Was gehört dazu, und was kostet sie?
 beschreibung: Eine Website ist nach dem Start nicht fertig. Welche Aufgaben regelmäßig anfallen, welche Sie selbst übernehmen können und was ein Wartungsvertrag kosten darf.
 datum: 2027-03-30
 thema: Hosting & Wartung
-angebot: /hosting-wartung
+angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
 angebotText: Hosting in Deutschland, tägliche Backups, Updates und Überwachung ab 25 € im Monat. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
 entwurf: nein

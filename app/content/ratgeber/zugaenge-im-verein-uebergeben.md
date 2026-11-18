@@ -4,7 +4,7 @@ hervorhebung: sicher übergeben.
 beschreibung: Website, Domain, E-Mail, Social Media: Im Verein liegen die Zugänge oft bei einzelnen Mitgliedern. Wie Sie den Überblick bekommen, Passwörter sicher teilen und den nächsten Vorstandswechsel ohne Chaos überstehen.
 datum: 2027-05-11
 thema: Sicherheit
-angebot: /website-sicherheit
+angebot: /websites/sicherheit
 angebotTitel: Website-Sicherheit
 angebotText: Ich verschaffe Ihnen den Überblick über Ihre Zugänge, sichere die Website ab und halte sie danach aktuell.
 entwurf: nein

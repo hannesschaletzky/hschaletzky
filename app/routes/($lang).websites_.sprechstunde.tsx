@@ -169,7 +169,7 @@ const text = {
         text: "We work on your own website, and you hold the mouse. That way it sticks.",
       },
       {
-        title: "Any questions",
+        title: "Follow-up questions",
         text: "If something is unclear later, just write to me.",
       },
     ],
@@ -199,8 +199,7 @@ const text = {
       },
       {
         question: "Do I need any prior knowledge?",
-        answer:
-          "No. I start where you are and explain without jargon.",
+        answer: "No. I start where you are and explain without jargon.",
       },
       {
         question: "Can several people take part?",
@@ -226,7 +225,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/website-sprechstunde",
+    path: "/websites/sprechstunde",
     lang,
     image: "website-sprechstunde",
   });
@@ -258,12 +257,12 @@ export default function WebsiteSprechstunde() {
           </div>
         </section>
 
-        <section>
+        <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.stepsEyebrow}>
               {t.stepsHeading}
             </SectionHeading>
-            <FeaturePath items={t.steps} />
+            <FeaturePath items={t.steps} circleBg="bg-navy-light" />
           </div>
         </section>
 
@@ -280,7 +279,7 @@ export default function WebsiteSprechstunde() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/website-sprechstunde" />
+        <RelatedOffers current="/websites/sprechstunde" />
 
         <ContactBox />
       </main>

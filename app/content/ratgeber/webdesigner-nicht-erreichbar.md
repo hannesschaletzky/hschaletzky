@@ -4,9 +4,9 @@ hervorhebung: Was jetzt?
 beschreibung: Der Mensch, der Ihre Website gebaut hat, antwortet nicht mehr. Wie Sie herausfinden, wo Ihre Seite liegt, wie Sie die Zugänge zurückbekommen und was Sie tun, wenn die Domain gar nicht auf Sie läuft.
 datum: 2026-11-26
 thema: Hosting & Wartung
-angebot: /hosting-wartung
+angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
-angebotText: Ich ziehe Ihre Website kostenlos zu mir um und halte sie danach aktuell. Ab 25 € im Monat, eine .de-Domain ist dabei.
+angebotText: Ich ziehe Ihre Website kostenlos zu mir um und halte sie danach aktuell. Ab 25 € im Monat, für WordPress & Co. 60 €, eine .de-Domain ist dabei.
 entwurf: nein
 ---
 

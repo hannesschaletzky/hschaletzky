@@ -1,6 +1,5 @@
 import type { MetaFunction } from "react-router";
-import { useState } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useSearchParams } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
@@ -64,7 +63,17 @@ export default function Ratgeber() {
   const items = useLoaderData<typeof loader>();
   // the newest live article gets a small "Neu" (the list is sorted newest first)
   const newest = items.find((i) => !i.status)?.slug;
-  const [filter, setFilter] = useState<string | null>(null);
+  // the filter lives in the address (?thema=…), so it is still set when a reader
+  // comes back from an article; replace keeps the back button free of filter clicks
+  const [params, setParams] = useSearchParams();
+  const filter = situations.some((s) => s.key === params.get("thema"))
+    ? params.get("thema")
+    : null;
+  const setFilter = (key: string | null) =>
+    setParams(key ? { thema: key } : {}, {
+      replace: true,
+      preventScrollReset: true,
+    });
   const shown = filter
     ? items.filter((i) => situationOf(i)?.key === filter)
     : items;

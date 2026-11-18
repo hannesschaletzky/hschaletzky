@@ -8,7 +8,7 @@ import { businessJsonLd, pageMeta } from "~/components/site/pageMeta";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 
-// index: hero with the mountains, testimonials, the two offers, stack and contact
+// index: hero with the mountains, testimonials, the two offers and contact
 
 export const loader = langLoader;
 
@@ -96,7 +96,7 @@ export default function Index() {
           </div>
         </section>
 
-        <Testimonials className="bg-navy-lighter" />
+        <Testimonials className="bg-navy-lighter" centered />
         <Offers />
 
         <ContactBox />

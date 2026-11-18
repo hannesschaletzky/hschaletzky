@@ -4,7 +4,7 @@ hervorhebung: SSL einfach erklärt.
 beschreibung: Ihr Browser zeigt bei Ihrer Website „Nicht sicher“? Was ein SSL-Zertifikat ist, warum es heute Pflicht ist, was es kostet (meist nichts) und wie Sie die Warnung loswerden.
 datum: 2027-01-05
 thema: Sicherheit
-angebot: /website-sicherheit
+angebot: /websites/sicherheit
 angebotTitel: Website-Sicherheit
 angebotText: Ich richte SSL richtig ein, behebe die Ursache von Warnungen und sorge dafür, dass sich das Zertifikat von allein erneuert.
 entwurf: nein

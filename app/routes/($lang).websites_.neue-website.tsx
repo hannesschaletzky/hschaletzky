@@ -19,10 +19,10 @@ const text = {
   de: {
     title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Fertig in ein bis zwei Wochen, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
-      highlight: "in ein bis zwei Wochen online.",
+      highlight: "meist in ein bis zwei Wochen online.",
       cta: "Kontakt aufnehmen",
       text: "Webdesign aus Berlin: modern, schnell und auf jedem Handy gut lesbar. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
     },
@@ -44,7 +44,7 @@ const text = {
       },
       {
         title: "Entwurf & Feinschliff",
-        text: "Nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und in zwei Korrekturrunden passen wir alles an.",
+        text: "Meist nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und in zwei Korrekturrunden passen wir ihn an.",
       },
       {
         title: "Online & betreut",
@@ -76,7 +76,7 @@ const text = {
       },
       {
         title: "Zahlung zum Schluss",
-        text: "Sie zahlen erst, wenn die Website online ist und Ihnen gefällt.",
+        text: "Sie zahlen erst, wenn die Website online ist.",
       },
     ],
     pricingEyebrow: "Pakete & Preise",
@@ -156,7 +156,7 @@ const text = {
       {
         question: "Wie läuft die Bezahlung?",
         answer:
-          "Sie zahlen erst, wenn Ihre Website online ist und Ihnen gefällt. Hosting und Wartung rechne ich monatlich ab.",
+          "Sie zahlen erst, wenn Ihre Website online ist. Hosting und Wartung rechne ich monatlich ab.",
       },
       {
         question: "Wem gehören die Website und die Domain?",
@@ -168,17 +168,17 @@ const text = {
   en: {
     title: "Website Creation from 599 € | Hannes Schaletzky",
     description:
-      "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Ready in one to two weeks, you only pay once it's online.",
+      "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
     hero: {
       title: "Your new website,",
-      highlight: "online in one to two weeks.",
+      highlight: "usually online in one to two weeks.",
       cta: "Get in touch",
       text: "Web design from Berlin: modern, fast and easy to read on every phone. I take care of design and technology, you only take care of your content.",
     },
     examplesEyebrow: "Examples",
     examplesHeading: "This is what your website could look like.",
     examplesNote:
-      "All three are sample projects: the practice, the club and the carpentry don't exist, but I designed and built the websites myself.",
+      "All three are sample projects: the practice, the club and the carpentry workshop don't exist, but I designed and built the websites myself.",
     examples: [
       { name: "Physiotherapy practice", slug: "physio-musterfrau" },
       { name: "Sports club", slug: "sv-musterstadt" },
@@ -193,7 +193,7 @@ const text = {
       },
       {
         title: "Draft & polish",
-        text: "After a few days you see a first draft. You tell me what you like, and we adjust everything in two rounds of changes.",
+        text: "Usually after a few days you see a first draft. You tell me what you like, and we adjust it in two rounds of changes.",
       },
       {
         title: "Online & cared for",
@@ -225,7 +225,7 @@ const text = {
       },
       {
         title: "Pay at the end",
-        text: "You only pay once the website is online and you like it.",
+        text: "You only pay once the website is online.",
       },
     ],
     pricingEyebrow: "Packages & prices",
@@ -284,7 +284,7 @@ const text = {
       {
         question: "Can you also build a page for a single offer or campaign?",
         answer:
-          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with sign-up or a contact form. Links to your social media channels are part of every website. The cost depends on the scope. I tell you the price beforehand.",
+          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with a sign-up or contact form. Links to your social media channels are part of every website. The cost depends on the scope. I tell you the price beforehand.",
       },
       {
         question: "Can I change content myself?",
@@ -294,7 +294,7 @@ const text = {
       {
         question: "What running costs come on top?",
         answer:
-          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month, a .de domain included. You can also run the website with another provider, then I hand it over to you fully set up.",
+          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month, a .de domain included. You can also run the website with another provider; in that case I hand it over to you fully set up.",
       },
       {
         question: "Who is responsible for the imprint and privacy policy?",
@@ -304,7 +304,7 @@ const text = {
       {
         question: "How does payment work?",
         answer:
-          "You only pay once your website is online and you like it. Hosting and maintenance are billed monthly.",
+          "You only pay once your website is online. Hosting and maintenance are billed monthly.",
       },
       {
         question: "Who owns the website and the domain?",
@@ -320,7 +320,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/website-erstellen",
+    path: "/websites/neue-website",
     lang,
     image: "website-erstellen",
   });
@@ -372,9 +372,9 @@ export default function WebsiteErstellen() {
                       {example.slug}.hschaletzky.com{" "}
                       <span
                         aria-hidden="true"
-                        className="inline-block transition-transform group-hover:translate-x-1"
+                        className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                       >
-                        →
+                        ↗
                       </span>
                     </p>
                   </div>
@@ -419,7 +419,7 @@ export default function WebsiteErstellen() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/website-erstellen" />
+        <RelatedOffers current="/websites/neue-website" />
 
         <ContactBox />
       </main>

@@ -1,7 +1,6 @@
-import type { MetaFunction } from "react-router";
-import AboutMeSection from "~/components/site/aboutMeSection";
+import type { LoaderFunctionArgs, MetaFunction } from "react-router";
+import { useLoaderData } from "react-router";
 import ContactBox from "~/components/site/contactBox";
-import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import OfferTiles from "~/components/site/offerTiles";
@@ -11,8 +10,25 @@ import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
 import { phone } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { formatDate } from "~/ratgeber";
+import { getArticles, status } from "~/ratgeber.server";
 
-export const loader = langLoader;
+// the three newest guide articles, German only (the guide has no English version)
+export function loader(args: LoaderFunctionArgs) {
+  langLoader(args);
+  if (args.params.lang) return { articles: [] };
+  return {
+    articles: getArticles()
+      .filter((a) => !status(a))
+      .slice(0, 3)
+      .map((a) => ({
+        slug: a.slug,
+        title: `${a.title} ${a.highlight}`,
+        description: a.description,
+        date: a.date,
+      })),
+  };
+}
 
 // overview of the website offers: one tile each, the details live on their own pages
 const text = {
@@ -34,24 +50,6 @@ const text = {
       label: "Notfall?",
       text: "Website gehackt, plötzlich offline oder der Browser warnt? Rufen Sie mich an:",
     },
-    faqHeading: "Gut zu wissen.",
-    faqs: [
-      {
-        question: "Brauche ich technisches Wissen?",
-        answer:
-          "Nein. Ich kümmere mich um die Technik und erkläre Ihnen alles so, dass Sie es verstehen.",
-      },
-      {
-        question: "Können Sie meine bestehende Website übernehmen?",
-        answer:
-          "Ja, und der Umzug zu mir ist kostenlos. Vorher sage ich Ihnen, ob ich sie so weiter betreuen kann oder ob ein Neuaufbau sinnvoller ist.",
-      },
-      {
-        question: "Arbeiten Sie auch vor Ort?",
-        answer:
-          "Ja, gern. Ich komme vorbei oder wir arbeiten remote, ganz wie es Ihnen lieber ist.",
-      },
-    ],
   },
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
@@ -70,24 +68,6 @@ const text = {
       label: "Emergency?",
       text: "Website hacked, suddenly offline or the browser shows a warning? Call me:",
     },
-    faqHeading: "Good to know.",
-    faqs: [
-      {
-        question: "Do I need any technical knowledge?",
-        answer:
-          "No. I take care of the technology and explain everything in a way that makes sense to you.",
-      },
-      {
-        question: "Can you take over my existing website?",
-        answer:
-          "Yes, and moving it to me is free. Beforehand I tell you whether I can maintain it as it is or whether a rebuild makes more sense.",
-      },
-      {
-        question: "Do you work on-site?",
-        answer:
-          "Yes, happily. I can come by or we work remotely, whatever you prefer.",
-      },
-    ],
   },
 };
 
@@ -105,6 +85,7 @@ export const meta: MetaFunction = ({ params }) => {
 export default function Websites() {
   const lang = useLang();
   const t = text[lang];
+  const { articles } = useLoaderData<typeof loader>();
 
   return (
     <div className="min-h-screen">
@@ -119,7 +100,7 @@ export default function Websites() {
           {t.hero.text}
         </PageHero>
 
-        <Testimonials group="websites" className="bg-navy-lighter" />
+        <Testimonials group="websites" className="bg-navy-lighter" centered />
 
         {/* offers: equal tiles, each one links to its own page */}
         <section>
@@ -146,18 +127,62 @@ export default function Websites() {
           </div>
         </section>
 
-        <AboutMeSection className="bg-navy-lighter" />
+        {/* the guide belongs to the website offers, so it lives here instead of the header */}
+        {articles.length > 0 && (
+          <section className="bg-navy-light">
+            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+              <SectionHeading eyebrow="Ratgeber">
+                Ausführlich erklärt.
+              </SectionHeading>
+              <div className="max-w-3xl">
+                <ul className="border-t border-white/10">
+                  {articles.map((item) => (
+                    <li key={item.slug} className="border-b border-white/10">
+                      <a
+                        href={`/ratgeber/${item.slug}`}
+                        className="group grid gap-2 py-6 md:grid-cols-[1fr_auto] md:gap-8"
+                      >
+                        <span>
+                          <span className="block text-xl font-bold leading-snug text-white group-hover:text-teal-light">
+                            {item.title}
+                          </span>
+                          <span className="mt-1 block text-slate-400">
+                            {item.description}
+                          </span>
+                          <span className="mt-2 block text-sm text-slate-400">
+                            {formatDate(item.date)}
+                          </span>
+                        </span>
+                        <span
+                          aria-hidden="true"
+                          className="hidden text-teal transition-transform group-hover:translate-x-1 md:block md:pt-1"
+                        >
+                          →
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/ratgeber"
+                  className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
+                >
+                  Alle Artikel im Ratgeber{" "}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
 
-        <FaqSection
-          heading={t.faqHeading}
-          faqs={t.faqs}
-          className="bg-navy-light"
+        <ContactBox
+          above={articles.length > 0 ? "--color-navy-light" : undefined}
         />
-
-        {/* the faq has its own background, so the box needs its own gap */}
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
       </main>
 
       <Footer />

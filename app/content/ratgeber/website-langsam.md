@@ -4,7 +4,7 @@ hervorhebung: so langsam?
 beschreibung: Eine langsame Website kostet Besucher und Plätze bei Google. Wie Sie die Ladezeit selbst messen, was die häufigsten Bremsen sind und welche davon Sie ohne Technikwissen lösen können.
 datum: 2027-03-16
 thema: Gefunden werden
-angebot: /website-check-up
+angebot: /websites/check-up
 angebotTitel: Website-Check-up
 angebotText: Ich messe, was Ihre Website bremst, und sage Ihnen, was sich mit wenig Aufwand verbessern lässt. Für 250 €.
 entwurf: nein

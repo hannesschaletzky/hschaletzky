@@ -1,9 +1,9 @@
 import type { MetaFunction } from "react-router";
-import AboutMeSection from "~/components/site/aboutMeSection";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
 import FeatureNumbers from "~/components/site/featureNumbers";
 import Footer from "~/components/site/footer";
+import { RelatedOffers } from "~/components/site/offerTiles";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
@@ -19,23 +19,23 @@ const text = {
     title:
       "Website-Sicherheit für kleine Betriebe & Vereine | Hannes Schaletzky",
     description:
-      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat.",
+      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat, für WordPress & Co. 60 €.",
     hero: {
       title: "Ist Ihre Website",
       highlight: "sicher?",
       cta: "Kontakt aufnehmen",
-      text: "Sicherheitslücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich finde heraus, wo Ihre Website steht, und sorge danach dafür, dass sie sicher und aktuell bleibt.",
+      text: "Sicherheitslücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich finde heraus, wo Ihre Website steht, und halte sie danach auf Wunsch aktuell.",
     },
     risksEyebrow: "Die häufigsten Risiken",
     risksHeading: "Woran es meistens liegt.",
     risks: [
       {
         title: "Veraltete Software",
-        text: "Alte Versionen von WordPress, Plugins oder PHP haben bekannte Lücken, nach denen Angreifer gezielt suchen.",
+        text: "Alte WordPress-, Plugin- oder PHP-Versionen haben bekannte Lücken.",
       },
       {
         title: "Automatische Angriffe",
-        text: "Programme durchsuchen rund um die Uhr das Internet nach verwundbaren Seiten. KI-Werkzeuge machen das noch einfacher.",
+        text: "Programme suchen rund um die Uhr nach verwundbaren Seiten, KI hilft dabei.",
       },
       {
         title: "Keine Backups",
@@ -68,7 +68,7 @@ const text = {
       helpHeading: "Das übernehme ich",
       help: [
         "Ich prüfe im Check-up, welche Version läuft und was von außen angreifbar ist.",
-        "Ich aktualisiere PHP sicher: erst ein Backup, dann der Test, ob Theme und Plugins mitspielen.",
+        "Ich aktualisiere PHP mit Vorsicht: erst ein Backup, dann der Test, ob Theme und Plugins mitspielen.",
         "In der Wartung spiele ich Updates dauerhaft selbst ein.",
       ],
       cta: "Kontakt aufnehmen",
@@ -81,14 +81,14 @@ const text = {
         label: "Schritt 1",
         title: "Website-Check-up",
         price: "250 €",
-        text: "Ich prüfe Ihre Website von außen auf Sicherheit, Verschlüsselung, E-Mail-Schutz und Technik. Sie bekommen einen Bericht, in dem jeder Vorschlag nach Dringlichkeit eingeordnet ist.",
-        href: "/website-check-up",
+        text: "Ich prüfe Ihre Website von außen und ordne jeden Vorschlag nach Dringlichkeit.",
+        href: "/websites/check-up",
         link: "Zum Check-up",
       },
       {
         label: "Schritt 2",
         title: "Maßnahmen umsetzen",
-        text: "Die dringenden Punkte aus dem Bericht behebe ich zuerst. Wie lange jeder Punkt ungefähr dauert, steht schon im Bericht.",
+        text: "Die dringenden Punkte behebe ich zuerst, den Aufwand kennen Sie aus dem Bericht.",
         href: "/contact",
         link: "Anfragen",
       },
@@ -96,8 +96,8 @@ const text = {
         label: "Schritt 3",
         title: "Hosting & Wartung",
         price: "ab 25 € / Monat",
-        text: "Ich halte Ihre Website aktuell, sichere sie täglich und werde alarmiert, wenn etwas nicht stimmt. Den Umzug zu mir übernehme ich kostenlos.",
-        href: "/hosting-wartung",
+        text: "Updates, tägliche Backups und Alarm bei Ausfällen. WordPress & Co. 60 € im Monat.",
+        href: "/websites/hosting-wartung",
         link: "Zu Hosting & Wartung",
       },
     ],
@@ -108,15 +108,15 @@ const text = {
     protection: [
       {
         title: "Updates",
-        text: "WordPress, Plugins und Server-Software bleiben aktuell, auch PHP.",
+        text: "WordPress, Plugins, Server-Software und PHP halte ich regelmäßig aktuell.",
       },
       {
         title: "Tägliche Backups",
-        text: "Jeden Tag eine Sicherung, 30 Tage aufbewahrt. Geht etwas schief, ist die Seite schnell wieder da.",
+        text: "Jeden Tag eine Sicherung, 30 Tage aufbewahrt. Geht etwas schief, lässt sich die Seite meist zurückholen.",
       },
       {
         title: "Überwachung",
-        text: "Fällt Ihre Website aus, werde ich automatisch alarmiert, meist bevor Sie es merken.",
+        text: "Fällt Ihre Website aus, bekomme ich einen Alarm und kann oft früh reagieren.",
       },
       {
         title: "SSL-Zertifikat",
@@ -128,7 +128,7 @@ const text = {
       },
       {
         title: "Direkter Draht",
-        text: "Bei Problemen erreichen Sie mich per E-Mail oder Telefon, meist mit Antwort innerhalb eines Werktags.",
+        text: "Bei Problemen erreichen Sie mich per E-Mail oder Telefon und bekommen eine persönliche Antwort.",
       },
     ],
     faqHeading: "Gut zu wissen.",
@@ -160,23 +160,23 @@ const text = {
   en: {
     title: "Website Security for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month.",
+      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & co.",
     hero: {
       title: "Is your website",
       highlight: "secure?",
       cta: "Get in touch",
-      text: "Security holes in PHP and WordPress make the headlines again and again. I find out where your website stands and then make sure it stays secure and up to date.",
+      text: "Security holes in PHP and WordPress make the headlines again and again. I find out where your website stands and then keep it up to date if you like.",
     },
     risksEyebrow: "The most common risks",
     risksHeading: "Where it usually goes wrong.",
     risks: [
       {
         title: "Outdated software",
-        text: "Old versions of WordPress, plugins or PHP have known holes that attackers look for on purpose.",
+        text: "Old versions of WordPress, plugins or PHP have known holes.",
       },
       {
         title: "Automated attacks",
-        text: "Programs scan the internet around the clock for vulnerable sites. AI tools make this even easier.",
+        text: "Programs scan around the clock for vulnerable sites, helped by AI.",
       },
       {
         title: "No backups",
@@ -209,8 +209,8 @@ const text = {
       helpHeading: "What I take care of",
       help: [
         "In the check-up I find out which version runs and what is open to attack from the outside.",
-        "I update PHP safely: a backup first, then a test whether theme and plugins still work.",
-        "With maintenance I install updates myself, for good.",
+        "I update PHP carefully: a backup first, then a test of whether theme and plugins still work.",
+        "With maintenance I keep installing updates for you on an ongoing basis.",
       ],
       cta: "Get in touch",
       note: "A PHP update can break older plugins or themes. So never without a backup.",
@@ -222,14 +222,14 @@ const text = {
         label: "Step 1",
         title: "Website check-up",
         price: "250 €",
-        text: "I check your website from the outside for security, encryption, email protection and technology. You get a report with every suggestion ranked by urgency.",
-        href: "/website-check-up",
+        text: "I check your website from the outside and rank every suggestion by urgency.",
+        href: "/websites/check-up",
         link: "To the check-up",
       },
       {
         label: "Step 2",
         title: "Fix the issues",
-        text: "I fix the urgent points from the report first. The report already says roughly how long each point takes.",
+        text: "I fix the urgent points first; the report already shows the effort.",
         href: "/contact",
         link: "Ask me",
       },
@@ -237,8 +237,8 @@ const text = {
         label: "Step 3",
         title: "Hosting & maintenance",
         price: "from 25 € / month",
-        text: "I keep your website up to date, back it up daily and get an alert when something is wrong. Moving it to me is free.",
-        href: "/hosting-wartung",
+        text: "Updates, daily backups and alerts on outages. WordPress & co. 60 € a month.",
+        href: "/websites/hosting-wartung",
         link: "To hosting & maintenance",
       },
     ],
@@ -249,15 +249,15 @@ const text = {
     protection: [
       {
         title: "Updates",
-        text: "WordPress, plugins and server software stay up to date, PHP included.",
+        text: "I update WordPress, plugins, server software and PHP regularly.",
       },
       {
         title: "Daily backups",
-        text: "A backup every day, kept for 30 days. If something goes wrong, the site is back quickly.",
+        text: "A backup every day, kept for 30 days. If something goes wrong, the site can usually be restored.",
       },
       {
         title: "Monitoring",
-        text: "If your website goes down, I get an automatic alert, usually before you notice.",
+        text: "If your website goes down, I get an alert and can often react early.",
       },
       {
         title: "SSL certificate",
@@ -269,7 +269,7 @@ const text = {
       },
       {
         title: "A direct line",
-        text: "With problems you reach me by email or phone, usually with an answer within one working day.",
+        text: "If you have problems, you can reach me by email or phone and get a personal answer.",
       },
     ],
     faqHeading: "Good to know.",
@@ -282,7 +282,7 @@ const text = {
       {
         question: "My website has already been hacked. Can you help?",
         answer:
-          "Best give me a call. I'll tell you honestly whether and how quickly I can help. I don't offer around-the-clock standby.",
+          "It's best to give me a call. I'll tell you honestly whether and how quickly I can help. I don't offer around-the-clock standby.",
       },
       {
         question: "Do I have to switch to you to make my website secure?",
@@ -304,7 +304,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/website-sicherheit",
+    path: "/websites/sicherheit",
     lang,
     image: "website-sicherheit",
   });
@@ -472,18 +472,15 @@ export default function WebsiteSicherheit() {
           </div>
         </section>
 
-        <AboutMeSection />
-
         <FaqSection
           heading={t.faqHeading}
           faqs={t.faqs}
           className="bg-navy-light"
         />
 
-        {/* the faq has its own background, so the box needs its own gap */}
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <RelatedOffers current="/websites/sicherheit" />
+
+        <ContactBox />
       </main>
 
       <Footer />

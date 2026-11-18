@@ -18,15 +18,14 @@ export const loader = langLoader;
 // established provider with servers in Germany runs the mailboxes
 const text = {
   de: {
-    title:
-      "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
+    title: "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
     description:
-      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte Mails umgezogen, Domain gegen gefälschte Absender geschützt. Einrichtung 249 €, Postfach 6 € im Monat.",
+      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
     hero: {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
       cta: "Kontakt aufnehmen",
-      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein, ziehe Ihre alten Mails um und schütze Ihre Domain vor gefälschten Absendern.",
+      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein, ziehe Ihre alten Mails um und erschwere gefälschte Absender mit Ihrer Domain.",
     },
     includedEyebrow: "Was ich einrichte",
     includedHeading: "Alles, damit es einfach funktioniert.",
@@ -37,7 +36,7 @@ const text = {
       },
       {
         title: "Umzug Ihrer Mails",
-        text: "Alte Nachrichten und Ordner ziehen mit, etwa von GMX, Web.de oder T-Online.",
+        text: "Alte Nachrichten und Ordner können mitziehen, etwa von GMX, Web.de oder T-Online.",
       },
       {
         title: "Gemeinsam auf Ihren Geräten",
@@ -93,7 +92,7 @@ const text = {
         features: [
           "Spam- und Virenschutz",
           "Server in Deutschland",
-          "Hilfe, wenn etwas nicht klappt",
+          "Ansprechpartner bei Fragen",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
@@ -123,7 +122,7 @@ const text = {
       {
         question: "Kann beim Umzug etwas verloren gehen?",
         answer:
-          "Nein. Ihre Mails werden kopiert, nicht verschoben. Beim alten Anbieter bleibt alles, wie es ist, bis Sie es selbst löschen.",
+          "Das ist sehr unwahrscheinlich. Ihre Mails werden kopiert, nicht verschoben. Beim alten Anbieter bleibt alles, wie es ist, bis Sie es selbst löschen.",
       },
       {
         question: "Ich brauche mehr als fünf Postfächer. Geht das?",
@@ -140,12 +139,12 @@ const text = {
   en: {
     title: "Email With Your Own Domain, 249 € Setup | Hannes Schaletzky",
     description:
-      "Professional addresses like info@your-business.de: set up on phone and computer, old mail moved over, domain protected against forged senders. Setup 249 €, mailbox 6 € a month.",
+      "Professional addresses like info@your-business.de: set up on phone and computer, old mail moved over, protective entries against forged senders. Setup 249 €, mailbox 6 € a month.",
     hero: {
       title: "Email with",
       highlight: "your own domain.",
       cta: "Get in touch",
-      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up, move your old mail and protect your domain against forged senders.",
+      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up, move your old mail and make it harder for others to send forged mail from your domain.",
     },
     includedEyebrow: "What I set up",
     includedHeading: "Everything so it simply works.",
@@ -156,7 +155,7 @@ const text = {
       },
       {
         title: "Moving your mail",
-        text: "Old messages and folders come along, for example from GMX, Web.de or T-Online.",
+        text: "Old messages and folders can come along, for example from GMX, Web.de or T-Online.",
       },
       {
         title: "Together on your devices",
@@ -212,7 +211,7 @@ const text = {
         features: [
           "Spam and virus protection",
           "Servers in Germany",
-          "Help when something doesn't work",
+          "A contact for questions",
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
       },
@@ -242,7 +241,7 @@ const text = {
       {
         question: "Can anything get lost during the move?",
         answer:
-          "No. Your mail is copied, not moved. Everything stays as it is with your old provider until you delete it yourself.",
+          "That is very unlikely. Your mail is copied, not moved. Everything stays as it is with your old provider until you delete it yourself.",
       },
       {
         question: "I need more than five mailboxes. Is that possible?",
@@ -263,7 +262,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/e-mail-einrichtung",
+    path: "/websites/e-mail-einrichtung",
     lang,
     image: "e-mail-einrichtung",
   });
@@ -295,12 +294,12 @@ export default function EMailEinrichtung() {
           </div>
         </section>
 
-        <section>
+        <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.stepsEyebrow}>
               {t.stepsHeading}
             </SectionHeading>
-            <ClimbSteps steps={t.steps} />
+            <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
           </div>
         </section>
 
@@ -317,7 +316,7 @@ export default function EMailEinrichtung() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/e-mail-einrichtung" />
+        <RelatedOffers current="/websites/e-mail-einrichtung" />
 
         <ContactBox />
       </main>

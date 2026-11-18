@@ -1,5 +1,4 @@
 import type { MetaFunction } from "react-router";
-import AboutMeSection from "~/components/site/aboutMeSection";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
 import FeatureStrokes from "~/components/site/featureStrokes";
@@ -20,43 +19,43 @@ const text = {
     title:
       "Website-Hosting & Wartung aus Berlin ab 25 € im Monat | Hannes Schaletzky",
     description:
-      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und schnelle Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
+      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und persönliche Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
     hero: {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
       cta: "Kontakt aufnehmen",
-      text: "Ich kümmere mich aus Berlin um Hosting, Backups und Updates und helfe schnell, wenn etwas hakt. Monatlich kündbar.",
+      text: "Ich kümmere mich aus Berlin um Hosting, Backups und Updates und helfe persönlich, wenn etwas hakt. Monatlich kündbar.",
     },
     servicesEyebrow: "Was ich übernehme",
-    servicesHeading: "Damit Ihre Website sorgenfrei läuft.",
+    servicesHeading: "Damit Sie sich um weniger kümmern müssen.",
     services: [
       {
         title: "Hosting in Deutschland",
-        text: "Server in Deutschland, damit Ihre Daten unter deutschem Datenschutz bleiben.",
+        text: "Server in Deutschland, unter deutschem Datenschutz.",
       },
       {
         title: "Domain inklusive",
-        text: "Eine .de-Domain auf Ihren Namen ist dabei, ich verwalte sie technisch.",
+        text: "Eine .de-Domain auf Ihren Namen, technisch verwaltet.",
       },
       {
         title: "SSL-Zertifikat",
-        text: "Eine verschlüsselte Verbindung, damit Browser nicht vor Ihrer Seite warnen.",
+        text: "Verschlüsselte Verbindung, ohne Warnung im Browser.",
       },
       {
         title: "Tägliche Backups",
-        text: "Jeden Tag eine Sicherung, 30 Tage aufbewahrt, damit nichts verloren geht.",
+        text: "Jeden Tag eine Sicherung, 30 Tage aufbewahrt.",
       },
       {
         title: "Updates",
-        text: "Technik und Software bleiben aktuell, auch bei WordPress.",
+        text: "Regelmäßige Updates für Technik und Software.",
       },
       {
         title: "Überwachung",
-        text: "Fällt Ihre Website aus, werde ich automatisch alarmiert, meist bevor Sie es merken.",
+        text: "Fällt Ihre Website aus, bekomme ich einen Alarm.",
       },
       {
-        title: "Schnelle Hilfe",
-        text: "Bei Fragen oder Problemen erreichen Sie mich direkt per E-Mail oder Telefon, meist mit Antwort innerhalb eines Werktags.",
+        title: "Persönliche Hilfe",
+        text: "Bei Fragen oder Problemen direkt bei mir, per E-Mail oder Telefon.",
       },
       {
         title: "Kostenloser Umzug",
@@ -87,9 +86,7 @@ const text = {
         description: "Wie Basis, dazu kleine Änderungen jeden Monat.",
         price: "50 €",
         priceNote: "pro Monat, inkl. 19 % MwSt.",
-        features: [
-          "Alles aus Basis",
-        ],
+        features: ["Alles aus Basis"],
         extras: [
           "Kleine Änderungen bis 30 Minuten im Monat, etwa Öffnungszeiten, Texte oder Bilder",
         ],
@@ -101,9 +98,7 @@ const text = {
           "Für WordPress, Joomla, Shops und ähnliche Systeme. Änderungen nach Aufwand.",
         price: "60 €",
         priceNote: "pro Monat, inkl. 19 % MwSt.",
-        features: [
-          "Alles aus Basis",
-        ],
+        features: ["Alles aus Basis"],
         extras: [
           "Updates für PHP, Plugins und Themes",
           "Tägliche Backups inklusive Datenbank",
@@ -134,7 +129,7 @@ const text = {
       {
         question: "Was passiert mit meinen E-Mail-Adressen?",
         answer:
-          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer mit Ihrer Domain ein: 249 € einmalig und 6 € pro Postfach im Monat. Bleiben Ihre Postfächer beim bisherigen Anbieter, sorge ich beim Umzug dafür, dass alle E-Mails weiter ankommen.",
+          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer mit Ihrer Domain ein: 249 € einmalig und 6 € pro Postfach im Monat. Bleiben Ihre Postfächer beim bisherigen Anbieter, achte ich beim Umzug darauf, dass alle E-Mails weiter ankommen.",
       },
       {
         question: "Welches Paket passt zu meiner Website?",
@@ -152,43 +147,43 @@ const text = {
     title:
       "Website Hosting & Maintenance from 25 € a Month | Hannes Schaletzky",
     description:
-      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and quick help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
+      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and personal help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
     hero: {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
       cta: "Get in touch",
-      text: "From Berlin, I take care of hosting, backups and updates and help quickly when something gets stuck. Cancel any month.",
+      text: "From Berlin, I take care of hosting, backups and updates and help personally when something gets stuck. Cancel any month.",
     },
     servicesEyebrow: "What I take care of",
-    servicesHeading: "So your website runs worry-free.",
+    servicesHeading: "So you have less to worry about.",
     services: [
       {
         title: "Hosting in Germany",
-        text: "Servers in Germany, so your data stays under German data protection.",
+        text: "Servers in Germany, under German data protection.",
       },
       {
         title: "Domain included",
-        text: "A .de domain in your name is included, I manage it technically.",
+        text: "A .de domain in your name, managed technically.",
       },
       {
         title: "SSL certificate",
-        text: "An encrypted connection, so browsers don't warn about your site.",
+        text: "Encrypted connection, no browser warnings.",
       },
       {
         title: "Daily backups",
-        text: "A backup every day, kept for 30 days, so nothing gets lost.",
+        text: "A backup every day, kept for 30 days.",
       },
       {
         title: "Updates",
-        text: "Technology and software stay up to date, WordPress included.",
+        text: "Regular updates for technology and software.",
       },
       {
         title: "Monitoring",
-        text: "If your website goes down, I get an automatic alert, usually before you notice.",
+        text: "If your website goes down, I get an alert.",
       },
       {
-        title: "Quick help",
-        text: "With questions or problems you reach me directly by email or phone, usually with an answer within one working day.",
+        title: "Personal help",
+        text: "Questions or problems go straight to me, by email or phone.",
       },
       {
         title: "Free move",
@@ -219,9 +214,7 @@ const text = {
         description: "Like Basic, plus small changes every month.",
         price: "50 €",
         priceNote: "per month, incl. 19 % VAT",
-        features: [
-          "Everything in Basic",
-        ],
+        features: ["Everything in Basic"],
         extras: [
           "Small changes up to 30 minutes a month, such as opening hours, texts or images",
         ],
@@ -233,9 +226,7 @@ const text = {
           "For WordPress, Joomla, shops and similar systems. Changes billed by effort.",
         price: "60 €",
         priceNote: "per month, incl. 19 % VAT",
-        features: [
-          "Everything in Basic",
-        ],
+        features: ["Everything in Basic"],
         extras: [
           "Updates for PHP, plugins and themes",
           "Daily backups including the database",
@@ -250,8 +241,7 @@ const text = {
     faqs: [
       {
         question: "How long does hosting & maintenance run?",
-        answer:
-          "There is no minimum term. You can cancel any month.",
+        answer: "There is no minimum term. You can cancel any month.",
       },
       {
         question: "What counts as a small change?",
@@ -266,7 +256,7 @@ const text = {
       {
         question: "What happens to my email addresses?",
         answer:
-          "Your email addresses keep working. If you like, I set up mailboxes with your domain: 249 € one-off and 6 € per mailbox a month. If your inboxes stay with your current provider, I make sure during the move that all emails keep arriving.",
+          "Your email addresses keep working. If you like, I set up mailboxes with your domain: 249 € one-off and 6 € per mailbox a month. If your inboxes stay with your current provider, I make sure during the move that your emails keep arriving.",
       },
       {
         question: "Which package fits my website?",
@@ -276,7 +266,7 @@ const text = {
       {
         question: "Who owns the website and the domain?",
         answer:
-          "The website is yours, and the domain is registered in your name. A .de domain is included in the hosting, which I manage technically for you. I'm happy to set up more domains or other endings and tell you the price beforehand. If you ever want to switch, I hand everything over.",
+          "The website is yours, and the domain is registered in your name. A .de domain is included in the hosting, which I manage technically for you. I'm happy to set up more domains or other domain extensions and tell you the price beforehand. If you ever want to switch, I hand everything over.",
       },
     ],
   },
@@ -287,7 +277,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/hosting-wartung",
+    path: "/websites/hosting-wartung",
     lang,
     image: "hosting-wartung",
   });
@@ -327,9 +317,7 @@ export default function HostingWartung() {
           featuresLabel={t.featuresLabel}
         />
 
-        <AboutMeSection className="bg-navy-light" />
-
-        <ReferencesSection />
+        <ReferencesSection className="bg-navy-lighter" />
 
         <FaqSection
           heading={t.faqHeading}
@@ -337,7 +325,7 @@ export default function HostingWartung() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/hosting-wartung" />
+        <RelatedOffers current="/websites/hosting-wartung" />
 
         <ContactBox />
       </main>

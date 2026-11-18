@@ -18,8 +18,14 @@ const text = {
     title1: "Lassen Sie uns",
     highlight: "über Ihr Projekt sprechen.",
     cta: "Kostenloses Erstgespräch buchen",
-    intro: "Ich antworte auf jede Nachricht, meist innerhalb eines Werktags.",
+    intro: "Ich antworte persönlich auf Ihre Nachricht.",
     channels: [
+      {
+        title: "Erstgespräch",
+        text: "Wählen Sie einen freien Termin in meinem Kalender. Das Gespräch ist kostenlos.",
+        label: "Kostenloses Erstgespräch buchen",
+        href: calUrl,
+      },
       {
         title: "E-Mail",
         text: "Am besten für Anfragen mit Details. Gern schicke ich Ihnen auch meinen Lebenslauf.",
@@ -31,12 +37,6 @@ const text = {
         text: "Rufen Sie gern an. Wenn ich gerade nicht rangehe, rufe ich zurück.",
         ...phone,
       },
-      {
-        title: "Erstgespräch",
-        text: "Wählen Sie einen freien Termin in meinem Kalender. Das Gespräch ist kostenlos.",
-        label: "Kostenloses Erstgespräch buchen",
-        href: calUrl,
-      },
     ],
   },
   en: {
@@ -46,10 +46,16 @@ const text = {
     title1: "Let's talk",
     highlight: "about your project.",
     cta: "Book a free intro call",
-    intro: "I reply to every message, usually within one working day.",
+    intro: "I reply to your message personally.",
     channels: [
       {
-        title: "Mail",
+        title: "Intro call",
+        text: "Pick a free slot in my calendar. The call is free of charge.",
+        label: "Book a free intro call",
+        href: calUrl,
+      },
+      {
+        title: "Email",
         text: "Best for requests with details. I'm also happy to send you my CV.",
         label: mail,
         href: `mailto:${mail}`,
@@ -58,12 +64,6 @@ const text = {
         title: "Phone",
         text: "Feel free to call. If I can't pick up, I'll call you back.",
         ...phone,
-      },
-      {
-        title: "Intro call",
-        text: "Pick a free slot in my calendar. The call is free of charge.",
-        label: "Book a free intro call",
-        href: calUrl,
       },
     ],
   },

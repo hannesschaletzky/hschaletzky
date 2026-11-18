@@ -80,7 +80,7 @@ const groups: { title: L; projects: Project[] }[] = [
         title: { de: "Drei Beispiel-Websites", en: "Three sample websites" },
         text: {
           de: "Für eine Physiopraxis, einen Sportverein und eine Tischlerei, damit Kunden sehen, wie ihre Website aussehen könnte.",
-          en: "For a physiotherapy practice, a sports club and a carpentry, so clients can see what their website could look like.",
+          en: "For a physiotherapy practice, a sports club and a carpentry workshop, so clients can see what their website could look like.",
         },
         stack: ["Astro", "TypeScript", "Docker"],
         linkLabels: [
@@ -222,9 +222,9 @@ function Arrow() {
   return (
     <span
       aria-hidden="true"
-      className="inline-block transition-transform group-hover:translate-x-1"
+      className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
     >
-      →
+      ↗
     </span>
   );
 }
@@ -282,7 +282,7 @@ export default function SideProjects() {
                         {project.stack.map((item) => (
                           <li
                             key={item}
-                            className="rounded-full border border-white/10 bg-navy-light px-3 py-1 text-sm text-white transition hover:-translate-y-0.5 hover:border-teal/60"
+                            className="rounded-full border border-white/10 bg-navy-light px-3 py-1 text-sm text-white"
                           >
                             {item}
                           </li>
@@ -349,9 +349,7 @@ export default function SideProjects() {
           </div>
         </section>
 
-        <div className="pt-16 sm:pt-24">
-          <ContactBox />
-        </div>
+        <ContactBox above="--color-navy-lighter" />
       </main>
 
       <Footer />

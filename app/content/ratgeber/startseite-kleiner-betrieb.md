@@ -4,7 +4,7 @@ hervorhebung: eines kleinen Betriebs?
 beschreibung: Besucher entscheiden in wenigen Sekunden, ob sie bleiben. Die Fragen, die Ihre Startseite sofort beantworten muss, und die Dinge, die Sie getrost weglassen können.
 datum: 2027-03-02
 thema: Website erstellen
-angebot: /website-erstellen
+angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
 angebotText: Eine klare, schnelle Website ab 599 €, bis fünf Seiten 990 €. Wir überlegen zusammen, was Ihre Kunden wirklich wissen wollen.
 entwurf: nein

@@ -4,9 +4,9 @@ hervorhebung: Haben Sie eins, und funktioniert es auch?
 beschreibung: „Mein Anbieter macht doch Backups“ reicht oft nicht. Was eine vollständige Sicherung Ihrer Website umfasst, wo sie liegen sollte und warum ein Backup erst zählt, wenn Sie es einmal zurückgespielt haben.
 datum: 2027-02-16
 thema: Hosting & Wartung
-angebot: /hosting-wartung
+angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
-angebotText: Tägliche Backups, Updates und Überwachung, ab 25 € im Monat. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
+angebotText: Tägliche Backups, Updates und Überwachung, ab 25 € im Monat, für WordPress & Co. 60 €. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
 entwurf: nein
 ---
 

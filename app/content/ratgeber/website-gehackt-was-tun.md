@@ -4,7 +4,7 @@ hervorhebung: Woran Sie es merken und was Sie tun.
 beschreibung: Seltsame Weiterleitungen, eine Warnung bei Google oder Spam aus Ihrem Namen. Die typischen Anzeichen für eine gehackte Website und die ersten Schritte, in der richtigen Reihenfolge.
 datum: 2026-12-06
 thema: Sicherheit
-angebot: /website-sicherheit
+angebot: /websites/sicherheit
 angebotTitel: Website-Sicherheit
 angebotText: Ich bereinige gehackte Websites, schließe die Lücke, durch die der Angriff kam, und halte die Seite danach aktuell.
 entwurf: nein

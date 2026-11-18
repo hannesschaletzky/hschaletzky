@@ -4,7 +4,7 @@ hervorhebung: oder reicht Instagram?
 beschreibung: Viele Vereine sind auf Instagram oder Facebook aktiv und fragen sich, ob eine eigene Website überhaupt noch nötig ist. Eine ehrliche Abwägung, auch wenn die Antwort mal „reicht erst einmal“ lautet.
 datum: 2027-01-19
 thema: Website erstellen
-angebot: /website-erstellen
+angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
 angebotText: Eine schlanke Vereinswebsite mit Terminen, Ansprechpartnern und Mitgliedsantrag, ab 599 €. Danach können Sie Inhalte selbst pflegen oder es mir überlassen.
 entwurf: nein

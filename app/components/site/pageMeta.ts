@@ -127,11 +127,6 @@ export const businessJsonLd = (lang: Lang) => ({
       name: lang === "de" ? "Leistungen" : "Services",
       itemListElement: [
         offer(
-          lang === "de" ? "Projekt-Kickoff" : "Project kickoff",
-          800,
-          false,
-        ),
-        offer(
           lang === "de"
             ? "Integrations- & Cloud-Projekte"
             : "Integration & cloud projects",

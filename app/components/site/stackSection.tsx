@@ -32,7 +32,7 @@ export default function StackSection({ className }: { className?: string }) {
           {tools.map((tool) => (
             <li
               key={tool}
-              className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white transition hover:-translate-y-0.5 hover:border-teal/60"
+              className="rounded-full border border-white/10 bg-navy-light px-4 py-2 text-white"
             >
               {tool}
             </li>
@@ -42,7 +42,7 @@ export default function StackSection({ className }: { className?: string }) {
           href={localize("/stack", lang)}
           className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
         >
-          {lang === "de" ? "Zum kompletten Stack" : "Full stack"}{" "}
+          {lang === "de" ? "Zum kompletten Stack" : "See the full stack"}{" "}
           <span
             aria-hidden="true"
             className="inline-block transition-transform group-hover:translate-x-1"

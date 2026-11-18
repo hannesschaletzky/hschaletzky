@@ -4,7 +4,7 @@ hervorhebung: Ist meine Website betroffen?
 beschreibung: Was hinter den Meldungen über Lücken in PHP steckt, wie Sie in fünf Minuten selbst prüfen, ob Ihre Website betroffen ist, und was Vereine tun können, wenn sich niemand mehr um die Seite kümmert.
 datum: 2026-11-16
 thema: Sicherheit
-angebot: /website-sicherheit#php
+angebot: /websites/sicherheit#php
 angebotTitel: Website-Sicherheit
 angebotText: Ich prüfe, wo Ihre Website steht, behebe die dringenden Punkte und halte sie danach aktuell. Der Check-up kostet 250 €, die Wartung für WordPress-Seiten 60 € im Monat.
 entwurf: nein

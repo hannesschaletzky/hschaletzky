@@ -18,12 +18,13 @@ export const loader = langLoader;
 // running SEO contract and no ranking promises
 const text = {
   de: {
-    title: "Google-Sichtbarkeit: besser gefunden werden, 390 € | Hannes Schaletzky",
+    title:
+      "Google-Sichtbarkeit: besser gefunden werden, 390 € | Hannes Schaletzky",
     description:
-      "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen Ihrer Website in Ordnung, damit Kunden Sie bei Google finden. Festpreis 390 €.",
+      "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen Ihrer Website in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
     hero: {
       title: "Damit Kunden Sie",
-      highlight: "bei Google finden.",
+      highlight: "leichter bei Google finden.",
       cta: "Kontakt aufnehmen",
       text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen in Ordnung, die Google braucht, um Ihre Seite zu verstehen und Menschen aus Ihrer Gegend zu zeigen.",
     },
@@ -32,31 +33,31 @@ const text = {
     included: [
       {
         title: "Google-Unternehmensprofil",
-        text: "Ich lege Ihr Profil an oder überarbeite es: Öffnungszeiten, Kategorien, Fotos und der Link zu Ihrer Website.",
+        text: "Profil anlegen oder überarbeiten: Öffnungszeiten, Kategorien, Fotos und Link.",
       },
       {
         title: "Search Console",
-        text: "Ich richte das kostenlose Werkzeug von Google ein, reiche Ihre Seiten ein und behebe gemeldete Fehler.",
+        text: "Einrichten, Seiten einreichen und gemeldete Fehler angehen.",
       },
       {
         title: "Seitentitel & Beschreibungen",
-        text: "Für jede wichtige Seite ein Titel und eine Beschreibung, so formuliert, wie Ihre Kunden suchen.",
+        text: "Titel und Beschreibung für jede wichtige Seite, so wie Kunden suchen.",
       },
       {
         title: "Ladezeit",
-        text: "Ich verkleinere zu große Bilder und entferne, was die Seite unnötig bremst.",
+        text: "Zu große Bilder verkleinern und, wo möglich, Bremsen entfernen.",
       },
       {
         title: "Technische Grundlagen",
-        text: "Weiterleitungen, defekte Links und die Darstellung auf dem Handy, damit Google nichts im Weg steht.",
+        text: "Weiterleitungen, defekte Links und die Darstellung auf dem Handy.",
       },
       {
         title: "Kurzer Bericht",
-        text: "Was ich gemacht habe und was Sie selbst weiter tun können, etwa um Bewertungen zu bitten.",
+        text: "Was ich gemacht habe und was Sie selbst weiter tun können.",
       },
     ],
     stepsEyebrow: "So läuft es ab",
-    stepsHeading: "In drei Schritten besser gefunden.",
+    stepsHeading: "In drei Schritten zu besseren Grundlagen.",
     steps: [
       {
         title: "Kennenlernen",
@@ -64,11 +65,11 @@ const text = {
       },
       {
         title: "Umsetzen",
-        text: "Sie geben mir Zugang zu Website und Google-Profil, und ich erledige alles innerhalb von etwa einer Woche.",
+        text: "Sie geben mir Zugang, ich setze es meist in etwa einer Woche um.",
       },
       {
         title: "Übergeben",
-        text: "Sie bekommen einen kurzen Bericht, und ich zeige Ihnen, wo Sie selbst nachsehen können, wie Sie gefunden werden.",
+        text: "Ein kurzer Bericht, und ich zeige Ihnen, wo Sie selbst nachsehen können.",
       },
     ],
     pricingEyebrow: "Preis",
@@ -109,7 +110,7 @@ const text = {
       {
         question: "Was ist der Unterschied zum Check-up?",
         answer:
-          "Der Check-up prüft Ihre ganze Website von außen und zeigt, was zu tun ist. Hier setze ich selbst um, und zwar alles, was mit Google und der Ladezeit zu tun hat.",
+          "Der Check-up prüft Ihre ganze Website von außen und zeigt, was zu tun ist. Hier setze ich selbst um, und zwar die Grundlagen rund um Google und Ladezeit.",
       },
       {
         question: "Meine Website hat mehr als zehn Seiten. Geht das trotzdem?",
@@ -121,10 +122,10 @@ const text = {
   en: {
     title: "Google Visibility: Get Found for 390 € | Hannes Schaletzky",
     description:
-      "Google Business Profile, Search Console, page titles and loading time: I put the basics of your website in order so customers find you on Google. Fixed price 390 €.",
+      "Google Business Profile, Search Console, page titles and loading time: I put the basics of your website in order so customers find you more easily on Google. Fixed price 390 €.",
     hero: {
       title: "So customers",
-      highlight: "find you on Google.",
+      highlight: "find you more easily on Google.",
       cta: "Get in touch",
       text: "Your website is online, but hardly anyone finds it? I put the basics in order that Google needs to understand your site and show it to people nearby.",
     },
@@ -133,43 +134,43 @@ const text = {
     included: [
       {
         title: "Google Business Profile",
-        text: "I create or revise your profile: opening hours, categories, photos and the link to your website.",
+        text: "Create or revise your profile: opening hours, categories, photos and link.",
       },
       {
         title: "Search Console",
-        text: "I set up Google's free tool, submit your pages and fix the errors it reports.",
+        text: "Set it up, submit your pages and tackle reported errors.",
       },
       {
         title: "Page titles & descriptions",
-        text: "A title and description for every important page, worded the way your customers search.",
+        text: "A title and description for every key page, worded the way customers search.",
       },
       {
         title: "Loading time",
-        text: "I shrink oversized images and remove what slows the site down for no reason.",
+        text: "Shrink oversized images and, where possible, remove what slows it down.",
       },
       {
         title: "Technical basics",
-        text: "Redirects, broken links and the mobile view, so nothing stands in Google's way.",
+        text: "Redirects, broken links and the mobile view.",
       },
       {
         title: "Short report",
-        text: "What I did and what you can keep doing yourself, such as asking for reviews.",
+        text: "What I did and what you can keep doing yourself.",
       },
     ],
     stepsEyebrow: "How it works",
-    stepsHeading: "Three steps to being found.",
+    stepsHeading: "Three steps to better basics.",
     steps: [
       {
-        title: "Get to know",
+        title: "Get to know each other",
         text: "We talk briefly about who your customers are and what they search for on Google.",
       },
       {
         title: "Do the work",
-        text: "You give me access to your website and Google profile, and I get everything done within about a week.",
+        text: "You give me access, and I usually get it done in about a week.",
       },
       {
         title: "Hand over",
-        text: "You get a short report, and I show you where to check yourself how people find you.",
+        text: "A short report, and I show you where to check things yourself.",
       },
     ],
     pricingEyebrow: "Price",
@@ -200,17 +201,17 @@ const text = {
       {
         question: "When will I see an effect?",
         answer:
-          "The Google Business Profile often works within a few days. Until Google re-evaluates your pages usually takes a few weeks.",
+          "The Google Business Profile often works within a few days. It usually takes a few weeks for Google to re-evaluate your pages.",
       },
       {
         question: "Does this work with WordPress, Wix or Jimdo too?",
         answer:
-          "Yes. Titles, descriptions and the Google profile can be adjusted anywhere. With site builders like Wix or Jimdo some things about loading time are fixed, and I tell you beforehand.",
+          "Yes. Titles, descriptions and the Google profile can be adjusted anywhere. With site builders like Wix or Jimdo some things about loading time are fixed; I'll tell you which ones beforehand.",
       },
       {
         question: "How is this different from the check-up?",
         answer:
-          "The check-up looks at your whole website from the outside and shows what needs doing. Here I do the work myself, for everything to do with Google and loading time.",
+          "The check-up looks at your whole website from the outside and shows what needs doing. Here I do the work myself, for the basics around Google and loading time.",
       },
       {
         question: "My website has more than ten pages. Does that work?",
@@ -226,7 +227,7 @@ export const meta: MetaFunction = ({ params }) => {
   return pageMeta({
     title: text[lang].title,
     description: text[lang].description,
-    path: "/google-sichtbarkeit",
+    path: "/websites/google-sichtbarkeit",
     lang,
     image: "google-sichtbarkeit",
   });
@@ -258,12 +259,12 @@ export default function GoogleSichtbarkeit() {
           </div>
         </section>
 
-        <section>
+        <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.stepsEyebrow}>
               {t.stepsHeading}
             </SectionHeading>
-            <ClimbSteps steps={t.steps} />
+            <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
           </div>
         </section>
 
@@ -280,7 +281,7 @@ export default function GoogleSichtbarkeit() {
           className="bg-navy-light"
         />
 
-        <RelatedOffers current="/google-sichtbarkeit" />
+        <RelatedOffers current="/websites/google-sichtbarkeit" />
 
         <ContactBox />
       </main>

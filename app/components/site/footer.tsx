@@ -8,9 +8,56 @@ export default function Footer() {
   const lang = useLang();
 
   return (
-    <footer className="border-t border-white/10">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
-        <div>
+    <footer className="bg-navy-light">
+      {/* the four link groups, as wide as their content and spread evenly, so the
+          last one ends flush with the logo below */}
+      <div className="mx-auto max-w-6xl px-4 pb-14 pt-20 sm:px-6">
+        <div className="grid grid-cols-2 gap-10 lg:flex lg:justify-between">
+          {getSiteMap(lang).map((group) => (
+            <nav key={group.title} aria-label={group.title}>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+                {group.title}
+              </p>
+              <ul className="mt-4 space-y-2 text-sm">
+                {group.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      {...(link.external && {
+                        target: "_blank",
+                        rel: "noreferrer",
+                      })}
+                      className="break-all hover:text-white"
+                    >
+                      {link.label}
+                      {link.external && <span aria-hidden="true"> ↗</span>}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+      </div>
+
+      {/* legal */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          {/* copyright and legal links on the left, the logo on the right */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <p>© {new Date().getFullYear()} Hannes Schaletzky</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {getLegalLinks(lang).map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
           <button
             type="button"
             onClick={secret.onClick}
@@ -23,7 +70,7 @@ export default function Footer() {
               height={159}
               loading="lazy"
               alt="HASC – Hannes Schaletzky"
-              className={`h-12 w-auto ${
+              className={`h-8 w-auto ${
                 secret.clicks > 0 ? "motion-safe:animate-wiggle" : ""
               } ${
                 secret.clicks >= 2
@@ -32,45 +79,6 @@ export default function Footer() {
               }`}
             />
           </button>
-        </div>
-
-        {getSiteMap(lang).map((group) => (
-          <nav key={group.title} aria-label={group.title}>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-              {group.title}
-            </p>
-            <ul className="mt-4 space-y-2 text-sm">
-              {group.links.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    {...(link.external && {
-                      target: "_blank",
-                      rel: "noreferrer",
-                    })}
-                    className="break-all hover:text-white"
-                  >
-                    {link.label}
-                    {link.external && <span aria-hidden="true"> ↗</span>}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        ))}
-      </div>
-
-      {/* legal */}
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} Hannes Schaletzky</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {getLegalLinks(lang).map((link) => (
-              <a key={link.href} href={link.href} className="hover:text-white">
-                {link.label}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
