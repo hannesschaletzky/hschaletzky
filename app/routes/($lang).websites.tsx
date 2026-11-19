@@ -103,7 +103,7 @@ export default function Websites() {
         <Testimonials group="websites" className="bg-navy-lighter" centered />
 
         {/* offers: equal tiles, each one links to its own page */}
-        <section>
+        <section id="angebote" className="scroll-mt-16">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}

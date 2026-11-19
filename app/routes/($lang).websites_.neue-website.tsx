@@ -5,7 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -17,9 +17,9 @@ const text = {
       "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
-      highlight: "meist in ein bis zwei Wochen online.",
+      highlight: "modern und persönlich.",
       cta: "Kontakt aufnehmen",
-      text: "Webdesign aus Berlin: modern, schnell und auf jedem Handy gut lesbar. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
+      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
     },
     examplesEyebrow: "Beispiele",
     examplesHeading: "So kann Ihre Website aussehen.",
@@ -107,7 +107,6 @@ const text = {
     ],
     pricingNotes: [
       "Weitere Korrekturrunden, größere Websites, Shops oder weitere Sprachen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
-      "Dazu empfehle ich Hosting & Wartung ab 25 € im Monat, eine .de-Domain ist dabei.",
     ],
     faqHeading: "Gut zu wissen.",
     faqs: [
@@ -166,9 +165,9 @@ const text = {
       "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
     hero: {
       title: "Your new website,",
-      highlight: "usually online in one to two weeks.",
+      highlight: "modern and personal.",
       cta: "Get in touch",
-      text: "Web design from Berlin: modern, fast and easy to read on every phone. I take care of design and technology, you only take care of your content.",
+      text: "Web design from Berlin for the self-employed, small businesses and clubs. I take care of design and technology, you only take care of your content.",
     },
     examplesEyebrow: "Examples",
     examplesHeading: "This is what your website could look like.",
@@ -256,7 +255,6 @@ const text = {
     ],
     pricingNotes: [
       "More rounds of changes, bigger sites, shops or more languages billed by effort: 71.40 € per hour (60 € net).",
-      "I recommend adding hosting & maintenance from 25 € a month, a .de domain included.",
     ],
     faqHeading: "Good to know.",
     faqs: [
@@ -373,18 +371,18 @@ export default function WebsiteErstellen() {
         <p className="mt-6 text-sm text-slate-400">{t.examplesNote}</p>
       </Section>
 
-      {/* process */}
-      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
-        <ClimbSteps steps={t.steps} />
+      {/* included in every website */}
+      <Section eyebrow={t.includedEyebrow} heading={t.includedHeading}>
+        <FeatureHeadlines items={t.included} />
       </Section>
 
-      {/* included in every website */}
+      {/* process */}
       <Section
-        eyebrow={t.includedEyebrow}
-        heading={t.includedHeading}
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <FeatureHeadlines items={t.included} />
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
       </Section>
 
       <PricingSection
@@ -393,6 +391,13 @@ export default function WebsiteErstellen() {
         packages={t.packages}
         notes={t.pricingNotes}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

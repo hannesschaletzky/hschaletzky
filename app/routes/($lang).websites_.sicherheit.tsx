@@ -100,7 +100,7 @@ const text = {
     stepsNote:
       "Jeden Schritt gibt es auch einzeln. Alle Preise inkl. 19 % MwSt.",
     protectionEyebrow: "Was ich in der Wartung übernehme",
-    protectionHeading: "Damit Sie sich nicht kümmern müssen.",
+    protectionHeading: "Darum kümmere ich mich.",
     protection: [
       {
         title: "Updates",
@@ -241,7 +241,7 @@ const text = {
     stepsNote:
       "Each step is also available on its own. All prices incl. 19 % VAT.",
     protectionEyebrow: "What I take care of in maintenance",
-    protectionHeading: "So you don't have to.",
+    protectionHeading: "That's what I take care of.",
     protection: [
       {
         title: "Updates",
@@ -391,6 +391,30 @@ export default function WebsiteSicherheit() {
         </div>
       </section>
 
+      <Section
+        eyebrow={t.protectionEyebrow}
+        heading={t.protectionHeading}
+        className="bg-navy-lighter"
+      >
+        {/* a list with checks, so it doesn't repeat the numbered risks */}
+        <ul className="max-w-3xl divide-y divide-white/10 border-y border-white/10">
+          {t.protection.map((item) => (
+            <li key={item.title} className="flex gap-5 py-5">
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal"
+              >
+                ✓
+              </span>
+              <div>
+                <h3 className="font-semibold text-white">{item.title}</h3>
+                <p className="mt-1 leading-relaxed">{item.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
       {/* check-up, fixes and maintenance as steps, styled like the offer tiles */}
       <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
         <div className="grid gap-6 md:grid-cols-3">
@@ -429,30 +453,6 @@ export default function WebsiteSicherheit() {
         <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
           {t.stepsNote}
         </p>
-      </Section>
-
-      <Section
-        eyebrow={t.protectionEyebrow}
-        heading={t.protectionHeading}
-        className="bg-navy-lighter"
-      >
-        {/* a list with checks, so it doesn't repeat the numbered risks */}
-        <ul className="max-w-3xl divide-y divide-white/10 border-y border-white/10">
-          {t.protection.map((item) => (
-            <li key={item.title} className="flex gap-5 py-5">
-              <span
-                aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal/15 font-semibold text-teal"
-              >
-                ✓
-              </span>
-              <div>
-                <h3 className="font-semibold text-white">{item.title}</h3>
-                <p className="mt-1 leading-relaxed">{item.text}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
       </Section>
     </OfferPage>
   );

@@ -6,7 +6,7 @@ import FeatureTable from "~/components/site/featureTable";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -334,25 +334,8 @@ export default function WebsiteCheckUp() {
       hero={t.hero}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
-      {/* areas */}
-      <Section
-        eyebrow={t.areasEyebrow}
-        heading={t.areasHeading}
-        className="bg-navy-lighter"
-      >
-        <FeatureTable items={t.areas} />
-        <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
-          {t.tools}
-        </p>
-      </Section>
-
-      {/* process */}
-      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
-        <ClimbSteps steps={t.steps} />
-      </Section>
-
       {/* sample report: text left, three pages fanned out right */}
-      <section className="bg-navy-light">
+      <section className="bg-navy-lighter">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2">
           <div>
             <SectionHeading eyebrow={t.reportEyebrow}>
@@ -413,11 +396,35 @@ export default function WebsiteCheckUp() {
         </div>
       </section>
 
+      {/* areas */}
+      <Section eyebrow={t.areasEyebrow} heading={t.areasHeading}>
+        <FeatureTable items={t.areas} />
+        <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
+          {t.tools}
+        </p>
+      </Section>
+
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+      </Section>
+
       <PricingSection
         eyebrow={t.pricingEyebrow}
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

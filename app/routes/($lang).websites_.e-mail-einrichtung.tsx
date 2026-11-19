@@ -5,7 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -20,10 +20,10 @@ const text = {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
       cta: "Kontakt aufnehmen",
-      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein, ziehe Ihre alten Mails um und erschwere gefälschte Absender mit Ihrer Domain.",
+      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten Mails um.",
     },
     includedEyebrow: "Was ich einrichte",
-    includedHeading: "Alles, damit es einfach funktioniert.",
+    includedHeading: "Alles, was dazugehört.",
     included: [
       {
         title: "Eigene Adressen",
@@ -139,10 +139,10 @@ const text = {
       title: "Email with",
       highlight: "your own domain.",
       cta: "Get in touch",
-      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up, move your old mail and make it harder for others to send forged mail from your domain.",
+      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up and move your old mail.",
     },
     includedEyebrow: "What I set up",
-    includedHeading: "Everything so it simply works.",
+    includedHeading: "Everything that comes with it.",
     included: [
       {
         title: "Your own addresses",
@@ -295,6 +295,13 @@ export default function EMailEinrichtung() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

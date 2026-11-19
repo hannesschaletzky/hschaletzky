@@ -5,7 +5,7 @@ import FeatureNumbers from "~/components/site/featureNumbers";
 import FeaturePath from "~/components/site/featurePath";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -24,7 +24,7 @@ const text = {
       text: "Sie bringen mit, was Sie an Ihrer Website beschäftigt, und wir gehen es in Ruhe durch. Ich erkläre und zeige, Sie probieren es direkt an Ihrer eigenen Seite aus. Vor Ort in Berlin oder per Video.",
     },
     topicsEyebrow: "Typische Themen",
-    topicsHeading: "Was Sie danach selbst können.",
+    topicsHeading: "Worum es gehen kann.",
     topics: [
       {
         title: "Texte & Bilder ändern",
@@ -125,7 +125,7 @@ const text = {
       text: "You bring whatever is on your mind about your website, and we go through it calmly. I explain and show, you try it straight away on your own site. On-site in Berlin or by video.",
     },
     topicsEyebrow: "Typical topics",
-    topicsHeading: "What you can do yourself afterwards.",
+    topicsHeading: "What it can be about.",
     topics: [
       {
         title: "Change texts & images",
@@ -258,6 +258,13 @@ export default function WebsiteSprechstunde() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

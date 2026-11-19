@@ -5,7 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -52,7 +52,7 @@ const text = {
       },
     ],
     stepsEyebrow: "So läuft es ab",
-    stepsHeading: "In drei Schritten zu besseren Grundlagen.",
+    stepsHeading: "In drei Schritten erledigt.",
     steps: [
       {
         title: "Kennenlernen",
@@ -153,7 +153,7 @@ const text = {
       },
     ],
     stepsEyebrow: "How it works",
-    stepsHeading: "Three steps to better basics.",
+    stepsHeading: "Done in three steps.",
     steps: [
       {
         title: "Get to know each other",
@@ -260,6 +260,13 @@ export default function GoogleSichtbarkeit() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

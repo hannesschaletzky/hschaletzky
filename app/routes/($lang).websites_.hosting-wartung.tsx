@@ -1,11 +1,12 @@
 import type { MetaFunction } from "react-router";
 import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
+import ClimbSteps from "~/components/site/climbSteps";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import { pageMeta } from "~/components/site/pageMeta";
 import PricingSection from "~/components/site/pricingSection";
 import ReferencesSection from "~/components/site/referencesSection";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -19,10 +20,10 @@ const text = {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
       cta: "Kontakt aufnehmen",
-      text: "Ich kümmere mich aus Berlin um Hosting, Backups und Updates und helfe persönlich, wenn etwas hakt. Monatlich kündbar.",
+      text: "Hosting, Backups und Updates aus einer Hand. Den Umzug Ihrer Website übernehme ich kostenlos, monatlich kündbar.",
     },
     servicesEyebrow: "Was ich übernehme",
-    servicesHeading: "Damit Sie sich um weniger kümmern müssen.",
+    servicesHeading: "Darum kümmere ich mich.",
     services: [
       {
         title: "Hosting in Deutschland",
@@ -53,8 +54,24 @@ const text = {
         text: "Bei Fragen oder Problemen direkt bei mir, per E-Mail oder Telefon.",
       },
       {
-        title: "Kostenloser Umzug",
-        text: "Ihre bestehende Website ziehe ich kostenlos zu mir um.",
+        title: "E-Mail bleibt",
+        text: "Ihre bestehenden E-Mail-Adressen funktionieren weiter.",
+      },
+    ],
+    stepsEyebrow: "So läuft es ab",
+    stepsHeading: "In drei Schritten zu mir.",
+    steps: [
+      {
+        title: "Kennenlernen",
+        text: "Wir sprechen über Ihre Website und welches Paket passt.",
+      },
+      {
+        title: "Umzug",
+        text: "Ich ziehe Ihre Website kostenlos zu mir um und richte Backups und Überwachung ein.",
+      },
+      {
+        title: "Betreuung",
+        text: "Ich spiele Updates ein und bin da, wenn etwas hakt.",
       },
     ],
     pricingEyebrow: "Pakete & Preise",
@@ -101,9 +118,6 @@ const text = {
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
       },
     ],
-    pricingNotes: [
-      "Monatlich kündbar. Den Umzug Ihrer bestehenden Website übernehme ich kostenlos.",
-    ],
     faqHeading: "Gut zu wissen.",
     faqs: [
       {
@@ -147,10 +161,10 @@ const text = {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
       cta: "Get in touch",
-      text: "From Berlin, I take care of hosting, backups and updates and help personally when something gets stuck. Cancel any month.",
+      text: "Hosting, backups and updates from one source. Moving your website to me is free, cancel any month.",
     },
     servicesEyebrow: "What I take care of",
-    servicesHeading: "So you have less to worry about.",
+    servicesHeading: "That's what I take care of.",
     services: [
       {
         title: "Hosting in Germany",
@@ -181,8 +195,24 @@ const text = {
         text: "Questions or problems go straight to me, by email or phone.",
       },
       {
-        title: "Free move",
-        text: "I move your existing website to me free of charge.",
+        title: "Email stays",
+        text: "Your existing email addresses keep working.",
+      },
+    ],
+    stepsEyebrow: "How it works",
+    stepsHeading: "Three steps to me.",
+    steps: [
+      {
+        title: "Get to know each other",
+        text: "We talk about your website and which package fits.",
+      },
+      {
+        title: "Move",
+        text: "I move your website to me free of charge and set up backups and monitoring.",
+      },
+      {
+        title: "Ongoing care",
+        text: "I install updates and I'm there when something gets stuck.",
       },
     ],
     pricingEyebrow: "Packages & prices",
@@ -228,9 +258,6 @@ const text = {
         ],
         cta: { label: "Get in touch", href: "/en/contact" },
       },
-    ],
-    pricingNotes: [
-      "Cancel any month. I move your existing website to me free of charge.",
     ],
     faqHeading: "Good to know.",
     faqs: [
@@ -297,12 +324,27 @@ export default function HostingWartung() {
         <FeatureStrokes items={t.services} columns={4} />
       </Section>
 
+      {/* process */}
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+      </Section>
+
       <PricingSection
         eyebrow={t.pricingEyebrow}
         heading={t.pricingHeading}
         packages={t.packages}
-        notes={t.pricingNotes}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
 
       <ReferencesSection className="bg-navy-lighter" />

@@ -156,9 +156,25 @@ export function RelatedOffers({
         <SectionHeading
           eyebrow={lang === "de" ? "Weitere Angebote" : "More offers"}
         >
-          {lang === "de" ? "Das passt dazu." : "This goes well with it."}
+          {lang === "de"
+            ? "Mehr rund um Ihre Website."
+            : "More around your website."}
         </SectionHeading>
         <OfferTiles current={current} />
+        <a
+          href={`${localize("/websites", lang)}#angebote`}
+          className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
+        >
+          {lang === "de"
+            ? "Alle Angebote im Überblick"
+            : "All offers at a glance"}{" "}
+          <span
+            aria-hidden="true"
+            className="inline-block transition-transform group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </a>
       </div>
     </section>
   );
