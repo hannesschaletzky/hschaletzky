@@ -10,6 +10,17 @@ updates:
     groups:
       npm:
         update-types: [minor, patch]
+    ignore:
+      # ESLint 10 erst, wenn eslint-plugin-react, -import und -jsx-a11y es unterstützen
+      # (eslint-plugin-react 7.37 stürzt mit ESLint 10 ab: context.getFilename fehlt).
+      - dependency-name: eslint
+        versions: [">=10"]
+      - dependency-name: "@eslint/js"
+        versions: [">=10"]
+      # TypeScript 7 erst, wenn typescript-eslint es unterstützt (Peer-Dependency bis <6.1):
+      # https://github.com/typescript-eslint/typescript-eslint/issues/10940
+      - dependency-name: typescript
+        versions: [">=7"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
