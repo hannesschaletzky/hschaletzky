@@ -17,7 +17,7 @@
   "dependencies": {
     "@react-router/node": "^8.5.1",
     "@react-router/serve": "^8.5.1",
-    "isbot": "^5.2.2",
+    "isbot": "^5.2.3",
     "marked": "^15.0.12",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
@@ -27,7 +27,7 @@
     "@eslint/js": "^9.39.0",
     "@react-router/dev": "^8.5.1",
     "@react-router/fs-routes": "^8.5.1",
-    "@tailwindcss/vite": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^22.19.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
@@ -39,10 +39,10 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^16.0.0",
-    "playwright-core": "1.64.1",
+    "playwright-core": "1.65.1",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.72.1",
-    "vite": "^8.3.5"
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8"
   }
 }
