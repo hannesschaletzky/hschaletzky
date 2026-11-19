@@ -14,8 +14,9 @@ export default function Datenschutz() {
     <LegalPage title="Datenschutzerklärung" updated="November 2026">
       <LegalSection title="1. Verantwortlicher">
         <p>
-          Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser
-          Website ist:
+          Diese Datenschutzerklärung gilt für hschaletzky.com und für meinen
+          Blog unter blog.hschaletzky.com. Verantwortlich für die Verarbeitung
+          personenbezogener Daten ist:
         </p>
         <p>
           Hannes Schaletzky
@@ -77,7 +78,11 @@ export default function Datenschutz() {
       </LegalSection>
 
       <LegalSection title="5. Cookies und Besucherstatistik">
-        <p>Diese Website verwendet keine Cookies.</p>
+        <p>
+          Diese Website verwendet keine Cookies. Wählen Sie im Blog eine
+          Darstellung (Tag oder Nacht), merkt sich Ihr Browser diese Wahl lokal;
+          sie wird nicht an mich übertragen.
+        </p>
         <p>
           Um zu verstehen, wie die Website genutzt wird, setze ich die
           Statistiksoftware Plausible Analytics ein (Community Edition, Open
