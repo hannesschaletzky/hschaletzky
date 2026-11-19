@@ -1,9 +1,13 @@
 import type { MetaFunction } from "react-router";
+import ArchitectureLink, {
+  diagrams,
+  type Diagram,
+} from "~/components/site/architecture";
 import ContactBox from "~/components/site/contactBox";
 import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
-import { ProjectCards } from "~/components/site/projects";
+import { ProjectCards, type ProjectId } from "~/components/site/projects";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
@@ -248,6 +252,39 @@ const text = {
   },
 };
 
+// diagrams behind each project, shown once the client has approved them
+// (blu: 19.11.2026; BundesIdent is open source). Not yet approved ones live in
+// a local, git-ignored file, so they only exist on the dev server
+const local = import.meta.glob<{ unapproved: Record<string, Diagram> }>(
+  "../components/site/diagrams.unapproved.ts",
+  { eager: true },
+);
+const unapproved = Object.values(local)[0]?.unapproved ?? {};
+const showArchitecture = {
+  de: "Architektur ansehen",
+  en: "View architecture",
+};
+const architecture: Record<
+  ProjectId,
+  { diagram: Diagram; label: { de: string; en: string } }[]
+> = {
+  platform: [
+    { diagram: diagrams.platform, label: showArchitecture },
+    {
+      diagram: diagrams.assets,
+      label: {
+        de: "Beispiel: Asset-Management",
+        en: "Example: asset management",
+      },
+    },
+  ],
+  bridge: [{ diagram: diagrams.bridge, label: showArchitecture }],
+  vorsorge: unapproved.vorsorge
+    ? [{ diagram: unapproved.vorsorge, label: showArchitecture }]
+    : [],
+  bundesident: [{ diagram: diagrams.bundesident, label: showArchitecture }],
+};
+
 export const meta: MetaFunction = ({ params }) => {
   const lang = langFromParams(params);
   return pageMeta({
@@ -380,6 +417,16 @@ export default function Cloud() {
             </SectionHeading>
             <ProjectCards
               ids={["platform", "bridge", "vorsorge", "bundesident"]}
+              links={(id) =>
+                architecture[id].map((entry) => (
+                  <ArchitectureLink
+                    key={entry.label.en}
+                    diagram={entry.diagram}
+                    label={entry.label[lang]}
+                    className="rounded-full border border-teal/40 px-3 py-1 text-sm font-semibold text-teal hover:-translate-y-0.5 hover:border-teal hover:text-teal-light"
+                  />
+                ))
+              }
             />
           </div>
         </section>

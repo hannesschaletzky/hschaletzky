@@ -7,3 +7,6 @@ node_modules
 
 # internal documents (offer terms etc.), never published
 /intern/
+
+# architecture diagrams not yet approved by the client (see cloud.tsx)
+app/components/site/diagrams.unapproved.ts
