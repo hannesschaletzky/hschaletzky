@@ -5,6 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
@@ -20,8 +21,9 @@ const text = {
     hero: {
       title: "Damit Kunden Sie",
       highlight: "leichter bei Google finden.",
-      cta: "Kontakt aufnehmen",
-      text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen in Ordnung, die Google braucht, um Ihre Seite zu verstehen und Menschen aus Ihrer Gegend zu zeigen.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen bei Google in Ordnung. Festpreis 390 €.",
     },
     includedEyebrow: "Was ich mache",
     includedHeading: "Die Grundlagen, sauber erledigt.",
@@ -121,8 +123,9 @@ const text = {
     hero: {
       title: "So customers",
       highlight: "find you more easily on Google.",
-      cta: "Get in touch",
-      text: "Your website is online, but hardly anyone finds it? I put the basics in order that Google needs to understand your site and show it to people nearby.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "Your website is online, but hardly anyone finds it? I put the basics on Google in order. Fixed price 390 €.",
     },
     includedEyebrow: "What I do",
     includedHeading: "The basics, done properly.",

@@ -5,6 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureTable from "~/components/site/featureTable";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -19,8 +20,9 @@ const text = {
     hero: {
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
-      cta: "Kontakt aufnehmen",
-      text: "Ich prüfe Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Sie bekommen einen verständlichen Bericht mit klaren Empfehlungen, und wir besprechen ihn gemeinsam.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Ich prüfe Sicherheit, Technik, Ladezeit, Google und Rechtstexte. Sie bekommen einen verständlichen Bericht, und wir besprechen ihn gemeinsam. Festpreis 250 €.",
     },
     areasEyebrow: "Was ich prüfe",
     areasHeading: "Zehn Bereiche, ein klares Bild.",
@@ -164,8 +166,9 @@ const text = {
     hero: {
       title: "How good is your website",
       highlight: "really?",
-      cta: "Get in touch",
-      text: "I check security, technology, loading time, findability on Google and legal texts. You get a report that is easy to understand, with clear recommendations, and we go through it together.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "I check security, technology, loading time, Google and legal texts. You get a report that is easy to understand, and we go through it together. Fixed price 250 €.",
     },
     areasEyebrow: "What I check",
     areasHeading: "Ten areas, one clear picture.",

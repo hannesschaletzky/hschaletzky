@@ -5,6 +5,7 @@ import ClimbSteps from "~/components/site/climbSteps";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
@@ -19,8 +20,9 @@ const text = {
     hero: {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
-      cta: "Kontakt aufnehmen",
-      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten Mails um.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten Mails um. Einmalig 249 €.",
     },
     includedEyebrow: "Was ich einrichte",
     includedHeading: "Alles, was dazugehört.",
@@ -138,8 +140,9 @@ const text = {
     hero: {
       title: "Email with",
       highlight: "your own domain.",
-      cta: "Get in touch",
-      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up and move your old mail.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up and move your old mail. 249 € one-off.",
     },
     includedEyebrow: "What I set up",
     includedHeading: "Everything that comes with it.",

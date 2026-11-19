@@ -3,6 +3,7 @@ import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
 import FeatureNumbers from "~/components/site/featureNumbers";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -19,8 +20,9 @@ const text = {
     hero: {
       title: "Ist Ihre Website",
       highlight: "sicher?",
-      cta: "Kontakt aufnehmen",
-      text: "Sicherheitslücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich finde heraus, wo Ihre Website steht, und halte sie danach auf Wunsch aktuell.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Lücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich prüfe, wo Ihre Website steht. Der Check-up kostet 250 €.",
     },
     risksEyebrow: "Die häufigsten Risiken",
     risksHeading: "Woran es meistens liegt.",
@@ -160,8 +162,9 @@ const text = {
     hero: {
       title: "Is your website",
       highlight: "secure?",
-      cta: "Get in touch",
-      text: "Security holes in PHP and WordPress make the headlines again and again. I find out where your website stands and then keep it up to date if you like.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "Holes in PHP and WordPress make the headlines again and again. I check where your website stands. The check-up costs 250 €.",
     },
     risksEyebrow: "The most common risks",
     risksHeading: "Where it usually goes wrong.",

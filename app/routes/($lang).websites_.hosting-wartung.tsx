@@ -4,6 +4,7 @@ import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
 import FeatureStrokes from "~/components/site/featureStrokes";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import PricingSection from "~/components/site/pricingSection";
 import ReferencesSection from "~/components/site/referencesSection";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
@@ -19,8 +20,9 @@ const text = {
     hero: {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
-      cta: "Kontakt aufnehmen",
-      text: "Hosting, Backups und Updates aus einer Hand. Den Umzug Ihrer Website übernehme ich kostenlos, monatlich kündbar.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Hosting, Backups und Updates aus einer Hand. Ab 25 € im Monat. Monatlich kündbar, der Umzug zu mir ist kostenlos.",
     },
     servicesEyebrow: "Was ich übernehme",
     servicesHeading: "Darum kümmere ich mich.",
@@ -160,8 +162,9 @@ const text = {
     hero: {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
-      cta: "Get in touch",
-      text: "Hosting, backups and updates from one source. Moving your website to me is free, cancel any month.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "Hosting, backups and updates from one source. From 25 € a month. Cancel any month, moving to me is free.",
     },
     servicesEyebrow: "What I take care of",
     servicesHeading: "That's what I take care of.",

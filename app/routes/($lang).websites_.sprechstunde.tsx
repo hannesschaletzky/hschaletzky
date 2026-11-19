@@ -5,6 +5,7 @@ import FeatureNumbers from "~/components/site/featureNumbers";
 import FeaturePath from "~/components/site/featurePath";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
@@ -20,8 +21,9 @@ const text = {
     hero: {
       title: "Ihre Fragen,",
       highlight: "persönlich beantwortet.",
-      cta: "Kontakt aufnehmen",
-      text: "Sie bringen mit, was Sie an Ihrer Website beschäftigt, und wir gehen es in Ruhe durch. Ich erkläre und zeige, Sie probieren es direkt an Ihrer eigenen Seite aus. Vor Ort in Berlin oder per Video.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Wir gehen Ihre Fragen zur Website in Ruhe durch, vor Ort in Berlin oder per Video. 71,40 € pro Stunde.",
     },
     topicsEyebrow: "Typische Themen",
     topicsHeading: "Worum es gehen kann.",
@@ -121,8 +123,9 @@ const text = {
     hero: {
       title: "Your questions,",
       highlight: "answered in person.",
-      cta: "Get in touch",
-      text: "You bring whatever is on your mind about your website, and we go through it calmly. I explain and show, you try it straight away on your own site. On-site in Berlin or by video.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "We go through your questions about your website calmly, on-site in Berlin or by video. 71.40 € per hour.",
     },
     topicsEyebrow: "Typical topics",
     topicsHeading: "What it can be about.",
