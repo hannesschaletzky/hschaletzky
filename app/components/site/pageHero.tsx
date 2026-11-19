@@ -7,11 +7,17 @@ export default function PageHero({
   highlight,
   children,
   cta,
+  note,
+  phone,
 }: {
   title: string;
   highlight: string;
   children: ReactNode;
   cta: { label: string; href: string };
+  // a short line under the text, e.g. price and payment, visible without scrolling
+  note?: string;
+  // a second, quieter way next to the button: the phone number to tap on mobile
+  phone?: { label: string; href: string };
 }) {
   return (
     <section
@@ -32,17 +38,32 @@ export default function PageHero({
           <span className="font-semibold text-teal">{highlight}</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg">{children}</p>
-        <a
-          href={cta.href}
-          // external links (the booking page) open in a new tab
-          {...(cta.href.startsWith("http") && {
-            target: "_blank",
-            rel: "noreferrer",
-          })}
-          className="mt-10 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
-        >
-          {cta.label}
-        </a>
+        {note && (
+          <p className="mx-auto mt-4 max-w-xl text-balance font-semibold text-white">
+            {note}
+          </p>
+        )}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+          <a
+            href={cta.href}
+            // external links (the booking page) open in a new tab
+            {...(cta.href.startsWith("http") && {
+              target: "_blank",
+              rel: "noreferrer",
+            })}
+            className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+          >
+            {cta.label}
+          </a>
+          {phone && (
+            <a
+              href={phone.href}
+              className="font-semibold text-white hover:text-teal-light"
+            >
+              {phone.label}
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );

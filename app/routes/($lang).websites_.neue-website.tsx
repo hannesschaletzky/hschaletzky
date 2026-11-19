@@ -4,6 +4,8 @@ import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import { pageMeta } from "~/components/site/pageMeta";
+import { calUrl } from "~/components/site/siteNav";
+import Testimonials from "~/components/site/testimonials";
 import PricingSection from "~/components/site/pricingSection";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
@@ -14,15 +16,16 @@ const text = {
   de: {
     title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: Onepager 599 €, bis 5 Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis 5 Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
       highlight: "modern und persönlich.",
-      cta: "Kontakt aufnehmen",
-      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Gestaltung und Technik übernehme ich, Sie kümmern sich nur um Ihre Inhalte.",
+      cta: "Kostenloses Erstgespräch buchen",
+      ctaHref: calUrl,
+      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Ab 599 €. Sie zahlen erst, wenn die Website online ist.",
     },
     examplesEyebrow: "Beispiele",
-    examplesHeading: "So kann Ihre Website aussehen.",
+    examplesHeading: "Für Praxen, Vereine und Handwerk.",
     examplesNote:
       "Alle drei sind Beispielprojekte: Praxis, Verein und Tischlerei gibt es nicht, die Websites habe ich aber selbst gestaltet und gebaut.",
     examples: [
@@ -63,7 +66,7 @@ const text = {
       },
       {
         title: "Bei Google auffindbar",
-        text: "Saubere Titel, Beschreibungen und eine Sitemap, damit Google Ihre Seiten versteht.",
+        text: "Klare Seitentitel und Beschreibungen, damit Google Ihre Seiten richtig einordnet.",
       },
       {
         title: "Ein Ansprechpartner",
@@ -79,7 +82,7 @@ const text = {
     featuresLabel: "Enthalten",
     packages: [
       {
-        name: "Onepager",
+        name: "Einseitig",
         price: "599 €",
         priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
@@ -113,7 +116,7 @@ const text = {
       {
         question: "Wie lange dauert eine neue Website?",
         answer:
-          "Ein Onepager ist meist nach einer Woche fertig, eine mehrseitige Website nach etwa zwei Wochen. Wichtig ist nur, dass Texte und Bilder bereitliegen.",
+          "Eine einseitige Website ist meist nach einer Woche fertig, eine mehrseitige Website nach etwa zwei Wochen. Wichtig ist nur, dass Texte und Bilder bereitliegen.",
       },
       {
         question: "Wer liefert Texte und Bilder?",
@@ -135,12 +138,12 @@ const text = {
       {
         question: "Kann ich Inhalte selbst ändern?",
         answer:
-          "Ja. Auf Wunsch baue ich ein einfaches Redaktionssystem ein, mit dem Sie Texte und Bilder selbst pflegen können. Das rechne ich nach Aufwand ab. Sie können mir Änderungen aber auch einfach schicken.",
+          "Ja. Auf Wunsch richte ich Ihnen einen einfachen Zugang ein, mit dem Sie Texte und Bilder selbst pflegen können. Das rechne ich nach Aufwand ab. Sie können mir Änderungen aber auch einfach schicken.",
       },
       {
         question: "Welche laufenden Kosten kommen dazu?",
         answer:
-          "Das hängt davon ab, wo Ihre Website läuft. Ich empfehle Hosting & Wartung bei mir ab 25 € im Monat, eine .de-Domain ist dabei. Sie können die Website aber auch bei einem anderen Anbieter betreiben, dann übergebe ich sie Ihnen fertig eingerichtet.",
+          "Das hängt davon ab, wo Ihre Website läuft. Ich empfehle Hosting & Wartung bei mir ab 25 € im Monat, eine .de-Domain, also Ihre Adresse wie ihr-betrieb.de, ist dabei. Sie können die Website aber auch bei einem anderen Anbieter betreiben, dann übergebe ich sie Ihnen fertig eingerichtet.",
       },
       {
         question: "Wer ist für Impressum und Datenschutz verantwortlich?",
@@ -162,15 +165,16 @@ const text = {
   en: {
     title: "Website Creation from 599 € | Hannes Schaletzky",
     description:
-      "A modern website for small businesses, self-employed people and clubs: one-pager 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
+      "A modern website for small businesses, self-employed people and clubs: single page 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
     hero: {
       title: "Your new website,",
       highlight: "modern and personal.",
-      cta: "Get in touch",
-      text: "Web design from Berlin for the self-employed, small businesses and clubs. I take care of design and technology, you only take care of your content.",
+      cta: "Book a free intro call",
+      ctaHref: calUrl,
+      text: "Web design from Berlin for the self-employed, small businesses and clubs. From 599 €. You only pay once the website is online.",
     },
     examplesEyebrow: "Examples",
-    examplesHeading: "This is what your website could look like.",
+    examplesHeading: "For practices, clubs and trades.",
     examplesNote:
       "All three are sample projects: the practice, the club and the carpentry workshop don't exist, but I designed and built the websites myself.",
     examples: [
@@ -211,7 +215,7 @@ const text = {
       },
       {
         title: "Findable on Google",
-        text: "Clean titles, descriptions and a sitemap, so Google understands your pages.",
+        text: "Clear page titles and descriptions, so Google can place your pages correctly.",
       },
       {
         title: "One contact person",
@@ -227,7 +231,7 @@ const text = {
     featuresLabel: "Included",
     packages: [
       {
-        name: "One-pager",
+        name: "Single page",
         price: "599 €",
         priceNote: "one-off, incl. 19 % VAT",
         features: [
@@ -261,7 +265,7 @@ const text = {
       {
         question: "How long does a new website take?",
         answer:
-          "A one-pager is usually ready after a week, a multi-page website after about two weeks. All it needs is for the texts and images to be ready.",
+          "A single-page website is usually ready after a week, a multi-page website after about two weeks. All it needs is for the texts and images to be ready.",
       },
       {
         question: "Who provides texts and images?",
@@ -282,7 +286,7 @@ const text = {
       {
         question: "Can I change content myself?",
         answer:
-          "Yes. If you like, I add a simple content management system so you can edit texts and images yourself. I bill that by effort. You can also just send me your changes.",
+          "Yes. If you like, I set up simple access so you can edit texts and images yourself. I bill that by effort. You can also just send me your changes.",
       },
       {
         question: "What running costs come on top?",
@@ -330,12 +334,17 @@ export default function WebsiteErstellen() {
       hero={t.hero}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
-      {/* examples: screenshots of the demo sites */}
-      <Section
-        eyebrow={t.examplesEyebrow}
-        heading={t.examplesHeading}
+      {/* a real client voice right under the hero, for visitors from the ads */}
+      <Testimonials
+        group="websites"
+        only="Lucas Thiel"
+        short
         className="bg-navy-lighter"
-      >
+        centered
+      />
+
+      {/* examples: screenshots of the demo sites */}
+      <Section eyebrow={t.examplesEyebrow} heading={t.examplesHeading}>
         <div className="grid gap-6 md:grid-cols-3">
           {t.examples.map((example) => (
             <a
@@ -372,7 +381,11 @@ export default function WebsiteErstellen() {
       </Section>
 
       {/* included in every website */}
-      <Section eyebrow={t.includedEyebrow} heading={t.includedHeading}>
+      <Section
+        eyebrow={t.includedEyebrow}
+        heading={t.includedHeading}
+        className="bg-navy-lighter"
+      >
         <FeatureHeadlines items={t.included} />
       </Section>
 

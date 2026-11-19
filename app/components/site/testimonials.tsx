@@ -7,6 +7,7 @@ import { useLang } from "~/i18n";
 type Testimonial = {
   group: "cloud" | "websites";
   quote: { de: string; en: string };
+  short?: { de: string; en: string };
   name: string;
   role: { de: string; en: string };
   // link and logo only where the client agreed to it
@@ -50,6 +51,11 @@ const testimonials: Testimonial[] = [
       de: "Ich bin sehr zufrieden mit Hannes! Als Kunde kann ich sagen, dass die Server zuverlässig laufen und das Hosting einwandfrei funktioniert. Auch beim Aufbau meiner Website wurde ich super unterstützt. Schneller Service, kompetente Hilfe und insgesamt eine klare Empfehlung!",
       en: "I'm very happy with Hannes! As a client I can say that the servers run reliably and the hosting works flawlessly. I also got great support building my website. Fast service, competent help and overall a clear recommendation!",
     },
+    // only the part about the website, for the new-website page; […] marks the cut
+    short: {
+      de: "[…] beim Aufbau meiner Website wurde ich super unterstützt. Schneller Service, kompetente Hilfe und insgesamt eine klare Empfehlung!",
+      en: "[…] great support building my website. Fast service, competent help and overall a clear recommendation!",
+    },
     name: "Lucas Thiel",
     role: { de: "Beach Factory", en: "Beach Factory" },
     href: "https://www.beach-factory.com/",
@@ -73,6 +79,7 @@ export default function Testimonials({
   only,
   className = "",
   centered,
+  short,
 }: {
   group?: Testimonial["group"];
   // a single quote by name, e.g. on an offer page
@@ -81,6 +88,8 @@ export default function Testimonials({
   // narrower and centred, right under a centred hero; otherwise on the
   // same left edge as the other sections
   centered?: boolean;
+  // the shortened quote, where one exists
+  short?: boolean;
 }) {
   const lang = useLang();
 
@@ -154,7 +163,11 @@ export default function Testimonials({
                 </figcaption>
                 <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
                   {lang === "de" ? "„" : "“"}
-                  {testimonial.quote[lang]}
+                  {
+                    (short && testimonial.short
+                      ? testimonial.short
+                      : testimonial.quote)[lang]
+                  }
                   {lang === "de" ? "“" : "”"}
                 </blockquote>
               </figure>

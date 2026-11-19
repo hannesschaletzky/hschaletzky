@@ -5,6 +5,7 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { RelatedOffers } from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
+import { phone } from "~/components/site/siteNav";
 import { localize, useLang } from "~/i18n";
 
 type Faq = { question: string; answer: string };
@@ -22,7 +23,16 @@ export default function OfferPage({
   area: "websites" | "cloud";
   // the page's own address, so the related offers leave it out
   current: string;
-  hero: { title: string; highlight: string; cta: string; text: string };
+  hero: {
+    title: string;
+    highlight: string;
+    cta: string;
+    text: string;
+    // optional: price line, button target other than /contact, phone link
+    note?: string;
+    ctaHref?: string;
+    phone?: boolean;
+  };
   faq: { heading: string; faqs: Faq[] };
   children: ReactNode;
 }) {
@@ -37,7 +47,19 @@ export default function OfferPage({
         <PageHero
           title={hero.title}
           highlight={hero.highlight}
-          cta={{ label: hero.cta, href: localize("/contact", lang) }}
+          cta={{
+            label: hero.cta,
+            href: hero.ctaHref ?? localize("/contact", lang),
+          }}
+          note={hero.note}
+          phone={
+            hero.phone
+              ? {
+                  href: phone.href,
+                  label: `${lang === "de" ? "oder anrufen" : "or call"}: ${phone.label}`,
+                }
+              : undefined
+          }
         >
           {hero.text}
         </PageHero>
