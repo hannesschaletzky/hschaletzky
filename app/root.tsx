@@ -56,6 +56,7 @@ function Document({
         {title && <title>{title}</title>}
         <Meta />
         <Links />
+        {import.meta.env.PROD && <Analytics />}
       </head>
       <body className="bg-navy font-brand text-slate-300 antialiased">
         {children}
@@ -63,6 +64,30 @@ function Document({
         <Scripts />
       </body>
     </html>
+  );
+}
+
+// cookieless visitor stats (Plausible, self-hosted on stats.hschaletzky.com).
+// Script and events go through this domain (Caddy forwards /js/pa-* and /api/event),
+// so the browser never talks to a third party. Clicks on the intro call, email and
+// phone leave the site without a request, so they are counted here as events.
+const plausibleInit = `
+window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init({endpoint:"/api/event"});
+document.addEventListener("click",function(e){
+  var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(!a)return;
+  var h=a.getAttribute("href")||"";
+  var n=h.indexOf("cal.com/")>-1?"Erstgespräch":h.indexOf("mailto:")===0?"E-Mail":h.indexOf("tel:")===0?"Telefon":null;
+  if(n)window.plausible(n);
+},true);
+`;
+
+function Analytics() {
+  return (
+    <>
+      <script async src="/js/pa-zJRtAXMl_Y8qMFPzUAxeh.js" />
+      <script dangerouslySetInnerHTML={{ __html: plausibleInit }} />
+    </>
   );
 }
 

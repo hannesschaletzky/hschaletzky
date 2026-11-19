@@ -76,11 +76,42 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Cookies und Analysewerkzeuge">
+      <LegalSection title="5. Cookies und Besucherstatistik">
+        <p>Diese Website verwendet keine Cookies.</p>
         <p>
-          Diese Website verwendet keine Cookies und keine Analyse- oder
-          Tracking-Werkzeuge. Sollte sich das ändern, wird diese
-          Datenschutzerklärung entsprechend angepasst.
+          Um zu verstehen, wie die Website genutzt wird, setze ich die
+          Statistiksoftware Plausible Analytics ein (Community Edition, Open
+          Source). Plausible läuft auf meinem eigenen Server bei Hetzner in
+          Nürnberg (siehe Abschnitt 2). Es werden keine Daten an Plausible
+          Insights oder andere Dritte übermittelt.
+        </p>
+        <p>
+          Plausible speichert nichts auf Ihrem Gerät und erstellt keine Profile.
+          Erfasst werden:
+        </p>
+        <ul className="list-disc space-y-1 pl-6">
+          <li>
+            die aufgerufene Seite und die Seite, von der Sie kommen (Referrer)
+          </li>
+          <li>Browser, Betriebssystem und Gerätetyp</li>
+          <li>das Land, abgeleitet aus der IP-Adresse</li>
+          <li>
+            Klicks auf Links zu externen Seiten, auf Downloads sowie auf die
+            Links für Terminbuchung, E-Mail und Telefon
+          </li>
+        </ul>
+        <p>
+          Um Besuche zählen zu können, ohne Sie wiederzuerkennen, bildet
+          Plausible aus IP-Adresse und Browserkennung einen verschlüsselten
+          Wert, der täglich wechselt. Die IP-Adresse selbst wird nicht
+          gespeichert. Ein Rückschluss auf Ihre Person ist nicht möglich, und
+          Besuche an verschiedenen Tagen lassen sich nicht miteinander
+          verknüpfen.
+        </p>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes
+          Interesse liegt darin, die Website anhand anonymer Nutzungszahlen zu
+          verbessern.
         </p>
       </LegalSection>
 
