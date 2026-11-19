@@ -135,7 +135,7 @@ export const diagrams = {
         text: secrets,
       },
       {
-        x: 890,
+        x: 920,
         y: 380,
         w: 220,
         h: 76,
@@ -154,7 +154,7 @@ export const diagrams = {
         text: { de: "über Graph API", en: "via Graph API" },
       },
       {
-        x: 910,
+        x: 925,
         y: 190,
         w: 210,
         h: 64,
@@ -165,10 +165,17 @@ export const diagrams = {
     edges: [
       {
         points: [
-          [200, 570],
-          [290, 715],
+          [200, 555],
+          [240, 555],
+          [240, 730],
+          [290, 730],
         ],
-        label: { x: 230, y: 660, text: { de: "Anfrage", en: "request" } },
+        label: {
+          x: 240,
+          y: 645,
+          text: { de: "Anfrage", en: "request" },
+          onFrame: true,
+        },
       },
       {
         points: [
@@ -183,30 +190,33 @@ export const diagrams = {
         ],
         label: {
           x: 850,
-          y: 705,
+          y: 755,
           text: { de: "startet", en: "starts" },
           onFrame: true,
         },
       },
       {
         points: [
-          [890, 700],
-          [810, 440],
+          [890, 705],
+          [850, 705],
+          [850, 600],
+          [760, 600],
+          [760, 456],
         ],
         label: {
-          x: 835,
-          y: 560,
+          x: 760,
+          y: 530,
           text: { de: "holt Secret", en: "fetches secret" },
           onFrame: true,
         },
       },
       {
         points: [
-          [1000, 690],
-          [1000, 456],
+          [1030, 690],
+          [1030, 456],
         ],
         label: {
-          x: 1000,
+          x: 1030,
           y: 600,
           text: { de: "erstellt Job", en: "creates job" },
           onFrame: true,
@@ -214,17 +224,24 @@ export const diagrams = {
       },
       {
         points: [
-          [1015, 380],
-          [1015, 254],
+          [1030, 380],
+          [1030, 254],
         ],
-        label: { x: 1015, y: 330, text: { de: "führt aus", en: "runs" } },
+        label: { x: 1030, y: 330, text: { de: "führt aus", en: "runs" } },
       },
       {
         points: [
-          [940, 690],
-          [775, 254],
+          [900, 690],
+          [900, 285],
+          [840, 285],
+          [840, 254],
         ],
-        label: { x: 820, y: 330, text: { de: "Graph API", en: "Graph API" } },
+        label: {
+          x: 900,
+          y: 520,
+          text: { de: "Graph API", en: "Graph API" },
+          onFrame: true,
+        },
       },
       {
         points: [
@@ -241,8 +258,10 @@ export const diagrams = {
       },
       {
         points: [
-          [700, 690],
-          [500, 440],
+          [650, 690],
+          [650, 610],
+          [460, 610],
+          [460, 456],
         ],
         dashed: true,
       },
@@ -349,9 +368,16 @@ export const diagrams = {
       {
         points: [
           [200, 675],
-          [290, 735],
+          [240, 675],
+          [240, 740],
+          [290, 740],
         ],
-        label: { x: 240, y: 690, text: { de: "Anfrage", en: "request" } },
+        label: {
+          x: 240,
+          y: 708,
+          text: { de: "Anfrage", en: "request" },
+          onFrame: true,
+        },
       },
       {
         points: [
@@ -374,60 +400,58 @@ export const diagrams = {
       {
         points: [
           [810, 725],
-          [960, 650],
+          [850, 725],
+          [850, 605],
+          [890, 605],
         ],
         label: {
-          x: 880,
-          y: 700,
+          x: 850,
+          y: 665,
           text: { de: "1 Auftrag", en: "1 job" },
           onFrame: true,
         },
       },
       {
         points: [
-          [920, 560],
-          [800, 320],
+          [900, 560],
+          [900, 320],
         ],
         label: {
-          x: 835,
+          x: 840,
           y: 450,
           text: { de: "2 holt Auftrag", en: "2 fetches job" },
         },
       },
       {
         points: [
-          [700, 250],
+          [700, 230],
           [500, 230],
         ],
         label: {
           x: 600,
-          y: 225,
+          y: 230,
           text: { de: "PowerShell", en: "PowerShell" },
           onFrame: true,
         },
       },
       {
         points: [
-          [700, 295],
-          [500, 320],
+          [700, 305],
+          [500, 305],
         ],
         label: {
           x: 600,
-          y: 322,
+          y: 305,
           text: { de: "SQL", en: "SQL" },
           onFrame: true,
         },
       },
       {
         points: [
-          [940, 320],
-          [1040, 560],
+          [960, 320],
+          [960, 560],
         ],
-        label: {
-          x: 1040,
-          y: 450,
-          text: { de: "3 Ergebnis", en: "3 result" },
-        },
+        label: { x: 1015, y: 450, text: { de: "3 Ergebnis", en: "3 result" } },
       },
       {
         points: [
@@ -445,8 +469,8 @@ export const diagrams = {
       },
       {
         points: [
-          [590, 760],
-          [540, 820],
+          [620, 780],
+          [620, 820],
           [125, 820],
           [125, 710],
         ],
@@ -593,19 +617,23 @@ export const diagrams = {
       {
         points: [
           [360, 240],
-          [500, 235],
+          [500, 240],
         ],
       },
       {
         points: [
           [360, 360],
+          [425, 360],
+          [425, 240],
           [500, 240],
         ],
       },
       {
         points: [
           [360, 480],
-          [500, 245],
+          [425, 480],
+          [425, 240],
+          [500, 240],
         ],
       },
       {
@@ -635,17 +663,23 @@ export const diagrams = {
       {
         points: [
           [840, 565],
-          [960, 480],
+          [1000, 565],
+          [1000, 510],
         ],
-        label: { x: 905, y: 545, text: { de: "Import", en: "import" } },
+        label: {
+          x: 920,
+          y: 565,
+          text: { de: "Import", en: "import" },
+          onFrame: true,
+        },
       },
       {
         points: [
-          [960, 440],
+          [960, 455],
           [840, 455],
         ],
         dashed: true,
-        label: { x: 900, y: 425, text: { de: "Bestand", en: "current data" } },
+        label: { x: 900, y: 438, text: { de: "Bestand", en: "current data" } },
       },
       {
         points: [
@@ -773,23 +807,29 @@ export const diagrams = {
       },
       {
         points: [
-          [520, 230],
-          [390, 330],
+          [480, 230],
+          [480, 330],
         ],
-        label: { x: 440, y: 262, text: { de: "bindet ein", en: "embeds" } },
+        label: {
+          x: 480,
+          y: 262,
+          text: { de: "bindet ein", en: "embeds" },
+          onFrame: true,
+        },
       },
       {
         points: [
-          [650, 230],
+          [670, 230],
           [670, 330],
         ],
         label: {
-          x: 700,
+          x: 670,
           y: 262,
           text: {
             de: "startet Ablauf, holt Ergebnis",
             en: "starts flow, fetches result",
           },
+          onFrame: true,
         },
       },
       {
@@ -807,12 +847,14 @@ export const diagrams = {
       },
       {
         points: [
-          [470, 540],
-          [600, 420],
+          [500, 560],
+          [530, 560],
+          [530, 375],
+          [560, 375],
         ],
         label: {
-          x: 535,
-          y: 480,
+          x: 530,
+          y: 470,
           text: { de: "holt tcToken", en: "fetches tcToken" },
           onFrame: true,
         },
