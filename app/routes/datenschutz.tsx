@@ -14,9 +14,11 @@ export default function Datenschutz() {
     <LegalPage title="Datenschutzerklärung" updated="November 2026">
       <LegalSection title="1. Verantwortlicher">
         <p>
-          Diese Datenschutzerklärung gilt für hschaletzky.com und für meinen
-          Blog unter blog.hschaletzky.com. Verantwortlich für die Verarbeitung
-          personenbezogener Daten ist:
+          Diese Datenschutzerklärung gilt für hschaletzky.com, meinen Blog unter
+          blog.hschaletzky.com und meine Beispielwebsites
+          tischlerei-mustermann.hschaletzky.com, sv-musterstadt.hschaletzky.com
+          und physio-musterfrau.hschaletzky.com. Verantwortlich für die
+          Verarbeitung personenbezogener Daten ist:
         </p>
         <p>
           Hannes Schaletzky
