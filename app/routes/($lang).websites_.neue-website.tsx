@@ -134,7 +134,7 @@ const text = {
         question:
           "Können Sie auch eine Seite für ein einzelnes Angebot oder eine Aktion bauen?",
         answer:
-          "Ja. Für eine Aktion, einen Kurs oder ein Angebot, das Sie auf Instagram, Facebook oder per Flyer bewerben, baue ich eine eigene Landingpage mit Anmeldung oder Kontaktformular. Links zu Ihren Social-Media-Kanälen sind auf jeder Website dabei. Was das kostet, hängt vom Umfang ab. Den Preis nenne ich Ihnen vorher.",
+          "Ja. Für eine Aktion, einen Kurs oder ein Angebot, das Sie auf Instagram, Facebook oder per Flyer bewerben, baue ich eine eigene Seite nur für dieses Angebot (Landingpage) mit Anmeldung oder Kontaktformular. Links zu Ihren Social-Media-Kanälen sind auf jeder Website dabei. Was das kostet, hängt vom Umfang ab. Den Preis nenne ich Ihnen vorher.",
       },
       {
         question: "Kann ich Inhalte selbst ändern?",

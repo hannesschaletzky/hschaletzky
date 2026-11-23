@@ -29,7 +29,7 @@ const offers: { de: Offer[]; en: Offer[] } = {
     {
       title: "Hosting & Wartung",
       price: "ab 25 € / Monat",
-      text: "Hosting in Deutschland, Domain, tägliche Backups, Updates und persönliche Hilfe, wenn etwas hakt. Monatlich kündbar.",
+      text: "Ich betreibe Ihre Website in Deutschland, mit eigener Adresse, täglicher Sicherung, Updates und persönlicher Hilfe, wenn etwas hakt. Monatlich kündbar.",
       href: "/websites/hosting-wartung",
     },
     {
@@ -41,13 +41,13 @@ const offers: { de: Offer[]; en: Offer[] } = {
     {
       title: "Google-Sichtbarkeit",
       price: "390 €",
-      text: "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden.",
+      text: "Ihr Eintrag bei Google und Google Maps, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden.",
       href: "/websites/google-sichtbarkeit",
     },
     {
       title: "Sprechstunde",
       price: "71,40 € / Std.",
-      text: "Sie bringen Ihre Fragen mit, wir gehen sie gemeinsam an Ihrer Website durch: Pflege, Updates, Google-Profil oder Ads. Vor Ort in Berlin oder per Video.",
+      text: "Sie bringen Ihre Fragen mit, wir gehen sie gemeinsam an Ihrer Website durch: Pflege, Updates, Ihr Google-Eintrag oder Anzeigen bei Google. Vor Ort in Berlin oder per Video.",
       href: "/websites/sprechstunde",
     },
   ],

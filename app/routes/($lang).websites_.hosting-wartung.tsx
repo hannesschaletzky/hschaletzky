@@ -23,18 +23,18 @@ const text = {
       highlight: "persönlich statt Hotline.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Hosting, Backups und Updates aus einer Hand. Ab 25 € im Monat. Monatlich kündbar, der Umzug zu mir ist kostenlos.",
+      text: "Ich betreibe Ihre Website, sichere sie täglich und halte sie aktuell. Ab 25 € im Monat. Monatlich kündbar, der Umzug zu mir ist kostenlos.",
     },
     servicesEyebrow: "Was ich übernehme",
     servicesHeading: "Darum kümmere ich mich.",
     services: [
       {
         title: "Hosting in Deutschland",
-        text: "Server in Deutschland, unter deutschem Datenschutz.",
+        text: "Ihre Website liegt auf einem Server in Deutschland, unter deutschem Datenschutz.",
       },
       {
         title: "Domain inklusive",
-        text: "Eine .de-Domain auf Ihren Namen, technisch verwaltet.",
+        text: "Ihre Adresse im Internet, etwa ihr-betrieb.de, läuft auf Ihren Namen. Ich verwalte sie technisch.",
       },
       {
         title: "SSL-Zertifikat",

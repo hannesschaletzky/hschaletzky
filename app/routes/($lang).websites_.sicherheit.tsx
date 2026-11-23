@@ -31,7 +31,7 @@ const text = {
     risks: [
       {
         title: "Veraltete Software",
-        text: "Alte WordPress-, Plugin- oder PHP-Versionen haben bekannte Lücken.",
+        text: "Alte Versionen von WordPress, seinen Erweiterungen (Plugins) oder der Programmiersprache PHP haben bekannte Lücken.",
       },
       {
         title: "Automatische Angriffe",

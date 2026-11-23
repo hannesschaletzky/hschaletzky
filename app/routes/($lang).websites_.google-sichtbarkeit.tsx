@@ -35,7 +35,7 @@ const text = {
       },
       {
         title: "Search Console",
-        text: "Einrichten, Seiten einreichen und gemeldete Fehler angehen.",
+        text: "Googles kostenloses Werkzeug für Website-Besitzer: einrichten, Seiten einreichen und gemeldete Fehler angehen.",
       },
       {
         title: "Seitentitel & Beschreibungen",
