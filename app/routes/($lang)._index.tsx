@@ -6,7 +6,7 @@ import Mountains from "~/components/site/mountains";
 import Offers from "~/components/site/offers";
 import { businessJsonLd, pageMeta } from "~/components/site/pageMeta";
 import Testimonials from "~/components/site/testimonials";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 // index: hero with the mountains, testimonials, the two offers and contact
 
@@ -81,7 +81,7 @@ export default function Index() {
             <p className="mx-auto mt-6 max-w-xl text-lg">{t.intro}</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:info@hschaletzky.com"
+                href={localize("/contact", lang)}
                 className="rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
               >
                 {t.contact}

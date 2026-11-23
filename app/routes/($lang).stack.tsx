@@ -4,7 +4,7 @@ import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
-import { langFromParams, langLoader, useLang } from "~/i18n";
+import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 
 export const loader = langLoader;
 
@@ -16,7 +16,6 @@ const text = {
     title1: "Werkzeuge, auf die ich",
     highlight: "mich verlassen kann.",
     cta: "Über Ihr Projekt sprechen",
-    mail: "mailto:info@hschaletzky.com?subject=Projektanfrage",
     intro:
       "Ein Überblick über die Technologien, mit denen ich arbeite, von der Cloud über Websites bis zu KI.",
   },
@@ -27,7 +26,6 @@ const text = {
     title1: "Tools I trust",
     highlight: "in production.",
     cta: "Talk about your project",
-    mail: "mailto:info@hschaletzky.com?subject=Project%20inquiry",
     intro:
       "An overview of the technologies I work with, from the cloud to websites and AI.",
   },
@@ -180,7 +178,7 @@ export default function Stack() {
         <PageHero
           title={t.title1}
           highlight={t.highlight}
-          cta={{ label: t.cta, href: t.mail }}
+          cta={{ label: t.cta, href: localize("/contact", lang) }}
         >
           {t.intro}
         </PageHero>

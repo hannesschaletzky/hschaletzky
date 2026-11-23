@@ -8,7 +8,13 @@ import PageHero from "~/components/site/pageHero";
 import SectionHeading from "~/components/site/sectionHeading";
 import Peak from "~/components/site/peak";
 import { pageMeta, personJsonLd } from "~/components/site/pageMeta";
-import { langFromParams, langLoader, useLang, type Lang } from "~/i18n";
+import {
+  langFromParams,
+  langLoader,
+  localize,
+  useLang,
+  type Lang,
+} from "~/i18n";
 
 export const loader = langLoader;
 
@@ -309,7 +315,7 @@ function AboutIntro({ lang }: { lang: Lang }) {
       <PageHero
         title={t.hero.title}
         highlight={t.hero.highlight}
-        cta={{ label: t.hero.cta, href: "mailto:info@hschaletzky.com" }}
+        cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
       >
         {t.hero.text}
       </PageHero>
