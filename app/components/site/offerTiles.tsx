@@ -94,11 +94,18 @@ const offers: { de: Offer[]; en: Offer[] } = {
 
 // the website offers as equal tiles: all of them on the overview, on an offer page
 // only the other website offers
-export default function OfferTiles({ current }: { current?: string }) {
+export default function OfferTiles({
+  current,
+  hidden = [],
+}: {
+  current?: string;
+  // further offers to leave out, e.g. those a page already shows with prices
+  hidden?: string[];
+}) {
   const lang = useLang();
-  const shown = current
-    ? offers[lang].filter((o) => o.href !== current)
-    : offers[lang];
+  const shown = offers[lang].filter(
+    (o) => o.href !== current && !hidden.includes(o.href),
+  );
   return (
     <div
       className={`grid gap-6 sm:grid-cols-2 ${shown.length > 4 ? "lg:grid-cols-3" : ""}`}
@@ -147,9 +154,11 @@ export default function OfferTiles({ current }: { current?: string }) {
 // the other website offers at the end of an offer page, so it isn't a dead end
 export function RelatedOffers({
   current,
+  hidden,
   className,
 }: {
   current: string;
+  hidden?: string[];
   className?: string;
 }) {
   const lang = useLang();
@@ -163,7 +172,7 @@ export function RelatedOffers({
             ? "Mehr rund um Ihre Website."
             : "More around your website."}
         </SectionHeading>
-        <OfferTiles current={current} />
+        <OfferTiles current={current} hidden={hidden} />
         <a
           href={`${localize("/websites", lang)}#angebote`}
           className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"

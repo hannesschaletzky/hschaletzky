@@ -1,12 +1,14 @@
 import type { MetaFunction } from "react-router";
+import ClimbSteps from "~/components/site/climbSteps";
 import { useContactLinks } from "~/components/site/contactTopic";
 import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
 import FeatureNumbers from "~/components/site/featureNumbers";
 import { pageMeta } from "~/components/site/pageMeta";
+import PricingSection from "~/components/site/pricingSection";
 import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, localize, useLang } from "~/i18n";
+import { langFromParams, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 
 export const loader = offerLoader("/websites/sicherheit");
@@ -77,31 +79,63 @@ const text = {
     stepsHeading: "Prüfen, beheben, absichern.",
     steps: [
       {
-        label: "Schritt 1",
-        title: "Check-up",
-        price: "250 €",
+        title: "Prüfen",
         text: "Ich prüfe Ihre Website von außen und ordne jeden Vorschlag nach Dringlichkeit.",
-        href: "/websites/check-up",
-        link: "Zum Check-up",
       },
       {
-        label: "Schritt 2",
-        title: "Maßnahmen umsetzen",
+        title: "Beheben",
         text: "Die dringenden Punkte behebe ich zuerst, den Aufwand kennen Sie aus dem Bericht.",
-        href: "/contact",
-        link: "Anfragen",
       },
       {
-        label: "Schritt 3",
-        title: "Hosting & Wartung",
-        price: "ab 25 € im Monat",
-        text: "Updates, tägliche Backups und Alarm bei Ausfällen. WordPress & Co. 60 € im Monat.",
-        href: "/websites/hosting-wartung",
-        link: "Zu Hosting & Wartung",
+        title: "Absichern",
+        text: "Danach halte ich Ihre Website aktuell, mit Updates, täglichen Backups und Alarm bei Ausfällen.",
       },
     ],
-    stepsNote:
-      "Jeden Schritt gibt es auch einzeln. Alle Preise inkl. 19 % MwSt.",
+    pricingEyebrow: "Preis",
+    pricingHeading: "Drei Schritte, jeder auch einzeln.",
+    featuresLabel: "Enthalten",
+    packages: [
+      {
+        name: "Check-up",
+        description: "Der Einstieg: Sie wissen danach, wo Ihre Website steht.",
+        price: "250 €",
+        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
+        features: [
+          "Prüfung in zehn Bereichen",
+          "Bericht als PDF innerhalb von 5 Werktagen",
+          "30-minütige Besprechung per Video oder Telefon",
+        ],
+        cta: { label: "Zum Check-up", href: "/websites/check-up" },
+      },
+      {
+        name: "Maßnahmen umsetzen",
+        description:
+          "Ich behebe, was der Bericht zeigt, die dringenden Punkte zuerst.",
+        price: "71,40 €",
+        priceNote: "pro Stunde, inkl. 19 % MwSt. (60 € netto)",
+        features: [
+          "Den Aufwand je Vorschlag kennen Sie aus dem Bericht",
+          "Sie entscheiden, was ich umsetze",
+        ],
+        cta: { label: "Kontakt aufnehmen", href: "/contact" },
+      },
+      {
+        name: "Hosting & Wartung",
+        description: "Für WordPress & Co. 60 € im Monat.",
+        price: "ab 25 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        features: [
+          "Updates von Technik und Software",
+          "Tägliche Backups, 30 Tage aufbewahrt",
+          "Überwachung mit Alarm bei Ausfall",
+          "Monatlich kündbar",
+        ],
+        cta: {
+          label: "Zu Hosting & Wartung",
+          href: "/websites/hosting-wartung",
+        },
+      },
+    ],
     protectionEyebrow: "Was ich in der Wartung übernehme",
     protectionHeading: "Darum kümmere ich mich.",
     protection: [
@@ -219,31 +253,63 @@ const text = {
     stepsHeading: "Check, fix, secure.",
     steps: [
       {
-        label: "Step 1",
-        title: "Check-up",
-        price: "250 €",
+        title: "Check",
         text: "I check your website from the outside and rank every suggestion by urgency.",
-        href: "/websites/check-up",
-        link: "To the check-up",
       },
       {
-        label: "Step 2",
-        title: "Fix the issues",
+        title: "Fix",
         text: "I fix the urgent points first; the report already shows the effort.",
-        href: "/contact",
-        link: "Ask me",
       },
       {
-        label: "Step 3",
-        title: "Hosting & maintenance",
-        price: "from 25 € / month",
-        text: "Updates, daily backups and alerts on outages. WordPress & Co. 60 € a month.",
-        href: "/websites/hosting-wartung",
-        link: "To hosting & maintenance",
+        title: "Secure",
+        text: "After that I keep your website up to date, with updates, daily backups and alerts on outages.",
       },
     ],
-    stepsNote:
-      "Each step is also available on its own. All prices incl. 19 % VAT.",
+    pricingEyebrow: "Price",
+    pricingHeading: "Three steps, each available on its own.",
+    featuresLabel: "Included",
+    packages: [
+      {
+        name: "Check-up",
+        description:
+          "The starting point: afterwards you know where your website stands.",
+        price: "250 €",
+        priceNote: "fixed price, one-off, incl. 19 % VAT",
+        features: [
+          "A check in ten areas",
+          "Report as a PDF within 5 working days",
+          "30-minute video or phone call",
+        ],
+        cta: { label: "To the check-up", href: "/websites/check-up" },
+      },
+      {
+        name: "Fix the issues",
+        description: "I fix what the report shows, the urgent points first.",
+        price: "71.40 €",
+        priceNote: "per hour, incl. 19 % VAT (60 € net)",
+        features: [
+          "The report shows the effort for every suggestion",
+          "You decide what I work on",
+        ],
+        cta: { label: "Get in touch", href: "/contact" },
+      },
+      {
+        name: "Hosting & maintenance",
+        description: "For WordPress & Co. 60 € a month.",
+        price: "from 25 €",
+        priceNote: "per month, incl. 19 % VAT",
+        features: [
+          "Updates for technology and software",
+          "Daily backups, kept for 30 days",
+          "Monitoring with an alert on outages",
+          "Cancel any month",
+        ],
+        cta: {
+          label: "To hosting & maintenance",
+          href: "/websites/hosting-wartung",
+        },
+      },
+    ],
     protectionEyebrow: "What I take care of in maintenance",
     protectionHeading: "That's what I take care of.",
     protection: [
@@ -319,6 +385,8 @@ export default function WebsiteSicherheit() {
     <OfferPage
       area="websites"
       current="/websites/sicherheit"
+      // both are already in the price section of this page
+      relatedHidden={["/websites/check-up", "/websites/hosting-wartung"]}
       hero={t.hero}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
@@ -421,48 +489,20 @@ export default function WebsiteSicherheit() {
       </Section>
 
       {/* check-up, fixes and maintenance as steps, styled like the offer tiles */}
-      <Section eyebrow={t.stepsEyebrow} heading={t.stepsHeading}>
-        <div className="grid gap-6 md:grid-cols-3">
-          {t.steps.map((step) => (
-            <a
-              key={step.title}
-              href={
-                step.href === "/contact"
-                  ? links.contact
-                  : localize(step.href, lang)
-              }
-              className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
-            >
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                {step.label}
-              </p>
-              <div className="mt-3 flex items-baseline justify-between gap-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-teal-light">
-                  {step.title}
-                </h3>
-                {step.price && (
-                  <p className="shrink-0 font-semibold text-teal">
-                    {step.price}
-                  </p>
-                )}
-              </div>
-              <p className="mt-3 leading-relaxed">{step.text}</p>
-              <p className="mt-auto pt-6 font-semibold text-teal group-hover:text-teal-light">
-                {step.link}{" "}
-                <span
-                  aria-hidden="true"
-                  className="inline-block transition-transform group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </p>
-            </a>
-          ))}
-        </div>
-        <p className="mt-8 max-w-3xl leading-relaxed text-slate-400">
-          {t.stepsNote}
-        </p>
+      <Section
+        eyebrow={t.stepsEyebrow}
+        heading={t.stepsHeading}
+        className="bg-navy-light"
+      >
+        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
       </Section>
+
+      <PricingSection
+        eyebrow={t.pricingEyebrow}
+        heading={t.pricingHeading}
+        packages={t.packages}
+        featuresLabel={t.featuresLabel}
+      />
     </OfferPage>
   );
 }

@@ -20,6 +20,7 @@ type Faq = { question: string; answer: string };
 export default function OfferPage({
   area,
   current,
+  relatedHidden,
   hero,
   faq,
   children,
@@ -27,6 +28,8 @@ export default function OfferPage({
   area: "websites" | "cloud";
   // the page's own address, so the related offers leave it out
   current: string;
+  // offers the page already shows in its own price section
+  relatedHidden?: string[];
   hero: {
     title: string;
     highlight: string;
@@ -100,6 +103,7 @@ export default function OfferPage({
         {websites && (
           <RelatedOffers
             current={current}
+            hidden={relatedHidden}
             className={articles.length > 0 ? "bg-navy-light" : undefined}
           />
         )}
