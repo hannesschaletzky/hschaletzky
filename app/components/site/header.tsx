@@ -53,6 +53,8 @@ export default function Header() {
   const lang = useLang();
   const de = lang === "de";
   const [menuOpen, setMenuOpen] = useState(false);
+  // the first three groups belong to the three main links, in the same order
+  const siteMap = getSiteMap(lang);
 
   // close the mobile menu with Escape
   useEffect(() => {
@@ -81,14 +83,53 @@ export default function Header() {
           />
         </a>
         <nav className="flex items-center gap-3 text-sm sm:gap-6">
-          {getSiteNav(lang).map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hidden hover:text-white md:inline"
-            >
-              {link.label}
-            </a>
+          {/* each main link opens a small menu with the pages of its area, on
+              hover and on keyboard focus (CSS only, so it works without
+              JavaScript). The link itself still leads to the overview, which is
+              what a tap does on touch screens. */}
+          {getSiteNav(lang).map((link, i) => (
+            <div key={link.href} className="group relative hidden md:block">
+              <a
+                href={link.href}
+                className="inline-flex items-center gap-1.5 hover:text-white group-focus-within:text-white group-hover:text-white"
+              >
+                {link.label}
+                <svg
+                  viewBox="0 0 12 12"
+                  className="h-2.5 w-2.5 text-slate-400 transition-transform group-focus-within:rotate-180 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M2.5 4.5 6 8l3.5-3.5" />
+                </svg>
+              </a>
+              {/* the padding above the box bridges the gap, so the menu stays
+                  open on the way down; it closes with a short delay */}
+              <div className="invisible absolute -left-5 top-full pt-5 opacity-0 transition-[opacity,visibility] delay-100 duration-150 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:delay-0 group-hover:visible group-hover:opacity-100 group-hover:delay-0">
+                <ul className="min-w-60 rounded-2xl border border-white/10 bg-navy-light p-2 shadow-xl shadow-black/30">
+                  {/* without the overview: the main link already leads there */}
+                  {siteMap[i].links.slice(1).map((sub) => (
+                    <li key={sub.href}>
+                      <a
+                        href={sub.href}
+                        {...(sub.external && {
+                          target: "_blank",
+                          rel: "noreferrer",
+                        })}
+                        className="block whitespace-nowrap rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5 hover:text-white focus-visible:bg-white/5"
+                      >
+                        {sub.label}
+                        {sub.external && <span aria-hidden="true"> ↗</span>}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
           <LangSwitch />
           <a
@@ -139,7 +180,7 @@ export default function Header() {
           aria-label={de ? "Menü" : "Menu"}
           className="border-t border-white/10 bg-navy px-4 pb-8 pt-4 md:hidden"
         >
-          {getSiteMap(lang).map((group) => (
+          {siteMap.map((group) => (
             <div key={group.title} className="mt-4">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
                 {group.title}
