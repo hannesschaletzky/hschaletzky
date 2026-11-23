@@ -46,7 +46,7 @@ const text = {
         text: "Meist nach wenigen Tagen sehen Sie einen ersten Entwurf. Sie sagen mir, was Ihnen gefällt, und in zwei Korrekturrunden passen wir ihn an.",
       },
       {
-        title: "Online & betreut",
+        title: "Online gehen",
         text: "Ihre Website geht online, und erst dann zahlen Sie. Danach bin ich weiter für Sie da.",
       },
     ],
@@ -195,7 +195,7 @@ const text = {
         text: "Usually after a few days you see a first draft. You tell me what you like, and we adjust it in two rounds of changes.",
       },
       {
-        title: "Online & cared for",
+        title: "Going live",
         text: "Your website goes live, and only then do you pay. After that I'm still there for you.",
       },
     ],
