@@ -15,8 +15,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 lg:flex lg:justify-between">
           {getSiteMap(lang).map((group) => (
             <nav key={group.title} aria-label={group.title}>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-                {group.title}
+              {/* the heading leads to the group's main page (its first link) */}
+              <p className="text-xs font-semibold uppercase tracking-[0.2em]">
+                <a
+                  href={group.links[0].href}
+                  className="text-teal hover:text-teal-light"
+                >
+                  {group.title}
+                </a>
               </p>
               <ul className="mt-4 space-y-2 text-sm">
                 {group.links.map((link) => (
