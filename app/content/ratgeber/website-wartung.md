@@ -18,7 +18,7 @@ Viele behandeln ihre Website wie eine Broschüre: einmal drucken lassen, fertig.
 
 **Backups.** Eine aktuelle Sicherung von Dateien und Datenbank, die Sie im Notfall auch zurückspielen können.
 
-**Überwachung.** Jemand merkt, wenn die Seite nicht erreichbar ist, das Zertifikat abläuft oder das Kontaktformular keine Mails mehr verschickt. Am besten, bevor es ein Kunde merkt.
+**Überwachung.** Jemand merkt, wenn die Seite nicht erreichbar ist, das Zertifikat abläuft oder das Kontaktformular keine E-Mails mehr verschickt. Am besten, bevor es ein Kunde merkt.
 
 **Kleine Änderungen.** Neue Öffnungszeiten, ein neues Foto, ein geänderter Preis. Das ist keine Wartung im engeren Sinne, fällt aber immer an.
 

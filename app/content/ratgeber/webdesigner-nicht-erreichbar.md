@@ -22,7 +22,7 @@ Eine Website besteht aus drei Teilen, die oft bei verschiedenen Anbietern liegen
 - **Das Hosting**, also der Speicherplatz, auf dem die Dateien liegen
 - **Die Website selbst**, oft ein WordPress mit eigenem Login
 
-Häufig hängt auch Ihre E-Mail-Adresse an der Domain. Das ist der wichtigste Grund, sauber vorzugehen. Wer hier etwas falsch umstellt, bekommt plötzlich keine Mails mehr.
+Häufig hängt auch Ihre E-Mail-Adresse an der Domain. Das ist der wichtigste Grund, sauber vorzugehen. Wer hier etwas falsch umstellt, bekommt plötzlich keine E-Mails mehr.
 
 ## Schritt 1: Herausfinden, wo die Seite liegt.
 

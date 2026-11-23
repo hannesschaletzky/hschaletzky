@@ -58,14 +58,14 @@ const text = {
       eyebrow: "PHP-Sicherheitslücken",
       heading: "Ist Ihre Website betroffen?",
       text: "PHP ist die Programmiersprache, auf der WordPress und die meisten kleinen Websites laufen. Wird darin eine Lücke bekannt, hängt es von zwei Dingen ab, ob Sie handeln müssen: welche PHP-Version Ihre Website nutzt und ob Ihr Anbieter die Updates einspielt.",
-      checkHeading: "So prüfen Sie es selbst",
+      checkHeading: "So prüfen Sie es selbst.",
       check: [
         "In WordPress unter Werkzeuge → Website-Zustand → Bericht → Server.",
         "Oder im Kundenbereich Ihres Hosting-Anbieters, meist in den Einstellungen zu PHP.",
         "Steht Ihre Version nicht mehr in der Liste der unterstützten Versionen, bekommt sie keine Sicherheitsupdates mehr.",
       ],
       versionsLink: "Unterstützte PHP-Versionen auf php.net",
-      helpHeading: "Das übernehme ich",
+      helpHeading: "Das übernehme ich.",
       help: [
         "Ich prüfe im Check-up, welche Version läuft und was von außen angreifbar ist.",
         "Ich aktualisiere PHP mit Vorsicht: erst ein Backup, dann der Test, ob Theme und Plugins mitspielen.",
@@ -74,7 +74,7 @@ const text = {
       cta: "Kontakt aufnehmen",
       note: "Ein PHP-Update kann ältere Plugins oder Themes stören. Deshalb nie ohne Backup.",
     },
-    stepsEyebrow: "So gehen wir vor",
+    stepsEyebrow: "So läuft es ab",
     stepsHeading: "Prüfen, beheben, absichern.",
     steps: [
       {
@@ -95,7 +95,7 @@ const text = {
       {
         label: "Schritt 3",
         title: "Hosting & Wartung",
-        price: "ab 25 € / Monat",
+        price: "ab 25 € im Monat",
         text: "Updates, tägliche Backups und Alarm bei Ausfällen. WordPress & Co. 60 € im Monat.",
         href: "/websites/hosting-wartung",
         link: "Zu Hosting & Wartung",
@@ -147,7 +147,7 @@ const text = {
         question:
           "Muss ich zu Ihnen wechseln, damit meine Website sicher wird?",
         answer:
-          "Nein. Den Bericht aus dem Check-up können Sie auch Ihrem bisherigen Dienstleister geben. Wenn Sie möchten, übernehme ich Hosting und Wartung, der Umzug ist kostenlos.",
+          "Nein. Den Bericht aus dem Check-up können Sie auch Ihrem bisherigen Dienstleister geben. Wenn Sie möchten, übernehme ich Hosting & Wartung, der Umzug ist kostenlos.",
       },
       {
         question:
@@ -200,14 +200,14 @@ const text = {
       eyebrow: "Security holes in PHP",
       heading: "Is your website affected?",
       text: "PHP is the programming language that WordPress and most small websites run on. When a hole in it becomes known, two things decide whether you need to act: which PHP version your website uses and whether your provider installs the updates.",
-      checkHeading: "How to check it yourself",
+      checkHeading: "How to check it yourself.",
       check: [
         "In WordPress under Tools → Site Health → Info → Server.",
         "Or in your hosting provider's customer area, usually in the PHP settings.",
         "If your version is no longer on the list of supported versions, it gets no more security updates.",
       ],
       versionsLink: "Supported PHP versions on php.net",
-      helpHeading: "What I take care of",
+      helpHeading: "What I take care of.",
       help: [
         "In the check-up I find out which version runs and what is open to attack from the outside.",
         "I update PHP carefully: a backup first, then a test of whether theme and plugins still work.",
@@ -216,7 +216,7 @@ const text = {
       cta: "Get in touch",
       note: "A PHP update can break older plugins or themes. So never without a backup.",
     },
-    stepsEyebrow: "How we go about it",
+    stepsEyebrow: "How it works",
     stepsHeading: "Check, fix, secure.",
     steps: [
       {

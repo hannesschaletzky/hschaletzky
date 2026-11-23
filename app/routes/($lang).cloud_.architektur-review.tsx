@@ -136,7 +136,7 @@ const text = {
       {
         question: "Setzen Sie die Empfehlungen auch um?",
         answer:
-          "Gerne, das muss aber nicht sein. Sie können die Empfehlungen auch selbst oder mit Ihrem Team angehen.",
+          "Gern, das muss aber nicht sein. Sie können die Empfehlungen auch selbst oder mit Ihrem Team angehen.",
       },
       {
         question: "Was, wenn alles gut ist?",

@@ -103,7 +103,7 @@ const text = {
       {
         question: "Funktioniert das auch mit WordPress, Wix oder Jimdo?",
         answer:
-          "Ja. Titel, Beschreibungen und das Google-Profil lassen sich überall anpassen. Bei Baukästen wie Wix oder Jimdo ist bei der Ladezeit manches vorgegeben, das sage ich Ihnen vorher.",
+          "Ja. Titel, Beschreibungen und das Google-Unternehmensprofil lassen sich überall anpassen. Bei Baukästen wie Wix oder Jimdo ist bei der Ladezeit manches vorgegeben, das sage ich Ihnen vorher.",
       },
       {
         question: "Was ist der Unterschied zum Check-up?",

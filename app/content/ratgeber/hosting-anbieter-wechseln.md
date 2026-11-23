@@ -32,7 +32,7 @@ Gerade der letzte Punkt wird gern vergessen. Wenn Ihre E-Mails über Microsoft o
 4. **E-Mail-Postfächer beim neuen Anbieter anlegen,** mit denselben Adressen.
 5. **Domain umstellen.** Entweder Sie ziehen die Domain ganz zum neuen Anbieter um, dafür brauchen Sie einen Code vom alten Anbieter, oder Sie stellen nur ein, dass sie auf den neuen Server zeigt.
 6. **Alte E-Mails übertragen.** Viele Anbieter haben dafür ein Werkzeug, das die Inhalte von einem Postfach ins andere kopiert.
-7. **Ein paar Tage beobachten:** Kommen alle Mails an? Funktioniert das Kontaktformular? Laden alle Seiten?
+7. **Ein paar Tage beobachten:** Kommen alle E-Mails an? Funktioniert das Kontaktformular? Laden alle Seiten?
 8. **Erst dann den alten Vertrag kündigen.**
 
 Nach der Umstellung der Domain dauert es eine Weile, bis die Änderung überall angekommen ist, meist einige Stunden, selten bis zu zwei Tage. In dieser Zeit sehen manche Besucher noch die alte Seite. Deshalb laufen beide parallel, und deshalb sollten Sie in dieser Zeit nichts an der Website ändern.
@@ -42,7 +42,7 @@ Nach der Umstellung der Domain dauert es eine Weile, bis die Änderung überall 
 - **Zu früh gekündigt.** Ist der alte Vertrag weg, bevor der Umzug fertig ist, sind auch Daten und Postfächer weg.
 - **Kündigungsfristen.** Viele Hosting-Verträge laufen ein Jahr und verlängern sich automatisch. Planen Sie den Umzug so, dass er vor dem Ende der Frist fertig ist.
 - **Die Domain gehört nicht Ihnen.** Wenn sie auf einen früheren Dienstleister läuft, klären Sie das zuerst.
-- **Das Kontaktformular verschickt keine Mails mehr,** weil es noch die Einstellungen des alten Anbieters nutzt. Testen Sie es nach dem Umzug.
+- **Das Kontaktformular verschickt keine E-Mails mehr,** weil es noch die Einstellungen des alten Anbieters nutzt. Testen Sie es nach dem Umzug.
 
 ## Mein Rat.
 

@@ -28,14 +28,14 @@ const offers: { de: Offer[]; en: Offer[] } = {
     },
     {
       title: "Hosting & Wartung",
-      price: "ab 25 € / Monat",
+      price: "ab 25 € im Monat",
       text: "Ich betreibe Ihre Website in Deutschland, mit eigener Adresse, täglicher Sicherung, Updates und persönlicher Hilfe, wenn etwas hakt. Monatlich kündbar.",
       href: "/websites/hosting-wartung",
     },
     {
       title: "E-Mail-Einrichtung",
       price: "249 €",
-      text: "Professionelle Adressen wie info@ihr-betrieb.de, eingerichtet auf Handy und Computer. Ihre alten Mails ziehen mit um. Dazu 6 € pro Postfach im Monat.",
+      text: "Professionelle Adressen wie info@ihr-betrieb.de, eingerichtet auf Handy und Computer. Ihre alten E-Mails ziehen mit um. Dazu 6 € pro Postfach im Monat.",
       href: "/websites/e-mail-einrichtung",
     },
     {
@@ -46,7 +46,7 @@ const offers: { de: Offer[]; en: Offer[] } = {
     },
     {
       title: "Sprechstunde",
-      price: "71,40 € / Std.",
+      price: "71,40 € pro Stunde",
       text: "Sie bringen Ihre Fragen mit, wir gehen sie gemeinsam an Ihrer Website durch: Pflege, Updates, Ihr Google-Eintrag oder Anzeigen bei Google. Vor Ort in Berlin oder per Video.",
       href: "/websites/sprechstunde",
     },

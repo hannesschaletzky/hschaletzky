@@ -139,7 +139,7 @@ const text = {
       {
         question: "Arbeiten Sie mit unserem Team zusammen?",
         answer:
-          "Gerne. Ich kann den Betrieb ganz übernehmen oder Ihr Team unterstützen, zum Beispiel als Vertretung.",
+          "Gern. Ich kann den Betrieb ganz übernehmen oder Ihr Team unterstützen, zum Beispiel als Vertretung.",
       },
     ],
     more: "Alle Leistungen im Überblick",

@@ -17,13 +17,13 @@ const text = {
   de: {
     title: "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
     description:
-      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
+      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte E-Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
     hero: {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten Mails um. Einmalig 249 €.",
+      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten E-Mails um. Einmalig 249 €.",
     },
     includedEyebrow: "Was ich einrichte",
     includedHeading: "Alles, was dazugehört.",
@@ -33,7 +33,7 @@ const text = {
         text: "info@, vorname@ oder rechnung@, so wie es zu Ihrem Betrieb passt.",
       },
       {
-        title: "Umzug Ihrer Mails",
+        title: "Umzug Ihrer E-Mails",
         text: "Alte Nachrichten und Ordner können mitziehen, etwa von GMX, Web.de oder T-Online.",
       },
       {
@@ -42,7 +42,7 @@ const text = {
       },
       {
         title: "Schutz vor Fälschungen",
-        text: "Schutzeinträge an Ihrer Domain erschweren es Betrügern, in Ihrem Namen zu schreiben. Ihre eigenen Mails landen dadurch seltener im Spam.",
+        text: "Schutzeinträge an Ihrer Domain erschweren es Betrügern, in Ihrem Namen zu schreiben. Ihre eigenen E-Mails landen dadurch seltener im Spam.",
       },
       {
         title: "Server in Deutschland",
@@ -58,7 +58,7 @@ const text = {
       },
       {
         title: "Einrichten & umziehen",
-        text: "Ich richte die Postfächer ein, ziehe Ihre Mails um und trage die Schutzeinträge an Ihrer Domain ein.",
+        text: "Ich richte die Postfächer ein, ziehe Ihre E-Mails um und trage die Schutzeinträge an Ihrer Domain ein.",
       },
       {
         title: "Loslegen",
@@ -77,7 +77,7 @@ const text = {
         features: [
           "Bis zu fünf Postfächer mit Ihrer Domain",
           "Schutzeinträge gegen gefälschte Absender",
-          "Umzug Ihrer Mails aus bis zu fünf alten Postfächern",
+          "Umzug Ihrer E-Mails aus bis zu fünf alten Postfächern",
           "Gemeinsamer Termin für Ihre Geräte, bis zu einer Stunde",
         ],
         cta: { label: "Kontakt aufnehmen", href: "/contact" },
@@ -120,7 +120,7 @@ const text = {
       {
         question: "Kann beim Umzug etwas verloren gehen?",
         answer:
-          "Das ist sehr unwahrscheinlich. Ihre Mails werden kopiert, nicht verschoben. Beim alten Anbieter bleibt alles, wie es ist, bis Sie es selbst löschen.",
+          "Das ist sehr unwahrscheinlich. Ihre E-Mails werden kopiert, nicht verschoben. Beim alten Anbieter bleibt alles, wie es ist, bis Sie es selbst löschen.",
       },
       {
         question: "Ich brauche mehr als fünf Postfächer. Geht das?",
@@ -130,7 +130,7 @@ const text = {
       {
         question: "Kann ich wieder kündigen?",
         answer:
-          "Ja, jeden Monat. Vorher exportieren wir Ihre Mails, damit Sie alles mitnehmen können.",
+          "Ja, jeden Monat. Vorher exportieren wir Ihre E-Mails, damit Sie alles mitnehmen können.",
       },
     ],
   },

@@ -65,7 +65,7 @@ Wenn Sie unsicher sind, helfen diese Fragen:
 4. Wer kümmert sich in zwei Jahren um Updates, Sicherheit und geänderte Öffnungszeiten?
 5. Wer ist für Impressum, Datenschutz und Cookie-Banner verantwortlich?
 
-## Mein Fazit.
+## Mein Rat.
 
 Für eine einfache Seite, wenn Sie Zeit und Lust haben, ist ein Baukasten völlig in Ordnung. KI ist ein hervorragender Helfer für Texte und Ideen, weiß aber nicht, ob am Ende alles stimmt. Beauftragen lohnt sich, wenn Ihre Zeit mehr wert ist als das gesparte Geld oder die Seite einfach laufen soll.
 

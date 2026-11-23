@@ -43,7 +43,7 @@ Wenn Ihre Kunden aus der Umgebung kommen, ist das [Google-Unternehmensprofil](ht
 
 ## Was Sie nicht brauchen.
 
-Sie bekommen vermutlich regelmäßig Mails von Anbietern, die Ihnen „Platz 1 bei Google“ versprechen. Das kann niemand seriös versprechen. Auch gekaufte Links oder massenhaft Einträge in Verzeichnissen schaden eher, als dass sie helfen.
+Sie bekommen vermutlich regelmäßig E-Mails von Anbietern, die Ihnen „Platz 1 bei Google“ versprechen. Das kann niemand seriös versprechen. Auch gekaufte Links oder massenhaft Einträge in Verzeichnissen schaden eher, als dass sie helfen.
 
 ## Mein Rat.
 

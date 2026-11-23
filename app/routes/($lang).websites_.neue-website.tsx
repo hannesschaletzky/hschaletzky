@@ -17,7 +17,7 @@ const text = {
   de: {
     title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis 5 Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis zu fünf Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
       highlight: "modern und persönlich.",
@@ -39,7 +39,7 @@ const text = {
     steps: [
       {
         title: "Kennenlernen",
-        text: "Sie erzählen mir in einem kostenlosen Gespräch, was Sie vorhaben. Danach wissen Sie, welches Paket passt und was es kostet.",
+        text: "Sie erzählen mir in einem kostenlosen Erstgespräch, was Sie vorhaben. Danach wissen Sie, welches Paket passt und was es kostet.",
       },
       {
         title: "Entwurf & Feinschliff",
@@ -100,7 +100,7 @@ const text = {
         price: "990 €",
         priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
-          "Bis zu 5 Seiten, zum Beispiel Leistungen, Team, Termine und Kontakt",
+          "Bis zu fünf Seiten, zum Beispiel Leistungen, Team, Termine und Kontakt",
           "Kontaktformular",
           "Dazu Impressum und Datenschutzerklärung",
           "Zwei Korrekturrunden",
@@ -154,7 +154,7 @@ const text = {
       {
         question: "Wie läuft die Bezahlung?",
         answer:
-          "Sie zahlen erst, wenn Ihre Website online ist. Hosting und Wartung rechne ich monatlich ab.",
+          "Sie zahlen erst, wenn Ihre Website online ist. Hosting & Wartung rechne ich monatlich ab.",
       },
       {
         question: "Wem gehören die Website und die Domain?",
