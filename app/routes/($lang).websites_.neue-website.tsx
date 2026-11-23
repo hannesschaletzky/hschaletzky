@@ -7,9 +7,10 @@ import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import Testimonials from "~/components/site/testimonials";
 import PricingSection from "~/components/site/pricingSection";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/neue-website");
 
 // landing page for new websites (also the target of the website ads)
 const text = {

@@ -6,9 +6,10 @@ import FeatureHeadlines from "~/components/site/featureHeadlines";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/e-mail-einrichtung");
 
 // email with the client's own domain: I set it up and move the old mail, an
 // established provider with servers in Germany runs the mailboxes

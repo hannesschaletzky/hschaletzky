@@ -7,9 +7,10 @@ import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import PricingSection from "~/components/site/pricingSection";
 import ReferencesSection from "~/components/site/referencesSection";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/hosting-wartung");
 
 const text = {
   de: {

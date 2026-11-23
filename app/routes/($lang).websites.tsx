@@ -2,6 +2,7 @@ import type { LoaderFunctionArgs, MetaFunction } from "react-router";
 import { useLoaderData } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
+import GuideList from "~/components/site/guideList";
 import Header from "~/components/site/header";
 import OfferTiles from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
@@ -10,23 +11,14 @@ import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
 import { phone } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
-import { formatDate } from "~/ratgeber";
-import { getArticles, status } from "~/ratgeber.server";
+import { teasers } from "~/ratgeber.server";
 
 // the three newest guide articles, German only (the guide has no English version)
 export function loader(args: LoaderFunctionArgs) {
   langLoader(args);
   if (args.params.lang) return { articles: [] };
   return {
-    articles: getArticles()
-      .filter((a) => !status(a))
-      .slice(0, 3)
-      .map((a) => ({
-        slug: a.slug,
-        title: `${a.title} ${a.highlight}`,
-        description: a.description,
-        date: a.date,
-      })),
+    articles: teasers().slice(0, 3),
   };
 }
 
@@ -134,48 +126,7 @@ export default function Websites() {
               <SectionHeading eyebrow="Ratgeber">
                 Ausführlich erklärt.
               </SectionHeading>
-              <div className="max-w-3xl">
-                <ul className="border-t border-white/10">
-                  {articles.map((item) => (
-                    <li key={item.slug} className="border-b border-white/10">
-                      <a
-                        href={`/ratgeber/${item.slug}`}
-                        className="group grid gap-2 py-6 md:grid-cols-[1fr_auto] md:gap-8"
-                      >
-                        <span>
-                          <span className="block text-xl font-bold leading-snug text-white group-hover:text-teal-light">
-                            {item.title}
-                          </span>
-                          <span className="mt-1 block text-slate-400">
-                            {item.description}
-                          </span>
-                          <span className="mt-2 block text-sm text-slate-400">
-                            {formatDate(item.date)}
-                          </span>
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          className="hidden text-teal transition-transform group-hover:translate-x-1 md:block md:pt-1"
-                        >
-                          →
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="/ratgeber"
-                  className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-                >
-                  Alle Artikel im Ratgeber{" "}
-                  <span
-                    aria-hidden="true"
-                    className="inline-block transition-transform group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </a>
-              </div>
+              <GuideList articles={articles} />
             </div>
           </section>
         )}

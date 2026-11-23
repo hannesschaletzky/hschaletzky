@@ -6,9 +6,10 @@ import FeaturePath from "~/components/site/featurePath";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/sprechstunde");
 
 // office hours: the client brings questions, we go through them on their own
 // website, by the hour

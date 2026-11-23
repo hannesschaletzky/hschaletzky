@@ -6,9 +6,10 @@ import FeatureStrokes from "~/components/site/featureStrokes";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/google-sichtbarkeit");
 
 // fixed-price package for being found on Google: the basics put in order, not a
 // running SEO contract and no ranking promises

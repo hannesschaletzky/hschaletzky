@@ -1,4 +1,7 @@
+import type { LoaderFunctionArgs } from "react-router";
 import { marked } from "marked";
+import type { GuideTeaser } from "~/components/site/guideList";
+import { langLoader } from "~/i18n";
 
 // the guide articles: one Markdown file each in app/content/ratgeber, German only.
 // Server only (.server.ts), so article texts and drafts never reach the browser bundle.
@@ -22,6 +25,8 @@ export type Article = {
   minutes: number;
   // the offer the article leads to, shown as a tile at the end
   offer: { href: string; title: string; text: string };
+  // further offer pages that list the article ("auchAuf", separated by commas)
+  also: string[];
   // drafts render locally but stay out of the overview, sitemap and search engines;
   // published articles with a future date go live on that date
   draft: boolean;
@@ -53,6 +58,10 @@ function parse(path: string, raw: string): Article {
       title: meta.angebotTitel,
       text: meta.angebotText,
     },
+    also: (meta.auchAuf ?? "")
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean),
     draft: meta.entwurf === "ja",
     html: marked.parse(body, { async: false }),
   };
@@ -91,4 +100,32 @@ export function status(a: Article) {
   if (a.draft) return "Entwurf";
   if (a.date > today()) return "Geplant";
   return null;
+}
+
+// live articles as short teasers, newest first; with a path only the articles
+// that belong to that offer page (their own offer or listed under "auchAuf")
+export function teasers(offerPath?: string): GuideTeaser[] {
+  return getArticles()
+    .filter((a) => !status(a))
+    .filter(
+      (a) =>
+        !offerPath ||
+        a.offer.href.split("#")[0] === offerPath ||
+        a.also.includes(offerPath),
+    )
+    .map((a) => ({
+      slug: a.slug,
+      title: `${a.title} ${a.highlight}`,
+      description: a.description,
+      date: a.date,
+    }));
+}
+
+// loader for an offer page: its three newest guide articles, German only
+// (the guide has no English version)
+export function offerLoader(offerPath: string) {
+  return (args: LoaderFunctionArgs) => {
+    langLoader(args);
+    return { articles: args.params.lang ? [] : teasers(offerPath).slice(0, 3) };
+  };
 }

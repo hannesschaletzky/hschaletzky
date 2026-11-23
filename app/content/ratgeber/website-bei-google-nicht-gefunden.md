@@ -7,6 +7,7 @@ thema: Gefunden werden
 angebot: /websites/check-up
 angebotTitel: Website-Check-up
 angebotText: Ich prüfe Ihre Website auf Technik, Sicherheit und Auffindbarkeit und sage Ihnen, was dringend ist und was warten kann. Für 250 €.
+auchAuf: /websites/google-sichtbarkeit
 entwurf: nein
 ---
 

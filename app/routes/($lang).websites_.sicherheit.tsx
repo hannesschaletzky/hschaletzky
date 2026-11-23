@@ -6,9 +6,10 @@ import FeatureNumbers from "~/components/site/featureNumbers";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
+import { offerLoader } from "~/ratgeber.server";
 
-export const loader = langLoader;
+export const loader = offerLoader("/websites/sicherheit");
 
 // landing page for the security ads: the risks, then check-up, fixes and
 // maintenance as the three steps
