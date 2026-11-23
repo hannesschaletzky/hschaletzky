@@ -6,7 +6,7 @@ datum: 2027-01-19
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Eine schlanke Vereinswebsite ab 599 €, bis zu fünf Seiten 990 €. Was hineingehört, etwa Termine, Ansprechpartner oder ein Mitgliedsantrag, klären wir im Erstgespräch.
+angebotText: Eine schlanke Vereinswebsite ab 599 €, bis zu fünf Seiten 990 €. Was hineingehört, etwa Termine, Ansprechpartner oder ein Mitgliedsantrag, klären wir im Erstgespräch.
 entwurf: nein
 ---
 

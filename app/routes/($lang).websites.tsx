@@ -28,7 +28,7 @@ const text = {
     title:
       "Websites für kleine Unternehmen & Vereine in Berlin | Hannes Schaletzky",
     description:
-      "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat.",
+      "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat.",
     hero: {
       title: "Rund um Ihre Website,",
       highlight: "ein Ansprechpartner.",
@@ -37,7 +37,7 @@ const text = {
     },
     offersEyebrow: "Angebote & Preise",
     offersHeading: "Jedes Angebot mit Preis.",
-    vat: "Alle Preise inkl. 19 % MwSt.",
+    vat: "Alle Preise inkl. 19 % MwSt.",
     emergency: {
       label: "Notfall?",
       text: "Website gehackt, plötzlich offline oder der Browser warnt? Rufen Sie mich an:",
@@ -46,7 +46,7 @@ const text = {
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Secure websites for small businesses, clubs and self-employed people: check-up for 250 €, new websites from 599 €, hosting from 25 € a month.",
+      "Secure websites for small businesses, clubs and self-employed people: check-up for 250 €, new websites from 599 €, hosting from 25 € a month.",
     hero: {
       title: "Everything around your website,",
       highlight: "one person to talk to.",
@@ -55,7 +55,7 @@ const text = {
     },
     offersEyebrow: "Offers & prices",
     offersHeading: "Every offer with its price.",
-    vat: "All prices incl. 19 % VAT.",
+    vat: "All prices incl. 19 % VAT.",
     emergency: {
       label: "Emergency?",
       text: "Website hacked, suddenly offline or the browser shows a warning? Call me:",
@@ -95,7 +95,7 @@ export default function Websites() {
         <Testimonials group="websites" className="bg-navy-lighter" centered />
 
         {/* offers: equal tiles, each one links to its own page */}
-        <section id="angebote" className="scroll-mt-16">
+        <section id="angebote" className="scroll-mt-20">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.offersEyebrow}>
               {t.offersHeading}

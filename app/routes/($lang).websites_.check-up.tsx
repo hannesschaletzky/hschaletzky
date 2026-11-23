@@ -15,15 +15,15 @@ export const loader = offerLoader("/websites/check-up");
 // landing page for the check-up (also the target of the check-up ads)
 const text = {
   de: {
-    title: "Website-Check-up in Berlin für 250 € | Hannes Schaletzky",
+    title: "Website-Check-up in Berlin für 250 € | Hannes Schaletzky",
     description:
-      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30-minütige Besprechung, Festpreis 250 €.",
+      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30-minütige Besprechung, Festpreis 250 €.",
     hero: {
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Ich prüfe Sicherheit, Technik, Ladezeit, Google und Rechtstexte. Sie bekommen einen verständlichen Bericht, und wir besprechen ihn gemeinsam. Festpreis 250 €.",
+      text: "Ich prüfe Sicherheit, Technik, Ladezeit, Google und Rechtstexte. Sie bekommen einen verständlichen Bericht, und wir besprechen ihn gemeinsam. Festpreis 250 €.",
     },
     areasEyebrow: "Was ich prüfe",
     areasHeading: "Zehn Bereiche, ein klares Bild.",
@@ -110,8 +110,8 @@ const text = {
     packages: [
       {
         name: "Website-Check-up",
-        price: "250 €",
-        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
+        price: "250 €",
+        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
         features: [
           "Prüfung in zehn Bereichen",
           "Bis zu fünf wichtige Seiten genau durchgesehen, Sicherheit für die ganze Website",
@@ -146,7 +146,7 @@ const text = {
       {
         question: "Beheben Sie die Probleme auch?",
         answer:
-          "Gern, nach Aufwand zu 71,40 € pro Stunde (60 € netto). Im Beispielbericht brauchen 27 von 30 Vorschlägen jeweils höchstens etwa zwei Stunden. Sie können den Bericht aber genauso an Ihre Agentur oder Ihren bisherigen Dienstleister geben.",
+          "Gern, nach Aufwand zu 71,40 € pro Stunde (60 € netto). Im Beispielbericht brauchen 27 von 30 Vorschlägen jeweils höchstens etwa zwei Stunden. Sie können den Bericht aber genauso an Ihre Agentur oder Ihren bisherigen Dienstleister geben.",
       },
       {
         question: "Ist der Check-up eine Rechtsberatung?",
@@ -161,15 +161,15 @@ const text = {
     ],
   },
   en: {
-    title: "Website Check-up for 250 € | Hannes Schaletzky",
+    title: "Website Check-up for 250 € | Hannes Schaletzky",
     description:
-      "I check your website for security, technology, loading time, findability on Google and legal texts. A report with clear recommendations and a 30-minute call, fixed price 250 €.",
+      "I check your website for security, technology, loading time, findability on Google and legal texts. A report with clear recommendations and a 30-minute call, fixed price 250 €.",
     hero: {
       title: "How good is your website",
       highlight: "really?",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "I check security, technology, loading time, Google and legal texts. You get a report that is easy to understand, and we go through it together. Fixed price 250 €.",
+      text: "I check security, technology, loading time, Google and legal texts. You get a report that is easy to understand, and we go through it together. Fixed price 250 €.",
     },
     areasEyebrow: "What I check",
     areasHeading: "Ten areas, one clear picture.",
@@ -256,8 +256,8 @@ const text = {
     packages: [
       {
         name: "Website check-up",
-        price: "250 €",
-        priceNote: "Fixed price, one-off, incl. 19 % VAT.",
+        price: "250 €",
+        priceNote: "Fixed price, one-off, incl. 19 % VAT.",
         features: [
           "A check in ten areas",
           "A close look at up to five important pages, security for the whole website",
@@ -292,7 +292,7 @@ const text = {
       {
         question: "Do you fix the problems too?",
         answer:
-          "Happily, billed by effort at 71.40 € per hour (60 € net). In the sample report, 27 of 30 suggestions take at most about two hours each. You can just as well hand the report to your agency or your current provider.",
+          "Happily, billed by effort at 71.40 € per hour (60 € net). In the sample report, 27 of 30 suggestions take at most about two hours each. You can just as well hand the report to your agency or your current provider.",
       },
       {
         question: "Is the check-up legal advice?",

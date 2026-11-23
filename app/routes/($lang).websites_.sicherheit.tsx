@@ -18,13 +18,13 @@ const text = {
     title:
       "Website-Sicherheit für kleine Betriebe & Vereine | Hannes Schaletzky",
     description:
-      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat, für WordPress & Co. 60 €.",
+      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat, für WordPress & Co. 60 €.",
     hero: {
       title: "Ist Ihre Website",
       highlight: "sicher?",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Lücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich prüfe, wo Ihre Website steht. Der Check-up kostet 250 €.",
+      text: "Lücken in PHP und WordPress machen regelmäßig Schlagzeilen. Ich prüfe, wo Ihre Website steht. Der Check-up kostet 250 €.",
     },
     risksEyebrow: "Die häufigsten Risiken",
     risksHeading: "Woran es meistens liegt.",
@@ -80,7 +80,7 @@ const text = {
       {
         label: "Schritt 1",
         title: "Website-Check-up",
-        price: "250 €",
+        price: "250 €",
         text: "Ich prüfe Ihre Website von außen und ordne jeden Vorschlag nach Dringlichkeit.",
         href: "/websites/check-up",
         link: "Zum Check-up",
@@ -95,14 +95,14 @@ const text = {
       {
         label: "Schritt 3",
         title: "Hosting & Wartung",
-        price: "ab 25 € im Monat",
-        text: "Updates, tägliche Backups und Alarm bei Ausfällen. WordPress & Co. 60 € im Monat.",
+        price: "ab 25 € im Monat",
+        text: "Updates, tägliche Backups und Alarm bei Ausfällen. WordPress & Co. 60 € im Monat.",
         href: "/websites/hosting-wartung",
         link: "Zu Hosting & Wartung",
       },
     ],
     stepsNote:
-      "Jeden Schritt gibt es auch einzeln. Alle Preise inkl. 19 % MwSt.",
+      "Jeden Schritt gibt es auch einzeln. Alle Preise inkl. 19 % MwSt.",
     protectionEyebrow: "Was ich in der Wartung übernehme",
     protectionHeading: "Darum kümmere ich mich.",
     protection: [
@@ -160,13 +160,13 @@ const text = {
   en: {
     title: "Website Security for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & Co.",
+      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & Co.",
     hero: {
       title: "Is your website",
       highlight: "secure?",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Holes in PHP and WordPress make the headlines again and again. I check where your website stands. The check-up costs 250 €.",
+      text: "Holes in PHP and WordPress make the headlines again and again. I check where your website stands. The check-up costs 250 €.",
     },
     risksEyebrow: "The most common risks",
     risksHeading: "Where it usually goes wrong.",
@@ -222,7 +222,7 @@ const text = {
       {
         label: "Step 1",
         title: "Website check-up",
-        price: "250 €",
+        price: "250 €",
         text: "I check your website from the outside and rank every suggestion by urgency.",
         href: "/websites/check-up",
         link: "To the check-up",
@@ -237,14 +237,14 @@ const text = {
       {
         label: "Step 3",
         title: "Hosting & maintenance",
-        price: "from 25 € / month",
-        text: "Updates, daily backups and alerts on outages. WordPress & Co. 60 € a month.",
+        price: "from 25 € / month",
+        text: "Updates, daily backups and alerts on outages. WordPress & Co. 60 € a month.",
         href: "/websites/hosting-wartung",
         link: "To hosting & maintenance",
       },
     ],
     stepsNote:
-      "Each step is also available on its own. All prices incl. 19 % VAT.",
+      "Each step is also available on its own. All prices incl. 19 % VAT.",
     protectionEyebrow: "What I take care of in maintenance",
     protectionHeading: "That's what I take care of.",
     protection: [

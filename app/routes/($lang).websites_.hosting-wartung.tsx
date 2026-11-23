@@ -15,15 +15,15 @@ export const loader = offerLoader("/websites/hosting-wartung");
 const text = {
   de: {
     title:
-      "Website-Hosting & Wartung aus Berlin ab 25 € im Monat | Hannes Schaletzky",
+      "Website-Hosting & Wartung aus Berlin ab 25 € im Monat | Hannes Schaletzky",
     description:
-      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und persönliche Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
+      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und persönliche Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
     hero: {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Ich betreibe Ihre Website, sichere sie täglich und halte sie aktuell. Ab 25 € im Monat. Monatlich kündbar, der Umzug zu mir ist kostenlos.",
+      text: "Ich betreibe Ihre Website, sichere sie täglich und halte sie aktuell. Ab 25 € im Monat. Monatlich kündbar, der Umzug zu mir ist kostenlos.",
     },
     servicesEyebrow: "Was ich übernehme",
     servicesHeading: "Darum kümmere ich mich.",
@@ -84,8 +84,8 @@ const text = {
       {
         name: "Basis",
         description: "Für Websites, die ich für Sie baue.",
-        price: "25 €",
-        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        price: "25 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: [
           "Hosting in Deutschland",
           "Eine .de-Domain auf Ihren Namen",
@@ -99,8 +99,8 @@ const text = {
       {
         name: "Plus",
         description: "Wie Basis, dazu kleine Änderungen jeden Monat.",
-        price: "50 €",
-        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        price: "50 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: ["Alles aus Basis"],
         extras: [
           "Kleine Änderungen bis 30 Minuten im Monat, etwa Öffnungszeiten, Texte oder Bilder",
@@ -111,8 +111,8 @@ const text = {
         name: "WordPress & Co.",
         description:
           "Für WordPress, Joomla, Shops und ähnliche Systeme. Änderungen nach Aufwand.",
-        price: "60 €",
-        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        price: "60 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: ["Alles aus Basis"],
         extras: [
           "Updates für PHP, Plugins und Themes",
@@ -131,7 +131,7 @@ const text = {
       {
         question: "Was zählt als kleine Änderung?",
         answer:
-          "Zum Beispiel neue Öffnungszeiten, ein neues Foto oder ein geänderter Text. Im Plus-Paket sind bis zu 30 Minuten im Monat enthalten, ungenutzte Minuten verfallen am Monatsende. Alles darüber sowie Änderungen in den Paketen Basis und WordPress & Co. rechne ich nach Aufwand ab: 71,40 € pro Stunde (60 € netto).",
+          "Zum Beispiel neue Öffnungszeiten, ein neues Foto oder ein geänderter Text. Im Plus-Paket sind bis zu 30 Minuten im Monat enthalten, ungenutzte Minuten verfallen am Monatsende. Alles darüber sowie Änderungen in den Paketen Basis und WordPress & Co. rechne ich nach Aufwand ab: 71,40 € pro Stunde (60 € netto).",
       },
       {
         question: "Können Sie meine bestehende Website übernehmen?",
@@ -141,7 +141,7 @@ const text = {
       {
         question: "Was passiert mit meinen E-Mail-Adressen?",
         answer:
-          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer mit Ihrer Domain ein: 249 € einmalig und 6 € pro Postfach im Monat. Bleiben Ihre Postfächer beim bisherigen Anbieter, achte ich beim Umzug darauf, dass alle E-Mails weiter ankommen.",
+          "Ihre E-Mail-Adressen funktionieren weiter. Auf Wunsch richte ich Ihnen Postfächer mit Ihrer Domain ein: 249 € einmalig und 6 € pro Postfach im Monat. Bleiben Ihre Postfächer beim bisherigen Anbieter, achte ich beim Umzug darauf, dass alle E-Mails weiter ankommen.",
       },
       {
         question: "Welches Paket passt zu meiner Website?",
@@ -157,15 +157,15 @@ const text = {
   },
   en: {
     title:
-      "Website Hosting & Maintenance from 25 € a Month | Hannes Schaletzky",
+      "Website Hosting & Maintenance from 25 € a Month | Hannes Schaletzky",
     description:
-      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and personal help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
+      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and personal help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
     hero: {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "I run your website, back it up daily and keep it up to date. From 25 € a month. Cancel any month, moving to me is free.",
+      text: "I run your website, back it up daily and keep it up to date. From 25 € a month. Cancel any month, moving to me is free.",
     },
     servicesEyebrow: "What I take care of",
     servicesHeading: "That's what I take care of.",
@@ -226,8 +226,8 @@ const text = {
       {
         name: "Basic",
         description: "For websites I build for you.",
-        price: "25 €",
-        priceNote: "per month, incl. 19 % VAT",
+        price: "25 €",
+        priceNote: "per month, incl. 19 % VAT",
         features: [
           "Hosting in Germany",
           "A .de domain in your name",
@@ -241,8 +241,8 @@ const text = {
       {
         name: "Plus",
         description: "Like Basic, plus small changes every month.",
-        price: "50 €",
-        priceNote: "per month, incl. 19 % VAT",
+        price: "50 €",
+        priceNote: "per month, incl. 19 % VAT",
         features: ["Everything in Basic"],
         extras: [
           "Small changes up to 30 minutes a month, such as opening hours, texts or images",
@@ -253,8 +253,8 @@ const text = {
         name: "WordPress & Co.",
         description:
           "For WordPress, Joomla, shops and similar systems. Changes billed by effort.",
-        price: "60 €",
-        priceNote: "per month, incl. 19 % VAT",
+        price: "60 €",
+        priceNote: "per month, incl. 19 % VAT",
         features: ["Everything in Basic"],
         extras: [
           "Updates for PHP, plugins and themes",
@@ -272,7 +272,7 @@ const text = {
       {
         question: "What counts as a small change?",
         answer:
-          "For example new opening hours, a new photo or an edited text. The Plus package includes up to 30 minutes a month, unused minutes expire at the end of the month. Anything beyond that, and changes in the Basic and WordPress & Co. packages, is billed by effort: 71.40 € per hour (60 € net).",
+          "For example new opening hours, a new photo or an edited text. The Plus package includes up to 30 minutes a month, unused minutes expire at the end of the month. Anything beyond that, and changes in the Basic and WordPress & Co. packages, is billed by effort: 71.40 € per hour (60 € net).",
       },
       {
         question: "Can you take over my existing website?",
@@ -282,7 +282,7 @@ const text = {
       {
         question: "What happens to my email addresses?",
         answer:
-          "Your email addresses keep working. If you like, I set up mailboxes with your domain: 249 € one-off and 6 € per mailbox a month. If your inboxes stay with your current provider, I make sure during the move that your emails keep arriving.",
+          "Your email addresses keep working. If you like, I set up mailboxes with your domain: 249 € one-off and 6 € per mailbox a month. If your inboxes stay with your current provider, I make sure during the move that your emails keep arriving.",
       },
       {
         question: "Which package fits my website?",

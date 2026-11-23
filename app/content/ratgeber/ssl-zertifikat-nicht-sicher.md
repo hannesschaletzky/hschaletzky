@@ -24,7 +24,7 @@ Fehlt es, warnen alle gängigen Browser. Viele Besucher brechen dann ab, und auc
 
 In den allermeisten Fällen nichts. Die gemeinnützige Organisation Let’s Encrypt stellt Zertifikate kostenlos aus, und fast alle Hosting-Anbieter bieten sie im Kundenbereich an, oft mit einem einzigen Klick. Für eine normale Website reicht so ein kostenloses Zertifikat völlig.
 
-Bezahlte Zertifikate gibt es auch. Für kleine Betriebe und Vereine bringen sie in der Regel keinen Vorteil. Wenn Ihnen jemand eins für 100 € im Jahr verkaufen will, fragen Sie ruhig nach, warum.
+Bezahlte Zertifikate gibt es auch. Für kleine Betriebe und Vereine bringen sie in der Regel keinen Vorteil. Wenn Ihnen jemand eins für 100 € im Jahr verkaufen will, fragen Sie ruhig nach, warum.
 
 ## Die häufigsten Ursachen für die Warnung.
 

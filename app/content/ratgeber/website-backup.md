@@ -6,7 +6,7 @@ datum: 2027-02-16
 thema: Hosting & Wartung
 angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
-angebotText: Tägliche Backups, Updates und Überwachung, ab 25 € im Monat, für WordPress & Co. 60 €. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
+angebotText: Tägliche Backups, Updates und Überwachung, ab 25 € im Monat, für WordPress & Co. 60 €. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
 entwurf: nein
 ---
 

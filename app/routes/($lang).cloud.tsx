@@ -318,7 +318,7 @@ export default function Cloud() {
 
         {/* services: like the stack page, area left, what it covers right;
             entries with a page of their own link there; the subpages jump back here */}
-        <section id="leistungen" className="scroll-mt-16">
+        <section id="leistungen" className="scroll-mt-20">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.servicesEyebrow}>
               {t.servicesHeading}

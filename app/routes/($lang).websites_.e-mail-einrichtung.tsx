@@ -15,15 +15,15 @@ export const loader = offerLoader("/websites/e-mail-einrichtung");
 // established provider with servers in Germany runs the mailboxes
 const text = {
   de: {
-    title: "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
+    title: "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
     description:
-      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte E-Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
+      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte E-Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
     hero: {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten E-Mails um. Einmalig 249 €.",
+      text: "Eine Adresse wie info@ihr-betrieb.de wirkt professioneller als eine GMX-Adresse. Ich richte alles ein und ziehe Ihre alten E-Mails um. Einmalig 249 €.",
     },
     includedEyebrow: "Was ich einrichte",
     includedHeading: "Alles, was dazugehört.",
@@ -72,8 +72,8 @@ const text = {
       {
         name: "Einrichtung",
         description: "Einmalig, für bis zu fünf Postfächer.",
-        price: "249 €",
-        priceNote: "einmalig, inkl. 19 % MwSt.",
+        price: "249 €",
+        priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
           "Bis zu fünf Postfächer mit Ihrer Domain",
           "Schutzeinträge gegen gefälschte Absender",
@@ -85,8 +85,8 @@ const text = {
       {
         name: "Postfach",
         description: "Pro Postfach, monatlich kündbar.",
-        price: "6 €",
-        priceNote: "pro Monat, inkl. 19 % MwSt.",
+        price: "6 €",
+        priceNote: "pro Monat, inkl. 19 % MwSt.",
         features: [
           "Spam- und Virenschutz",
           "Server in Deutschland",
@@ -115,7 +115,7 @@ const text = {
       {
         question: "Was, wenn die Einrichtung der Geräte länger dauert?",
         answer:
-          "Eine Stunde reicht den meisten Betrieben, weil alle parallel mitmachen. Dauert es länger, rechne ich die zusätzliche Zeit nach Aufwand ab: 71,40 € pro Stunde (60 € netto).",
+          "Eine Stunde reicht den meisten Betrieben, weil alle parallel mitmachen. Dauert es länger, rechne ich die zusätzliche Zeit nach Aufwand ab: 71,40 € pro Stunde (60 € netto).",
       },
       {
         question: "Kann beim Umzug etwas verloren gehen?",
@@ -125,7 +125,7 @@ const text = {
       {
         question: "Ich brauche mehr als fünf Postfächer. Geht das?",
         answer:
-          "Ja. Für die Einrichtung weiterer Postfächer nenne ich Ihnen vorher einen Preis, jedes Postfach kostet dann ebenfalls 6 € im Monat.",
+          "Ja. Für die Einrichtung weiterer Postfächer nenne ich Ihnen vorher einen Preis, jedes Postfach kostet dann ebenfalls 6 € im Monat.",
       },
       {
         question: "Kann ich wieder kündigen?",
@@ -135,15 +135,15 @@ const text = {
     ],
   },
   en: {
-    title: "Email With Your Own Domain, 249 € Setup | Hannes Schaletzky",
+    title: "Email With Your Own Domain, 249 € Setup | Hannes Schaletzky",
     description:
-      "Professional addresses like info@your-business.de: set up on phone and computer, old mail moved over, protective entries against forged senders. Setup 249 €, mailbox 6 € a month.",
+      "Professional addresses like info@your-business.de: set up on phone and computer, old mail moved over, protective entries against forged senders. Setup 249 €, mailbox 6 € a month.",
     hero: {
       title: "Email with",
       highlight: "your own domain.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up and move your old mail. 249 € one-off.",
+      text: "An address like info@your-business.de looks more professional than a free-mail address. I set everything up and move your old mail. 249 € one-off.",
     },
     includedEyebrow: "What I set up",
     includedHeading: "Everything that comes with it.",
@@ -192,8 +192,8 @@ const text = {
       {
         name: "Setup",
         description: "One-off, for up to five mailboxes.",
-        price: "249 €",
-        priceNote: "one-off, incl. 19 % VAT",
+        price: "249 €",
+        priceNote: "one-off, incl. 19 % VAT",
         features: [
           "Up to five mailboxes with your domain",
           "Protective entries against forged senders",
@@ -205,8 +205,8 @@ const text = {
       {
         name: "Mailbox",
         description: "Per mailbox, cancel any month.",
-        price: "6 €",
-        priceNote: "per month, incl. 19 % VAT",
+        price: "6 €",
+        priceNote: "per month, incl. 19 % VAT",
         features: [
           "Spam and virus protection",
           "Servers in Germany",
@@ -235,7 +235,7 @@ const text = {
       {
         question: "What if setting up the devices takes longer?",
         answer:
-          "One hour is enough for most businesses, because everyone joins in at the same time. If it takes longer, I bill the extra time by effort: 71.40 € per hour (60 € net).",
+          "One hour is enough for most businesses, because everyone joins in at the same time. If it takes longer, I bill the extra time by effort: 71.40 € per hour (60 € net).",
       },
       {
         question: "Can anything get lost during the move?",
@@ -245,7 +245,7 @@ const text = {
       {
         question: "I need more than five mailboxes. Is that possible?",
         answer:
-          "Yes. For setting up more mailboxes I tell you a price beforehand, and each mailbox also costs 6 € a month.",
+          "Yes. For setting up more mailboxes I tell you a price beforehand, and each mailbox also costs 6 € a month.",
       },
       {
         question: "Can I cancel again?",

@@ -4,10 +4,10 @@ hervorhebung: oft wichtiger als die Website.
 beschreibung: Der Eintrag mit Karte, Öffnungszeiten und Bewertungen ist kostenlos und für lokale Betriebe oft der erste Kontakt mit neuen Kunden. Wie Sie ihn einrichten und was einen guten Eintrag ausmacht.
 datum: 2027-02-02
 thema: Gefunden werden
-angebot: /websites/check-up
-angebotTitel: Website-Check-up
-angebotText: Ich prüfe Ihre Website und Ihren Auftritt bei Google und sage Ihnen, was dringend ist und was warten kann. Für 250 €.
-auchAuf: /websites/google-sichtbarkeit
+angebot: /websites/google-sichtbarkeit
+angebotTitel: Google-Sichtbarkeit
+angebotText: Ich richte Ihr Google-Unternehmensprofil ein oder bringe es in Ordnung, dazu Seitentitel und Ladezeit Ihrer Website. Festpreis 390 €.
+auchAuf: /websites/check-up
 entwurf: nein
 ---
 

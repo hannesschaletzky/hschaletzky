@@ -6,7 +6,7 @@ datum: 2027-03-30
 thema: Hosting & Wartung
 angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
-angebotText: Hosting in Deutschland, tägliche Backups, Updates und Überwachung, ab 25 € im Monat, für WordPress & Co. 60 €. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
+angebotText: Hosting in Deutschland, tägliche Backups, Updates und Überwachung, ab 25 € im Monat, für WordPress & Co. 60 €. Eine .de-Domain ist dabei, und der Umzug zu mir ist kostenlos.
 entwurf: nein
 ---
 
@@ -43,8 +43,8 @@ Die Spanne ist groß. Grob:
 
 | Umfang | typischer Preis |
 | --- | --- |
-| Hosting mit Updates und Backups für eine kleine Seite | etwa 20 bis 50 € im Monat |
-| dazu Überwachung, kleine Änderungen und schnelle Hilfe | etwa 50 bis 150 € im Monat |
+| Hosting mit Updates und Backups für eine kleine Seite | etwa 20 bis 50 € im Monat |
+| dazu Überwachung, kleine Änderungen und schnelle Hilfe | etwa 50 bis 150 € im Monat |
 | Agenturverträge mit festen Reaktionszeiten | oft mehrere hundert Euro im Monat |
 
 Achten Sie weniger auf den Preis als darauf, was drinsteht. Diese Fragen helfen:

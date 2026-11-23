@@ -1,12 +1,12 @@
 ---
 titel: Was kostet eine Website
 hervorhebung: wirklich?
-beschreibung: Von 0 € bis 10.000 € ist alles dabei. Woher die Unterschiede kommen, welche Kosten jeden Monat dazukommen und worauf Sie bei einem Angebot achten sollten.
+beschreibung: Von 0 € bis 10.000 € ist alles dabei. Woher die Unterschiede kommen, welche Kosten jeden Monat dazukommen und worauf Sie bei einem Angebot achten sollten.
 datum: 2026-11-16
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Eine moderne, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Der Preis steht vorher fest, und Sie zahlen erst, wenn die Seite online ist.
+angebotText: Eine moderne, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Der Preis steht vorher fest, und Sie zahlen erst, wenn die Seite online ist.
 entwurf: nein
 ---
 
@@ -18,9 +18,9 @@ Grob gibt es drei Preisklassen:
 
 | Weg | Einmalig | Typisch für |
 | --- | --- | --- |
-| Selbst mit Baukasten | 0 € | einfache Seite, viel eigene Zeit |
-| Freelancer | etwa 500 bis 3.000 € | kleine Betriebe, Vereine, Selbstständige |
-| Agentur | ab etwa 3.000 €, oft deutlich mehr | größere Seiten, Shops, eigenes Design |
+| Selbst mit Baukasten | 0 € | einfache Seite, viel eigene Zeit |
+| Freelancer | etwa 500 bis 3.000 € | kleine Betriebe, Vereine, Selbstständige |
+| Agentur | ab etwa 3.000 €, oft deutlich mehr | größere Seiten, Shops, eigenes Design |
 
 Die Spanne innerhalb einer Klasse kommt vor allem von drei Dingen: wie viele Seiten es werden, ob Funktionen wie Terminbuchung, Mitgliederbereich oder Shop dazukommen, und wer die Texte und Bilder liefert. Wenn Sie Ihre Texte selbst schreiben und eigene Fotos haben, wird es günstiger. Muss alles erst entstehen, steckt darin oft mehr Arbeit als in der Technik.
 
@@ -28,10 +28,10 @@ Die Spanne innerhalb einer Klasse kommt vor allem von drei Dingen: wie viele Sei
 
 Diesen Teil vergessen viele. Eine Website ist nach dem Start nicht fertig bezahlt.
 
-- **Domain:** Eine .de-Adresse kostet meist zwischen 5 und 15 € im Jahr.
-- **Hosting:** Der Speicherplatz, auf dem die Seite liegt, kostet für kleine Seiten etwa 5 bis 15 € im Monat.
-- **Wartung:** Updates, Backups und jemand, der eingreift, wenn etwas nicht funktioniert. Das reicht von 0 €, wenn Sie es selbst machen, bis zu einigen hundert Euro im Monat bei Agenturen.
-- **Baukasten-Abo:** Wer einen Baukasten nutzt, zahlt statt Hosting und Wartung meist 10 bis 40 € im Monat.
+- **Domain:** Eine .de-Adresse kostet meist zwischen 5 und 15 € im Jahr.
+- **Hosting:** Der Speicherplatz, auf dem die Seite liegt, kostet für kleine Seiten etwa 5 bis 15 € im Monat.
+- **Wartung:** Updates, Backups und jemand, der eingreift, wenn etwas nicht funktioniert. Das reicht von 0 €, wenn Sie es selbst machen, bis zu einigen hundert Euro im Monat bei Agenturen.
+- **Baukasten-Abo:** Wer einen Baukasten nutzt, zahlt statt Hosting und Wartung meist 10 bis 40 € im Monat.
 
 Über fünf Jahre gerechnet sind die laufenden Kosten oft höher als der einmalige Preis. Schauen Sie deshalb immer auf beides.
 

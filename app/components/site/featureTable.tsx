@@ -10,7 +10,10 @@ export default function FeatureTable({ items }: { items: Item[] }) {
           key={item.title}
           className="grid gap-2 border-b border-white/15 py-6 md:grid-cols-[3rem_18rem_1fr] md:items-baseline md:gap-8"
         >
-          <span className="text-sm font-semibold tabular-nums text-teal">
+          <span
+            aria-hidden="true"
+            className="text-sm font-semibold tabular-nums text-teal"
+          >
             {String(i + 1).padStart(2, "0")}
           </span>
           <h3 className="text-xl font-bold text-white">{item.title}</h3>

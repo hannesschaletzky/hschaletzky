@@ -16,15 +16,15 @@ export const loader = offerLoader("/websites/google-sichtbarkeit");
 const text = {
   de: {
     title:
-      "Google-Sichtbarkeit: besser gefunden werden, 390 € | Hannes Schaletzky",
+      "Google-Sichtbarkeit: besser gefunden werden, 390 € | Hannes Schaletzky",
     description:
-      "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen Ihrer Website in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
+      "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen Ihrer Website in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
     hero: {
       title: "Damit Kunden Sie",
       highlight: "leichter bei Google finden.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen bei Google in Ordnung. Festpreis 390 €.",
+      text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen bei Google in Ordnung. Festpreis 390 €.",
     },
     includedEyebrow: "Was ich mache",
     includedHeading: "Die Grundlagen, sauber erledigt.",
@@ -76,8 +76,8 @@ const text = {
     packages: [
       {
         name: "Google-Sichtbarkeit",
-        price: "390 €",
-        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
+        price: "390 €",
+        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
         features: [
           "Google-Unternehmensprofil anlegen oder überarbeiten",
           "Search Console einrichten und Seiten einreichen",
@@ -118,15 +118,15 @@ const text = {
     ],
   },
   en: {
-    title: "Google Visibility: Get Found for 390 € | Hannes Schaletzky",
+    title: "Google Visibility: Get Found for 390 € | Hannes Schaletzky",
     description:
-      "Google Business Profile, Search Console, page titles and loading time: I put the basics of your website in order so customers find you more easily on Google. Fixed price 390 €.",
+      "Google Business Profile, Search Console, page titles and loading time: I put the basics of your website in order so customers find you more easily on Google. Fixed price 390 €.",
     hero: {
       title: "So customers",
       highlight: "find you more easily on Google.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Your website is online, but hardly anyone finds it? I put the basics on Google in order. Fixed price 390 €.",
+      text: "Your website is online, but hardly anyone finds it? I put the basics on Google in order. Fixed price 390 €.",
     },
     includedEyebrow: "What I do",
     includedHeading: "The basics, done properly.",
@@ -178,8 +178,8 @@ const text = {
     packages: [
       {
         name: "Google visibility",
-        price: "390 €",
-        priceNote: "Fixed price, one-off, incl. 19 % VAT.",
+        price: "390 €",
+        priceNote: "Fixed price, one-off, incl. 19 % VAT.",
         features: [
           "Create or revise your Google Business Profile",
           "Set up Search Console and submit your pages",

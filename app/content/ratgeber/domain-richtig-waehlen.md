@@ -6,7 +6,7 @@ datum: 2027-04-13
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Ich helfe bei der Wahl der Domain und baue die passende Website dazu, ab 599 €. Bei Hosting & Wartung ist eine .de-Domain auf Ihren Namen enthalten.
+angebotText: Ich helfe bei der Wahl der Domain und baue die passende Website dazu, ab 599 €. Bei Hosting & Wartung ist eine .de-Domain auf Ihren Namen enthalten.
 entwurf: nein
 ---
 
@@ -30,7 +30,7 @@ Wenn Ihr Name oft unterschiedlich geschrieben wird, lohnt es sich, die häufigst
 
 ## Was eine Domain kostet.
 
-Eine `.de`-Domain kostet meist zwischen 5 und 15 € im Jahr, oft ist sie im Hosting enthalten. Vorsicht bei Lockangeboten, die im ersten Jahr fast nichts kosten und danach deutlich teurer werden. Schauen Sie auf den Preis ab dem zweiten Jahr.
+Eine `.de`-Domain kostet meist zwischen 5 und 15 € im Jahr, oft ist sie im Hosting enthalten. Vorsicht bei Lockangeboten, die im ersten Jahr fast nichts kosten und danach deutlich teurer werden. Schauen Sie auf den Preis ab dem zweiten Jahr.
 
 Ist Ihre Wunschadresse vergeben, sehen Sie manchmal Angebote, sie für viel Geld zu kaufen. Das lohnt sich für kleine Betriebe selten. Eine gute Alternative findet sich fast immer.
 

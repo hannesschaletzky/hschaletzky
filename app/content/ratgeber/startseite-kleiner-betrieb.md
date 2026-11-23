@@ -6,7 +6,7 @@ datum: 2027-03-02
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Eine klare, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Wir überlegen zusammen, was Ihre Kunden wirklich wissen wollen.
+angebotText: Eine klare, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Wir überlegen zusammen, was Ihre Kunden wirklich wissen wollen.
 entwurf: nein
 ---
 

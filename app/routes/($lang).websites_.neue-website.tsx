@@ -15,15 +15,15 @@ export const loader = offerLoader("/websites/neue-website");
 // landing page for new websites (also the target of the website ads)
 const text = {
   de: {
-    title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
+    title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis zu fünf Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis zu fünf Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
       highlight: "modern und persönlich.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Ab 599 €. Sie zahlen erst, wenn die Website online ist.",
+      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Ab 599 €. Sie zahlen erst, wenn die Website online ist.",
     },
     examplesEyebrow: "Beispiele",
     examplesHeading: "Für Praxen, Vereine und Handwerk.",
@@ -84,8 +84,8 @@ const text = {
     packages: [
       {
         name: "Einseitig",
-        price: "599 €",
-        priceNote: "einmalig, inkl. 19 % MwSt.",
+        price: "599 €",
+        priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
           "Eine Seite mit allem Wichtigen: Leistungen, Über uns, Kontakt",
           "Kontaktformular",
@@ -97,8 +97,8 @@ const text = {
       },
       {
         name: "Mehrseitig",
-        price: "990 €",
-        priceNote: "einmalig, inkl. 19 % MwSt.",
+        price: "990 €",
+        priceNote: "einmalig, inkl. 19 % MwSt.",
         features: [
           "Bis zu fünf Seiten, zum Beispiel Leistungen, Team, Termine und Kontakt",
           "Kontaktformular",
@@ -110,7 +110,7 @@ const text = {
       },
     ],
     pricingNotes: [
-      "Weitere Korrekturrunden, größere Websites, Shops oder weitere Sprachen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
+      "Weitere Korrekturrunden, größere Websites, Shops oder weitere Sprachen nach Aufwand: 71,40 € pro Stunde (60 € netto).",
     ],
     faqHeading: "Gut zu wissen.",
     faqs: [
@@ -144,7 +144,7 @@ const text = {
       {
         question: "Welche laufenden Kosten kommen dazu?",
         answer:
-          "Das hängt davon ab, wo Ihre Website läuft. Ich empfehle Hosting & Wartung bei mir ab 25 € im Monat, eine .de-Domain, also Ihre Adresse wie ihr-betrieb.de, ist dabei. Sie können die Website aber auch bei einem anderen Anbieter betreiben, dann übergebe ich sie Ihnen fertig eingerichtet.",
+          "Das hängt davon ab, wo Ihre Website läuft. Ich empfehle Hosting & Wartung bei mir ab 25 € im Monat, eine .de-Domain, also Ihre Adresse wie ihr-betrieb.de, ist dabei. Sie können die Website aber auch bei einem anderen Anbieter betreiben, dann übergebe ich sie Ihnen fertig eingerichtet.",
       },
       {
         question: "Wer ist für Impressum und Datenschutz verantwortlich?",
@@ -164,15 +164,15 @@ const text = {
     ],
   },
   en: {
-    title: "Website Creation from 599 € | Hannes Schaletzky",
+    title: "Website Creation from 599 € | Hannes Schaletzky",
     description:
-      "A modern website for small businesses, self-employed people and clubs: single page 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
+      "A modern website for small businesses, self-employed people and clubs: single page 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
     hero: {
       title: "Your new website,",
       highlight: "modern and personal.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Web design from Berlin for the self-employed, small businesses and clubs. From 599 €. You only pay once the website is online.",
+      text: "Web design from Berlin for the self-employed, small businesses and clubs. From 599 €. You only pay once the website is online.",
     },
     examplesEyebrow: "Examples",
     examplesHeading: "For practices, clubs and trades.",
@@ -233,8 +233,8 @@ const text = {
     packages: [
       {
         name: "Single page",
-        price: "599 €",
-        priceNote: "one-off, incl. 19 % VAT",
+        price: "599 €",
+        priceNote: "one-off, incl. 19 % VAT",
         features: [
           "One page with everything important: services, about, contact",
           "Contact form",
@@ -246,8 +246,8 @@ const text = {
       },
       {
         name: "Multi-page",
-        price: "990 €",
-        priceNote: "one-off, incl. 19 % VAT",
+        price: "990 €",
+        priceNote: "one-off, incl. 19 % VAT",
         features: [
           "Up to 5 pages, for example services, team, dates and contact",
           "Contact form",
@@ -259,7 +259,7 @@ const text = {
       },
     ],
     pricingNotes: [
-      "More rounds of changes, bigger sites, shops or more languages billed by effort: 71.40 € per hour (60 € net).",
+      "More rounds of changes, bigger sites, shops or more languages billed by effort: 71.40 € per hour (60 € net).",
     ],
     faqHeading: "Good to know.",
     faqs: [
@@ -292,7 +292,7 @@ const text = {
       {
         question: "What running costs come on top?",
         answer:
-          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month; a .de domain, meaning your address such as your-business.de, is included. You can also run the website with another provider; in that case I hand it over to you fully set up.",
+          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month; a .de domain, meaning your address such as your-business.de, is included. You can also run the website with another provider; in that case I hand it over to you fully set up.",
       },
       {
         question: "Who is responsible for the imprint and privacy policy?",

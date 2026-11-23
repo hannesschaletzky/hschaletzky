@@ -4,7 +4,7 @@ import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { pageMeta } from "~/components/site/pageMeta";
-import { formatDate } from "~/ratgeber";
+import { formatDate, situationOf, situations } from "~/ratgeber";
 import { getArticles, status } from "~/ratgeber.server";
 
 // overview of the guide, German only: one list, newest first, with filter chips
@@ -34,22 +34,8 @@ export const meta: MetaFunction = () =>
     germanOnly: true,
   });
 
-type Item = ReturnType<typeof loader>[number];
-
-// each article's "thema" decides its situation; an article with an unknown topic
-// shows under "Alle" without a label, so no article ever disappears
-const situations = [
-  { key: "plan", name: "Website planen", topics: ["Website erstellen"] },
-  { key: "find", name: "Gefunden werden", topics: ["Gefunden werden"] },
-  {
-    key: "worry",
-    name: "Sicherheit & Pflege",
-    topics: ["Sicherheit", "Hosting & Wartung"],
-  },
-];
-
-const situationOf = (i: Item) =>
-  situations.find((s) => s.topics.includes(i.topic));
+// an article with an unknown topic shows under "Alle" without a label, so no
+// article ever disappears
 
 function Badge({ children }: { children: string }) {
   return (
@@ -75,7 +61,7 @@ export default function Ratgeber() {
       preventScrollReset: true,
     });
   const shown = filter
-    ? items.filter((i) => situationOf(i)?.key === filter)
+    ? items.filter((i) => situationOf(i.topic)?.key === filter)
     : items;
 
   return (
@@ -100,7 +86,7 @@ export default function Ratgeber() {
             {[
               { key: null, name: `Alle (${items.length})` },
               ...situations.filter((s) =>
-                items.some((i) => situationOf(i)?.key === s.key),
+                items.some((i) => situationOf(i.topic)?.key === s.key),
               ),
             ].map((s) => (
               <button
@@ -127,9 +113,9 @@ export default function Ratgeber() {
                   className="group grid gap-2 py-6 md:grid-cols-[10rem_1fr_auto] md:gap-8"
                 >
                   <span className="md:pt-1">
-                    {situationOf(item) && (
+                    {situationOf(item.topic) && (
                       <span className="inline-block whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-3 py-0.5 text-xs font-semibold text-slate-300">
-                        {situationOf(item)!.name}
+                        {situationOf(item.topic)!.name}
                       </span>
                     )}
                   </span>

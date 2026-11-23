@@ -8,7 +8,10 @@ export default function FeatureHeadlines({ items }: { items: Item[] }) {
       {items.map((item, i) => (
         <li key={item.title}>
           <div className="flex items-center gap-5">
-            <span className="w-6 shrink-0 text-sm font-semibold tabular-nums text-teal">
+            <span
+              aria-hidden="true"
+              className="w-6 shrink-0 text-sm font-semibold tabular-nums text-teal"
+            >
               {String(i + 1).padStart(2, "0")}
             </span>
             <h3 className="text-2xl font-bold text-white sm:text-3xl">

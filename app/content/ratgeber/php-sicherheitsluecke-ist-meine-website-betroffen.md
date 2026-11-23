@@ -6,7 +6,7 @@ datum: 2026-11-16
 thema: Sicherheit
 angebot: /websites/sicherheit#php
 angebotTitel: Website-Sicherheit
-angebotText: Ich prüfe, wo Ihre Website steht, behebe die dringenden Punkte und halte sie danach aktuell. Der Check-up kostet 250 €, die Wartung für WordPress-Seiten 60 € im Monat.
+angebotText: Ich prüfe, wo Ihre Website steht, behebe die dringenden Punkte und halte sie danach aktuell. Der Check-up kostet 250 €, die Wartung für WordPress-Seiten 60 € im Monat.
 entwurf: nein
 ---
 

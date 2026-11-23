@@ -11,8 +11,13 @@ import { localize, switchLang, useLang } from "~/i18n";
 // German-only pages, legal texts and the guide, switch to the English start page)
 function useOtherLang() {
   const lang = useLang();
-  const { pathname } = useLocation();
-  const href = isGermanOnly(pathname) ? "/en" : switchLang(pathname);
+  const { pathname, search } = useLocation();
+  // the topic of a request (?thema=…, see contactTopic.ts) survives the switch
+  const thema = new URLSearchParams(search).get("thema");
+  const href = isGermanOnly(pathname)
+    ? "/en"
+    : switchLang(pathname) +
+      (thema ? `?thema=${encodeURIComponent(thema)}` : "");
   return { lang, href } as const;
 }
 

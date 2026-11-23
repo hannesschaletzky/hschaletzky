@@ -260,9 +260,12 @@ export default function SideProjects() {
               >
                 {/* numbered like chapters: 1 Websites, then 1.1, 1.2 … */}
                 <h2 className="flex items-baseline gap-4 text-2xl font-bold text-white sm:text-3xl">
-                  <span className="text-4xl font-bold tabular-nums text-teal/40 sm:text-5xl">
+                  <span
+                    aria-hidden="true"
+                    className="text-4xl font-bold tabular-nums text-teal/40 sm:text-5xl"
+                  >
                     {g + 1}
-                  </span>
+                  </span>{" "}
                   {group.title[lang]}
                 </h2>
                 {/* the projects hang off one teal line per chapter */}
@@ -271,9 +274,12 @@ export default function SideProjects() {
                     const d = details(project);
                     const title = (
                       <h3 className="text-xl font-bold leading-snug text-white sm:text-2xl">
-                        <span className="mr-3 font-semibold tabular-nums text-teal/40">
+                        <span
+                          aria-hidden="true"
+                          className="mr-2 font-semibold tabular-nums text-teal/40"
+                        >
                           {g + 1}.{i + 1}
-                        </span>
+                        </span>{" "}
                         {project.title[lang]}
                       </h3>
                     );

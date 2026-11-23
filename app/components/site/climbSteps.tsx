@@ -72,6 +72,7 @@ export default function ClimbSteps({
               />
             ) : null}
             <span
+              aria-hidden="true"
               className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-teal font-bold lg:mx-auto ${
                 i === n - 1 ? "bg-teal text-navy" : "bg-navy text-teal"
               }`}

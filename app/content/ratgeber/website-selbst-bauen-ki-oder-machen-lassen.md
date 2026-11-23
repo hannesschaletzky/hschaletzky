@@ -5,7 +5,7 @@ beschreibung: Baukasten, KI oder Profi: ein ehrlicher Vergleich der drei Wege zu
 datum: 2026-11-16
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Eine moderne, schnelle Website ab 599 €. Impressum und Datenschutz sind dabei, und Sie zahlen erst, wenn sie online ist.
+angebotText: Eine moderne, schnelle Website ab 599 €. Impressum und Datenschutz sind dabei, und Sie zahlen erst, wenn sie online ist.
 thema: Website erstellen
 entwurf: nein
 ---
@@ -18,7 +18,7 @@ Ganz neutral bin ich dabei natürlich nicht. Ich versuche trotzdem, jeden Weg fa
 
 | | Baukasten | KI | Machen lassen |
 | --- | --- | --- | --- |
-| Kosten | rund 10 bis 40 € im Monat | ähnlich, oft im Baukasten enthalten | einmalig ab einigen hundert Euro, dazu Hosting |
+| Kosten | rund 10 bis 40 € im Monat | ähnlich, oft im Baukasten enthalten | einmalig ab einigen hundert Euro, dazu Hosting |
 | Ihr Zeitaufwand | hoch | mittel | gering |
 | Technik und Updates | macht der Anbieter | oft bleibt es bei Ihnen | macht der Dienstleister, wenn vereinbart |
 | Größtes Risiko | Sie hängen am Anbieter | Fehler, die niemand bemerkt | ein Dienstleister, der nicht mehr erreichbar ist |

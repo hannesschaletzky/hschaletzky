@@ -18,13 +18,13 @@ const text = {
     title:
       "Website-Sprechstunde: Ihre Fragen, persönlich beantwortet | Hannes Schaletzky",
     description:
-      "Sie bringen Ihre Fragen zu Website, Google-Unternehmensprofil, Analytics oder Ads mit, und wir gehen sie gemeinsam durch. Vor Ort in Berlin oder per Video, 71,40 € pro Stunde.",
+      "Sie bringen Ihre Fragen zu Website, Google-Unternehmensprofil, Analytics oder Ads mit, und wir gehen sie gemeinsam durch. Vor Ort in Berlin oder per Video, 71,40 € pro Stunde.",
     hero: {
       title: "Ihre Fragen,",
       highlight: "persönlich beantwortet.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Wir gehen Ihre Fragen zur Website in Ruhe durch, vor Ort in Berlin oder per Video. 71,40 € pro Stunde.",
+      text: "Wir gehen Ihre Fragen zur Website in Ruhe durch, vor Ort in Berlin oder per Video. 71,40 € pro Stunde.",
     },
     topicsEyebrow: "Typische Themen",
     topicsHeading: "Worum es gehen kann.",
@@ -76,8 +76,8 @@ const text = {
     packages: [
       {
         name: "Website-Sprechstunde",
-        price: "71,40 €",
-        priceNote: "pro Stunde, inkl. 19 % MwSt. (60 € netto)",
+        price: "71,40 €",
+        priceNote: "pro Stunde, inkl. 19 % MwSt. (60 € netto)",
         features: [
           "Vor Ort in Berlin oder per Video",
           "An Ihrer eigenen Website, Sie klicken selbst",
@@ -112,7 +112,7 @@ const text = {
       {
         question: "Wie wird abgerechnet?",
         answer:
-          "Nach der tatsächlichen Zeit, zu 71,40 € pro Stunde (60 € netto). Vorher sage ich Ihnen, wie lange es ungefähr dauert.",
+          "Nach der tatsächlichen Zeit, zu 71,40 € pro Stunde (60 € netto). Vorher sage ich Ihnen, wie lange es ungefähr dauert.",
       },
     ],
   },
@@ -120,13 +120,13 @@ const text = {
     title:
       "Website Office Hours: Your Questions, Answered in Person | Hannes Schaletzky",
     description:
-      "You bring your questions about your website, Google Business Profile, Analytics or Ads, and we go through them together. On-site in Berlin or by video, 71.40 € per hour.",
+      "You bring your questions about your website, Google Business Profile, Analytics or Ads, and we go through them together. On-site in Berlin or by video, 71.40 € per hour.",
     hero: {
       title: "Your questions,",
       highlight: "answered in person.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "We go through your questions about your website calmly, on-site in Berlin or by video. 71.40 € per hour.",
+      text: "We go through your questions about your website calmly, on-site in Berlin or by video. 71.40 € per hour.",
     },
     topicsEyebrow: "Typical topics",
     topicsHeading: "What it can be about.",
@@ -178,8 +178,8 @@ const text = {
     packages: [
       {
         name: "Website office hours",
-        price: "71.40 €",
-        priceNote: "per hour, incl. 19 % VAT (60 € net)",
+        price: "71.40 €",
+        priceNote: "per hour, incl. 19 % VAT (60 € net)",
         features: [
           "On-site in Berlin or by video",
           "On your own website, you do the clicking",
@@ -213,7 +213,7 @@ const text = {
       {
         question: "How is it billed?",
         answer:
-          "By the actual time, at 71.40 € per hour (60 € net). Beforehand I tell you roughly how long it will take.",
+          "By the actual time, at 71.40 € per hour (60 € net). Beforehand I tell you roughly how long it will take.",
       },
     ],
   },

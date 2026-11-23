@@ -6,7 +6,7 @@ datum: 2027-04-27
 thema: Hosting & Wartung
 angebot: /websites/hosting-wartung
 angebotTitel: Hosting & Wartung
-angebotText: Ich ziehe Ihre Website kostenlos zu mir um, möglichst ohne Ausfall, und halte sie danach aktuell. Ab 25 € im Monat, für WordPress & Co. 60 €, eine .de-Domain ist dabei.
+angebotText: Ich ziehe Ihre Website kostenlos zu mir um, möglichst ohne Ausfall, und halte sie danach aktuell. Ab 25 € im Monat, für WordPress & Co. 60 €, eine .de-Domain ist dabei.
 entwurf: nein
 ---
 

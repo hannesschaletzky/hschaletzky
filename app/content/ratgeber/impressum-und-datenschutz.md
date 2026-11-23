@@ -6,7 +6,7 @@ datum: 2026-12-16
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Bei jeder Website, die ich baue, sind Impressum und Datenschutzerklärung eingerichtet und passen zu dem, was auf der Seite tatsächlich läuft. Ab 599 €.
+angebotText: Bei jeder Website, die ich baue, sind Impressum und Datenschutzerklärung eingerichtet und passen zu dem, was auf der Seite tatsächlich läuft. Ab 599 €.
 entwurf: nein
 ---
 

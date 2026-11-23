@@ -6,7 +6,8 @@ datum: 2027-03-16
 thema: Gefunden werden
 angebot: /websites/check-up
 angebotTitel: Website-Check-up
-angebotText: Ich messe, was Ihre Website bremst, und sage Ihnen, was sich mit wenig Aufwand verbessern lässt. Für 250 €.
+angebotText: Ich messe, was Ihre Website bremst, und sage Ihnen, was sich mit wenig Aufwand verbessern lässt. Für 250 €.
+auchAuf: /websites/google-sichtbarkeit
 entwurf: nein
 ---
 
