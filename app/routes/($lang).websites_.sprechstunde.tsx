@@ -6,7 +6,7 @@ import FeaturePath from "~/components/site/featurePath";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, localize, useLang } from "~/i18n";
+import { langFromParams, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 
 export const loader = offerLoader("/websites/sprechstunde");
@@ -260,13 +260,6 @@ export default function WebsiteSprechstunde() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
-        more={{
-          label:
-            lang === "de"
-              ? "Alle Website-Leistungen im Überblick"
-              : "All website services at a glance",
-          href: `${localize("/websites", lang)}#angebote`,
-        }}
       />
     </OfferPage>
   );

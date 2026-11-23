@@ -10,6 +10,7 @@ import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
 import { langFromParams, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
+import { primaryButton } from "~/components/site/buttons";
 
 export const loader = offerLoader("/websites/sicherheit");
 
@@ -454,7 +455,7 @@ export default function WebsiteSicherheit() {
               </ul>
               <a
                 href={links.contact}
-                className="mt-8 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+                className={`mt-8 inline-block ${primaryButton}`}
               >
                 {t.php.cta}
               </a>

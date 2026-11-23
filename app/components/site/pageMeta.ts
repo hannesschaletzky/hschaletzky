@@ -110,9 +110,9 @@ export const businessJsonLd = (lang: Lang) => ({
       addressCountry: "DE",
     },
     // DACH: remote or on-site in Germany, Austria and Switzerland
-    areaServed: ["DE", "AT", "CH"].map((code) => ({
+    areaServed: ["Germany", "Austria", "Switzerland"].map((name) => ({
       "@type": "Country",
-      name: code,
+      name,
     })),
     founder: {
       "@type": "Person",

@@ -7,7 +7,7 @@ import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import Testimonials from "~/components/site/testimonials";
 import PricingSection from "~/components/site/pricingSection";
-import { langFromParams, localize, useLang } from "~/i18n";
+import { langFromParams, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 
 export const loader = offerLoader("/websites/neue-website");
@@ -405,13 +405,6 @@ export default function WebsiteErstellen() {
         packages={t.packages}
         notes={t.pricingNotes}
         featuresLabel={t.featuresLabel}
-        more={{
-          label:
-            lang === "de"
-              ? "Alle Website-Leistungen im Überblick"
-              : "All website services at a glance",
-          href: `${localize("/websites", lang)}#angebote`,
-        }}
       />
     </OfferPage>
   );

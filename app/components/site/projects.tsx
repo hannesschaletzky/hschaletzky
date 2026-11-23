@@ -117,7 +117,7 @@ export function ProjectCards({
         return (
           <article
             key={id}
-            className="flex flex-col rounded-3xl border border-white/10 bg-navy-light p-8"
+            className="flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8"
           >
             <div className="flex items-center gap-4">
               <img

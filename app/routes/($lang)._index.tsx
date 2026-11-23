@@ -7,6 +7,7 @@ import Offers from "~/components/site/offers";
 import { businessJsonLd, pageMeta } from "~/components/site/pageMeta";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { primaryButton } from "~/components/site/buttons";
 
 // index: hero with the mountains, testimonials, the two offers and contact
 
@@ -80,10 +81,7 @@ export default function Index() {
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg">{t.intro}</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <a
-                href={localize("/contact", lang)}
-                className="rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
-              >
+              <a href={localize("/contact", lang)} className={primaryButton}>
                 {t.contact}
               </a>
               <a

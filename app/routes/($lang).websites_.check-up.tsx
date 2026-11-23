@@ -7,8 +7,9 @@ import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, localize, useLang } from "~/i18n";
+import { langFromParams, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
+import { primaryButton } from "~/components/site/buttons";
 
 export const loader = offerLoader("/websites/check-up");
 
@@ -366,7 +367,7 @@ export default function WebsiteCheckUp() {
                 href={reportPdf}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+                className={`inline-block ${primaryButton}`}
               >
                 {t.reportCta}
               </a>
@@ -422,13 +423,6 @@ export default function WebsiteCheckUp() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
-        more={{
-          label:
-            lang === "de"
-              ? "Alle Website-Leistungen im Überblick"
-              : "All website services at a glance",
-          href: `${localize("/websites", lang)}#angebote`,
-        }}
       />
     </OfferPage>
   );

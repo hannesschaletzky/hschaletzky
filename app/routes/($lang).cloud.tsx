@@ -14,6 +14,7 @@ import SectionHeading from "~/components/site/sectionHeading";
 import StackSection from "~/components/site/stackSection";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
+import { primaryButton } from "~/components/site/buttons";
 
 export const loader = langLoader;
 
@@ -385,7 +386,7 @@ export default function Cloud() {
               {t.ways.map((way) => (
                 <article
                   key={way.title}
-                  className="flex flex-col rounded-3xl border border-white/10 bg-navy-light p-8"
+                  className="flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8"
                 >
                   <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
                     {way.title}
@@ -402,7 +403,7 @@ export default function Cloud() {
             </div>
             <a
               href={localize("/contact", lang)}
-              className="mt-10 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+              className={`mt-10 inline-block ${primaryButton}`}
             >
               {t.hero.cta}
             </a>

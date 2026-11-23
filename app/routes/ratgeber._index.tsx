@@ -120,12 +120,12 @@ export default function Ratgeber() {
                     )}
                   </span>
                   <span>
-                    <span className="block text-xl font-bold leading-snug text-white group-hover:text-teal-light">
+                    <h2 className="text-xl font-bold leading-snug text-white group-hover:text-teal-light">
                       {item.title}
                       {item.slug === newest && <Badge>Neu</Badge>}
                       {/* only in development: drafts and scheduled ones */}
                       {item.status && <Badge>{item.status}</Badge>}
-                    </span>
+                    </h2>
                     <span className="mt-1 block text-slate-400">
                       {item.description}
                     </span>

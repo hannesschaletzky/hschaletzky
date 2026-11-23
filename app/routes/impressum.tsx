@@ -25,7 +25,7 @@ export default function Impressum() {
           E-Mail:{" "}
           <a
             href={`mailto:${mail}`}
-            className="text-teal underline underline-offset-4"
+            className="text-teal underline underline-offset-4 hover:text-teal-light"
           >
             {mail}
           </a>
@@ -33,7 +33,7 @@ export default function Impressum() {
           Telefon:{" "}
           <a
             href={phone.href}
-            className="text-teal underline underline-offset-4"
+            className="text-teal underline underline-offset-4 hover:text-teal-light"
           >
             {phone.label}
           </a>

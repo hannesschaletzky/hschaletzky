@@ -2,6 +2,7 @@ import { useContactLinks } from "~/components/site/contactTopic";
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
 import ArrowLink from "~/components/site/arrowLink";
+import { primaryButton } from "~/components/site/buttons";
 
 type Package = {
   name: string;
@@ -33,7 +34,7 @@ function Cta({ cta }: { cta: Package["cta"] }) {
         target: "_blank",
         rel: "noreferrer",
       })}
-      className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+      className={`inline-block ${primaryButton}`}
     >
       {cta.label}
     </a>

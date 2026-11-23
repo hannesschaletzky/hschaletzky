@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Mountains from "~/components/site/mountains";
+import { primaryButton } from "~/components/site/buttons";
 
 // smaller version of the index hero for subpages
 export default function PageHero({
@@ -51,7 +52,7 @@ export default function PageHero({
               target: "_blank",
               rel: "noreferrer",
             })}
-            className="inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
+            className={`inline-block ${primaryButton}`}
           >
             {cta.label}
           </a>

@@ -22,9 +22,9 @@ function GuideList({ articles }: { articles: GuideTeaser[] }) {
               className="group grid gap-2 py-6 md:grid-cols-[1fr_auto] md:gap-8"
             >
               <span>
-                <span className="block text-xl font-bold leading-snug text-white group-hover:text-teal-light">
+                <h3 className="text-xl font-bold leading-snug text-white group-hover:text-teal-light">
                   {item.title}
-                </span>
+                </h3>
                 <span className="mt-1 block text-slate-400">
                   {item.description}
                 </span>

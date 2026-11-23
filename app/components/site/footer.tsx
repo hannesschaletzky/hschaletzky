@@ -66,6 +66,8 @@ export default function Footer() {
           </div>
           <button
             type="button"
+            // a hidden extra for the mouse only: not a stop for the keyboard
+            tabIndex={-1}
             onClick={secret.onClick}
             className="cursor-default"
           >

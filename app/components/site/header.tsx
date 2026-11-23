@@ -87,7 +87,10 @@ export default function Header() {
             className="h-5 w-auto sm:h-6"
           />
         </a>
-        <nav className="flex items-center gap-3 text-sm sm:gap-6">
+        <nav
+          aria-label={de ? "Hauptnavigation" : "Main navigation"}
+          className="flex items-center gap-3 text-sm sm:gap-6"
+        >
           {/* each main link opens a small menu with the pages of its area, on
               hover and on keyboard focus (CSS only, so it works without
               JavaScript). The link itself still leads to the overview, which is
