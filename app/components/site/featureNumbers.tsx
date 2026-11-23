@@ -9,7 +9,10 @@ export default function FeatureNumbers({ items }: { items: Item[] }) {
           <span
             aria-hidden="true"
             className="block text-5xl font-bold leading-none text-transparent"
-            style={{ WebkitTextStroke: "1px rgb(63 184 160 / 0.6)" }}
+            style={{
+              WebkitTextStroke:
+                "1px color-mix(in srgb, var(--color-teal) 60%, transparent)",
+            }}
           >
             {String(i + 1).padStart(2, "0")}
           </span>

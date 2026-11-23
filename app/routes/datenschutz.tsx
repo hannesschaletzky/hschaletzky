@@ -3,6 +3,7 @@ import LegalPage, {
   ExternalLink,
   LegalSection,
 } from "~/components/site/legalPage";
+import { mail } from "~/components/site/siteNav";
 
 export const meta: MetaFunction = () => [
   { title: "Datenschutzerklärung | Hannes Schaletzky" },
@@ -27,7 +28,7 @@ export default function Datenschutz() {
           <br />
           10719 Berlin
           <br />
-          E-Mail: info@hschaletzky.com
+          E-Mail: {mail}
         </p>
       </LegalSection>
 

@@ -312,10 +312,11 @@ export default function ArchitekturReview() {
       </Section>
 
       {/* possible focus areas, picked together */}
-      <Section eyebrow={t.focusEyebrow} heading={t.focusHeading}>
-        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-          {t.focusIntro}
-        </p>
+      <Section
+        eyebrow={t.focusEyebrow}
+        heading={t.focusHeading}
+        intro={t.focusIntro}
+      >
         <FeatureStrokes items={t.focus} columns={4} />
       </Section>
 
@@ -325,7 +326,7 @@ export default function ArchitekturReview() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+        <ClimbSteps steps={t.steps} />
       </Section>
 
       <PricingSection

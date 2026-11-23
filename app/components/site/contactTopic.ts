@@ -1,8 +1,6 @@
 import { useLocation, useSearchParams } from "react-router";
-import { calUrl, getSiteMap } from "~/components/site/siteNav";
+import { calUrl, getSiteMap, mail } from "~/components/site/siteNav";
 import { localize, useLang, type Lang } from "~/i18n";
-
-export const mail = "info@hschaletzky.com";
 
 // The offer a visitor comes from travels along when they get in touch: as the
 // subject of the mail, as a note in the booking and as ?thema=… on the way to

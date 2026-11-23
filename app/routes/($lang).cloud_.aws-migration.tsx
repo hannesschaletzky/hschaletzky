@@ -292,10 +292,11 @@ export default function AwsMigration() {
       </Section>
 
       {/* what's included */}
-      <Section eyebrow={t.includedEyebrow} heading={t.includedHeading}>
-        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-          {t.includedIntro}
-        </p>
+      <Section
+        eyebrow={t.includedEyebrow}
+        heading={t.includedHeading}
+        intro={t.includedIntro}
+      >
         <FeatureChecks items={t.included} />
       </Section>
 
@@ -309,7 +310,7 @@ export default function AwsMigration() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+        <FeaturePath items={t.steps} />
       </Section>
 
       <PricingSection

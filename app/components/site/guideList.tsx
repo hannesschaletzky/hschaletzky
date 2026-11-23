@@ -1,4 +1,6 @@
 import { formatDate } from "~/ratgeber";
+import ArrowLink from "~/components/site/arrowLink";
+import Section from "~/components/site/section";
 
 export type GuideTeaser = {
   slug: string;
@@ -9,7 +11,7 @@ export type GuideTeaser = {
 
 // guide articles as a quiet list with a link to the whole guide; on /websites
 // and on the offer pages the articles belong to
-export default function GuideList({ articles }: { articles: GuideTeaser[] }) {
+function GuideList({ articles }: { articles: GuideTeaser[] }) {
   return (
     <div className="max-w-3xl">
       <ul className="border-t border-white/10">
@@ -40,18 +42,28 @@ export default function GuideList({ articles }: { articles: GuideTeaser[] }) {
           </li>
         ))}
       </ul>
-      <a
-        href="/ratgeber"
-        className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-      >
-        Alle Artikel im Ratgeber{" "}
-        <span
-          aria-hidden="true"
-          className="inline-block transition-transform group-hover:translate-x-1"
-        >
-          →
-        </span>
-      </a>
+      <ArrowLink href="/ratgeber">Alle Artikel im Ratgeber</ArrowLink>
     </div>
+  );
+}
+
+// the section "Ratgeber – Ausführlich erklärt." on /websites and on the offer
+// pages; nothing is shown without articles
+export default function GuideSection({
+  articles,
+  className,
+}: {
+  articles: GuideTeaser[];
+  className?: string;
+}) {
+  if (articles.length === 0) return null;
+  return (
+    <Section
+      eyebrow="Ratgeber"
+      heading="Ausführlich erklärt."
+      className={className}
+    >
+      <GuideList articles={articles} />
+    </Section>
   );
 }

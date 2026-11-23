@@ -1,5 +1,6 @@
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
+import ArrowLink from "~/components/site/arrowLink";
 
 // a short teaser for tech readers (cloud page): one row of the most telling
 // tools, the details with a sentence per area live on the stack page
@@ -38,18 +39,9 @@ export default function StackSection({ className }: { className?: string }) {
             </li>
           ))}
         </ul>
-        <a
-          href={localize("/stack", lang)}
-          className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-        >
-          {lang === "de" ? "Zum kompletten Stack" : "See the full stack"}{" "}
-          <span
-            aria-hidden="true"
-            className="inline-block transition-transform group-hover:translate-x-1"
-          >
-            →
-          </span>
-        </a>
+        <ArrowLink href={localize("/stack", lang)}>
+          {lang === "de" ? "Zum kompletten Stack" : "See the full stack"}
+        </ArrowLink>
       </div>
     </section>
   );

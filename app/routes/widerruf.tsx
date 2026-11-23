@@ -1,5 +1,6 @@
 import type { MetaFunction } from "react-router";
 import LegalPage, { LegalSection } from "~/components/site/legalPage";
+import { mail, phone } from "~/components/site/siteNav";
 
 export const meta: MetaFunction = () => [
   { title: "Widerrufsbelehrung | Hannes Schaletzky" },
@@ -29,10 +30,10 @@ export default function Widerruf() {
         </p>
         <p>
           Um Ihr Widerrufsrecht auszuüben, müssen Sie mich (Hannes Schaletzky,
-          Fasanenstraße 38, 10719 Berlin, Telefon: +49 162 8525830, E-Mail:
-          info@hschaletzky.com) mittels einer eindeutigen Erklärung (z. B. ein
-          mit der Post versandter Brief oder eine E-Mail) über Ihren Entschluss,
-          diesen Vertrag zu widerrufen, informieren. Sie können dafür das unten
+          Fasanenstraße 38, 10719 Berlin, Telefon: {phone.label}, E-Mail: {mail}
+          ) mittels einer eindeutigen Erklärung (z. B. ein mit der Post
+          versandter Brief oder eine E-Mail) über Ihren Entschluss, diesen
+          Vertrag zu widerrufen, informieren. Sie können dafür das unten
           stehende Muster-Widerrufsformular verwenden, das jedoch nicht
           vorgeschrieben ist.
         </p>
@@ -82,8 +83,7 @@ export default function Widerruf() {
         </p>
         <div className="space-y-3 rounded-xl border border-white/10 px-5 py-4">
           <p>
-            An Hannes Schaletzky, Fasanenstraße 38, 10719 Berlin, E-Mail:
-            info@hschaletzky.com
+            An Hannes Schaletzky, Fasanenstraße 38, 10719 Berlin, E-Mail: {mail}
           </p>
           <p>
             Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen

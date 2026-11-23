@@ -1,5 +1,6 @@
 import type { MetaFunction } from "react-router";
 import LegalPage, { LegalSection } from "~/components/site/legalPage";
+import { mail, phone } from "~/components/site/siteNav";
 
 export const meta: MetaFunction = () => [
   { title: "Impressum | Hannes Schaletzky" },
@@ -23,18 +24,18 @@ export default function Impressum() {
         <p>
           E-Mail:{" "}
           <a
-            href="mailto:info@hschaletzky.com"
+            href={`mailto:${mail}`}
             className="text-teal underline underline-offset-4"
           >
-            info@hschaletzky.com
+            {mail}
           </a>
           <br />
           Telefon:{" "}
           <a
-            href="tel:+491628525830"
+            href={phone.href}
             className="text-teal underline underline-offset-4"
           >
-            +49 162 8525830
+            {phone.label}
           </a>
         </p>
       </LegalSection>

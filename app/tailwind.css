@@ -23,6 +23,8 @@
 
   --color-teal: #3fb8a0;
   --color-teal-light: #6fd0bc;
+  /* the paper of the certificates on /about */
+  --color-paper: #fbf8f1;
 
   @keyframes wiggle {
     0%,

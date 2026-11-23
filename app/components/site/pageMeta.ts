@@ -1,5 +1,6 @@
 import { siteUrl } from "~/components/site/sitePages";
 import { localize, type Lang } from "~/i18n";
+import { mail, phone } from "~/components/site/siteNav";
 
 // title, description, link preview (Open Graph), canonical URL and the links
 // between the German and English version of a page
@@ -98,8 +99,8 @@ export const businessJsonLd = (lang: Lang) => ({
     url: siteUrl,
     image: `${siteUrl}/hannes-portrait.jpg`,
     logo: `${siteUrl}/icon-512.png`,
-    email: "info@hschaletzky.com",
-    telephone: "+491628525830",
+    email: mail,
+    telephone: phone.number,
     // the same address as in the imprint
     address: {
       "@type": "PostalAddress",

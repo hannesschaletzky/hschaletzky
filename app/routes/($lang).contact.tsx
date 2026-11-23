@@ -2,8 +2,8 @@ import type { MetaFunction } from "react-router";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
-import { mail, useContactLinks } from "~/components/site/contactTopic";
-import { calUrl, phone } from "~/components/site/siteNav";
+import { useContactLinks } from "~/components/site/contactTopic";
+import { calUrl, mail, phone } from "~/components/site/siteNav";
 import { pageMeta } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 

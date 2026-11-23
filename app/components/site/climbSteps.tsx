@@ -22,7 +22,7 @@ const layouts = {
 
 export default function ClimbSteps({
   steps,
-  hillClass = "fill-navy-light",
+  hillClass = "fill-navy-lighter",
 }: {
   steps: { title: string; text: string }[];
   hillClass?: string;

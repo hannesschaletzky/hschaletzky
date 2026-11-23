@@ -2,7 +2,7 @@ import type { LoaderFunctionArgs, MetaFunction } from "react-router";
 import { useLoaderData } from "react-router";
 import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
-import GuideList from "~/components/site/guideList";
+import GuideSection from "~/components/site/guideList";
 import Header from "~/components/site/header";
 import OfferTiles from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
@@ -119,16 +119,7 @@ export default function Websites() {
         </section>
 
         {/* the guide belongs to the website offers, so it lives here instead of the header */}
-        {articles.length > 0 && (
-          <section className="bg-navy-light">
-            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-              <SectionHeading eyebrow="Ratgeber">
-                Ausführlich erklärt.
-              </SectionHeading>
-              <GuideList articles={articles} />
-            </div>
-          </section>
-        )}
+        <GuideSection articles={articles} className="bg-navy-light" />
 
         <ContactBox
           above={articles.length > 0 ? "--color-navy-light" : undefined}

@@ -1,5 +1,6 @@
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
+import ArrowLink from "~/components/site/arrowLink";
 
 type Offer = {
   title: string;
@@ -173,20 +174,11 @@ export function RelatedOffers({
             : "More around your website."}
         </SectionHeading>
         <OfferTiles current={current} hidden={hidden} />
-        <a
-          href={`${localize("/websites", lang)}#angebote`}
-          className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-        >
+        <ArrowLink href={`${localize("/websites", lang)}#angebote`}>
           {lang === "de"
             ? "Alle Angebote im Überblick"
-            : "All offers at a glance"}{" "}
-          <span
-            aria-hidden="true"
-            className="inline-block transition-transform group-hover:translate-x-1"
-          >
-            →
-          </span>
-        </a>
+            : "All offers at a glance"}
+        </ArrowLink>
       </div>
     </section>
   );

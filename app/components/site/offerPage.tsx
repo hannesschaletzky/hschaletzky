@@ -4,11 +4,10 @@ import ContactBox from "~/components/site/contactBox";
 import { useContactLinks } from "~/components/site/contactTopic";
 import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
-import GuideList, { type GuideTeaser } from "~/components/site/guideList";
+import GuideSection, { type GuideTeaser } from "~/components/site/guideList";
 import Header from "~/components/site/header";
 import { RelatedOffers } from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
-import SectionHeading from "~/components/site/sectionHeading";
 import { calUrl, phone } from "~/components/site/siteNav";
 import { useLang } from "~/i18n";
 
@@ -87,16 +86,7 @@ export default function OfferPage({
           className={websites ? "bg-navy-light" : "bg-navy-lighter"}
         />
 
-        {articles.length > 0 && (
-          <section>
-            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-              <SectionHeading eyebrow="Ratgeber">
-                Ausführlich erklärt.
-              </SectionHeading>
-              <GuideList articles={articles} />
-            </div>
-          </section>
-        )}
+        <GuideSection articles={articles} />
 
         {/* after the guide list the related offers get the lighter background,
             so the sections keep alternating down to the contact box */}

@@ -252,7 +252,7 @@ export default function WebsiteSprechstunde() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+        <FeaturePath items={t.steps} />
       </Section>
 
       <PricingSection

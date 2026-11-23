@@ -1,24 +1,20 @@
+import { getSiteMap } from "~/components/site/siteNav";
+
 // indexable pages of the site (German addresses, English under /en) – used for
 // sitemap.xml (legal pages are noindex)
 export const siteUrl = "https://hschaletzky.com";
 
+// every page of the navigation (start page first), without external links, the
+// guide (its articles come from ratgeber.server.ts) and mail or phone links
 export const sitePages = [
   "/",
-  "/cloud",
-  "/cloud/systemintegration",
-  "/cloud/aws-migration",
-  "/cloud/architektur-review",
-  "/cloud/betrieb",
-  "/websites",
-  "/websites/check-up",
-  "/websites/neue-website",
-  "/websites/hosting-wartung",
-  "/websites/sicherheit",
-  "/websites/google-sichtbarkeit",
-  "/websites/sprechstunde",
-  "/websites/e-mail-einrichtung",
-  "/about",
-  "/stack",
-  "/side-projects",
-  "/contact",
+  ...getSiteMap("de")
+    .flatMap((group) => group.links)
+    .filter(
+      (link) =>
+        !link.external &&
+        link.href.startsWith("/") &&
+        !link.href.startsWith("/ratgeber"),
+    )
+    .map((link) => link.href),
 ];

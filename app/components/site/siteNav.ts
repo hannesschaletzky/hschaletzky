@@ -128,7 +128,7 @@ export function getSiteMap(lang: Lang): { title: string; links: SiteLink[] }[] {
           href: calUrl,
           external: true,
         },
-        { label: "info@hschaletzky.com", href: "mailto:info@hschaletzky.com" },
+        { label: mail, href: `mailto:${mail}` },
         phone,
       ],
     },
@@ -139,7 +139,14 @@ export function getSiteMap(lang: Lang): { title: string; links: SiteLink[] }[] {
 export const calUrl = "https://cal.com/hannesschaletzky";
 
 // business number, the same as in the imprint
-export const phone = { label: "+49 162 8525830", href: "tel:+491628525830" };
+export const phone = {
+  label: "+49 162 8525830",
+  number: "+491628525830",
+  href: "tel:+491628525830",
+};
+
+// the one mail address, also in the imprint and the structured data
+export const mail = "info@hschaletzky.com";
 
 // the legal pages exist in German only
 export const legalPaths = ["/impressum", "/datenschutz", "/widerruf"];

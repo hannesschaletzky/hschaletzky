@@ -307,10 +307,11 @@ export default function Betrieb() {
       </Section>
 
       {/* possible tasks, agreed together */}
-      <Section eyebrow={t.tasksEyebrow} heading={t.tasksHeading}>
-        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-          {t.tasksIntro}
-        </p>
+      <Section
+        eyebrow={t.tasksEyebrow}
+        heading={t.tasksHeading}
+        intro={t.tasksIntro}
+      >
         <FeatureStrokes items={t.tasks} columns={4} />
       </Section>
 
@@ -327,7 +328,7 @@ export default function Betrieb() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <FeaturePath items={t.steps} circleBg="bg-navy-light" />
+        <FeaturePath items={t.steps} />
       </Section>
 
       <PricingSection

@@ -1,6 +1,7 @@
 import { useContactLinks } from "~/components/site/contactTopic";
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
+import ArrowLink from "~/components/site/arrowLink";
 
 type Package = {
   name: string;
@@ -194,20 +195,7 @@ export default function PricingSection({
             ))}
           </div>
         )}
-        {more && (
-          <a
-            href={more.href}
-            className="group mt-8 inline-block font-semibold text-teal hover:text-teal-light"
-          >
-            {more.label}{" "}
-            <span
-              aria-hidden="true"
-              className="inline-block transition-transform group-hover:translate-x-1"
-            >
-              →
-            </span>
-          </a>
-        )}
+        {more && <ArrowLink href={more.href}>{more.label}</ArrowLink>}
       </div>
     </section>
   );

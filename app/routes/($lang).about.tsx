@@ -463,7 +463,7 @@ export default function About() {
                       className="aspect-square w-16 object-cover sm:w-20"
                     />
                   </PhotoLightbox>
-                  <div className="flex-1 rounded-xl bg-[#FBF8F1] p-2 text-navy shadow-2xl shadow-black/30">
+                  <div className="flex-1 rounded-xl bg-paper p-2 text-navy shadow-2xl shadow-black/30">
                     <div className="relative h-full rounded-lg border border-navy/20">
                       <div className="h-full px-6 pb-10 pt-8 text-center sm:px-10">
                         <h3 className="font-serif text-3xl text-navy sm:text-4xl">
@@ -483,7 +483,7 @@ export default function About() {
                         </ul>
                       </div>
                       {/* seal */}
-                      <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-[#FBF8F1]">
+                      <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-paper">
                         {license.icon}
                       </span>
                     </div>

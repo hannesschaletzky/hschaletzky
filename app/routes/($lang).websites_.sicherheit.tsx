@@ -494,7 +494,7 @@ export default function WebsiteSicherheit() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+        <ClimbSteps steps={t.steps} />
       </Section>
 
       <PricingSection

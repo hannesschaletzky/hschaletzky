@@ -4,7 +4,7 @@ type Item = { title: string; text: string };
 // The circles cover the line, so they take the background of their section.
 export default function FeaturePath({
   items,
-  circleBg = "bg-navy",
+  circleBg = "bg-navy-light",
 }: {
   items: Item[];
   circleBg?: string;

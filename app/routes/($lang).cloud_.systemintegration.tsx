@@ -281,10 +281,11 @@ export default function Systemintegration() {
       </Section>
 
       {/* typical tasks */}
-      <Section eyebrow={t.tasksEyebrow} heading={t.tasksHeading}>
-        <p className="-mt-4 mb-12 max-w-2xl text-lg leading-relaxed">
-          {t.tasksIntro}
-        </p>
+      <Section
+        eyebrow={t.tasksEyebrow}
+        heading={t.tasksHeading}
+        intro={t.tasksIntro}
+      >
         <FeatureNumbers items={t.tasks} />
       </Section>
 
@@ -301,7 +302,7 @@ export default function Systemintegration() {
         heading={t.stepsHeading}
         className="bg-navy-light"
       >
-        <ClimbSteps steps={t.steps} hillClass="fill-navy-lighter" />
+        <ClimbSteps steps={t.steps} />
       </Section>
 
       <PricingSection

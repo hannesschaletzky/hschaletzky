@@ -1,6 +1,6 @@
 import Peak from "~/components/site/peak";
-import { mail, useContactLinks } from "~/components/site/contactTopic";
-import { phone } from "~/components/site/siteNav";
+import { useContactLinks } from "~/components/site/contactTopic";
+import { mail, phone } from "~/components/site/siteNav";
 import { localize, useLang } from "~/i18n";
 
 // the closing box on every page: photo with the about link on the left, centred
