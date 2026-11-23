@@ -126,8 +126,8 @@ const focus: {
   {
     title: { de: "Delivery & Betrieb", en: "Delivery & operations" },
     text: {
-      de: "Automatisierte Tests und Deployments ab dem ersten Tag und ein Monitoring, das Probleme meldet, bevor Ihre Kunden sie bemerken.",
-      en: "Automated tests and deployments from day one, and monitoring that reports problems before your customers notice them.",
+      de: "Automatisierte Tests und Deployments ab dem ersten Tag und ein Monitoring, das Probleme meldet, oft bevor Ihre Kunden sie bemerken.",
+      en: "Automated tests and deployments from day one, and monitoring that reports problems, often before your customers notice them.",
     },
     items: [
       "Docker",

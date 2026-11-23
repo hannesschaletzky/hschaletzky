@@ -37,8 +37,8 @@ export default function ReferencesSection({
         </SectionHeading>
         <p className="-mt-4 mb-10 max-w-2xl text-lg leading-relaxed">
           {lang === "de"
-            ? "Inhalte und Gestaltung pflegen die Vereine selbst. Ich sorge dafür, dass ihre Seiten sicher, aktuell und erreichbar sind."
-            : "The clubs maintain content and design themselves. I make sure their sites are secure, up to date and online."}
+            ? "Inhalte und Gestaltung pflegen die Vereine selbst. Ich kümmere mich um Sicherheit, Updates und Erreichbarkeit ihrer Seiten."
+            : "The clubs maintain content and design themselves. I take care of security, updates and availability of their sites."}
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           {references.map((reference) => (

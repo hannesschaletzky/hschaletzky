@@ -20,7 +20,7 @@ const text = {
     heading: "Cloud, Integrationen &\u00a0Websites,",
     highlight: "die zuverlässig laufen.",
     intro:
-      "Ich bin Hannes, freiberuflicher Software Engineer. Vom ersten Konzept bis zum laufenden Betrieb bekommen Sie alles aus einer Hand.",
+      "Ich bin Hannes, freiberuflicher Software Engineer. Ich begleite Sie vom ersten Konzept bis zum laufenden Betrieb.",
     contact: "Kontakt aufnehmen",
     offers: "Was ich mache",
   },
@@ -31,7 +31,7 @@ const text = {
     heading: "Cloud, integrations &\u00a0websites",
     highlight: "that just keep running.",
     intro:
-      "I'm Hannes, a freelance software engineer. From the first concept to day-to-day operation, you get everything from one person.",
+      "I'm Hannes, a freelance software engineer. I work with you from the first concept to day-to-day operation.",
     contact: "Get in touch",
     offers: "See what I do",
   },

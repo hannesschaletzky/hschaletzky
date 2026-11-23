@@ -28,12 +28,12 @@ const text = {
     title:
       "Websites für kleine Unternehmen & Vereine in Berlin | Hannes Schaletzky",
     description:
-      "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat. Persönlich und fair.",
+      "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat.",
     hero: {
       title: "Rund um Ihre Website,",
       highlight: "ein Ansprechpartner.",
       cta: "Kontakt aufnehmen",
-      text: "Persönlich & fair. Vor Ort in Berlin oder remote. Für Selbstständige, kleine Unternehmen und Vereine.",
+      text: "Vor Ort in Berlin oder per Video. Für Selbstständige, kleine Unternehmen und Vereine.",
     },
     offersEyebrow: "Angebote & Preise",
     offersHeading: "Jedes Angebot mit Preis.",
@@ -46,12 +46,12 @@ const text = {
   en: {
     title: "Websites for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Secure websites for small businesses, clubs and self-employed people: check-up for 250 €, new websites from 599 €, hosting from 25 € a month. Personal and fair.",
+      "Secure websites for small businesses, clubs and self-employed people: check-up for 250 €, new websites from 599 €, hosting from 25 € a month.",
     hero: {
       title: "Everything around your website,",
       highlight: "one person to talk to.",
       cta: "Get in touch",
-      text: "Personal & fair. On-site in Berlin or remote. For self-employed people, small businesses and clubs.",
+      text: "On-site in Berlin or by video. For self-employed people, small businesses and clubs.",
     },
     offersEyebrow: "Offers & prices",
     offersHeading: "Every offer with its price.",
