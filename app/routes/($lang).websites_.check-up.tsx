@@ -92,7 +92,7 @@ const text = {
     reportText:
       "Vorne steht auf einen Blick, was gut läuft und was dringend ist. Danach folgt jeder Vorschlag mit Befund, Begründung und Empfehlung, eingeordnet als dringend, sinnvoll oder optional und mit einer Schätzung des Aufwands. So wissen Sie, was Sie zuerst angehen sollten, ob mit mir oder mit jemand anderem.",
     reportFacts: [
-      { value: "15", label: "Seiten geprüft" },
+      { value: "10", label: "Bereiche geprüft" },
       { value: "9", label: "Prüfwerkzeuge" },
       { value: "30", label: "Vorschläge" },
     ],
@@ -109,7 +109,7 @@ const text = {
     featuresLabel: "Enthalten",
     packages: [
       {
-        name: "Website-Check-up",
+        name: "Check-up",
         price: "250 €",
         priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
         features: [
@@ -238,7 +238,7 @@ const text = {
     reportText:
       "At the front you see at a glance what works well and what is urgent. Then every suggestion follows with the finding, the reason and a recommendation, rated as urgent, worthwhile or optional and with an estimate of the effort. So you know what to tackle first, with me or with someone else.",
     reportFacts: [
-      { value: "15", label: "pages checked" },
+      { value: "10", label: "areas checked" },
       { value: "9", label: "testing tools" },
       { value: "30", label: "suggestions" },
     ],
@@ -255,7 +255,7 @@ const text = {
     featuresLabel: "Included",
     packages: [
       {
-        name: "Website check-up",
+        name: "Check-up",
         price: "250 €",
         priceNote: "Fixed price, one-off, incl. 19 % VAT.",
         features: [

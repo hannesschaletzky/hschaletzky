@@ -5,7 +5,7 @@ beschreibung: Sie haben eine Website, aber bei Google taucht sie nicht auf. Wie 
 datum: 2026-11-16
 thema: Gefunden werden
 angebot: /websites/check-up
-angebotTitel: Website-Check-up
+angebotTitel: Check-up
 angebotText: Ich prüfe Ihre Website auf Technik, Sicherheit und Auffindbarkeit und sage Ihnen, was dringend ist und was warten kann. Für 250 €.
 auchAuf: /websites/google-sichtbarkeit
 entwurf: nein

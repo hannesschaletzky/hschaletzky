@@ -116,7 +116,7 @@ export const businessJsonLd = (lang: Lang) => ({
     founder: {
       "@type": "Person",
       name: "Hannes Schaletzky",
-      jobTitle: "Freelance Integration & Cloud Engineer",
+      jobTitle: "Freelance Software Engineer",
       sameAs: [
         "https://linkedin.com/in/hannesschaletzky/",
         "https://github.com/hannesschaletzky",
@@ -180,7 +180,7 @@ export const personJsonLd = {
     name: "Hannes Schaletzky",
     url: `${siteUrl}/about`,
     image: `${siteUrl}/hannes-portrait.jpg`,
-    jobTitle: "Freelance Integration & Cloud Engineer",
+    jobTitle: "Freelance Software Engineer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Berlin",

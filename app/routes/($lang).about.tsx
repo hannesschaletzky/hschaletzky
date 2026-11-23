@@ -134,7 +134,7 @@ const facts = {
 // icons from Lucide (ISC license): target, shield-check, eye
 const values = [
   {
-    title: "Focus on impact",
+    title: { de: "Wirkung zuerst", en: "Focus on impact" },
     text: {
       de: "Ich baue zuerst, was Ihnen schnell weiterhilft, nicht was technisch spannend ist.",
       en: "I build what helps you quickly first, not what is technically exciting.",
@@ -148,7 +148,7 @@ const values = [
     ),
   },
   {
-    title: "Take ownership",
+    title: { de: "Verantwortung übernehmen", en: "Take ownership" },
     text: {
       de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum.",
       en: "What I build, I also look after. If something breaks, I take care of it.",
@@ -161,7 +161,7 @@ const values = [
     ),
   },
   {
-    title: "Open by default",
+    title: { de: "Offen von Anfang an", en: "Open by default" },
     text: {
       de: "Sie wissen, wo Ihr Projekt steht, auch wenn etwas nicht nach Plan läuft.",
       en: "You know where your project stands, even when something doesn't go to plan.",
@@ -197,7 +197,7 @@ const licenses = [
         en: "Landeslehrer 1 · Salzburg · 2025",
       },
     ],
-    since: "2019",
+    since: "2018",
     photo: {
       src: "/hannes-skilehrer.jpg",
       width: 960,
@@ -391,7 +391,7 @@ export default function About() {
             <SectionHeading eyebrow={t.work}>{t.headings.work}</SectionHeading>
             <ul className="grid gap-10 sm:grid-cols-3 sm:gap-6">
               {values.map((value) => (
-                <li key={value.title}>
+                <li key={value.title.en}>
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/10 text-teal">
                     <svg
                       viewBox="0 0 24 24"
@@ -407,7 +407,7 @@ export default function About() {
                     </svg>
                   </span>
                   <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">
-                    {value.title}
+                    {value.title[lang]}
                   </h3>
                   <p className="mt-3 leading-relaxed">{value.text[lang]}</p>
                 </li>

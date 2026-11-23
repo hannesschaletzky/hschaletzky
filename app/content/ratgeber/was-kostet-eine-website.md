@@ -5,7 +5,7 @@ beschreibung: Von 0 € bis 10.000 € ist alles dabei. Woher die Unterschiede
 datum: 2026-11-16
 thema: Website erstellen
 angebot: /websites/neue-website
-angebotTitel: Website-Erstellung
+angebotTitel: Neue Website
 angebotText: Eine moderne, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Der Preis steht vorher fest, und Sie zahlen erst, wenn die Seite online ist.
 entwurf: nein
 ---

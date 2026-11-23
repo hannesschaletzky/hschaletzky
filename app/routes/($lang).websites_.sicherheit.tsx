@@ -79,7 +79,7 @@ const text = {
     steps: [
       {
         label: "Schritt 1",
-        title: "Website-Check-up",
+        title: "Check-up",
         price: "250 €",
         text: "Ich prüfe Ihre Website von außen und ordne jeden Vorschlag nach Dringlichkeit.",
         href: "/websites/check-up",
@@ -221,7 +221,7 @@ const text = {
     steps: [
       {
         label: "Step 1",
-        title: "Website check-up",
+        title: "Check-up",
         price: "250 €",
         text: "I check your website from the outside and rank every suggestion by urgency.",
         href: "/websites/check-up",

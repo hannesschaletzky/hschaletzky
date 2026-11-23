@@ -47,7 +47,7 @@ export default function Impressum() {
       </LegalSection>
 
       <LegalSection title="Berufsbezeichnung">
-        <p>Freiberuflicher Softwareentwickler</p>
+        <p>Freiberuflicher Software Engineer</p>
       </LegalSection>
 
       <LegalSection title="Verbraucherstreitbeilegung / Universalschlichtungsstelle">

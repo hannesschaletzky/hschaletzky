@@ -62,4 +62,4 @@ Wer sich das nicht zutraut, ist damit nicht allein. Es ist völlig in Ordnung, d
 
 Schauen Sie einmal nach, welche PHP-Version Ihre Website nutzt. Das dauert fünf Minuten und gibt Ihnen Klarheit. Ist sie aktuell und kümmert sich jemand um die Updates, ist alles gut. Ist sie veraltet oder weiß niemand so genau, wer zuständig ist, sollten Sie das bald angehen, nicht erst, wenn die Seite gehackt ist.
 
-Wenn Sie Unterstützung möchten: Im Website-Check-up sehe ich mir Ihre Seite von außen an, ohne dass Sie mir Zugangsdaten geben müssen, und sage Ihnen, was dringend ist und was warten kann.
+Wenn Sie Unterstützung möchten: Im Check-up sehe ich mir Ihre Seite von außen an, ohne dass Sie mir Zugangsdaten geben müssen, und sage Ihnen, was dringend ist und was warten kann.

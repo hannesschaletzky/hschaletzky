@@ -5,7 +5,7 @@ beschreibung: Eine langsame Website kostet Besucher und Plätze bei Google. Wie 
 datum: 2027-03-16
 thema: Gefunden werden
 angebot: /websites/check-up
-angebotTitel: Website-Check-up
+angebotTitel: Check-up
 angebotText: Ich messe, was Ihre Website bremst, und sage Ihnen, was sich mit wenig Aufwand verbessern lässt. Für 250 €.
 auchAuf: /websites/google-sichtbarkeit
 entwurf: nein

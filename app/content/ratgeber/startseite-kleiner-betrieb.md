@@ -5,7 +5,7 @@ beschreibung: Besucher entscheiden in wenigen Sekunden, ob sie bleiben. Die Frag
 datum: 2027-03-02
 thema: Website erstellen
 angebot: /websites/neue-website
-angebotTitel: Website-Erstellung
+angebotTitel: Neue Website
 angebotText: Eine klare, schnelle Website ab 599 €, bis zu fünf Seiten 990 €. Wir überlegen zusammen, was Ihre Kunden wirklich wissen wollen.
 entwurf: nein
 ---

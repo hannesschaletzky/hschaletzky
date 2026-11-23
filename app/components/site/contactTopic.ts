@@ -22,11 +22,18 @@ function topics(lang: Lang): Topic[] {
     .map(({ label, parts }) => ({ slug: parts.at(-1)!, label }));
 }
 
+const fullNames: Record<string, Record<Lang, string>> = {
+  "check-up": { de: "Website-Check-up", en: "Website check-up" },
+  sprechstunde: { de: "Website-Sprechstunde", en: "Website office hours" },
+};
+
 export function contactLinks(lang: Lang, topic?: Topic) {
   const contact = localize("/contact", lang);
   if (!topic) return { cal: calUrl, mail: `mailto:${mail}`, contact };
+  // in the inbox the short menu names lack context, so these get their full name
+  const full = fullNames[topic.slug]?.[lang] ?? topic.label;
   const text = encodeURIComponent(
-    `${lang === "de" ? "Anfrage" : "Inquiry"}: ${topic.label}`,
+    `${lang === "de" ? "Anfrage" : "Inquiry"}: ${full}`,
   );
   return {
     // cal.com fills the notes field of the booking form from ?notes=

@@ -4,7 +4,7 @@ hervorhebung: mit KI oder machen lassen?
 beschreibung: Baukasten, KI oder Profi: ein ehrlicher Vergleich der drei Wege zur eigenen Website, mit Kosten, Zeitaufwand und den Haken, die man vorher kennen sollte.
 datum: 2026-11-16
 angebot: /websites/neue-website
-angebotTitel: Website-Erstellung
+angebotTitel: Neue Website
 angebotText: Eine moderne, schnelle Website ab 599 €. Impressum und Datenschutz sind dabei, und Sie zahlen erst, wenn sie online ist.
 thema: Website erstellen
 entwurf: nein

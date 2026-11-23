@@ -27,12 +27,12 @@ const text = {
   de: {
     title: "Cloud & Integrationen für Unternehmen | Hannes Schaletzky",
     description:
-      "Freiberuflicher Integration & Cloud Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
+      "Freiberuflicher Software Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
     hero: {
       title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
       cta: "Über Ihr Projekt sprechen",
-      text: "Freiberuflicher Integration & Cloud Engineer aus Berlin. Remote oder vor Ort im DACH-Raum. Für Software-Anbieter, IT-Teams und Start-ups.",
+      text: "Freiberuflicher Software Engineer aus Berlin. Remote oder vor Ort im DACH-Raum. Für Software-Anbieter, IT-Teams und Start-ups.",
     },
     servicesEyebrow: "Leistungen",
     servicesHeading: "Von der Planung bis zum Betrieb.",
@@ -138,14 +138,14 @@ const text = {
     workHeading: "Gebaut für den Produktivbetrieb.",
   },
   en: {
-    title: "Integration & Cloud Engineer | Hannes Schaletzky",
+    title: "Cloud & Integrations for Companies | Hannes Schaletzky",
     description:
-      "Freelance integration & cloud engineer from Berlin: ITSM, MDM and Microsoft integrations (Xurrent, Intune, ACMP, Entra) with Node.js/TypeScript and AWS. Remote or on-site across Germany, Austria and Switzerland.",
+      "Freelance software engineer from Berlin: ITSM, MDM and Microsoft integrations (Xurrent, Intune, ACMP, Entra) with Node.js/TypeScript and AWS. Remote or on-site across Germany, Austria and Switzerland.",
     hero: {
       title: "Cloud & integrations,",
       highlight: "reliable in production.",
       cta: "Talk about your project",
-      text: "Freelance integration & cloud engineer from Berlin. Remote or on-site across Germany, Austria and Switzerland. For software vendors, IT teams and start-ups.",
+      text: "Freelance software engineer from Berlin. Remote or on-site across Germany, Austria and Switzerland. For software vendors, IT teams and start-ups.",
     },
     servicesEyebrow: "Services",
     servicesHeading: "From planning to operations.",

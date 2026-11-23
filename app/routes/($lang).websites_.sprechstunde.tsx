@@ -75,7 +75,7 @@ const text = {
     featuresLabel: "Enthalten",
     packages: [
       {
-        name: "Website-Sprechstunde",
+        name: "Sprechstunde",
         price: "71,40 €",
         priceNote: "pro Stunde, inkl. 19 % MwSt. (60 € netto)",
         features: [
@@ -177,7 +177,7 @@ const text = {
     featuresLabel: "Included",
     packages: [
       {
-        name: "Website office hours",
+        name: "Office hours",
         price: "71.40 €",
         priceNote: "per hour, incl. 19 % VAT (60 € net)",
         features: [
