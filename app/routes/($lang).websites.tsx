@@ -36,7 +36,7 @@ const text = {
       text: "Persönlich & fair. Vor Ort in Berlin oder remote. Für Selbstständige, kleine Unternehmen und Vereine.",
     },
     offersEyebrow: "Angebote & Preise",
-    offersHeading: "Klare Preise, keine Überraschungen.",
+    offersHeading: "Jedes Angebot mit Preis.",
     vat: "Alle Preise inkl. 19 % MwSt.",
     emergency: {
       label: "Notfall?",
@@ -54,7 +54,7 @@ const text = {
       text: "Personal & fair. On-site in Berlin or remote. For self-employed people, small businesses and clubs.",
     },
     offersEyebrow: "Offers & prices",
-    offersHeading: "Clear prices, no surprises.",
+    offersHeading: "Every offer with its price.",
     vat: "All prices incl. 19 % VAT.",
     emergency: {
       label: "Emergency?",
