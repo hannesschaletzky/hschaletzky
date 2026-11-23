@@ -6,7 +6,7 @@ datum: 2027-04-13
 thema: Website erstellen
 angebot: /websites/neue-website
 angebotTitel: Website-Erstellung
-angebotText: Ich helfe bei der Wahl der Domain, registriere sie auf Ihren Namen und baue die passende Website dazu, ab 599 €.
+angebotText: Ich helfe bei der Wahl der Domain und baue die passende Website dazu, ab 599 €. Bei Hosting & Wartung ist eine .de-Domain auf Ihren Namen enthalten.
 entwurf: nein
 ---
 

@@ -6,7 +6,7 @@ datum: 2026-12-06
 thema: Sicherheit
 angebot: /websites/sicherheit
 angebotTitel: Website-Sicherheit
-angebotText: Ich bereinige gehackte Websites, schließe die Lücke, durch die der Angriff kam, und halte die Seite danach aktuell.
+angebotText: Rufen Sie an, wenn Ihre Website gehackt wurde. Ich sage Ihnen ehrlich, ob und wie schnell ich helfen kann. Danach halte ich die Seite auf Wunsch aktuell.
 entwurf: nein
 ---
 
