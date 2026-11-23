@@ -113,8 +113,8 @@ const text = {
         price: "250 €",
         priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
         features: [
-          "Prüfung der ganzen Website in zehn Bereichen",
-          "Persönliche Durchsicht von bis zu fünf wichtigen Seiten",
+          "Prüfung in zehn Bereichen",
+          "Bis zu fünf wichtige Seiten genau durchgesehen, Sicherheit für die ganze Website",
           "Bericht als PDF innerhalb von 5 Werktagen, jeder Vorschlag mit Dringlichkeit und Aufwand",
           "30-minütige Besprechung per Video oder Telefon",
         ],
@@ -141,7 +141,7 @@ const text = {
       {
         question: "Wie viele Seiten prüfen Sie?",
         answer:
-          "Technik, Sicherheit und Links prüfe ich für die ganze Website. Bis zu fünf wichtige Seiten sehe ich mir zusätzlich persönlich genau an, darunter immer Startseite, Impressum und Datenschutzerklärung.",
+          "Sicherheit, Verschlüsselung und E-Mail-Schutz prüfe ich für die ganze Website. Bis zu fünf wichtige Seiten sehe ich mir in allen Bereichen genau an, darunter immer Startseite, Impressum und Datenschutzerklärung. Die Ladezeit messe ich auf der Startseite.",
       },
       {
         question: "Beheben Sie die Probleme auch?",
@@ -259,8 +259,8 @@ const text = {
         price: "250 €",
         priceNote: "Fixed price, one-off, incl. 19 % VAT.",
         features: [
-          "A check of the whole website in ten areas",
-          "A personal look at up to five important pages",
+          "A check in ten areas",
+          "A close look at up to five important pages, security for the whole website",
           "Report as a PDF within 5 working days, every suggestion with urgency and effort",
           "30-minute video or phone call",
         ],
@@ -287,7 +287,7 @@ const text = {
       {
         question: "How many pages do you check?",
         answer:
-          "I check technology, security and links across the whole website. I also take a close personal look at up to five important pages, always including the home page, imprint and privacy policy.",
+          "I check security, encryption and email protection for the whole website. I take a close look at up to five important pages in all areas, always including the home page, imprint and privacy policy. I measure loading time on the home page.",
       },
       {
         question: "Do you fix the problems too?",

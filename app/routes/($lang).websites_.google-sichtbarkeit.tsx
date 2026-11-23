@@ -108,7 +108,7 @@ const text = {
       {
         question: "Was ist der Unterschied zum Check-up?",
         answer:
-          "Der Check-up prüft Ihre ganze Website von außen und zeigt, was zu tun ist. Hier setze ich selbst um, und zwar die Grundlagen rund um Google und Ladezeit.",
+          "Der Check-up prüft Ihre Website von außen und zeigt, was zu tun ist. Hier setze ich selbst um, und zwar die Grundlagen rund um Google und Ladezeit.",
       },
       {
         question: "Meine Website hat mehr als zehn Seiten. Geht das trotzdem?",
@@ -210,7 +210,7 @@ const text = {
       {
         question: "How is this different from the check-up?",
         answer:
-          "The check-up looks at your whole website from the outside and shows what needs doing. Here I do the work myself, for the basics around Google and loading time.",
+          "The check-up looks at your website from the outside and shows what needs doing. Here I do the work myself, for the basics around Google and loading time.",
       },
       {
         question: "My website has more than ten pages. Does that work?",
