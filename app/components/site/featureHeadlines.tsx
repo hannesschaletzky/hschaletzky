@@ -16,7 +16,7 @@ export default function FeatureHeadlines({ items }: { items: Item[] }) {
             </h3>
             <span className="hidden h-px min-w-8 flex-1 bg-white/15 sm:block" />
           </div>
-          <p className="mt-2 max-w-2xl leading-relaxed sm:pl-11">{item.text}</p>
+          <p className="mt-2 max-w-4xl leading-relaxed sm:pl-11">{item.text}</p>
         </li>
       ))}
     </ol>

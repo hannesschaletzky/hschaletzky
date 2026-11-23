@@ -127,7 +127,10 @@ export default function OfferTiles({ current }: { current?: string }) {
           </div>
           <p className="mt-3 leading-relaxed">{offer.text}</p>
           <p className="mt-auto pt-6 font-semibold text-teal group-hover:text-teal-light">
-            {offer.link ?? (lang === "de" ? "Mehr dazu" : "More")}{" "}
+            {offer.link ??
+              (lang === "de"
+                ? `${offer.title} ansehen`
+                : `View ${offer.title}`)}{" "}
             <span
               aria-hidden="true"
               className="inline-block transition-transform group-hover:translate-x-1"

@@ -130,8 +130,8 @@ const values = [
   {
     title: "Focus on impact",
     text: {
-      de: "Ich baue zuerst, was Ihnen am meisten bringt, nicht was technisch am spannendsten ist.",
-      en: "I build what helps you most first, not what is technically most exciting.",
+      de: "Ich baue zuerst, was Ihnen schnell weiterhilft, nicht was technisch spannend ist.",
+      en: "I build what helps you quickly first, not what is technically exciting.",
     },
     icon: (
       <>
@@ -144,8 +144,8 @@ const values = [
   {
     title: "Take ownership",
     text: {
-      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum und bleibe dran.",
-      en: "What I build, I also look after. If something breaks, I take care of it and stay on it.",
+      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum.",
+      en: "What I build, I also look after. If something breaks, I take care of it.",
     },
     icon: (
       <>
@@ -157,8 +157,8 @@ const values = [
   {
     title: "Open by default",
     text: {
-      de: "Sie wissen jederzeit, wo Ihr Projekt steht, auch wenn etwas nicht nach Plan läuft.",
-      en: "You always know where your project stands, even when something doesn't go to plan.",
+      de: "Sie wissen, wo Ihr Projekt steht, auch wenn etwas nicht nach Plan läuft.",
+      en: "You know where your project stands, even when something doesn't go to plan.",
     },
     icon: (
       <>
@@ -185,10 +185,10 @@ const licenses = [
     title: { de: "Skilehrer", en: "Ski instructor" },
     // one line per qualification, as in the CV
     details: [
-      { de: "Anwärter · Tirol, 2018", en: "Anwärter · Tyrol, 2018" },
+      { de: "Anwärter · Tirol · 2018", en: "Anwärter · Tyrol · 2018" },
       {
-        de: "Landeslehrer 1 · Salzburg, 2025",
-        en: "Landeslehrer 1 · Salzburg, 2025",
+        de: "Landeslehrer 1 · Salzburg · 2025",
+        en: "Landeslehrer 1 · Salzburg · 2025",
       },
     ],
     since: "2019",

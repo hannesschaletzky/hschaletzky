@@ -119,7 +119,7 @@ export default function RatgeberArticle() {
             </h2>
             <p className="mt-3 leading-relaxed">{article.offer.text}</p>
             <p className="mt-6 font-semibold text-teal group-hover:text-teal-light">
-              Mehr dazu{" "}
+              {article.offer.title} ansehen{" "}
               <span
                 aria-hidden="true"
                 className="inline-block transition-transform group-hover:translate-x-1"

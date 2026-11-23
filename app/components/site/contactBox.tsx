@@ -66,8 +66,8 @@ export default function ContactBox({
               </h2>
               <p className="mt-3 max-w-xl text-lg text-slate-300">
                 {de
-                  ? "Sie sprechen immer direkt mit mir, persönlich und fair. Buchen Sie ein kostenloses Erstgespräch, schreiben Sie mir oder rufen Sie mich an."
-                  : "You always talk to me directly, personal and fair. Book a free intro call, drop me a line or give me a call."}
+                  ? "Sie sprechen immer direkt mit mir. Das Erstgespräch ist kostenlos."
+                  : "You always talk to me directly. The intro call is free."}
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {/* the free call is the main action, mail and phone second */}
