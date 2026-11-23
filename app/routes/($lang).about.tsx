@@ -438,7 +438,7 @@ export default function About() {
             </SectionHeading>
             <div className="grid gap-10 md:grid-cols-2 md:gap-8">
               {licenses.map((license) => (
-                // the certificate (paper, double frame, ornament line and a seal)
+                // the certificate (paper, one frame, a short accent line and a seal)
                 // with its photo small on it, large on click
                 <div key={license.since} className="relative flex flex-col">
                   {/* a polaroid pinned to the top right corner, clear of the title */}
@@ -458,8 +458,8 @@ export default function About() {
                     />
                   </PhotoLightbox>
                   <div className="flex-1 rounded-xl bg-[#FBF8F1] p-2 text-navy shadow-2xl shadow-black/30">
-                    <div className="relative h-full rounded-lg border-2 border-navy/20 p-1">
-                      <div className="h-full rounded-md border border-navy/20 px-6 pb-10 pt-8 text-center sm:px-10">
+                    <div className="relative h-full rounded-lg border border-navy/20">
+                      <div className="h-full px-6 pb-10 pt-8 text-center sm:px-10">
                         <h3 className="font-serif text-3xl text-navy sm:text-4xl">
                           {license.title[lang]}
                         </h3>
@@ -468,12 +468,8 @@ export default function About() {
                         </p>
                         <div
                           aria-hidden="true"
-                          className="mx-auto mt-4 flex max-w-48 items-center gap-3 text-teal"
-                        >
-                          <span className="h-px flex-1 bg-navy/20" />
-                          <span className="text-sm">✦</span>
-                          <span className="h-px flex-1 bg-navy/20" />
-                        </div>
+                          className="mx-auto mt-4 h-0.5 w-12 rounded-full bg-teal"
+                        />
                         <ul className="mt-4 space-y-1 text-sm font-semibold uppercase tracking-[0.12em] text-navy/70 sm:tracking-[0.2em]">
                           {license.details.map((detail) => (
                             <li key={detail.en}>{detail[lang]}</li>
@@ -482,9 +478,7 @@ export default function About() {
                       </div>
                       {/* seal */}
                       <span className="absolute -bottom-5 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal shadow-lg ring-4 ring-[#FBF8F1]">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-navy/40">
-                          {license.icon}
-                        </span>
+                        {license.icon}
                       </span>
                     </div>
                   </div>
