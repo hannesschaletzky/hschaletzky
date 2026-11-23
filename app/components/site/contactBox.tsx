@@ -1,8 +1,7 @@
 import Peak from "~/components/site/peak";
-import { calUrl, phone } from "~/components/site/siteNav";
+import { mail, useContactLinks } from "~/components/site/contactTopic";
+import { phone } from "~/components/site/siteNav";
 import { localize, useLang } from "~/i18n";
-
-const mail = "info@hschaletzky.com";
 
 // the closing box on every page: photo with the about link on the left, centred
 // in the space before the text, the ways to get in touch on the right
@@ -19,6 +18,8 @@ export default function ContactBox({
 }) {
   const lang = useLang();
   const de = lang === "de";
+  // on an offer page the mail subject and the booking note name that offer
+  const links = useContactLinks();
   // the box always sits right above the footer: its lower half lies on the
   // footer colour, so both belong together
   return (
@@ -72,7 +73,7 @@ export default function ContactBox({
               <div className="mt-6 flex flex-wrap gap-3">
                 {/* the free call is the main action, mail and phone second */}
                 <a
-                  href={calUrl}
+                  href={links.cal}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full bg-teal px-5 py-2.5 font-semibold text-navy transition hover:bg-teal-light"
@@ -82,7 +83,7 @@ export default function ContactBox({
                     : "Book a free intro call"}
                 </a>
                 <a
-                  href={`mailto:${mail}`}
+                  href={links.mail}
                   className="rounded-full border px-5 py-2.5 font-semibold transition border-white/20 text-white hover:border-white/50"
                 >
                   {mail}

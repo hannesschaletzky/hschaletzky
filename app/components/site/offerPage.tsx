@@ -1,12 +1,13 @@
 import type { ReactNode } from "react";
 import ContactBox from "~/components/site/contactBox";
+import { useContactLinks } from "~/components/site/contactTopic";
 import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { RelatedOffers } from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
-import { phone } from "~/components/site/siteNav";
-import { localize, useLang } from "~/i18n";
+import { calUrl, phone } from "~/components/site/siteNav";
+import { useLang } from "~/i18n";
 
 type Faq = { question: string; answer: string };
 
@@ -37,6 +38,7 @@ export default function OfferPage({
   children: ReactNode;
 }) {
   const lang = useLang();
+  const links = useContactLinks();
   const websites = area === "websites";
 
   return (
@@ -49,7 +51,11 @@ export default function OfferPage({
           highlight={hero.highlight}
           cta={{
             label: hero.cta,
-            href: hero.ctaHref ?? localize("/contact", lang),
+            // the booking link and the way to /contact carry this offer as topic
+            href:
+              hero.ctaHref === calUrl
+                ? links.cal
+                : (hero.ctaHref ?? links.contact),
           }}
           note={hero.note}
           phone={

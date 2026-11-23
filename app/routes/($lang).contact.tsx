@@ -2,13 +2,12 @@ import type { MetaFunction } from "react-router";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import PageHero from "~/components/site/pageHero";
+import { mail, useContactLinks } from "~/components/site/contactTopic";
 import { calUrl, phone } from "~/components/site/siteNav";
 import { pageMeta } from "~/components/site/pageMeta";
 import { langFromParams, langLoader, useLang } from "~/i18n";
 
 export const loader = langLoader;
-
-const mail = "info@hschaletzky.com";
 
 const text = {
   de: {
@@ -82,6 +81,14 @@ export const meta: MetaFunction = ({ params }) => {
 export default function Contact() {
   const lang = useLang();
   const t = text[lang];
+  // coming from an offer page (?thema=…), mail and booking name that offer
+  const links = useContactLinks();
+  const withTopic = (href: string) =>
+    href === calUrl
+      ? links.cal
+      : href.startsWith("mailto:")
+        ? links.mail
+        : href;
   return (
     <div className="min-h-screen">
       <Header />
@@ -90,7 +97,7 @@ export default function Contact() {
         <PageHero
           title={t.title1}
           highlight={t.highlight}
-          cta={{ label: t.cta, href: calUrl }}
+          cta={{ label: t.cta, href: links.cal }}
         >
           {t.intro}
         </PageHero>
@@ -102,7 +109,7 @@ export default function Contact() {
               return (
                 <a
                   key={channel.title}
-                  href={channel.href}
+                  href={withTopic(channel.href)}
                   {...(external && { target: "_blank", rel: "noreferrer" })}
                   className="group rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
                 >

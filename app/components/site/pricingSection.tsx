@@ -1,3 +1,4 @@
+import { useContactLinks } from "~/components/site/contactTopic";
 import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
 
@@ -17,7 +18,12 @@ type Package = {
 function Cta({ cta }: { cta: Package["cta"] }) {
   const lang = useLang();
   // internal links get the language prefix, unless the text already has it
-  const href = cta.href.startsWith("/en") ? cta.href : localize(cta.href, lang);
+  const local = cta.href.startsWith("/en")
+    ? cta.href
+    : localize(cta.href, lang);
+  // the way to /contact carries the offer of this page as topic
+  const links = useContactLinks();
+  const href = local === localize("/contact", lang) ? links.contact : local;
   return (
     <a
       href={href}

@@ -1,4 +1,5 @@
 import type { MetaFunction } from "react-router";
+import { useContactLinks } from "~/components/site/contactTopic";
 import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
 import FeatureNumbers from "~/components/site/featureNumbers";
@@ -311,6 +312,7 @@ export const meta: MetaFunction = ({ params }) => {
 
 export default function WebsiteSicherheit() {
   const lang = useLang();
+  const links = useContactLinks();
   const t = text[lang];
 
   return (
@@ -383,7 +385,7 @@ export default function WebsiteSicherheit() {
                 ))}
               </ul>
               <a
-                href={localize("/contact", lang)}
+                href={links.contact}
                 className="mt-8 inline-block rounded-full bg-teal px-6 py-3 font-semibold text-navy transition hover:bg-teal-light"
               >
                 {t.php.cta}
@@ -424,7 +426,11 @@ export default function WebsiteSicherheit() {
           {t.steps.map((step) => (
             <a
               key={step.title}
-              href={localize(step.href, lang)}
+              href={
+                step.href === "/contact"
+                  ? links.contact
+                  : localize(step.href, lang)
+              }
               className="group flex flex-col rounded-2xl border border-white/10 p-6 transition hover:-translate-y-0.5 hover:border-teal/50"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
