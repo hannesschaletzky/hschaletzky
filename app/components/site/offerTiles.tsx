@@ -68,7 +68,7 @@ const offers: { de: Offer[]; en: Offer[] } = {
     {
       title: "Hosting & maintenance",
       price: "from 25 € / month",
-      text: "Hosting in Germany, domain, daily backups, updates and personal help when something gets stuck. Cancel any month.",
+      text: "I run your website in Germany, with your own address, daily backups, updates and personal help when something gets stuck. Cancel any month.",
       href: "/websites/hosting-wartung",
     },
     {
@@ -80,13 +80,13 @@ const offers: { de: Offer[]; en: Offer[] } = {
     {
       title: "Google visibility",
       price: "390 €",
-      text: "Google Business Profile, Search Console, page titles and loading time: I put the basics in order so customers find you more easily on Google.",
+      text: "Your listing on Google and Google Maps, page titles and loading time: I put the basics in order so customers find you more easily on Google.",
       href: "/websites/google-sichtbarkeit",
     },
     {
       title: "Office hours",
       price: "71.40 € / hour",
-      text: "You bring your questions, we go through them together on your website: upkeep, updates, Google profile or ads. On-site in Berlin or by video.",
+      text: "You bring your questions, we go through them together on your website: upkeep, updates, your Google listing or ads on Google. On-site in Berlin or by video.",
       href: "/websites/sprechstunde",
     },
   ],

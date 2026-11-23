@@ -137,7 +137,7 @@ const text = {
       },
       {
         title: "Search Console",
-        text: "Set it up, submit your pages and tackle reported errors.",
+        text: "Google's free tool for website owners: set it up, submit your pages and tackle reported errors.",
       },
       {
         title: "Page titles & descriptions",

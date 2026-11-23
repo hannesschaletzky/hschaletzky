@@ -302,7 +302,7 @@ const text = {
       {
         question: "Do you guarantee better rankings on Google?",
         answer:
-          "No, nobody can honestly promise that. I show you what keeps Google from finding your site and how to fix it.",
+          "No, nobody can honestly promise that. I show you what keeps Google from finding your site easily and how to fix it.",
       },
     ],
   },

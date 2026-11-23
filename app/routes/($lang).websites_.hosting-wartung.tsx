@@ -165,18 +165,18 @@ const text = {
       highlight: "a person, not a hotline.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Hosting, backups and updates from one source. From 25 € a month. Cancel any month, moving to me is free.",
+      text: "I run your website, back it up daily and keep it up to date. From 25 € a month. Cancel any month, moving to me is free.",
     },
     servicesEyebrow: "What I take care of",
     servicesHeading: "That's what I take care of.",
     services: [
       {
         title: "Hosting in Germany",
-        text: "Servers in Germany, under German data protection.",
+        text: "Your website sits on a server in Germany, under German data protection.",
       },
       {
         title: "Domain included",
-        text: "A .de domain in your name, managed technically.",
+        text: "Your address on the internet, such as your-business.de, is registered in your name. I manage the technical side.",
       },
       {
         title: "SSL certificate",

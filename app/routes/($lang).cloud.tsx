@@ -244,7 +244,7 @@ const text = {
       {
         question: "How soon can you start?",
         answer:
-          "That depends on my current workload. In the first call I'll tell you honestly when I have time.",
+          "That depends on my current workload. In the intro call I'll tell you honestly when I have time.",
       },
     ],
     workEyebrow: "Selected work",

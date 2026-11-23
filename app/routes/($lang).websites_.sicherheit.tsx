@@ -160,7 +160,7 @@ const text = {
   en: {
     title: "Website Security for Small Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & co.",
+      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & Co.",
     hero: {
       title: "Is your website",
       highlight: "secure?",
@@ -173,7 +173,7 @@ const text = {
     risks: [
       {
         title: "Outdated software",
-        text: "Old versions of WordPress, plugins or PHP have known holes.",
+        text: "Old versions of WordPress, its extensions (plugins) or the programming language PHP have known holes.",
       },
       {
         title: "Automated attacks",
@@ -189,7 +189,7 @@ const text = {
       },
       {
         title: "Forged emails",
-        text: "Without protective records on your domain, fraudsters can send emails in your name.",
+        text: "Without protective entries on your domain, fraudsters can send emails in your name.",
       },
       {
         title: "Nobody is watching",
@@ -238,7 +238,7 @@ const text = {
         label: "Step 3",
         title: "Hosting & maintenance",
         price: "from 25 € / month",
-        text: "Updates, daily backups and alerts on outages. WordPress & co. 60 € a month.",
+        text: "Updates, daily backups and alerts on outages. WordPress & Co. 60 € a month.",
         href: "/websites/hosting-wartung",
         link: "To hosting & maintenance",
       },

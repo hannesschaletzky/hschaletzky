@@ -282,7 +282,7 @@ const text = {
       {
         question: "Can you also build a page for a single offer or campaign?",
         answer:
-          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a dedicated landing page with a sign-up or contact form. Links to your social media channels are part of every website. The cost depends on the scope. I tell you the price beforehand.",
+          "Yes. For a campaign, a course or an offer you promote on Instagram, Facebook or with flyers, I build a separate page just for this offer (a landing page) with a sign-up or contact form. Links to your social media channels are part of every website. The cost depends on the scope. I tell you the price beforehand.",
       },
       {
         question: "Can I change content myself?",
@@ -292,7 +292,7 @@ const text = {
       {
         question: "What running costs come on top?",
         answer:
-          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month, a .de domain included. You can also run the website with another provider; in that case I hand it over to you fully set up.",
+          "That depends on where your website runs. I recommend hosting & maintenance with me from 25 € a month; a .de domain, meaning your address such as your-business.de, is included. You can also run the website with another provider; in that case I hand it over to you fully set up.",
       },
       {
         question: "Who is responsible for the imprint and privacy policy?",
