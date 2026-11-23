@@ -15,10 +15,9 @@ export const loader = offerLoader("/websites/sicherheit");
 // maintenance as the three steps
 const text = {
   de: {
-    title:
-      "Website-Sicherheit für kleine Betriebe & Vereine | Hannes Schaletzky",
+    title: "Website-Sicherheit für Betriebe & Vereine | Hannes Schaletzky",
     description:
-      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie danach aktuell. Check-up 250 €, Wartung ab 25 € im Monat, für WordPress & Co. 60 €.",
+      "Veraltetes WordPress, alte PHP-Versionen, keine Backups: Ich prüfe, wie sicher Ihre Website ist, und halte sie aktuell. Check-up 250 €, Wartung ab 25 €.",
     hero: {
       title: "Ist Ihre Website",
       highlight: "sicher?",
@@ -158,9 +157,9 @@ const text = {
     ],
   },
   en: {
-    title: "Website Security for Small Businesses & Clubs | Hannes Schaletzky",
+    title: "Website Security for Businesses & Clubs | Hannes Schaletzky",
     description:
-      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date afterwards. Check-up 250 €, maintenance from 25 € a month, 60 € for WordPress & Co.",
+      "Outdated WordPress, old PHP versions, no backups: I check how secure your website is and keep it up to date. Check-up 250 €, maintenance from 25 €.",
     hero: {
       title: "Is your website",
       highlight: "secure?",

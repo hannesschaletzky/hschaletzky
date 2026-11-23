@@ -22,7 +22,7 @@ const text = {
   de: {
     title: "Über mich | Hannes Schaletzky, Software Engineer",
     description:
-      "Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite, woran ich glaube und was ich neben dem Code mache.",
+      "Hannes Schaletzky, freiberuflicher Software Engineer aus Berlin, Skilehrer und Beachvolleyball-Trainer. Wie ich arbeite und was ich neben dem Code mache.",
     hero: {
       title: "Hallo, ich bin Hannes,",
       highlight: "Software Engineer\u00a0&\u00a0Sportler.",

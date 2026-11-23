@@ -17,9 +17,13 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData: data }) => {
   if (!data) return [{ title: "Nicht gefunden | Hannes Schaletzky" }];
+  // search results cut titles after about 60 characters: long headlines go
+  // without the name, so the headline itself stays whole
+  const headline = `${data.title} ${data.highlight}`;
+  const withName = `${headline} | Hannes Schaletzky`;
   return [
     ...pageMeta({
-      title: `${data.title} ${data.highlight} | Hannes Schaletzky`,
+      title: withName.length <= 60 ? withName : headline,
       description: data.description,
       path: `/ratgeber/${data.slug}`,
       lang: "de",

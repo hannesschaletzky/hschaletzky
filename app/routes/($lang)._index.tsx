@@ -27,7 +27,7 @@ const text = {
   en: {
     title: "Hannes Schaletzky | Freelance Software Engineer",
     description:
-      "Software engineer from Berlin, remote or on-site across Germany, Austria and Switzerland: cloud and integration solutions with Node.js/TypeScript and AWS, plus websites and hosting.",
+      "Software engineer from Berlin, remote or on-site in the DACH region: cloud and integration solutions with Node.js/TypeScript and AWS, plus websites.",
     heading: "Cloud, integrations &\u00a0websites",
     highlight: "that just keep running.",
     intro:

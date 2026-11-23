@@ -13,10 +13,9 @@ export const loader = langLoader;
 // offer page for an architecture review, linked from the cloud services list
 const text = {
   de: {
-    title:
-      "Architektur-Review: Cloud, Infrastruktur & Code prüfen | Hannes Schaletzky",
+    title: "Architektur-Review für Cloud & Code | Hannes Schaletzky",
     description:
-      "Ich schaue mir Ihr System, Ihre Infrastruktur oder Ihre Pläne an, vor einem Umbau, einer Migration oder einer Finanzierungsrunde. Mit schriftlichem Bericht, priorisierten Empfehlungen und Besprechung, zum Festpreis nach einem kostenlosen Erstgespräch.",
+      "Ich prüfe Ihr System, Ihre Infrastruktur oder Ihre Pläne vor Umbau, Migration oder Finanzierungsrunde. Mit Bericht und Besprechung, zum Festpreis.",
     hero: {
       title: "Architektur-Review,",
       highlight: "klarer Blick von außen.",
@@ -147,10 +146,9 @@ const text = {
     more: "Alle Leistungen im Überblick",
   },
   en: {
-    title:
-      "Architecture review: assessing cloud, infrastructure & code | Hannes Schaletzky",
+    title: "Architecture review for cloud & code | Hannes Schaletzky",
     description:
-      "I look at your system, your infrastructure or your plans, before a rebuild, a migration or a funding round. With a written report, prioritised recommendations and a call, at a fixed price after a free intro call.",
+      "I review your system, infrastructure or plans before a rebuild, a migration or a funding round. With a report and a call, at a fixed price.",
     hero: {
       title: "Architecture review,",
       highlight: "a clear view from outside.",

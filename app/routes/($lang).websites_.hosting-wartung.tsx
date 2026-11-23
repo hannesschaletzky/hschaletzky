@@ -14,10 +14,9 @@ export const loader = offerLoader("/websites/hosting-wartung");
 
 const text = {
   de: {
-    title:
-      "Website-Hosting & Wartung aus Berlin ab 25 € im Monat | Hannes Schaletzky",
+    title: "Website-Hosting & Wartung ab 25 € im Monat | Hannes Schaletzky",
     description:
-      "Hosting in Deutschland, .de-Domain, SSL, tägliche Backups, Überwachung und persönliche Hilfe aus Berlin. Basis 25 €, Plus 50 €, WordPress & Co. 60 € im Monat, monatlich kündbar.",
+      "Hosting in Deutschland mit .de-Domain, täglichen Backups, Überwachung und persönlicher Hilfe. Ab 25 € im Monat, WordPress & Co. 60 €, monatlich kündbar.",
     hero: {
       title: "Hosting & Wartung,",
       highlight: "persönlich statt Hotline.",
@@ -156,10 +155,9 @@ const text = {
     ],
   },
   en: {
-    title:
-      "Website Hosting & Maintenance from 25 € a Month | Hannes Schaletzky",
+    title: "Website Hosting & Maintenance from 25 € | Hannes Schaletzky",
     description:
-      "Hosting in Germany, .de domain, SSL, daily backups, monitoring and personal help from Berlin. Basic 25 €, Plus 50 €, WordPress & Co. 60 € a month, cancel monthly.",
+      "Hosting in Germany with a .de domain, daily backups, monitoring and personal help. From 25 € a month, WordPress & Co. 60 €, cancel monthly.",
     hero: {
       title: "Hosting & maintenance,",
       highlight: "a person, not a hotline.",

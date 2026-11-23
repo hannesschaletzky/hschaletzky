@@ -17,7 +17,7 @@ const text = {
   de: {
     title: "Website erstellen lassen in Berlin ab 599 € | Hannes Schaletzky",
     description:
-      "Moderne Website aus Berlin für kleine Unternehmen, Selbstständige und Vereine: eine Seite 599 €, bis zu fünf Seiten 990 €. Meist in ein bis zwei Wochen fertig, bezahlt wird erst, wenn sie online ist.",
+      "Moderne Website aus Berlin für Selbstständige, kleine Betriebe und Vereine: eine Seite 599 €, bis zu fünf Seiten 990 €. Sie zahlen erst, wenn sie online ist.",
     hero: {
       title: "Ihre neue Website,",
       highlight: "modern und persönlich.",
@@ -166,7 +166,7 @@ const text = {
   en: {
     title: "Website Creation from 599 € | Hannes Schaletzky",
     description:
-      "A modern website for small businesses, self-employed people and clubs: single page 599 €, up to 5 pages 990 €. Usually ready in one to two weeks, you only pay once it's online.",
+      "A modern website from Berlin for self-employed people, small businesses and clubs: single page 599 €, up to five pages 990 €. You pay once it's online.",
     hero: {
       title: "Your new website,",
       highlight: "modern and personal.",

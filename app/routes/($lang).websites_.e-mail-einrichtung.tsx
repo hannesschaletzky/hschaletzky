@@ -17,7 +17,7 @@ const text = {
   de: {
     title: "E-Mail mit eigener Domain einrichten, 249 € | Hannes Schaletzky",
     description:
-      "Professionelle Adressen wie info@ihr-betrieb.de: eingerichtet auf Handy und Computer, alte E-Mails umgezogen, Schutzeinträge gegen gefälschte Absender. Einrichtung 249 €, Postfach 6 € im Monat.",
+      "Adressen wie info@ihr-betrieb.de, eingerichtet auf Handy und Computer, alte E-Mails ziehen mit um. Einrichtung 249 €, Postfach 6 € im Monat.",
     hero: {
       title: "E-Mail mit",
       highlight: "Ihrer eigenen Domain.",
@@ -137,7 +137,7 @@ const text = {
   en: {
     title: "Email With Your Own Domain, 249 € Setup | Hannes Schaletzky",
     description:
-      "Professional addresses like info@your-business.de: set up on phone and computer, old mail moved over, protective entries against forged senders. Setup 249 €, mailbox 6 € a month.",
+      "Addresses like info@your-business.de, set up on phone and computer, old emails move with you. Setup 249 €, mailbox 6 € a month.",
     hero: {
       title: "Email with",
       highlight: "your own domain.",

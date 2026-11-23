@@ -17,7 +17,7 @@ const text = {
   de: {
     title: "Website-Check-up in Berlin für 250 € | Hannes Schaletzky",
     description:
-      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Auffindbarkeit bei Google und Rechtstexte. Bericht mit klaren Empfehlungen und 30-minütige Besprechung, Festpreis 250 €.",
+      "Ich prüfe Ihre Website auf Sicherheit, Technik, Ladezeit, Google und Rechtstexte. Bericht mit Empfehlungen und 30 Minuten Besprechung, Festpreis 250 €.",
     hero: {
       title: "Wie gut ist Ihre Website",
       highlight: "wirklich?",
@@ -163,7 +163,7 @@ const text = {
   en: {
     title: "Website Check-up for 250 € | Hannes Schaletzky",
     description:
-      "I check your website for security, technology, loading time, findability on Google and legal texts. A report with clear recommendations and a 30-minute call, fixed price 250 €.",
+      "I check your website for security, technology, loading time, Google and legal texts. A report with recommendations and a 30-minute call, fixed price 250 €.",
     hero: {
       title: "How good is your website",
       highlight: "really?",

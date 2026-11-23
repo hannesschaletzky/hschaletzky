@@ -25,8 +25,7 @@ export function loader(args: LoaderFunctionArgs) {
 // overview of the website offers: one tile each, the details live on their own pages
 const text = {
   de: {
-    title:
-      "Websites für kleine Unternehmen & Vereine in Berlin | Hannes Schaletzky",
+    title: "Websites für Betriebe & Vereine in Berlin | Hannes Schaletzky",
     description:
       "Sichere Websites für kleine Unternehmen, Vereine und Selbstständige: Check-up für 250 €, neue Websites ab 599 €, Hosting ab 25 € im Monat.",
     hero: {

@@ -27,7 +27,7 @@ const text = {
   de: {
     title: "Cloud & Integrationen für Unternehmen | Hannes Schaletzky",
     description:
-      "Freiberuflicher Software Engineer aus Berlin: ITSM-, MDM- und Microsoft-Integrationen (Xurrent, Intune, ACMP, Entra) mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
+      "Freiberuflicher Software Engineer aus Berlin: Integrationen für ITSM, MDM und Microsoft mit Node.js/TypeScript und AWS. Remote oder vor Ort im DACH-Raum.",
     hero: {
       title: "Cloud & Integrationen,",
       highlight: "verlässlich im Betrieb.",
@@ -140,7 +140,7 @@ const text = {
   en: {
     title: "Cloud & Integrations for Companies | Hannes Schaletzky",
     description:
-      "Freelance software engineer from Berlin: ITSM, MDM and Microsoft integrations (Xurrent, Intune, ACMP, Entra) with Node.js/TypeScript and AWS. Remote or on-site across Germany, Austria and Switzerland.",
+      "Freelance software engineer from Berlin: integrations for ITSM, MDM and Microsoft with Node.js/TypeScript and AWS. Remote or on-site in the DACH region.",
     hero: {
       title: "Cloud & integrations,",
       highlight: "reliable in production.",

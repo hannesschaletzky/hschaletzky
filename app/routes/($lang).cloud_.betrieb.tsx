@@ -17,7 +17,7 @@ const text = {
   de: {
     title: "Betrieb & Rufbereitschaft für Cloud-Systeme | Hannes Schaletzky",
     description:
-      "Ich betreue Ihr Cloud-System im laufenden Betrieb, auch wenn es jemand anderes gebaut hat. Monitoring, Updates und Hilfe bei Störungen, auf Wunsch mit Rufbereitschaft. Feste monatliche Pauschale nach einem kostenlosen Erstgespräch.",
+      "Ich betreue Ihr Cloud-System im laufenden Betrieb, auch wenn es jemand anderes gebaut hat. Monitoring, Updates und Hilfe bei Störungen, als Monatspauschale.",
     hero: {
       title: "Betrieb & Rufbereitschaft,",
       highlight: "damit es läuft.",
@@ -147,7 +147,7 @@ const text = {
   en: {
     title: "Operations & on-call for cloud systems | Hannes Schaletzky",
     description:
-      "I look after your cloud system in production, even if someone else built it. Monitoring, updates and help with incidents, with on-call support if you like. A fixed monthly fee after a free intro call.",
+      "I look after your cloud system in production, even if someone else built it. Monitoring, updates and help with incidents, for a monthly fee.",
     hero: {
       title: "Operations & on-call,",
       highlight: "so it keeps running.",

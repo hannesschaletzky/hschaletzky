@@ -15,10 +15,9 @@ export const loader = offerLoader("/websites/google-sichtbarkeit");
 // running SEO contract and no ranking promises
 const text = {
   de: {
-    title:
-      "Google-Sichtbarkeit: besser gefunden werden, 390 € | Hannes Schaletzky",
+    title: "Google-Sichtbarkeit verbessern, 390 € | Hannes Schaletzky",
     description:
-      "Google-Unternehmensprofil, Search Console, Seitentitel und Ladezeit: Ich bringe die Grundlagen Ihrer Website in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
+      "Ihr Eintrag bei Google, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
     hero: {
       title: "Damit Kunden Sie",
       highlight: "leichter bei Google finden.",
@@ -120,7 +119,7 @@ const text = {
   en: {
     title: "Google Visibility: Get Found for 390 € | Hannes Schaletzky",
     description:
-      "Google Business Profile, Search Console, page titles and loading time: I put the basics of your website in order so customers find you more easily on Google. Fixed price 390 €.",
+      "Your listing on Google, page titles and loading time: I put the basics in order so customers find you more easily on Google. Fixed price 390 €.",
     hero: {
       title: "So customers",
       highlight: "find you more easily on Google.",

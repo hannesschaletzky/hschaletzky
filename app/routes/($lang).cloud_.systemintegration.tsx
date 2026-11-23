@@ -15,10 +15,9 @@ export const loader = langLoader;
 // offer page for system integration, linked from the cloud services list
 const text = {
   de: {
-    title:
-      "Systemintegration: ITSM, MDM & Microsoft verbinden | Hannes Schaletzky",
+    title: "Systemintegration: ITSM, MDM & Microsoft | Hannes Schaletzky",
     description:
-      "Ich verbinde ITSM, MDM und Microsoft-Umgebungen wie Xurrent, Intune, ACMP, Mobivisor, Entra ID und Exchange, auch mit Systemen hinter der Firewall. Zum Festpreis nach einem kostenlosen Erstgespräch.",
+      "Ich verbinde ITSM, MDM und Microsoft-Umgebungen wie Xurrent, Intune und Entra ID, auch hinter der Firewall. Festpreis nach kostenlosem Erstgespräch.",
     hero: {
       title: "Systemintegration,",
       highlight: "Daten fließen von selbst.",
@@ -133,10 +132,9 @@ const text = {
     more: "Alle Leistungen im Überblick",
   },
   en: {
-    title:
-      "System integration: connecting ITSM, MDM & Microsoft | Hannes Schaletzky",
+    title: "System integration: ITSM, MDM & Microsoft | Hannes Schaletzky",
     description:
-      "I connect ITSM, MDM and Microsoft environments such as Xurrent, Intune, ACMP, Mobivisor, Entra ID and Exchange, including systems behind the firewall. At a fixed price after a free intro call.",
+      "I connect ITSM, MDM and Microsoft environments such as Xurrent, Intune and Entra ID, including behind the firewall. Fixed price after a free intro call.",
     hero: {
       title: "System integration,",
       highlight: "data flows by itself.",

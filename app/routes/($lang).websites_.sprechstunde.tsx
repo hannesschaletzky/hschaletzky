@@ -15,10 +15,9 @@ export const loader = offerLoader("/websites/sprechstunde");
 // website, by the hour
 const text = {
   de: {
-    title:
-      "Website-Sprechstunde: Ihre Fragen, persönlich beantwortet | Hannes Schaletzky",
+    title: "Website-Sprechstunde, 71,40 € pro Stunde | Hannes Schaletzky",
     description:
-      "Sie bringen Ihre Fragen zu Website, Google-Unternehmensprofil, Analytics oder Ads mit, und wir gehen sie gemeinsam durch. Vor Ort in Berlin oder per Video, 71,40 € pro Stunde.",
+      "Sie bringen Ihre Fragen zu Website, Google-Eintrag oder Anzeigen mit, und wir gehen sie gemeinsam durch. In Berlin oder per Video, 71,40 € pro Stunde.",
     hero: {
       title: "Ihre Fragen,",
       highlight: "persönlich beantwortet.",
@@ -117,10 +116,9 @@ const text = {
     ],
   },
   en: {
-    title:
-      "Website Office Hours: Your Questions, Answered in Person | Hannes Schaletzky",
+    title: "Website Office Hours, 71.40 € per Hour | Hannes Schaletzky",
     description:
-      "You bring your questions about your website, Google Business Profile, Analytics or Ads, and we go through them together. On-site in Berlin or by video, 71.40 € per hour.",
+      "You bring your questions about your website, Google listing or ads, and we go through them together. In Berlin or by video, 71.40 € per hour.",
     hero: {
       title: "Your questions,",
       highlight: "answered in person.",

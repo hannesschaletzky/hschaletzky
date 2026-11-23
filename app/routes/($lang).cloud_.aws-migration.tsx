@@ -15,10 +15,9 @@ export const loader = langLoader;
 // offer page for moving to AWS, linked from the cloud services list
 const text = {
   de: {
-    title:
-      "Migration nach AWS: Umzug von Vercel, Server & On-Prem | Hannes Schaletzky",
+    title: "Migration nach AWS: von Vercel & On-Prem | Hannes Schaletzky",
     description:
-      "Ich ziehe Ihre Anwendung von Vercel, Netlify, Heroku, einem eigenen Server oder On-Prem nach AWS um. Mit Terraform/OpenTofu, Staging und Produktion, Monitoring, zum Festpreis nach einem kostenlosen Erstgespräch.",
+      "Ich ziehe Ihre Anwendung von Vercel, Heroku, einem eigenen Server oder On-Prem nach AWS um, mit Terraform/OpenTofu. Festpreis nach kostenlosem Erstgespräch.",
     hero: {
       title: "Migration",
       highlight: "nach AWS.",
@@ -138,10 +137,9 @@ const text = {
     more: "Alle Leistungen im Überblick",
   },
   en: {
-    title:
-      "Migration to AWS: moving from Vercel, servers & on-prem | Hannes Schaletzky",
+    title: "Migration to AWS: from Vercel & on-prem | Hannes Schaletzky",
     description:
-      "I move your application from Vercel, Netlify, Heroku, your own server or on-prem to AWS. With Terraform/OpenTofu, staging and production, monitoring, at a fixed price after a free intro call.",
+      "I move your application from Vercel, Heroku, your own server or on-prem to AWS, with Terraform/OpenTofu. Fixed price after a free intro call.",
     hero: {
       title: "Migration",
       highlight: "to AWS.",
