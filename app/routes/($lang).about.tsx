@@ -39,6 +39,7 @@ const text = {
     headings: {
       glance: "Kurz & knapp.",
       work: "Drei Prinzipien.",
+      believe: "Drei Überzeugungen.",
       clock: "Schnee & Sand.",
       social: "Zurückgeben.",
     },
@@ -63,6 +64,7 @@ const text = {
     headings: {
       glance: "The short version.",
       work: "Three principles.",
+      believe: "Three beliefs.",
       clock: "Snow & sand.",
       social: "Giving back.",
     },
@@ -104,6 +106,11 @@ const facts = {
         "Französisch (Grundkenntnisse)",
       ],
     },
+    // one personal row to end on
+    {
+      label: "Eigenheit",
+      value: "Für fast alles ein Tastenkürzel, sogar für die IBAN",
+    },
   ],
   en: [
     { label: "Freelance since", value: "2024" },
@@ -128,10 +135,13 @@ const facts = {
       label: "Languages",
       value: ["German (native)", "English (fluent)", "French (basic)"],
     },
+    {
+      label: "Quirk",
+      value: "A keyboard shortcut for almost everything, even my IBAN",
+    },
   ],
 };
 
-// icons from Lucide (ISC license): target, shield-check, eye
 const values = [
   {
     title: { de: "Wirkung zuerst", en: "Focus on impact" },
@@ -139,26 +149,13 @@ const values = [
       de: "Ich baue zuerst, was Ihnen schnell weiterhilft, nicht was technisch spannend ist.",
       en: "I build what helps you quickly first, not what is technically exciting.",
     },
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="6" />
-        <circle cx="12" cy="12" r="2" />
-      </>
-    ),
   },
   {
-    title: { de: "Verantwortung übernehmen", en: "Take ownership" },
+    title: { de: "Wie mein eigenes", en: "Take ownership" },
     text: {
-      de: "Was ich baue, betreue ich auch. Wenn etwas hakt, kümmere ich mich darum.",
-      en: "What I build, I also look after. If something breaks, I take care of it.",
+      de: "Ich behandle Ihr Projekt wie mein eigenes. Wenn etwas hakt, kümmere ich mich darum.",
+      en: "I treat your project like my own. If something breaks, I take care of it.",
     },
-    icon: (
-      <>
-        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-        <path d="m9 12 2 2 4-4" />
-      </>
-    ),
   },
   {
     title: { de: "Offen von Anfang an", en: "Open by default" },
@@ -166,23 +163,19 @@ const values = [
       de: "Sie wissen, wo Ihr Projekt steht, auch wenn etwas nicht nach Plan läuft.",
       en: "You know where your project stands, even when something doesn't go to plan.",
     },
-    icon: (
-      <>
-        <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
-        <circle cx="12" cy="12" r="3" />
-      </>
-    ),
   },
 ];
 
 const beliefs = {
   de: [
-    "Ehrlichkeit motiviert mehr als jedes Lob.",
+    "Ehrlichkeit motiviert mehr als gekünsteltes Lob.",
     "Gute schriftliche Updates sparen mehr Zeit als jedes Meeting.",
+    "Ein Team arbeitet gut, wenn es allen darin gut geht.",
   ],
   en: [
-    "Honesty motivates more than any praise.",
+    "Honesty motivates more than forced praise.",
     "Good written updates save more time than any meeting.",
+    "A team works well when everyone in it is doing well.",
   ],
 };
 
@@ -388,51 +381,38 @@ export default function About() {
         {/* how I work & beliefs */}
         <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            {/* the principles as cards like the offers, the beliefs as quotes
+                with a teal line like the client voices: two forms the site
+                already has, and neither repeats the table above */}
             <SectionHeading eyebrow={t.work}>{t.headings.work}</SectionHeading>
-            <ul className="grid gap-10 sm:grid-cols-3 sm:gap-6">
+            <ul className="grid gap-6 md:grid-cols-3">
               {values.map((value) => (
-                <li key={value.title.en}>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/10 text-teal">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      {value.icon}
-                    </svg>
-                  </span>
-                  <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">
+                <li
+                  key={value.title.en}
+                  className="rounded-2xl border border-white/10 p-6"
+                >
+                  <h3 className="text-xl font-bold text-white">
                     {value.title[lang]}
                   </h3>
                   <p className="mt-3 leading-relaxed">{value.text[lang]}</p>
                 </li>
               ))}
             </ul>
-            <div className="mt-16 rounded-3xl bg-navy-light p-8 sm:p-12">
-              <h3 className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                {t.believe}
-              </h3>
-              <ul className="grid gap-8 md:grid-cols-2 md:gap-12">
-                {beliefs[lang].map((belief) => (
-                  <li key={belief} className="flex gap-4">
-                    <span
-                      aria-hidden="true"
-                      className="text-5xl font-bold leading-[0.8] text-teal"
-                    >
-                      “
-                    </span>
-                    <p className="text-xl font-semibold leading-snug text-white sm:text-2xl sm:leading-snug">
-                      {belief}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-16 sm:mt-20">
+              <SectionHeading eyebrow={t.believe}>
+                {t.headings.believe}
+              </SectionHeading>
             </div>
+            <ul className="grid gap-8 md:grid-cols-3 md:gap-6">
+              {beliefs[lang].map((belief) => (
+                <li
+                  key={belief}
+                  className="border-l-2 border-teal pl-5 text-lg font-semibold leading-snug text-white"
+                >
+                  {belief}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
