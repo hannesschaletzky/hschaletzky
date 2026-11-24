@@ -437,7 +437,7 @@ export default function About() {
         </section>
 
         {/* licenses as certificates */}
-        <section>
+        <section className="bg-navy-light">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.clock}>
               {t.headings.clock}
@@ -508,7 +508,7 @@ export default function About() {
         </section>
 
         {/* giving back – same rows as the values */}
-        <section className="bg-navy-light">
+        <section>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
             <SectionHeading eyebrow={t.social}>
               {t.headings.social}
@@ -542,7 +542,7 @@ export default function About() {
           </div>
         </section>
 
-        <ContactBox above="--color-navy-light" />
+        <ContactBox />
       </main>
       <Footer />
     </div>
