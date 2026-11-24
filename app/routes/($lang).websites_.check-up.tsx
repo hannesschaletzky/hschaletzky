@@ -7,7 +7,7 @@ import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import SectionHeading from "~/components/site/sectionHeading";
-import { langFromParams, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 import { primaryButton } from "~/components/site/buttons";
 
@@ -423,6 +423,13 @@ export default function WebsiteCheckUp() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

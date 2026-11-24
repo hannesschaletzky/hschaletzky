@@ -6,7 +6,7 @@ import FeatureStrokes from "~/components/site/featureStrokes";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
-import { langFromParams, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 
 export const loader = offerLoader("/websites/google-sichtbarkeit");
@@ -263,6 +263,13 @@ export default function GoogleSichtbarkeit() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
     </OfferPage>
   );

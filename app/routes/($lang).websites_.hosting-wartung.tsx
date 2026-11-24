@@ -7,7 +7,7 @@ import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
 import PricingSection from "~/components/site/pricingSection";
 import ReferencesSection from "~/components/site/referencesSection";
-import { langFromParams, useLang } from "~/i18n";
+import { langFromParams, localize, useLang } from "~/i18n";
 import { offerLoader } from "~/ratgeber.server";
 
 export const loader = offerLoader("/websites/hosting-wartung");
@@ -340,6 +340,13 @@ export default function HostingWartung() {
         heading={t.pricingHeading}
         packages={t.packages}
         featuresLabel={t.featuresLabel}
+        more={{
+          label:
+            lang === "de"
+              ? "Alle Website-Leistungen im Überblick"
+              : "All website services at a glance",
+          href: `${localize("/websites", lang)}#angebote`,
+        }}
       />
 
       <ReferencesSection className="bg-navy-lighter" />
