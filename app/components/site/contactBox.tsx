@@ -6,9 +6,8 @@ import { localize, useLang } from "~/i18n";
 // the closing box on every page: photo with the about link on the left, centred
 // in the space before the text, the ways to get in touch on the right
 // calm on the dark page: only the call button is teal
-// the same gap above the box on every page: after a section with its own
-// background the box brings the whole gap, after a plain section (which already
-// ends with padding) only the rest
+// the same gap above the box on every page: the section above ends with its
+// own padding, the box adds the rest
 export default function ContactBox({
   above,
 }: {
@@ -26,7 +25,7 @@ export default function ContactBox({
     <section
       id="contact"
       style={above ? { background: `var(${above})` } : undefined}
-      className={`scroll-mt-20 ${above ? "pt-20 sm:pt-36" : "pt-8 sm:pt-24"}`}
+      className="scroll-mt-20 pt-8 sm:pt-24"
     >
       {/* the colour changes exactly at the middle of the box */}
       <div

@@ -147,17 +147,17 @@ export default function OfferPage({
             <RelatedLinks
               current={current}
               hidden={relatedHidden}
-              className={articles.length > 0 ? "bg-navy-light" : undefined}
+              // after the guide (dark) the lighter colour: then the colour
+              // changes in the middle of the contact box, like on every page
+              className={articles.length > 0 ? "bg-navy-lighter" : undefined}
             />
           )}
 
           <ContactBox
             above={
-              !websites
+              !websites || articles.length > 0
                 ? "--color-navy-lighter"
-                : articles.length > 0
-                  ? "--color-navy-light"
-                  : undefined
+                : undefined
             }
           />
         </main>

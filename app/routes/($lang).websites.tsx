@@ -149,10 +149,12 @@ export default function Websites() {
         </section>
 
         {/* the guide belongs to the website offers, so it lives here instead of the header */}
-        <GuideSection articles={articles} className="bg-navy-light" />
+        {/* the lighter colour, not the footer's: the colour changes in the
+            middle of the contact box */}
+        <GuideSection articles={articles} className="bg-navy-lighter" />
 
         <ContactBox
-          above={articles.length > 0 ? "--color-navy-light" : undefined}
+          above={articles.length > 0 ? "--color-navy-lighter" : undefined}
         />
       </main>
 
