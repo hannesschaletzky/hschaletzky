@@ -9,7 +9,7 @@ import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
-import { phone } from "~/components/site/siteNav";
+import { getByline, phone } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 import { teasers } from "~/ratgeber.server";
 
@@ -86,6 +86,7 @@ export default function Websites() {
         <PageHero
           title={t.hero.title}
           highlight={t.hero.highlight}
+          byline={getByline("websites", lang)}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
         >
           {t.hero.text}

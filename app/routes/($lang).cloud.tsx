@@ -15,6 +15,7 @@ import StackSection from "~/components/site/stackSection";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 import { primaryButton } from "~/components/site/buttons";
+import { getByline } from "~/components/site/siteNav";
 
 export const loader = langLoader;
 
@@ -309,6 +310,7 @@ export default function Cloud() {
         <PageHero
           title={t.hero.title}
           highlight={t.hero.highlight}
+          byline={getByline("cloud", lang)}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
         >
           {t.hero.text}

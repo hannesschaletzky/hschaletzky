@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { logos } from "~/components/site/logos";
 import SectionHeading from "~/components/site/sectionHeading";
 import { useLang } from "~/i18n";
@@ -80,6 +81,7 @@ export default function Testimonials({
   className = "",
   centered,
   short,
+  after,
 }: {
   group?: Testimonial["group"];
   // a single quote by name, e.g. on an offer page
@@ -90,6 +92,9 @@ export default function Testimonials({
   centered?: boolean;
   // the shortened quote, where one exists
   short?: boolean;
+  // something right below the quotes, in the same section (e.g. the prices
+  // at a glance on the landing page)
+  after?: ReactNode;
 }) {
   const lang = useLang();
 
@@ -173,6 +178,7 @@ export default function Testimonials({
               </figure>
             ))}
         </div>
+        {after}
       </div>
     </section>
   );

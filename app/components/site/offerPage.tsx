@@ -8,7 +8,7 @@ import GuideSection, { type GuideTeaser } from "~/components/site/guideList";
 import Header from "~/components/site/header";
 import { RelatedOffers } from "~/components/site/offerTiles";
 import PageHero from "~/components/site/pageHero";
-import { calUrl, phone } from "~/components/site/siteNav";
+import { calUrl, getByline, phone } from "~/components/site/siteNav";
 import { useLang } from "~/i18n";
 
 type Faq = { question: string; answer: string };
@@ -34,7 +34,8 @@ export default function OfferPage({
     highlight: string;
     cta: string;
     text: string;
-    // optional: price line, button target other than /contact, phone link
+    // optional: price line, button target other than /contact, a second
+    // button to call
     note?: string;
     ctaHref?: string;
     phone?: boolean;
@@ -66,11 +67,13 @@ export default function OfferPage({
                 : (hero.ctaHref ?? links.contact),
           }}
           note={hero.note}
+          byline={getByline(area, lang)}
           phone={
             hero.phone
               ? {
                   href: phone.href,
-                  label: `${lang === "de" ? "oder anrufen" : "or call"}: ${phone.label}`,
+                  short: lang === "de" ? "Anrufen" : "Call",
+                  label: `${lang === "de" ? "Anrufen" : "Call"}: ${phone.label}`,
                 }
               : undefined
           }

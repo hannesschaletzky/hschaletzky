@@ -59,7 +59,7 @@ export default function ClimbSteps({
           vectorEffect="non-scaling-stroke"
         />
       </svg>
-      <ol className={`relative grid gap-10 lg:gap-0 ${layout.cols}`}>
+      <ol className={`relative grid gap-6 lg:gap-0 ${layout.cols}`}>
         {steps.map((step, i) => (
           <li
             key={step.title}
@@ -68,7 +68,7 @@ export default function ClimbSteps({
             {i < n - 1 ? (
               <span
                 aria-hidden="true"
-                className="absolute -bottom-10 left-5 top-10 border-l-2 border-dashed border-teal/40 lg:hidden"
+                className="absolute -bottom-6 left-5 top-10 border-l-2 border-dashed border-teal/40 lg:hidden"
               />
             ) : null}
             <span
@@ -83,7 +83,7 @@ export default function ClimbSteps({
               <h3 className="text-xl font-bold text-white lg:mt-4">
                 {step.title}
               </h3>
-              <p className="mt-2 leading-relaxed">{step.text}</p>
+              <p className="mt-1 leading-relaxed lg:mt-2">{step.text}</p>
             </div>
           </li>
         ))}

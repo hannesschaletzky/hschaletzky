@@ -23,7 +23,8 @@ const text = {
       highlight: "modern und persönlich.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Ab 599 €. Sie zahlen erst, wenn die Website online ist.",
+      phone: true,
+      text: "Webdesign aus Berlin für Selbstständige, kleine Betriebe und Vereine. Ab 599 €. Sie zahlen erst, wenn die Website online ist.",
     },
     examplesEyebrow: "Beispiele",
     examplesHeading: "Für Praxen, Vereine und Handwerk.",
@@ -39,7 +40,7 @@ const text = {
     steps: [
       {
         title: "Kennenlernen",
-        text: "Sie erzählen mir in einem kostenlosen Erstgespräch, was Sie vorhaben. Danach wissen Sie, welches Paket passt und was es kostet.",
+        text: "Sie erzählen mir in einem kostenlosen Erstgespräch, was Sie vorhaben: eine neue Website oder Ihre alte überarbeiten. Danach wissen Sie, welches Paket passt und was es kostet.",
       },
       {
         title: "Entwurf & Feinschliff",
@@ -78,6 +79,8 @@ const text = {
         text: "Sie zahlen erst, wenn die Website online ist.",
       },
     ],
+    glanceEach: "jeweils",
+    glanceLink: "Was die Pakete enthalten",
     pricingEyebrow: "Pakete & Preise",
     pricingHeading: "Zwei Pakete, feste Preise.",
     featuresLabel: "Enthalten",
@@ -172,7 +175,8 @@ const text = {
       highlight: "modern and personal.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Web design from Berlin for the self-employed, small businesses and clubs. From 599 €. You only pay once the website is online.",
+      phone: true,
+      text: "Web design from Berlin for the self-employed, small businesses and clubs. From 599 €. You only pay once the website is online.",
     },
     examplesEyebrow: "Examples",
     examplesHeading: "For practices, clubs and trades.",
@@ -188,7 +192,7 @@ const text = {
     steps: [
       {
         title: "Get to know each other",
-        text: "You tell me in a free call what you have in mind. Afterwards you know which package fits and what it costs.",
+        text: "You tell me in a free call what you have in mind: a new website or a rework of your old one. Afterwards you know which package fits and what it costs.",
       },
       {
         title: "Draft & polish",
@@ -227,6 +231,8 @@ const text = {
         text: "You only pay once the website is online.",
       },
     ],
+    glanceEach: "each",
+    glanceLink: "What the packages include",
     pricingEyebrow: "Packages & prices",
     pricingHeading: "Two packages, fixed prices.",
     featuresLabel: "Included",
@@ -342,6 +348,41 @@ export default function WebsiteErstellen() {
         short
         className="bg-navy-lighter"
         centered
+        after={
+          // both packages at a glance, long before the price section at the end
+          // of the page; names and prices come from the packages themselves
+          <div className="mt-10 rounded-2xl border border-white/10 bg-navy-light px-6 py-5 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-8">
+            <dl className="grid grid-cols-2 gap-x-8 sm:flex sm:gap-x-12">
+              {t.packages.map((pkg) => (
+                <div key={pkg.name}>
+                  <dt className="text-sm font-semibold uppercase tracking-[0.15em] text-teal">
+                    {pkg.name}
+                  </dt>
+                  <dd className="mt-1 text-2xl font-bold text-white sm:text-3xl">
+                    {pkg.price}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-4 sm:mt-0 sm:text-right">
+              <p className="text-sm text-slate-400">
+                {t.glanceEach} {t.packages[0].priceNote}
+              </p>
+              <a
+                href="#preis"
+                className="group mt-1 inline-block font-semibold text-teal hover:text-teal-light"
+              >
+                {t.glanceLink}{" "}
+                <span
+                  aria-hidden="true"
+                  className="inline-block transition-transform group-hover:translate-y-0.5"
+                >
+                  ↓
+                </span>
+              </a>
+            </div>
+          </div>
+        }
       />
 
       {/* examples: screenshots of the demo sites */}
