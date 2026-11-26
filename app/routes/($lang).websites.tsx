@@ -113,7 +113,8 @@ export default function Websites() {
           factsNote={t.vat}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
           second={{
-            label: `${lang === "de" ? "Anrufen" : "Call"}: ${phone.label}`,
+            // on the computer the number itself: often no phone is connected
+            label: phone.label,
             short: lang === "de" ? "Anrufen" : "Call",
             href: phone.href,
           }}

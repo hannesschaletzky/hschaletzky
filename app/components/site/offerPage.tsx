@@ -114,7 +114,8 @@ export default function OfferPage({
                 href: ctaHref,
               }}
               second={{
-                label: `${de ? "Anrufen" : "Call"}: ${phone.label}`,
+                // on the computer the number itself: often no phone is connected
+                label: phone.label,
                 short: de ? "Anrufen" : "Call",
                 href: phone.href,
               }}

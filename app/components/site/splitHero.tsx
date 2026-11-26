@@ -36,6 +36,7 @@ export default function SplitHero({
   factsNote?: string;
   // short: the button text next to the photo (websites), so it stays on one line
   cta: { label: string; short?: string; href: string };
+  // short: the text on phones, label the one from sm up (e.g. the number)
   second?: { label: string; short?: string; href: string };
   // right column from lg up
   media?: ReactNode;
@@ -61,7 +62,16 @@ export default function SplitHero({
       </a>
       {second && (
         <a href={second.href} className={`text-center ${secondaryButton}`}>
-          {websites ? (second.short ?? second.label) : second.label}
+          {second.short ? (
+            <>
+              <span className="sm:hidden">{second.short}</span>
+              <span className="hidden whitespace-nowrap sm:inline">
+                {second.label}
+              </span>
+            </>
+          ) : (
+            second.label
+          )}
         </a>
       )}
     </div>
