@@ -4,14 +4,16 @@ import ContactBox from "~/components/site/contactBox";
 import Footer from "~/components/site/footer";
 import GuideSection from "~/components/site/guideList";
 import Header from "~/components/site/header";
-import OfferTiles from "~/components/site/offerTiles";
-import PageHero from "~/components/site/pageHero";
+import OfferTiles, { offers } from "~/components/site/offerTiles";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
 import Testimonials from "~/components/site/testimonials";
-import { getByline, phone } from "~/components/site/siteNav";
+import { calUrl, getByline, phone } from "~/components/site/siteNav";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 import { teasers } from "~/ratgeber.server";
+import SplitHero from "~/components/site/splitHero";
+import ExampleStack from "~/components/site/exampleStack";
+import CallBar from "~/components/site/callBar";
 
 // the three newest guide articles, German only (the guide has no English version)
 export function loader(args: LoaderFunctionArgs) {
@@ -83,14 +85,40 @@ export default function Websites() {
       <Header />
 
       <main>
-        <PageHero
+        {/* the same hero as the website offers: who, the three entry offers
+            with their prices, the built sites on the right */}
+        <SplitHero
+          byline={getByline(lang)}
           title={t.hero.title}
           highlight={t.hero.highlight}
-          byline={getByline("websites", lang)}
+          text={t.hero.text}
+          facts={offers[lang]
+            .filter((o) =>
+              [
+                "/websites/check-up",
+                "/websites/neue-website",
+                "/websites/hosting-wartung",
+              ].includes(o.href),
+            )
+            .map((o) => {
+              // "ab 25 € im Monat": the period goes into the small line
+              const [value, period] = o.price.split(/ (?=im Monat|\/ month)/);
+              return {
+                label: o.title.replace(/ & (Wartung|maintenance)$/, ""),
+                value,
+                caption: period && (lang === "de" ? "im Monat" : "a month"),
+                href: localize(o.href, lang),
+              };
+            })}
+          factsNote={t.vat}
           cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+          second={{
+            label: `${lang === "de" ? "Anrufen" : "Call"}: ${phone.label}`,
+            short: lang === "de" ? "Anrufen" : "Call",
+            href: phone.href,
+          }}
+          media={<ExampleStack />}
+        />
 
         <Testimonials group="websites" className="bg-navy-lighter" centered />
 
@@ -128,6 +156,7 @@ export default function Websites() {
       </main>
 
       <Footer />
+      <CallBar calHref={calUrl} />
     </div>
   );
 }

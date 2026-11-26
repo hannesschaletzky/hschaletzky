@@ -1,6 +1,7 @@
 import type { MetaFunction } from "react-router";
 import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
+import ExampleStack from "~/components/site/exampleStack";
 import ClimbSteps from "~/components/site/climbSteps";
 import FeatureHeadlines from "~/components/site/featureHeadlines";
 import { pageMeta } from "~/components/site/pageMeta";
@@ -79,8 +80,6 @@ const text = {
         text: "Sie zahlen erst, wenn die Website online ist.",
       },
     ],
-    glanceEach: "jeweils",
-    glanceLink: "Was die Pakete enthalten",
     pricingEyebrow: "Pakete & Preise",
     pricingHeading: "Zwei Pakete, feste Preise.",
     featuresLabel: "Enthalten",
@@ -231,8 +230,6 @@ const text = {
         text: "You only pay once the website is online.",
       },
     ],
-    glanceEach: "each",
-    glanceLink: "What the packages include",
     pricingEyebrow: "Packages & prices",
     pricingHeading: "Two packages, fixed prices.",
     featuresLabel: "Included",
@@ -339,6 +336,8 @@ export default function WebsiteErstellen() {
       area="websites"
       current="/websites/neue-website"
       hero={t.hero}
+      packages={t.packages}
+      heroMedia={<ExampleStack />}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       {/* a real client voice right under the hero, for visitors from the ads */}
@@ -348,41 +347,6 @@ export default function WebsiteErstellen() {
         short
         className="bg-navy-lighter"
         centered
-        after={
-          // both packages at a glance, long before the price section at the end
-          // of the page; names and prices come from the packages themselves
-          <div className="mt-10 rounded-2xl border border-white/10 bg-navy-light px-6 py-5 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-8">
-            <dl className="grid grid-cols-2 gap-x-8 sm:flex sm:gap-x-12">
-              {t.packages.map((pkg) => (
-                <div key={pkg.name}>
-                  <dt className="text-sm font-semibold uppercase tracking-[0.15em] text-teal">
-                    {pkg.name}
-                  </dt>
-                  <dd className="mt-1 text-2xl font-bold text-white sm:text-3xl">
-                    {pkg.price}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-4 sm:mt-0 sm:text-right">
-              <p className="text-sm text-slate-400">
-                {t.glanceEach} {t.packages[0].priceNote}
-              </p>
-              <a
-                href="#preis"
-                className="group mt-1 inline-block font-semibold text-teal hover:text-teal-light"
-              >
-                {t.glanceLink}{" "}
-                <span
-                  aria-hidden="true"
-                  className="inline-block transition-transform group-hover:translate-y-0.5"
-                >
-                  ↓
-                </span>
-              </a>
-            </div>
-          </div>
-        }
       />
 
       {/* examples: screenshots of the demo sites */}

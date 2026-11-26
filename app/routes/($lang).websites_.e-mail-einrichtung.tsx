@@ -276,6 +276,7 @@ export default function EMailEinrichtung() {
       area="websites"
       current="/websites/e-mail-einrichtung"
       hero={t.hero}
+      packages={t.packages}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       <Section

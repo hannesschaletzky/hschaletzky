@@ -17,8 +17,18 @@ function topics(lang: Lang): Topic[] {
       parts: link.href.split("/").filter(Boolean),
     }))
     .filter(({ parts }) => /^(cloud|websites)$/.test(parts.at(-2) ?? ""))
-    .map(({ label, parts }) => ({ slug: parts.at(-1)!, label }));
+    .map(({ label, parts }) => ({ slug: parts.at(-1)!, label }))
+    .concat(extraTopics.map((t) => ({ slug: t.slug, label: t.label[lang] })));
 }
+
+// packages without a page of their own, e.g. the small package on
+// /websites/google-sichtbarkeit (its button links to /contact?thema=…)
+const extraTopics: { slug: string; label: Record<Lang, string> }[] = [
+  {
+    slug: "google-unternehmensprofil",
+    label: { de: "Google-Unternehmensprofil", en: "Google Business Profile" },
+  },
+];
 
 const fullNames: Record<string, Record<Lang, string>> = {
   "check-up": { de: "Website-Check-up", en: "Website check-up" },

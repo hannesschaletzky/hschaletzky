@@ -190,8 +190,15 @@ export default function Header() {
         >
           {siteMap.map((group) => (
             <div key={group.title} className="mt-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-                {group.title}
+              {/* the heading leads to the group's main page, as in the footer */}
+              <p className="text-xs font-semibold uppercase tracking-[0.2em]">
+                <a
+                  href={group.links[0].href}
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-block py-1 text-teal hover:text-teal-light"
+                >
+                  {group.title}
+                </a>
               </p>
               <ul className="mt-2">
                 {group.links.map((link) => (

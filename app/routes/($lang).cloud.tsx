@@ -8,14 +8,15 @@ import FaqSection from "~/components/site/faqSection";
 import Footer from "~/components/site/footer";
 import Header from "~/components/site/header";
 import { ProjectCards, type ProjectId } from "~/components/site/projects";
-import PageHero from "~/components/site/pageHero";
 import { pageMeta } from "~/components/site/pageMeta";
 import SectionHeading from "~/components/site/sectionHeading";
 import StackSection from "~/components/site/stackSection";
 import Testimonials from "~/components/site/testimonials";
 import { langFromParams, langLoader, localize, useLang } from "~/i18n";
 import { primaryButton } from "~/components/site/buttons";
-import { getByline } from "~/components/site/siteNav";
+import SplitHero from "~/components/site/splitHero";
+import HeroQuote, { HeroQuoteProvider } from "~/components/site/heroQuote";
+import { careerFacts } from "~/components/site/offerPage";
 
 export const loader = langLoader;
 
@@ -298,149 +299,156 @@ export const meta: MetaFunction = ({ params }) => {
   });
 };
 
+// the client voice next to the hero; the list further down leaves it out
+const heroQuote = "Tien Hào Vu";
+
 export default function Cloud() {
   const lang = useLang();
   const t = text[lang];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <HeroQuoteProvider value={heroQuote}>
+      <div className="min-h-screen">
+        <Header />
 
-      <main>
-        <PageHero
-          title={t.hero.title}
-          highlight={t.hero.highlight}
-          byline={getByline("cloud", lang)}
-          cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
-        >
-          {t.hero.text}
-        </PageHero>
+        <main>
+          {/* the same sober hero as the cloud offers: career facts next to the
+            photo, a client voice on the right */}
+          <SplitHero
+            title={t.hero.title}
+            highlight={t.hero.highlight}
+            text={t.hero.text}
+            facts={careerFacts(lang)}
+            cta={{ label: t.hero.cta, href: localize("/contact", lang) }}
+            media={<HeroQuote name={heroQuote} />}
+          />
 
-        {/* proof first: companies want to know who has trusted me before */}
-        <Testimonials className="bg-navy-lighter" centered />
+          {/* proof first: companies want to know who has trusted me before */}
+          <Testimonials className="bg-navy-lighter" centered />
 
-        {/* services: like the stack page, area left, what it covers right;
+          {/* services: like the stack page, area left, what it covers right;
             entries with a page of their own link there; the subpages jump back here */}
-        <section id="leistungen" className="scroll-mt-20">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.servicesEyebrow}>
-              {t.servicesHeading}
-            </SectionHeading>
-            <div className="divide-y divide-white/10 border-y border-white/10">
-              {t.services.map((area) => (
-                <div
-                  key={area.title}
-                  className="grid gap-6 py-10 md:grid-cols-[1fr_2fr] md:gap-12"
-                >
-                  <h3 className="text-2xl font-bold text-white sm:text-3xl">
-                    {area.title}
-                  </h3>
-                  <ul className="grid content-start gap-6">
-                    {area.items.map((item) => {
-                      const body = (
-                        <>
-                          <p className="text-lg font-semibold text-white group-hover:text-teal-light">
-                            {item.title}{" "}
-                            {item.href && (
-                              <span
-                                aria-hidden="true"
-                                className="inline-block text-teal transition-transform group-hover:translate-x-1"
+          <section id="leistungen" className="scroll-mt-20">
+            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+              <SectionHeading eyebrow={t.servicesEyebrow}>
+                {t.servicesHeading}
+              </SectionHeading>
+              <div className="divide-y divide-white/10 border-y border-white/10">
+                {t.services.map((area) => (
+                  <div
+                    key={area.title}
+                    className="grid gap-6 py-10 md:grid-cols-[1fr_2fr] md:gap-12"
+                  >
+                    <h3 className="text-2xl font-bold text-white sm:text-3xl">
+                      {area.title}
+                    </h3>
+                    <ul className="grid content-start gap-6">
+                      {area.items.map((item) => {
+                        const body = (
+                          <>
+                            <p className="text-lg font-semibold text-white group-hover:text-teal-light">
+                              {item.title}{" "}
+                              {item.href && (
+                                <span
+                                  aria-hidden="true"
+                                  className="inline-block text-teal transition-transform group-hover:translate-x-1"
+                                >
+                                  →
+                                </span>
+                              )}
+                            </p>
+                            <p className="mt-1 text-slate-400">{item.text}</p>
+                          </>
+                        );
+                        // the line is teal only where a page with more follows
+                        return (
+                          <li key={item.title}>
+                            {item.href ? (
+                              <a
+                                href={localize(item.href, lang)}
+                                className="group block border-l-2 border-teal pl-5"
                               >
-                                →
-                              </span>
+                                {body}
+                              </a>
+                            ) : (
+                              <div className="border-l-2 border-white/15 pl-5">
+                                {body}
+                              </div>
                             )}
-                          </p>
-                          <p className="mt-1 text-slate-400">{item.text}</p>
-                        </>
-                      );
-                      // the line is teal only where a page with more follows
-                      return (
-                        <li key={item.title}>
-                          {item.href ? (
-                            <a
-                              href={localize(item.href, lang)}
-                              className="group block border-l-2 border-teal pl-5"
-                            >
-                              {body}
-                            </a>
-                          ) : (
-                            <div className="border-l-2 border-white/15 pl-5">
-                              {body}
-                            </div>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ways of working together: what is billed how; no amounts, prices follow the intro call */}
-        <section className="bg-navy-lighter">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.waysEyebrow}>
-              {t.waysHeading}
-            </SectionHeading>
-            <div className="grid gap-6 md:grid-cols-3">
-              {t.ways.map((way) => (
-                <article
-                  key={way.title}
-                  className="flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8"
-                >
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
-                    {way.title}
-                  </h3>
-                  <p className="mt-4 flex-1 leading-relaxed">{way.text}</p>
-                  <div className="mt-8 border-t border-white/10 pt-5">
-                    <p className="text-3xl font-bold text-white">
-                      {way.billing}
-                    </p>
-                    <p className="mt-1 text-sm">{way.note}</p>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                </article>
-              ))}
+                ))}
+              </div>
             </div>
-            <a
-              href={localize("/contact", lang)}
-              className={`mt-10 inline-block ${primaryButton}`}
-            >
-              {t.hero.cta}
-            </a>
-          </div>
-        </section>
+          </section>
 
-        {/* selected work */}
-        <section>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <SectionHeading eyebrow={t.workEyebrow}>
-              {t.workHeading}
-            </SectionHeading>
-            <ProjectCards
-              ids={["platform", "bridge", "vorsorge", "bundesident"]}
-              links={(id) =>
-                architecture[id].map((entry) => (
-                  <ArchitectureLink
-                    key={entry.label.en}
-                    diagram={entry.diagram}
-                    label={entry.label[lang]}
-                    className="rounded-full border border-teal/40 px-3 py-1 text-sm font-semibold text-teal hover:-translate-y-0.5 hover:border-teal hover:text-teal-light"
-                  />
-                ))
-              }
-            />
-          </div>
-        </section>
+          {/* ways of working together: what is billed how; no amounts, prices follow the intro call */}
+          <section className="bg-navy-lighter">
+            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+              <SectionHeading eyebrow={t.waysEyebrow}>
+                {t.waysHeading}
+              </SectionHeading>
+              <div className="grid gap-6 md:grid-cols-3">
+                {t.ways.map((way) => (
+                  <article
+                    key={way.title}
+                    className="flex flex-col rounded-2xl border border-white/10 bg-navy-light p-8"
+                  >
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+                      {way.title}
+                    </h3>
+                    <p className="mt-4 flex-1 leading-relaxed">{way.text}</p>
+                    <div className="mt-8 border-t border-white/10 pt-5">
+                      <p className="text-3xl font-bold text-white">
+                        {way.billing}
+                      </p>
+                      <p className="mt-1 text-sm">{way.note}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <a
+                href={localize("/contact", lang)}
+                className={`mt-10 inline-block ${primaryButton}`}
+              >
+                {t.hero.cta}
+              </a>
+            </div>
+          </section>
 
-        {/* own background, so it doesn't run into the project cards */}
-        <StackSection className="bg-navy-lighter" />
-        <FaqSection heading={t.faqHeading} faqs={t.faqs} />
-        <ContactBox />
-      </main>
+          {/* selected work */}
+          <section>
+            <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+              <SectionHeading eyebrow={t.workEyebrow}>
+                {t.workHeading}
+              </SectionHeading>
+              <ProjectCards
+                ids={["platform", "bridge", "vorsorge", "bundesident"]}
+                links={(id) =>
+                  architecture[id].map((entry) => (
+                    <ArchitectureLink
+                      key={entry.label.en}
+                      diagram={entry.diagram}
+                      label={entry.label[lang]}
+                      className="rounded-full border border-teal/40 px-3 py-1 text-sm font-semibold text-teal hover:-translate-y-0.5 hover:border-teal hover:text-teal-light"
+                    />
+                  ))
+                }
+              />
+            </div>
+          </section>
 
-      <Footer />
-    </div>
+          {/* own background, so it doesn't run into the project cards */}
+          <StackSection className="bg-navy-lighter" />
+          <FaqSection heading={t.faqHeading} faqs={t.faqs} />
+          <ContactBox />
+        </main>
+
+        <Footer />
+      </div>
+    </HeroQuoteProvider>
   );
 }

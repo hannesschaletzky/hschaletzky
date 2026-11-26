@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import { logos } from "~/components/site/logos";
+import { useHeroQuote } from "~/components/site/heroQuote";
 import SectionHeading from "~/components/site/sectionHeading";
 import { useLang } from "~/i18n";
 
 // only quotes with permission to publish them
 // "cloud" ones show on the home and cloud pages, "websites" ones on the websites page
-type Testimonial = {
+export type Testimonial = {
   group: "cloud" | "websites";
   quote: { de: string; en: string };
   short?: { de: string; en: string };
@@ -16,7 +17,7 @@ type Testimonial = {
   logo?: { src: string; width: number; height: number; onWhite?: boolean };
 };
 
-const testimonials: Testimonial[] = [
+export const testimonials: Testimonial[] = [
   {
     quote: {
       de: "Hannes hat unsere App von Vercel in eine eigene, sichere AWS-Umgebung überführt. Mit Staging-System und automatisierten Tests sind wir für den Umgang mit sensiblen Vorsorgedaten heute deutlich besser aufgestellt.",
@@ -97,9 +98,20 @@ export default function Testimonials({
   after?: ReactNode;
 }) {
   const lang = useLang();
+  // the hero of the page already shows this quote, so it doesn't repeat here
+  const inHero = useHeroQuote();
+  // (from lg up, where the hero shows it; phones don't see the hero column)
+  const shown = testimonials.filter(
+    (x) => x.group === group && (!only || x.name === only),
+  );
+  if (shown.length === 0) return null;
+  const onlyHero = shown.every((x) => x.name === inHero);
 
   return (
-    <section aria-labelledby="testimonials" className={className}>
+    <section
+      aria-labelledby="testimonials"
+      className={`${className ?? ""} ${onlyHero ? "lg:hidden" : ""}`}
+    >
       <div
         className={`mx-auto px-4 py-16 sm:px-6 sm:py-24 ${centered ? "max-w-5xl" : "max-w-6xl"}`}
       >
@@ -109,74 +121,72 @@ export default function Testimonials({
           </span>
         </SectionHeading>
         <div className="divide-y divide-white/10 border-y border-white/10">
-          {testimonials
-            .filter((x) => x.group === group && (!only || x.name === only))
-            .map((testimonial) => (
-              <figure
-                key={testimonial.name}
-                className="grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12"
-              >
-                <figcaption className="order-last flex items-center gap-4 md:order-first md:flex-col md:items-start">
-                  {testimonial.logo ? (
-                    <img
-                      src={testimonial.logo.src}
-                      width={testimonial.logo.width}
-                      height={testimonial.logo.height}
-                      loading="lazy"
-                      alt=""
-                      className={`h-10 w-auto rounded-lg ${testimonial.logo.onWhite ? "bg-white px-2 py-1" : ""}`}
-                    />
-                  ) : (
-                    // no logo: the initial in a circle, like on Google
-                    <span
-                      aria-hidden="true"
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal/15 font-bold text-teal"
-                    >
-                      {testimonial.name[0]}
-                    </span>
-                  )}
-                  {testimonial.href ? (
-                    <a
-                      href={testimonial.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group block"
-                    >
-                      <span className="flex items-center gap-1.5 font-semibold text-white transition-colors group-hover:text-teal-light">
-                        {testimonial.name}
-                        <span
-                          aria-hidden="true"
-                          className="text-teal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                        >
-                          ↗
-                        </span>
-                      </span>
-                      <span className="block text-sm text-slate-400">
-                        {testimonial.role[lang]}
-                      </span>
-                    </a>
-                  ) : (
-                    <span className="block">
-                      <span className="block font-semibold text-white">
-                        {testimonial.name}
-                      </span>
-                      <span className="block text-sm text-slate-400">
-                        {testimonial.role[lang]}
+          {shown.map((testimonial) => (
+            <figure
+              key={testimonial.name}
+              className={`grid gap-6 py-10 md:grid-cols-[18rem_1fr] md:gap-12 ${testimonial.name === inHero ? "lg:hidden" : ""}`}
+            >
+              <figcaption className="order-last flex items-center gap-4 md:order-first md:flex-col md:items-start">
+                {testimonial.logo ? (
+                  <img
+                    src={testimonial.logo.src}
+                    width={testimonial.logo.width}
+                    height={testimonial.logo.height}
+                    loading="lazy"
+                    alt=""
+                    className={`h-10 w-auto rounded-lg ${testimonial.logo.onWhite ? "bg-white px-2 py-1" : ""}`}
+                  />
+                ) : (
+                  // no logo: the initial in a circle, like on Google
+                  <span
+                    aria-hidden="true"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal/15 font-bold text-teal"
+                  >
+                    {testimonial.name[0]}
+                  </span>
+                )}
+                {testimonial.href ? (
+                  <a
+                    href={testimonial.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block"
+                  >
+                    <span className="flex items-center gap-1.5 font-semibold text-white transition-colors group-hover:text-teal-light">
+                      {testimonial.name}
+                      <span
+                        aria-hidden="true"
+                        className="text-teal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      >
+                        ↗
                       </span>
                     </span>
-                  )}
-                </figcaption>
-                <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
-                  {lang === "de" ? "„" : "“"}
-                  {
-                    (short && testimonial.short
-                      ? testimonial.short
-                      : testimonial.quote)[lang]
-                  }
-                  {lang === "de" ? "“" : "”"}
-                </blockquote>
-              </figure>
-            ))}
+                    <span className="block text-sm text-slate-400">
+                      {testimonial.role[lang]}
+                    </span>
+                  </a>
+                ) : (
+                  <span className="block">
+                    <span className="block font-semibold text-white">
+                      {testimonial.name}
+                    </span>
+                    <span className="block text-sm text-slate-400">
+                      {testimonial.role[lang]}
+                    </span>
+                  </span>
+                )}
+              </figcaption>
+              <blockquote className="border-l border-teal pl-6 text-lg leading-relaxed text-slate-100 sm:text-xl sm:leading-relaxed">
+                {lang === "de" ? "„" : "“"}
+                {
+                  (short && testimonial.short
+                    ? testimonial.short
+                    : testimonial.quote)[lang]
+                }
+                {lang === "de" ? "“" : "”"}
+              </blockquote>
+            </figure>
+          ))}
         </div>
         {after}
       </div>

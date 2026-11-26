@@ -174,14 +174,10 @@ export function getLegalLinks(lang: Lang) {
   ];
 }
 
-// the line with the small photo above the heading of the subpages
-export function getByline(area: "websites" | "cloud", lang: Lang) {
-  const de = lang === "de";
-  if (area === "websites")
-    return de
-      ? "Ihr Webdesigner in Berlin: Hannes Schaletzky"
-      : "Your web designer in Berlin: Hannes Schaletzky";
-  return de
-    ? "Ihr Software Engineer aus Berlin: Hannes Schaletzky"
-    : "Your software engineer from Berlin: Hannes Schaletzky";
+// name and role next to the photo in the hero of the website pages
+export function getByline(lang: Lang) {
+  return {
+    role: lang === "de" ? "Webdesign Berlin" : "Web design Berlin",
+    name: "Hannes Schaletzky",
+  };
 }

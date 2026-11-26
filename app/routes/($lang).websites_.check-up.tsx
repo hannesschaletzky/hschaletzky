@@ -337,6 +337,7 @@ export default function WebsiteCheckUp() {
       area="websites"
       current="/websites/check-up"
       hero={t.hero}
+      packages={t.packages}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       {/* sample report: text left, three pages fanned out right */}

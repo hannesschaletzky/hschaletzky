@@ -1,6 +1,4 @@
-import SectionHeading from "~/components/site/sectionHeading";
 import { localize, useLang } from "~/i18n";
-import ArrowLink from "~/components/site/arrowLink";
 
 type Offer = {
   title: string;
@@ -12,7 +10,7 @@ type Offer = {
   badge?: string;
 };
 
-const offers: { de: Offer[]; en: Offer[] } = {
+export const offers: { de: Offer[]; en: Offer[] } = {
   de: [
     {
       title: "Check-up",
@@ -41,7 +39,7 @@ const offers: { de: Offer[]; en: Offer[] } = {
     },
     {
       title: "Google-Sichtbarkeit",
-      price: "390 €",
+      price: "ab 149 €",
       text: "Ihr Eintrag bei Google und Google Maps, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden.",
       href: "/websites/google-sichtbarkeit",
     },
@@ -80,7 +78,7 @@ const offers: { de: Offer[]; en: Offer[] } = {
     },
     {
       title: "Google visibility",
-      price: "390 €",
+      price: "from 149 €",
       text: "Your listing on Google and Google Maps, page titles and loading time: I put the basics in order so customers find you more easily on Google.",
       href: "/websites/google-sichtbarkeit",
     },
@@ -152,10 +150,11 @@ export default function OfferTiles({
   );
 }
 
-// the other website offers at the end of an offer page, so it isn't a dead end
-export function RelatedOffers({
+// the other website offers as one short line of links (end of the website
+// offer pages): same internal links as the tiles, a fraction of the height
+export function RelatedLinks({
   current,
-  hidden,
+  hidden = [],
   className,
 }: {
   current: string;
@@ -163,22 +162,44 @@ export function RelatedOffers({
   className?: string;
 }) {
   const lang = useLang();
+  const shown = offers[lang].filter(
+    (o) => o.href !== current && !hidden.includes(o.href),
+  );
   return (
     <section className={className}>
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-        <SectionHeading
-          eyebrow={lang === "de" ? "Weitere Angebote" : "More offers"}
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal">
+          {lang === "de"
+            ? "Mehr rund um Ihre Website"
+            : "More around your website"}
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+          {shown.map((offer) => (
+            <li key={offer.href}>
+              <a
+                href={localize(offer.href, lang)}
+                className="font-semibold text-white hover:text-teal-light"
+              >
+                {offer.title}{" "}
+                <span className="font-normal text-slate-400">
+                  {offer.price}
+                </span>{" "}
+                <span aria-hidden="true" className="text-teal">
+                  →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a
+          href={`${localize("/websites", lang)}#angebote`}
+          className="mt-6 inline-block text-sm font-semibold text-teal hover:text-teal-light"
         >
           {lang === "de"
-            ? "Mehr rund um Ihre Website."
-            : "More around your website."}
-        </SectionHeading>
-        <OfferTiles current={current} hidden={hidden} />
-        <ArrowLink href={`${localize("/websites", lang)}#angebote`}>
-          {lang === "de"
             ? "Alle Angebote im Überblick"
-            : "All offers at a glance"}
-        </ArrowLink>
+            : "All offers at a glance"}{" "}
+          →
+        </a>
       </div>
     </section>
   );

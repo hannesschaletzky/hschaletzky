@@ -6,7 +6,7 @@ datum: 2027-02-02
 thema: Gefunden werden
 angebot: /websites/google-sichtbarkeit
 angebotTitel: Google-Sichtbarkeit
-angebotText: Ich richte Ihr Google-Unternehmensprofil ein oder bringe es in Ordnung, dazu Seitentitel und Ladezeit Ihrer Website. Festpreis 390 €.
+angebotText: Ich richte Ihr Google-Unternehmensprofil ein oder bringe es in Ordnung, für 149 €. Das ganze Paket mit Seitentiteln und Ladezeit Ihrer Website kostet 390 €.
 auchAuf: /websites/check-up
 entwurf: nein
 ---

@@ -316,6 +316,7 @@ export default function HostingWartung() {
       area="websites"
       current="/websites/hosting-wartung"
       hero={t.hero}
+      packages={t.packages}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       <Section

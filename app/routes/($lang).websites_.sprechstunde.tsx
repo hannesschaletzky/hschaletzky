@@ -237,6 +237,7 @@ export default function WebsiteSprechstunde() {
       area="websites"
       current="/websites/sprechstunde"
       hero={t.hero}
+      packages={t.packages}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       <Section

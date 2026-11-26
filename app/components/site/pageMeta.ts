@@ -150,6 +150,13 @@ export const businessJsonLd = (lang: Lang) => ({
         ),
         offer(lang === "de" ? "E-Mail-Einrichtung" : "Email setup", 249, true),
         offer(
+          lang === "de"
+            ? "Google-Unternehmensprofil"
+            : "Google Business Profile",
+          149,
+          true,
+        ),
+        offer(
           lang === "de" ? "Google-Sichtbarkeit" : "Google visibility",
           390,
           true,

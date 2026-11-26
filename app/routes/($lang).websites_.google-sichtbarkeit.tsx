@@ -3,6 +3,7 @@ import OfferPage from "~/components/site/offerPage";
 import Section from "~/components/site/section";
 import ClimbSteps from "~/components/site/climbSteps";
 import FeatureStrokes from "~/components/site/featureStrokes";
+import Testimonials from "~/components/site/testimonials";
 import PricingSection from "~/components/site/pricingSection";
 import { pageMeta } from "~/components/site/pageMeta";
 import { calUrl } from "~/components/site/siteNav";
@@ -15,18 +16,28 @@ export const loader = offerLoader("/websites/google-sichtbarkeit");
 // running SEO contract and no ranking promises
 const text = {
   de: {
-    title: "Google-Sichtbarkeit verbessern, 390 € | Hannes Schaletzky",
+    title: "Google-Unternehmensprofil ab 149 € | Hannes Schaletzky",
     description:
-      "Ihr Eintrag bei Google, Seitentitel und Ladezeit: Ich bringe die Grundlagen in Ordnung, damit Kunden Sie leichter bei Google finden. Festpreis 390 €.",
+      "Google-Unternehmensprofil anlegen oder überarbeiten ab 149 €, oder das ganze Paket mit Search Console, Seitentiteln und Ladezeit für 390 €. Festpreise.",
     hero: {
       title: "Damit Kunden Sie",
       highlight: "leichter bei Google finden.",
       cta: "Kostenloses Erstgespräch buchen",
       ctaHref: calUrl,
-      text: "Ihre Website ist online, aber kaum jemand findet sie? Ich bringe die Grundlagen bei Google in Ordnung. Festpreis 390 €.",
+      phone: true,
+      text: "Vom Google-Unternehmensprofil bis zur Search Console: Ich bringe die Grundlagen bei Google in Ordnung.",
+      prices: {
+        tiles: [
+          { label: "Nur das Profil", value: "149 €" },
+          { label: "Ganzes Paket", value: "390 €" },
+        ],
+        note: "jeweils einmalig, inkl. 19 % MwSt.",
+      },
     },
     includedEyebrow: "Was ich mache",
     includedHeading: "Die Grundlagen, sauber erledigt.",
+    includedNote:
+      "Im Paket Unternehmensprofil ist nur der erste Punkt enthalten, im ganzen Paket alle.",
     included: [
       {
         title: "Google-Unternehmensprofil",
@@ -62,7 +73,7 @@ const text = {
       },
       {
         title: "Umsetzen",
-        text: "Sie geben mir Zugang, ich setze es meist in etwa einer Woche um.",
+        text: "Sie geben mir Zugang, ich setze es meist in etwa einer Woche um. Bei einem neuen Profil kommt die Bestätigung durch Google dazu.",
       },
       {
         title: "Übergeben",
@@ -70,15 +81,32 @@ const text = {
       },
     ],
     pricingEyebrow: "Preis",
-    pricingHeading: "Ein Paket, ein fester Preis.",
+    pricingHeading: "Zwei Pakete, feste Preise.",
     featuresLabel: "Enthalten",
     packages: [
       {
-        name: "Google-Sichtbarkeit",
-        price: "390 €",
+        name: "Unternehmensprofil",
+        description: "Der Einstieg: Ihr Eintrag bei Google und Google Maps.",
+        price: "149 €",
         priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
         features: [
           "Google-Unternehmensprofil anlegen oder überarbeiten",
+          "Öffnungszeiten und Kategorien",
+          "Fotos",
+          "Link zu Ihrer Website",
+        ],
+        cta: {
+          label: "Kontakt aufnehmen",
+          href: "/contact?thema=google-unternehmensprofil",
+        },
+      },
+      {
+        name: "Google-Sichtbarkeit",
+        description: "Das ganze Paket, das Unternehmensprofil eingeschlossen.",
+        price: "390 €",
+        priceNote: "Festpreis, einmalig, inkl. 19 % MwSt.",
+        features: ["Alles aus dem Paket Unternehmensprofil"],
+        extras: [
           "Search Console einrichten und Seiten einreichen",
           "Seitentitel und Beschreibungen für bis zu zehn Seiten",
           "Ladezeit verbessern",
@@ -97,7 +125,12 @@ const text = {
       {
         question: "Wann sehe ich eine Wirkung?",
         answer:
-          "Das Google-Unternehmensprofil wirkt oft schon nach wenigen Tagen. Bis Google Ihre Seiten neu bewertet, dauert es meist einige Wochen.",
+          "Änderungen an einem bestehenden Google-Unternehmensprofil sind oft nach wenigen Tagen zu sehen, ein neues Profil erst, wenn Google es bestätigt hat. Bis Google Ihre Seiten neu bewertet, dauert es meist einige Wochen.",
+      },
+      {
+        question: "Muss Google das Profil erst bestätigen?",
+        answer:
+          "Ja, bei einem neuen Profil. Google prüft, ob es Ihren Betrieb wirklich gibt, zum Beispiel per Postkarte mit Code oder per kurzem Video. Das kann einige Tage dauern und liegt nicht in meiner Hand. Ich sage Ihnen, was zu tun ist, sobald Google den Weg vorgibt.",
       },
       {
         question: "Funktioniert das auch mit WordPress, Wix oder Jimdo?",
@@ -117,18 +150,28 @@ const text = {
     ],
   },
   en: {
-    title: "Google Visibility: Get Found for 390 € | Hannes Schaletzky",
+    title: "Google Business Profile from 149 € | Hannes Schaletzky",
     description:
-      "Your listing on Google, page titles and loading time: I put the basics in order so customers find you more easily on Google. Fixed price 390 €.",
+      "Create or revise your Google Business Profile from 149 €, or the whole package with Search Console, page titles and loading time for 390 €. Fixed prices.",
     hero: {
       title: "So customers",
       highlight: "find you more easily on Google.",
       cta: "Book a free intro call",
       ctaHref: calUrl,
-      text: "Your website is online, but hardly anyone finds it? I put the basics on Google in order. Fixed price 390 €.",
+      phone: true,
+      text: "From the Google Business Profile to Search Console: I put the basics on Google in order.",
+      prices: {
+        tiles: [
+          { label: "Profile only", value: "149 €" },
+          { label: "Whole package", value: "390 €" },
+        ],
+        note: "each one-off, incl. 19 % VAT",
+      },
     },
     includedEyebrow: "What I do",
     includedHeading: "The basics, done properly.",
+    includedNote:
+      "The Business Profile package covers only the first point, the whole package all of them.",
     included: [
       {
         title: "Google Business Profile",
@@ -164,7 +207,7 @@ const text = {
       },
       {
         title: "Do the work",
-        text: "You give me access, and I usually get it done in about a week.",
+        text: "You give me access, and I usually get it done in about a week. A new profile also needs Google's verification.",
       },
       {
         title: "Hand over",
@@ -172,15 +215,33 @@ const text = {
       },
     ],
     pricingEyebrow: "Price",
-    pricingHeading: "One package, one fixed price.",
+    pricingHeading: "Two packages, fixed prices.",
     featuresLabel: "Included",
     packages: [
       {
-        name: "Google visibility",
-        price: "390 €",
+        name: "Business Profile",
+        description:
+          "The starting point: your listing on Google and Google Maps.",
+        price: "149 €",
         priceNote: "Fixed price, one-off, incl. 19 % VAT.",
         features: [
           "Create or revise your Google Business Profile",
+          "Opening hours and categories",
+          "Photos",
+          "Link to your website",
+        ],
+        cta: {
+          label: "Get in touch",
+          href: "/en/contact?thema=google-unternehmensprofil",
+        },
+      },
+      {
+        name: "Google visibility",
+        description: "The whole package, Business Profile included.",
+        price: "390 €",
+        priceNote: "Fixed price, one-off, incl. 19 % VAT.",
+        features: ["Everything from the Business Profile package"],
+        extras: [
           "Set up Search Console and submit your pages",
           "Page titles and descriptions for up to ten pages",
           "Improve loading time",
@@ -199,7 +260,12 @@ const text = {
       {
         question: "When will I see an effect?",
         answer:
-          "The Google Business Profile often works within a few days. It usually takes a few weeks for Google to re-evaluate your pages.",
+          "Changes to an existing Google Business Profile often show within a few days, a new profile only once Google has verified it. It usually takes a few weeks for Google to re-evaluate your pages.",
+      },
+      {
+        question: "Does Google have to verify the profile first?",
+        answer:
+          "Yes, for a new profile. Google checks that your business really exists, for example by postcard with a code or by a short video. That can take a few days and is not in my hands. I tell you what to do as soon as Google sets the way.",
       },
       {
         question: "Does this work with WordPress, Wix or Jimdo too?",
@@ -240,6 +306,8 @@ export default function GoogleSichtbarkeit() {
       area="websites"
       current="/websites/google-sichtbarkeit"
       hero={t.hero}
+      packages={t.packages}
+      heroQuote="Lena Z."
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       <Section
@@ -248,7 +316,11 @@ export default function GoogleSichtbarkeit() {
         className="bg-navy-lighter"
       >
         <FeatureStrokes items={t.included} />
+        <p className="mt-8 text-sm text-slate-400">{t.includedNote}</p>
       </Section>
+
+      {/* a client voice about being found on Google */}
+      <Testimonials group="websites" only="Lena Z." />
 
       <Section
         eyebrow={t.stepsEyebrow}

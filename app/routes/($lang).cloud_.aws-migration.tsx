@@ -280,6 +280,7 @@ export default function AwsMigration() {
       area="cloud"
       current="/cloud/aws-migration"
       hero={t.hero}
+      heroQuote="Dr. Katharina Eller"
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       {/* starting points */}

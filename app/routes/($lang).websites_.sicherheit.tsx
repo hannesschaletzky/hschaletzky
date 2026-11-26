@@ -389,6 +389,7 @@ export default function WebsiteSicherheit() {
       // both are already in the price section of this page
       relatedHidden={["/websites/check-up", "/websites/hosting-wartung"]}
       hero={t.hero}
+      packages={t.packages}
       faq={{ heading: t.faqHeading, faqs: t.faqs }}
     >
       <Section
